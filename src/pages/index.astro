@@ -1,0 +1,1057 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+<style>
+  .hero {
+    text-align: center;
+    margin: 40px 0 60px 0;
+  }
+  .tagline {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .search-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #0f0;
+    background: #000;
+    color: #0f0;
+    font-family: monospace;
+    margin: 0 auto;
+    display: block;
+  }
+  .search-box:focus {
+    outline: none;
+    border-color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  }
+  .directory {
+    max-width: 1200px;
+    margin: 60px auto;
+  }
+  .section {
+    margin-bottom: 30px;
+    border: 1px solid #333;
+    background: #0a0a0a;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid #333;
+  }
+  .section-header:hover {
+    background: #111;
+  }
+  .section-title {
+    color: #0ff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+  }
+  .section-desc {
+    color: #666;
+    font-size: 13px;
+    margin-right: 20px;
+  }
+  .section-count {
+    color: #666;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+  .toggle-icon {
+    color: #0f0;
+    font-size: 14px;
+    font-family: monospace;
+  }
+  .section-content {
+    display: none;
+    padding: 20px;
+  }
+  .section-intro {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #222;
+  }
+  .toggle-checkbox {
+    display: none;
+  }
+  .toggle-checkbox:checked ~ .section-content {
+    display: block;
+  }
+  .toggle-checkbox:checked ~ .section-header .toggle-icon::before {
+    content: "[-]";
+  }
+  .toggle-checkbox:not(:checked) ~ .section-header .toggle-icon::before {
+    content: "[+]";
+  }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .category {
+    font-size: 13px;
+  }
+  .category > a {
+    color: #0f0;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #222;
+  }
+  .category > a:hover {
+    color: #0ff;
+  }
+  .subcategory-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .subcategory-list li {
+    padding: 3px 0;
+    padding-left: 15px;
+    position: relative;
+  }
+  .subcategory-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #666;
+  }
+  .subcategory-list a {
+    color: #999;
+    text-decoration: none;
+  }
+  .subcategory-list a:hover {
+    color: #0f0;
+  }
+  .count {
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .footer-stats {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    margin: 60px 0 40px 0;
+    padding-top: 40px;
+    border-top: 1px solid #333;
+  }
+</style>
+
+<div class="hero">
+  <div class="tagline">The cybersecurity resource directory. No BS.</div>
+</div>
+
+<div class="directory">
+  <!-- Security Tools -->
+  <div class="section">
+    <input type="checkbox" id="tools" class="toggle-checkbox" checked>
+    <label for="tools" class="section-header">
+      <div class="section-title">Security Tools</div>
+      <div class="section-desc">Software, scripts, and utilities</div>
+      <div class="section-count">892 tools</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Free and commercial security tools organized by category. Each tool includes description, 
+        download links, documentation, and whether it's free or paid.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/tools/network">Network Security Tools <span class="count">(156)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/network/scanners">Port Scanners</a></li>
+            <li><a href="/tools/network/vulnerability">Vulnerability Scanners</a></li>
+            <li><a href="/tools/network/mappers">Network Mappers</a></li>
+            <li><a href="/tools/network/packet">Packet Capture</a></li>
+            <li><a href="/tools/network/forensics">Network Forensics</a></li>
+            <li><a href="/tools/network/traffic">Traffic Generators</a></li>
+            <li><a href="/tools/network/ids">IDS/IPS</a></li>
+            <li><a href="/tools/network/firewalls">Firewalls</a></li>
+            <li><a href="/tools/network/honeypots">Honeypots</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/web">Web Application Tools <span class="count">(98)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/web/scanners">Web Scanners</a></li>
+            <li><a href="/tools/web/proxies">Web Proxies</a></li>
+            <li><a href="/tools/web/sqli">SQLi Tools</a></li>
+            <li><a href="/tools/web/xss">XSS Tools</a></li>
+            <li><a href="/tools/web/directory">Directory Brute Force</a></li>
+            <li><a href="/tools/web/api">API Testing</a></li>
+            <li><a href="/tools/web/cms">CMS Scanners</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/passwords">Password & Crypto Tools <span class="count">(67)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/passwords/cracking">Password Cracking</a></li>
+            <li><a href="/tools/passwords/cpu">CPU-based Cracking</a></li>
+            <li><a href="/tools/passwords/online">Online Cracking</a></li>
+            <li><a href="/tools/passwords/rainbow">Rainbow Tables</a></li>
+            <li><a href="/tools/passwords/management">Password Managers</a></li>
+            <li><a href="/tools/passwords/crypto">Cryptography Tools</a></li>
+            <li><a href="/tools/passwords/analysis">Crypto Analysis</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/exploitation">Exploitation Frameworks <span class="count">(124)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/exploitation/general">General Frameworks</a></li>
+            <li><a href="/tools/exploitation/c2">C2 Frameworks</a></li>
+            <li><a href="/tools/exploitation/post">Post-Exploitation</a></li>
+            <li><a href="/tools/exploitation/powershell">PowerShell Tools</a></li>
+            <li><a href="/tools/exploitation/windows">Windows Tools</a></li>
+            <li><a href="/tools/exploitation/ad">Active Directory</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/siem">SIEM & Log Management <span class="count">(92)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/siem/enterprise">Enterprise SIEM</a></li>
+            <li><a href="/tools/siem/opensource">Open Source SIEM</a></li>
+            <li><a href="/tools/siem/log">Log Analysis Tools</a></li>
+            <li><a href="/tools/siem/elk">ELK Stack</a></li>
+            <li><a href="/tools/siem/detection">Detection Engineering</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/forensics">Forensics & IR Tools <span class="count">(87)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/forensics/disk">Disk Forensics</a></li>
+            <li><a href="/tools/forensics/memory">Memory Forensics</a></li>
+            <li><a href="/tools/forensics/mobile">Mobile Forensics</a></li>
+            <li><a href="/tools/forensics/network">Network Forensics</a></li>
+            <li><a href="/tools/forensics/imaging">Imaging Tools</a></li>
+            <li><a href="/tools/forensics/ir">Incident Response</a></li>
+            <li><a href="/tools/forensics/case">Case Management</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/vulnerability">Vulnerability Management <span class="count">(76)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/vulnerability/scanners">Vuln Scanners</a></li>
+            <li><a href="/tools/vulnerability/config">Configuration Scanning</a></li>
+            <li><a href="/tools/vulnerability/patch">Patch Management</a></li>
+            <li><a href="/tools/vulnerability/container">Container Scanning</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/cloud">Cloud Security Tools <span class="count">(89)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/cloud/multi">Multi-Cloud Security</a></li>
+            <li><a href="/tools/cloud/aws">AWS Tools</a></li>
+            <li><a href="/tools/cloud/azure">Azure Tools</a></li>
+            <li><a href="/tools/cloud/gcp">GCP Tools</a></li>
+            <li><a href="/tools/cloud/container">Container Security</a></li>
+            <li><a href="/tools/cloud/kubernetes">Kubernetes Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/wireless">Wireless Security Tools <span class="count">(43)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/wireless/wifi">WiFi Tools</a></li>
+            <li><a href="/tools/wireless/bluetooth">Bluetooth Tools</a></li>
+            <li><a href="/tools/wireless/sdr">SDR Tools</a></li>
+            <li><a href="/tools/wireless/cellular">Cellular Tools</a></li>
+            <li><a href="/tools/wireless/rfid">RFID/NFC</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/mobile">Mobile Security Tools <span class="count">(54)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/mobile/android">Android Tools</a></li>
+            <li><a href="/tools/mobile/ios">iOS Tools</a></li>
+            <li><a href="/tools/mobile/static">Static Analysis</a></li>
+            <li><a href="/tools/mobile/dynamic">Dynamic Analysis</a></li>
+            <li><a href="/tools/mobile/runtime">Runtime Manipulation</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/osint">OSINT Tools <span class="count">(76)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/osint/search">Search & Recon</a></li>
+            <li><a href="/tools/osint/social">Social Media OSINT</a></li>
+            <li><a href="/tools/osint/dns">Domain/DNS Intel</a></li>
+            <li><a href="/tools/osint/people">People Search</a></li>
+            <li><a href="/tools/osint/frameworks">OSINT Frameworks</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/hardware">Hardware & Physical Tools <span class="count">(52)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/hardware/usb">USB Attacks</a></li>
+            <li><a href="/tools/hardware/rfid">RFID/NFC Tools</a></li>
+            <li><a href="/tools/hardware/analysis">Hardware Analysis</a></li>
+            <li><a href="/tools/hardware/implants">Hardware Implants</a></li>
+            <li><a href="/tools/hardware/lockpicking">Lock Picking</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/binary">Binary Analysis & RE <span class="count">(98)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/binary/disassemblers">Disassemblers</a></li>
+            <li><a href="/tools/binary/decompilers">Decompilers</a></li>
+            <li><a href="/tools/binary/debuggers">Debuggers</a></li>
+            <li><a href="/tools/binary/static">Static Analysis</a></li>
+            <li><a href="/tools/binary/dynamic">Dynamic Analysis</a></li>
+            <li><a href="/tools/binary/packing">Packers/Unpackers</a></li>
+            <li><a href="/tools/binary/malware">Malware Analysis</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/devsec">Development Security <span class="count">(86)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/devsec/sast">SAST Tools</a></li>
+            <li><a href="/tools/devsec/dast">DAST Tools</a></li>
+            <li><a href="/tools/devsec/dependency">Dependency Scanning</a></li>
+            <li><a href="/tools/devsec/secrets">Secret Scanning</a></li>
+            <li><a href="/tools/devsec/sca">Software Composition</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/privacy">Privacy & Anonymity <span class="count">(47)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/privacy/networks">Anonymity Networks</a></li>
+            <li><a href="/tools/privacy/vpn">VPN Tools</a></li>
+            <li><a href="/tools/privacy/encryption">Encryption Tools</a></li>
+            <li><a href="/tools/privacy/messaging">Secure Messaging</a></li>
+            <li><a href="/tools/privacy/data">Data Sanitization</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/tools/distros">Security Distributions <span class="count">(18)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/tools/distros/offensive">Offensive Distros</a></li>
+            <li><a href="/tools/distros/defensive">Defensive Distros</a></li>
+            <li><a href="/tools/distros/privacy">Privacy Distros</a></li>
+            <li><a href="/tools/distros/forensics">Forensics Distros</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning Resources -->
+  <div class="section">
+    <input type="checkbox" id="learning" class="toggle-checkbox">
+    <label for="learning" class="section-header">
+      <div class="section-title">Learning Resources</div>
+      <div class="section-desc">Guides, tutorials, books, and documentation</div>
+      <div class="section-count">1,314 resources</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Educational content for all skill levels. Includes free and paid courses, books, tutorials,
+        documentation, and reference materials organized by security domain.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/learning/offensive">Offensive Security <span class="count">(234)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/offensive/web">Web Application Security</a></li>
+            <li><a href="/learning/offensive/network">Network Penetration Testing</a></li>
+            <li><a href="/learning/offensive/mobile">Mobile Application Security</a></li>
+            <li><a href="/learning/offensive/api">API Security Testing</a></li>
+            <li><a href="/learning/offensive/cloud">Cloud Penetration Testing</a></li>
+            <li><a href="/learning/offensive/physical">Physical Security Testing</a></li>
+            <li><a href="/learning/offensive/social">Social Engineering</a></li>
+            <li><a href="/learning/offensive/redteam">Red Team Operations</a></li>
+            <li><a href="/learning/offensive/purple">Purple Team Exercises</a></li>
+            <li><a href="/learning/offensive/legal">Legal & Safe Testing</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/defensive">Defensive Security <span class="count">(198)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/defensive/soc">Security Operations Center</a></li>
+            <li><a href="/learning/defensive/ir">Incident Response</a></li>
+            <li><a href="/learning/defensive/threat-hunting">Threat Hunting</a></li>
+            <li><a href="/learning/defensive/threat-intel">Threat Intelligence</a></li>
+            <li><a href="/learning/defensive/monitoring">Security Monitoring</a></li>
+            <li><a href="/learning/defensive/log">Log Analysis</a></li>
+            <li><a href="/learning/defensive/siem">SIEM Management</a></li>
+            <li><a href="/learning/defensive/endpoint">Endpoint Security</a></li>
+            <li><a href="/learning/defensive/network">Network Defense</a></li>
+            <li><a href="/learning/defensive/email">Email Security</a></li>
+            <li><a href="/learning/defensive/deception">Deception Technology</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/binary">Binary Exploitation & RE <span class="count">(156)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/binary/exploitation">Binary Exploitation (PWN)</a></li>
+            <li><a href="/learning/binary/malware">Malware Analysis</a></li>
+            <li><a href="/learning/binary/firmware">Firmware Analysis</a></li>
+            <li><a href="/learning/binary/mobile">Mobile Reverse Engineering</a></li>
+            <li><a href="/learning/binary/game">Game Hacking</a></li>
+            <li><a href="/learning/binary/anti">Anti-Reversing Techniques</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/forensics">Digital Forensics <span class="count">(142)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/forensics/disk">Disk Forensics</a></li>
+            <li><a href="/learning/forensics/memory">Memory Forensics</a></li>
+            <li><a href="/learning/forensics/network">Network Forensics</a></li>
+            <li><a href="/learning/forensics/mobile">Mobile Device Forensics</a></li>
+            <li><a href="/learning/forensics/cloud">Cloud Forensics</a></li>
+            <li><a href="/learning/forensics/iot">IoT Forensics</a></li>
+            <li><a href="/learning/forensics/vehicle">Vehicle Forensics</a></li>
+            <li><a href="/learning/forensics/drone">Drone Forensics</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/crypto">Cryptography <span class="count">(87)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/crypto/applied">Applied Cryptography</a></li>
+            <li><a href="/learning/crypto/cryptanalysis">Cryptanalysis</a></li>
+            <li><a href="/learning/crypto/blockchain">Blockchain Security</a></li>
+            <li><a href="/learning/crypto/quantum">Quantum Cryptography</a></li>
+            <li><a href="/learning/crypto/hsm">Hardware Security Modules</a></li>
+            <li><a href="/learning/crypto/pki">PKI Management</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/appsec">Application Security <span class="count">(167)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/appsec/code-review">Secure Code Review</a></li>
+            <li><a href="/learning/appsec/sast">SAST/DAST/IAST</a></li>
+            <li><a href="/learning/appsec/devsecops">DevSecOps</a></li>
+            <li><a href="/learning/appsec/container">Container Security</a></li>
+            <li><a href="/learning/appsec/serverless">Serverless Security</a></li>
+            <li><a href="/learning/appsec/supply-chain">Supply Chain Security</a></li>
+            <li><a href="/learning/appsec/dependency">Dependency Management</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/infrastructure">Infrastructure Security <span class="count">(134)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/infrastructure/network">Network Security</a></li>
+            <li><a href="/learning/infrastructure/cloud">Cloud Security (AWS/Azure/GCP)</a></li>
+            <li><a href="/learning/infrastructure/kubernetes">Kubernetes Security</a></li>
+            <li><a href="/learning/infrastructure/database">Database Security</a></li>
+            <li><a href="/learning/infrastructure/virtualization">Virtualization Security</a></li>
+            <li><a href="/learning/infrastructure/zerotrust">Zero Trust Architecture</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/specialized">Specialized Domains <span class="count">(198)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/specialized/ics">ICS/SCADA Security</a></li>
+            <li><a href="/learning/specialized/healthcare">Healthcare Security</a></li>
+            <li><a href="/learning/specialized/financial">Financial Services</a></li>
+            <li><a href="/learning/specialized/automotive">Automotive Security</a></li>
+            <li><a href="/learning/specialized/aviation">Aviation Security</a></li>
+            <li><a href="/learning/specialized/iot">IoT Security</a></li>
+            <li><a href="/learning/specialized/ai">AI/ML Security</a></li>
+            <li><a href="/learning/specialized/5g">5G Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/physical">Physical & Hardware <span class="count">(76)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/physical/hardware">Hardware Hacking</a></li>
+            <li><a href="/learning/physical/rfid">RFID/NFC Security</a></li>
+            <li><a href="/learning/physical/lockpicking">Lock Picking</a></li>
+            <li><a href="/learning/physical/access">Physical Access Control</a></li>
+            <li><a href="/learning/physical/surveillance">Surveillance Systems</a></li>
+            <li><a href="/learning/physical/alarm">Alarm Systems</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/wireless">Wireless Security <span class="count">(89)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/wireless/wifi">WiFi Security</a></li>
+            <li><a href="/learning/wireless/bluetooth">Bluetooth Hacking</a></li>
+            <li><a href="/learning/wireless/sdr">Software Defined Radio</a></li>
+            <li><a href="/learning/wireless/cellular">Cellular Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/learning/programming">Security Programming <span class="count">(187)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/learning/programming/python">Python for Security</a></li>
+            <li><a href="/learning/programming/exploit">Exploit Development</a></li>
+            <li><a href="/learning/programming/scripting">Security Scripting</a></li>
+            <li><a href="/learning/programming/tools">Tool Development</a></li>
+            <li><a href="/learning/programming/automation">Security Automation</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Platforms -->
+  <div class="section">
+    <input type="checkbox" id="practice" class="toggle-checkbox">
+    <label for="practice" class="section-header">
+      <div class="section-title">Practice & Training</div>
+      <div class="section-desc">CTFs, labs, vulnerable apps, and hands-on platforms</div>
+      <div class="section-count">234 platforms</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Hands-on practice environments where you can legally test your skills. Includes CTF platforms,
+        vulnerable applications, cloud labs, and bug bounty programs.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/practice/ctf">CTF Platforms <span class="count">(42)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/practice/ctf/permanent">Permanent CTFs</a></li>
+            <li><a href="/practice/ctf/jeopardy">Jeopardy Style</a></li>
+            <li><a href="/practice/ctf/attack-defense">Attack-Defense</a></li>
+            <li><a href="/practice/ctf/beginner">Beginner Friendly</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/practice/labs">Practice Labs <span class="count">(38)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/practice/labs/free">Free Labs</a></li>
+            <li><a href="/practice/labs/paid">Premium Labs</a></li>
+            <li><a href="/practice/labs/cloud">Cloud Security Labs</a></li>
+            <li><a href="/practice/labs/ranges">Cyber Ranges</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/practice/vulnerable">Vulnerable Apps/VMs <span class="count">(67)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/practice/vulnerable/web">Web Applications</a></li>
+            <li><a href="/practice/vulnerable/vms">Vulnerable VMs</a></li>
+            <li><a href="/practice/vulnerable/mobile">Mobile Apps</a></li>
+            <li><a href="/practice/vulnerable/iot">IoT Devices</a></li>
+            <li><a href="/practice/vulnerable/containers">Containers</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/practice/bugbounty">Bug Bounty <span class="count">(31)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/practice/bugbounty/platforms">Platforms</a></li>
+            <li><a href="/practice/bugbounty/programs">Active Programs</a></li>
+            <li><a href="/practice/bugbounty/vdp">VDP Programs</a></li>
+            <li><a href="/practice/bugbounty/training">Training Resources</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/practice/courses">Online Courses <span class="count">(56)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/practice/courses/free">Free Courses</a></li>
+            <li><a href="/practice/courses/paid">Paid Courses</a></li>
+            <li><a href="/practice/courses/university">University Courses</a></li>
+            <li><a href="/practice/courses/bootcamps">Bootcamps</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <input type="checkbox" id="certs" class="toggle-checkbox">
+    <label for="certs" class="section-header">
+      <div class="section-title">Certifications</div>
+      <div class="section-desc">Study guides, exam info, costs, and community reviews</div>
+      <div class="section-count">124 certifications</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Comprehensive certification information including study materials, exam details, costs,
+        prerequisites, and community reviews. Organized by level and specialization.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/certs/entry">Entry Level <span class="count">(18)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/entry/comptia">CompTIA Certs</a></li>
+            <li><a href="/certs/entry/isc2">ISC2 CC</a></li>
+            <li><a href="/certs/entry/google">Google Certificate</a></li>
+            <li><a href="/certs/entry/microsoft">Microsoft Fundamentals</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/certs/vendor">Vendor-Specific <span class="count">(32)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/vendor/cisco">Cisco Security</a></li>
+            <li><a href="/certs/vendor/paloalto">Palo Alto</a></li>
+            <li><a href="/certs/vendor/fortinet">Fortinet NSE</a></li>
+            <li><a href="/certs/vendor/checkpoint">Check Point</a></li>
+            <li><a href="/certs/vendor/splunk">Splunk</a></li>
+            <li><a href="/certs/vendor/aws">AWS Security</a></li>
+            <li><a href="/certs/vendor/azure">Azure Security</a></li>
+            <li><a href="/certs/vendor/gcp">GCP Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/certs/offensive">Offensive Security <span class="count">(24)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/offensive/oscp">OSCP</a></li>
+            <li><a href="/certs/offensive/osep">OSEP</a></li>
+            <li><a href="/certs/offensive/oswe">OSWE</a></li>
+            <li><a href="/certs/offensive/gpen">GPEN</a></li>
+            <li><a href="/certs/offensive/gwapt">GWAPT</a></li>
+            <li><a href="/certs/offensive/gxpn">GXPN</a></li>
+            <li><a href="/certs/offensive/ceh">CEH</a></li>
+            <li><a href="/certs/offensive/ejpt">eJPT</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/certs/defensive">Defensive Security <span class="count">(21)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/defensive/gsec">GSEC</a></li>
+            <li><a href="/certs/defensive/gcih">GCIH</a></li>
+            <li><a href="/certs/defensive/gnfa">GNFA</a></li>
+            <li><a href="/certs/defensive/cysa">CySA+</a></li>
+            <li><a href="/certs/defensive/btl1">BTL1</a></li>
+            <li><a href="/certs/defensive/soc">SOC Analyst</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/certs/management">Management & Governance <span class="count">(16)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/management/cissp">CISSP</a></li>
+            <li><a href="/certs/management/cism">CISM</a></li>
+            <li><a href="/certs/management/cisa">CISA</a></li>
+            <li><a href="/certs/management/crisc">CRISC</a></li>
+            <li><a href="/certs/management/cgrc">CGRC</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/certs/specialized">Specialized <span class="count">(13)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/certs/specialized/ccsp">Cloud Security (CCSP)</a></li>
+            <li><a href="/certs/specialized/ics">ICS/SCADA (GICSP)</a></li>
+            <li><a href="/certs/specialized/privacy">Privacy (CIPP)</a></li>
+            <li><a href="/certs/specialized/forensics">Forensics (GCFA)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News & Research -->
+  <div class="section">
+    <input type="checkbox" id="news" class="toggle-checkbox">
+    <label for="news" class="section-header">
+      <div class="section-title">News & Research</div>
+      <div class="section-desc">Blogs, podcasts, papers, and threat intelligence</div>
+      <div class="section-count">456 sources</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Stay current with breaking news, vulnerability disclosures, research papers, threat intel feeds,
+        security blogs, podcasts, and YouTube channels from the community.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/news/breaking">Breaking News <span class="count">(34)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/breaking/krebs">Krebs on Security</a></li>
+            <li><a href="/news/breaking/register">The Register</a></li>
+            <li><a href="/news/breaking/bleeping">BleepingComputer</a></li>
+            <li><a href="/news/breaking/threatpost">Threatpost</a></li>
+            <li><a href="/news/breaking/darkreading">Dark Reading</a></li>
+            <li><a href="/news/breaking/securityweek">SecurityWeek</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/vendor">Vendor Blogs <span class="count">(42)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/vendor/talos">Talos (Cisco)</a></li>
+            <li><a href="/news/vendor/unit42">Unit 42 (Palo Alto)</a></li>
+            <li><a href="/news/vendor/xforce">X-Force (IBM)</a></li>
+            <li><a href="/news/vendor/projectzero">Project Zero (Google)</a></li>
+            <li><a href="/news/vendor/microsoft">Microsoft Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/technical">Technical Blogs <span class="count">(89)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/technical/offensive">Offensive Blogs</a></li>
+            <li><a href="/news/technical/defensive">Defensive Blogs</a></li>
+            <li><a href="/news/technical/malware">Malware Analysis</a></li>
+            <li><a href="/news/technical/research">Security Research</a></li>
+            <li><a href="/news/technical/personal">Personal Blogs</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/podcasts">Podcasts <span class="count">(34)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/podcasts/story">Story-driven</a></li>
+            <li><a href="/news/podcasts/news">News Format</a></li>
+            <li><a href="/news/podcasts/technical">Technical</a></li>
+            <li><a href="/news/podcasts/industry">Industry</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/youtube">YouTube Channels <span class="count">(56)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/youtube/beginner">Beginner Friendly</a></li>
+            <li><a href="/news/youtube/offensive">Offensive Security</a></li>
+            <li><a href="/news/youtube/binary">Binary/RE</a></li>
+            <li><a href="/news/youtube/general">General Security</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/documentation">Documentation <span class="count">(87)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/documentation/mitre">MITRE ATT&CK</a></li>
+            <li><a href="/news/documentation/nist">NIST Frameworks</a></li>
+            <li><a href="/news/documentation/owasp">OWASP Guides</a></li>
+            <li><a href="/news/documentation/cis">CIS Benchmarks</a></li>
+            <li><a href="/news/documentation/rfc">RFC Documents</a></li>
+            <li><a href="/news/documentation/cve">CVE Database</a></li>
+            <li><a href="/news/documentation/exploitdb">Exploit-DB</a></li>
+            <li><a href="/news/documentation/seclists">SecLists</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/news/books">Books & Publications <span class="count">(124)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/news/books/foundational">Foundational Books</a></li>
+            <li><a href="/news/books/offensive">Offensive Security</a></li>
+            <li><a href="/news/books/defensive">Defensive Security</a></li>
+            <li><a href="/news/books/specialized">Specialized Topics</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community -->
+  <div class="section">
+    <input type="checkbox" id="community" class="toggle-checkbox">
+    <label for="community" class="section-header">
+      <div class="section-title">Community</div>
+      <div class="section-desc">Local groups, conferences, forums, and online communities</div>
+      <div class="section-count">342 communities</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Connect with the global security community through local meetups, conferences, online forums,
+        Discord servers, and professional associations.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/community/geographic">Geographic Communities <span class="count">(134)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/community/geographic/2600">2600 Meetings</a></li>
+            <li><a href="/community/geographic/defcon">DEF CON Groups</a></li>
+            <li><a href="/community/geographic/owasp">OWASP Chapters</a></li>
+            <li><a href="/community/geographic/isc2">ISC2 Chapters</a></li>
+            <li><a href="/community/geographic/isaca">ISACA Chapters</a></li>
+            <li><a href="/community/geographic/infragard">InfraGard</a></li>
+            <li><a href="/community/geographic/hackerspaces">Hackerspaces</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/community/online">Online Communities <span class="count">(98)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/community/online/forums">Forums</a></li>
+            <li><a href="/community/online/discord">Discord Servers</a></li>
+            <li><a href="/community/online/slack">Slack Workspaces</a></li>
+            <li><a href="/community/online/reddit">Reddit Communities</a></li>
+            <li><a href="/community/online/irc">IRC Channels</a></li>
+            <li><a href="/community/online/matrix">Matrix Rooms</a></li>
+            <li><a href="/community/online/telegram">Telegram Groups</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/community/conferences">Conferences & Events <span class="count">(67)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/community/conferences/major">Major Conferences</a></li>
+            <li><a href="/community/conferences/bsides">BSides Events</a></li>
+            <li><a href="/community/conferences/regional">Regional Cons</a></li>
+            <li><a href="/community/conferences/specialized">Specialized</a></li>
+            <li><a href="/community/conferences/virtual">Virtual Events</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/community/special">Special Interest Groups <span class="count">(43)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/community/special/women">Women in Cybersecurity</a></li>
+            <li><a href="/community/special/minorities">Minorities in Security</a></li>
+            <li><a href="/community/special/veterans">Veterans in Security</a></li>
+            <li><a href="/community/special/students">Student Groups</a></li>
+            <li><a href="/community/special/lgbtq">LGBTQ+ in Tech</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career Resources -->
+  <div class="section">
+    <input type="checkbox" id="career" class="toggle-checkbox">
+    <label for="career" class="section-header">
+      <div class="section-title">Career Resources</div>
+      <div class="section-desc">Jobs, salaries, interview prep, and professional development</div>
+      <div class="section-count">298 resources</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Everything you need for your security career: job boards, salary data, interview preparation,
+        resume help, mentorship programs, and freelancing resources.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/career/jobs">Job Boards <span class="count">(34)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/jobs/general">General Job Sites</a></li>
+            <li><a href="/career/jobs/security">Security-Specific</a></li>
+            <li><a href="/career/jobs/clearance">Clearance Required</a></li>
+            <li><a href="/career/jobs/remote">Remote Positions</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/career/preparation">Resume & Interview <span class="count">(67)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/preparation/resume">Resume Templates</a></li>
+            <li><a href="/career/preparation/portfolio">Portfolio Examples</a></li>
+            <li><a href="/career/preparation/linkedin">LinkedIn Optimization</a></li>
+            <li><a href="/career/preparation/cover">Cover Letters</a></li>
+            <li><a href="/career/preparation/interview">Interview Questions</a></li>
+            <li><a href="/career/preparation/technical">Technical Challenges</a></li>
+            <li><a href="/career/preparation/behavioral">Behavioral Questions</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/career/development">Career Development <span class="count">(78)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/development/roadmaps">Career Roadmaps</a></li>
+            <li><a href="/career/development/skills">Skill Gap Analysis</a></li>
+            <li><a href="/career/development/mentorship">Mentorship Programs</a></li>
+            <li><a href="/career/development/performance">Performance Reviews</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/career/freelancing">Freelancing & Consulting <span class="count">(45)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/freelancing/bugbounty">Bug Bounty</a></li>
+            <li><a href="/career/freelancing/consulting">Consulting Guides</a></li>
+            <li><a href="/career/freelancing/rates">Rate Setting</a></li>
+            <li><a href="/career/freelancing/clients">Client Management</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/career/salary">Salary Intelligence <span class="count">(56)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/salary/data">Salary Data by Role</a></li>
+            <li><a href="/career/salary/surveys">Compensation Surveys</a></li>
+            <li><a href="/career/salary/negotiation">Negotiation Strategies</a></li>
+            <li><a href="/career/salary/calculators">Total Comp Calculators</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/career/companies">Company Profiles <span class="count">(18)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/career/companies/teams">Security Team Structures</a></li>
+            <li><a href="/career/companies/dayinlife">Day in the Life</a></li>
+            <li><a href="/career/companies/interviews">Interview Processes</a></li>
+            <li><a href="/career/companies/culture">Culture & Work-Life</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standards & Governance -->
+  <div class="section">
+    <input type="checkbox" id="standards" class="toggle-checkbox">
+    <label for="standards" class="section-header">
+      <div class="section-title">Standards & Governance</div>
+      <div class="section-desc">Frameworks, compliance, methodologies, and best practices</div>
+      <div class="section-count">220 documents</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Industry standards, compliance frameworks, security methodologies, governance documentation,
+        and architectural patterns essential for security professionals.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/standards/frameworks">Standards & Frameworks <span class="count">(48)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/standards/frameworks/mitre">MITRE ATT&CK</a></li>
+            <li><a href="/standards/frameworks/nist">NIST Framework</a></li>
+            <li><a href="/standards/frameworks/iso27001">ISO 27001</a></li>
+            <li><a href="/standards/frameworks/cis">CIS Controls</a></li>
+            <li><a href="/standards/frameworks/owasp">OWASP Standards</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/standards/compliance">Compliance & Regulations <span class="count">(72)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/standards/compliance/gdpr">GDPR</a></li>
+            <li><a href="/standards/compliance/ccpa">CCPA/CPRA</a></li>
+            <li><a href="/standards/compliance/hipaa">HIPAA</a></li>
+            <li><a href="/standards/compliance/pci">PCI DSS</a></li>
+            <li><a href="/standards/compliance/sox">SOX</a></li>
+            <li><a href="/standards/compliance/fisma">FISMA</a></li>
+            <li><a href="/standards/compliance/fedramp">FedRAMP</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/standards/governance">Governance & Risk <span class="count">(38)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/standards/governance/risk">Risk Management</a></li>
+            <li><a href="/standards/governance/audit">Audit & Assurance</a></li>
+            <li><a href="/standards/governance/policy">Policy Development</a></li>
+            <li><a href="/standards/governance/vendor">Vendor Management</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/standards/architecture">Security Architecture <span class="count">(62)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/standards/architecture/design">Secure Design Patterns</a></li>
+            <li><a href="/standards/architecture/threat">Threat Modeling</a></li>
+            <li><a href="/standards/architecture/reference">Reference Architectures</a></li>
+            <li><a href="/standards/architecture/zerotrust">Zero Trust Models</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Events Calendar -->
+  <div class="section">
+    <input type="checkbox" id="events" class="toggle-checkbox">
+    <label for="events" class="section-header">
+      <div class="section-title">Upcoming Events</div>
+      <div class="section-desc">Conferences, CFPs, competitions, and training deadlines</div>
+      <div class="section-count">87 events</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Track important dates for conferences, call for papers deadlines, CTF competitions, training courses,
+        and local meetups. Never miss another submission deadline or early-bird discount.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/events/conferences">Conferences <span class="count">(34)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/events/conferences/major">Major Conferences</a></li>
+            <li><a href="/events/conferences/bsides">BSides Events</a></li>
+            <li><a href="/events/conferences/regional">Regional Cons</a></li>
+            <li><a href="/events/conferences/virtual">Virtual Events</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/events/cfp">Call for Papers <span class="count">(21)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/events/cfp/upcoming">Upcoming Deadlines</a></li>
+            <li><a href="/events/cfp/open">Currently Open</a></li>
+            <li><a href="/events/cfp/recurring">Annual CFPs</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/events/competitions">Competitions <span class="count">(18)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/events/competitions/ctf">CTF Events</a></li>
+            <li><a href="/events/competitions/bugbounty">Bug Bounty Contests</a></li>
+            <li><a href="/events/competitions/hackathons">Hackathons</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/events/training">Training & Courses <span class="count">(14)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/events/training/sans">SANS Courses</a></li>
+            <li><a href="/events/training/offensive">Offensive Security</a></li>
+            <li><a href="/events/training/bootcamps">Bootcamps</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local Groups Map -->
+  <div class="section">
+    <input type="checkbox" id="localgroups" class="toggle-checkbox">
+    <label for="localgroups" class="section-header">
+      <div class="section-title">Local Groups</div>
+      <div class="section-desc">Find cybersecurity meetups and groups near you</div>
+      <div class="section-count">412 groups worldwide</div>
+      <div class="toggle-icon"></div>
+    </label>
+    <div class="section-content">
+      <div class="section-intro">
+        Discover local cybersecurity communities, 2600 meetings, DEF CON groups, OWASP chapters, and other
+        meetups in your area. Includes meeting times, locations, and contact information.
+      </div>
+      <div class="category-grid">
+        <div class="category">
+          <a href="/groups/2600">2600 Meetings <span class="count">(89)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/groups/2600/north-america">North America</a></li>
+            <li><a href="/groups/2600/europe">Europe</a></li>
+            <li><a href="/groups/2600/asia">Asia Pacific</a></li>
+            <li><a href="/groups/2600/other">Other Regions</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/groups/defcon">DEF CON Groups <span class="count">(134)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/groups/defcon/usa">United States</a></li>
+            <li><a href="/groups/defcon/international">International</a></li>
+            <li><a href="/groups/defcon/virtual">Virtual Groups</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/groups/owasp">OWASP Chapters <span class="count">(78)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/groups/owasp/active">Active Chapters</a></li>
+            <li><a href="/groups/owasp/student">Student Chapters</a></li>
+            <li><a href="/groups/owasp/virtual">Virtual Chapters</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/groups/professional">Professional Orgs <span class="count">(67)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/groups/professional/isc2">ISC2 Chapters</a></li>
+            <li><a href="/groups/professional/isaca">ISACA Chapters</a></li>
+            <li><a href="/groups/professional/infragard">InfraGard</a></li>
+          </ul>
+        </div>
+        <div class="category">
+          <a href="/groups/hackerspaces">Hackerspaces <span class="count">(44)</span></a>
+          <ul class="subcategory-list">
+            <li><a href="/groups/hackerspaces/active">Active Spaces</a></li>
+            <li><a href="/groups/hackerspaces/starting">Starting Up</a></li>
+            <li><a href="/groups/hackerspaces/directory">Full Directory</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-stats">
+  <pre>3,847 resources | * = paid | <a href="https://github.com/dcbokonon/secref" style="color: #666;">contribute</a></pre>
+</div>
+</BaseLayout>

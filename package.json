@@ -1,0 +1,40 @@
+{
+  "name": "secref",
+  "version": "1.0.0",
+  "description": "Community-driven cybersecurity resource directory",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcbokonon/secref.git"
+  },
+  "keywords": [
+    "cybersecurity",
+    "security",
+    "infosec",
+    "resources",
+    "tools"
+  ],
+  "author": "dcbokonon",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dcbokonon/secref/issues"
+  },
+  "homepage": "https://github.com/dcbokonon/secref#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@types/node": "^24.0.4",
+    "astro": "^5.10.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  }
+}

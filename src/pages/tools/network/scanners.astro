@@ -1,0 +1,557 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Port Scanners">
+<style>
+  .breadcrumb {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .breadcrumb a {
+    color: #0f0;
+  }
+  .page-header {
+    margin-bottom: 30px;
+  }
+  .page-title {
+    color: #0ff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .page-desc {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .tools-grid {
+    display: grid;
+    gap: 30px;
+  }
+  .tool {
+    border: 1px solid #333;
+    background: #0a0a0a;
+    padding: 20px;
+  }
+  .tool-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tool-name {
+    color: #0f0;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .tool-name:hover {
+    color: #0ff;
+  }
+  .tool-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+  .badge-free {
+    color: #0f0;
+    border-color: #0f0;
+  }
+  .badge-paid {
+    color: #f00;
+    border-color: #f00;
+  }
+  .badge-freemium {
+    color: #ff0;
+    border-color: #ff0;
+  }
+  .badge-platform {
+    color: #0ff;
+    border-color: #0ff;
+  }
+  .tool-desc {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  .tool-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    font-size: 12px;
+  }
+  .tool-meta-item {
+    display: flex;
+    gap: 10px;
+  }
+  .tool-meta-label {
+    color: #666;
+    min-width: 80px;
+  }
+  .tool-meta-value {
+    color: #999;
+  }
+  .tool-meta-value a {
+    color: #0ff;
+  }
+  .tool-features {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+  }
+  .tool-features-title {
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .tool-features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .feature-tag {
+    font-size: 11px;
+    color: #666;
+    border: 1px solid #333;
+    padding: 2px 8px;
+  }
+  .filters {
+    border: 1px solid #333;
+    background: #0a0a0a;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  .filter-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-label {
+    color: #666;
+    font-size: 12px;
+  }
+  .filter-options {
+    display: flex;
+    gap: 10px;
+  }
+  .filter-option {
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid #333;
+    color: #999;
+    cursor: pointer;
+    background: transparent;
+  }
+  .filter-option:hover {
+    border-color: #0f0;
+    color: #0f0;
+  }
+  .filter-option.active {
+    background: #0f0;
+    color: #000;
+    border-color: #0f0;
+  }
+</style>
+
+<div class="breadcrumb">
+  <a href="/">home</a> / <a href="/tools">tools</a> / <a href="/tools/network">network security</a> / port scanners
+</div>
+
+<div class="page-header">
+  <h1 class="page-title">Port Scanners</h1>
+  <p class="page-desc">
+    Tools for discovering open ports and services on network hosts. Essential for network reconnaissance,
+    security assessments, and system administration. Includes TCP/UDP scanners, service fingerprinting,
+    and OS detection capabilities.
+  </p>
+</div>
+
+<div class="filters">
+  <div class="filter-group">
+    <span class="filter-label">FILTER:</span>
+    <div class="filter-options">
+      <button class="filter-option active">all</button>
+      <button class="filter-option">free</button>
+      <button class="filter-option">paid</button>
+      <button class="filter-option">cli</button>
+      <button class="filter-option">gui</button>
+    </div>
+  </div>
+</div>
+
+<div class="tools-grid">
+  <!-- Nmap -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://nmap.org" class="tool-name">Nmap</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">cross-platform</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      The industry standard for network discovery and security auditing. Nmap ("Network Mapper") is a free 
+      and open source utility for network exploration, port scanning, and security auditing. Features include 
+      host discovery, port scanning, version detection, OS fingerprinting, and scriptable interaction with targets.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Website:</span>
+        <span class="tool-meta-value"><a href="https://nmap.org">nmap.org</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Source:</span>
+        <span class="tool-meta-value"><a href="https://github.com/nmap/nmap">GitHub</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">GPL v2</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI, GUI (Zenmap)</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">tcp scanning</span>
+        <span class="feature-tag">udp scanning</span>
+        <span class="feature-tag">os detection</span>
+        <span class="feature-tag">service detection</span>
+        <span class="feature-tag">nse scripts</span>
+        <span class="feature-tag">ipv6 support</span>
+        <span class="feature-tag">timing controls</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masscan -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://github.com/robertdavidgraham/masscan" class="tool-name">Masscan</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">linux</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      The fastest Internet port scanner, capable of scanning the entire Internet in under 6 minutes. 
+      Masscan produces results similar to nmap but operates asynchronously for massive speed improvements.
+      Ideal for large-scale scanning operations and internet-wide research.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Source:</span>
+        <span class="tool-meta-value"><a href="https://github.com/robertdavidgraham/masscan">GitHub</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">AGPL v3</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI only</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Speed:</span>
+        <span class="tool-meta-value">10 million packets/sec</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">asynchronous</span>
+        <span class="feature-tag">syn scanning</span>
+        <span class="feature-tag">banner grabbing</span>
+        <span class="feature-tag">custom packets</span>
+        <span class="feature-tag">rate limiting</span>
+        <span class="feature-tag">exclude lists</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zmap -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://zmap.io" class="tool-name">Zmap</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">linux</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      Open-source network scanner that enables researchers to perform Internet-wide network studies. 
+      Capable of scanning the entire public IPv4 address space in under 45 minutes from a single machine.
+      Designed for horizontal scans across many hosts rather than vertical scans of individual hosts.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Website:</span>
+        <span class="tool-meta-value"><a href="https://zmap.io">zmap.io</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Source:</span>
+        <span class="tool-meta-value"><a href="https://github.com/zmap/zmap">GitHub</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">Apache 2.0</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI only</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">stateless scanning</span>
+        <span class="feature-tag">ipv4 coverage</span>
+        <span class="feature-tag">modular architecture</span>
+        <span class="feature-tag">output modules</span>
+        <span class="feature-tag">probe modules</span>
+        <span class="feature-tag">blacklisting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RustScan -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://github.com/RustScan/RustScan" class="tool-name">RustScan</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">cross-platform</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      The modern port scanner. Fast, smart, effective. RustScan is a modern take on port scanning, 
+      built for speed with adaptive learning algorithms. It integrates with nmap for service scanning
+      and can scan all 65k ports in under 3 seconds.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Source:</span>
+        <span class="tool-meta-value"><a href="https://github.com/RustScan/RustScan">GitHub</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">GPL v3</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI only</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Language:</span>
+        <span class="tool-meta-value">Rust</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">adaptive learning</span>
+        <span class="feature-tag">nmap integration</span>
+        <span class="feature-tag">custom scripts</span>
+        <span class="feature-tag">docker support</span>
+        <span class="feature-tag">cidr notation</span>
+        <span class="feature-tag">batch scanning</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unicornscan -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://www.unicornscan.org" class="tool-name">Unicornscan</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">linux</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      Asynchronous stateless TCP and UDP port scanner designed for fast and accurate network probing.
+      Features include TCP banner grabbing, UDP protocol specific probes, and active/passive remote OS
+      and application identification.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Website:</span>
+        <span class="tool-meta-value"><a href="https://www.unicornscan.org">unicornscan.org</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">GPL v2</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI only</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Architecture:</span>
+        <span class="tool-meta-value">Distributed</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">asynchronous</span>
+        <span class="feature-tag">tcp/udp</span>
+        <span class="feature-tag">pcap support</span>
+        <span class="feature-tag">os fingerprinting</span>
+        <span class="feature-tag">distributed mode</span>
+        <span class="feature-tag">custom payloads</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Angry IP Scanner -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="https://angryip.org" class="tool-name">Angry IP Scanner</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">cross-platform</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      Fast and friendly network scanner with a clean GUI interface. Designed for simplicity and ease of use,
+      it can scan IP addresses and ports across networks. Popular among system administrators for quick
+      network inventory and monitoring tasks.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Website:</span>
+        <span class="tool-meta-value"><a href="https://angryip.org">angryip.org</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Source:</span>
+        <span class="tool-meta-value"><a href="https://github.com/angryip/ipscan">GitHub</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">GPL v2</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">GUI only</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">gui interface</span>
+        <span class="feature-tag">ping sweep</span>
+        <span class="feature-tag">hostname resolver</span>
+        <span class="feature-tag">mac address</span>
+        <span class="feature-tag">netbios info</span>
+        <span class="feature-tag">export results</span>
+        <span class="feature-tag">plugins</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- hping3 -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="http://www.hping.org" class="tool-name">hping3</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">linux</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      Command-line oriented TCP/IP packet assembler and analyzer. While primarily a packet crafting tool,
+      hping3 includes port scanning capabilities with fine-grained control over packet construction.
+      Excellent for firewall testing and advanced port scanning techniques.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Website:</span>
+        <span class="tool-meta-value"><a href="http://www.hping.org">hping.org</a></span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">License:</span>
+        <span class="tool-meta-value">GPL v2</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">CLI only</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Protocol:</span>
+        <span class="tool-meta-value">TCP/UDP/ICMP/RAW-IP</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">packet crafting</span>
+        <span class="feature-tag">firewall testing</span>
+        <span class="feature-tag">traceroute</span>
+        <span class="feature-tag">idle scanning</span>
+        <span class="feature-tag">tcl scripting</span>
+        <span class="feature-tag">fragmentation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SuperScan -->
+  <div class="tool">
+    <div class="tool-header">
+      <a href="#" class="tool-name">SuperScan 4</a>
+      <div class="tool-badges">
+        <span class="badge badge-free">free</span>
+        <span class="badge badge-platform">windows</span>
+      </div>
+    </div>
+    <p class="tool-desc">
+      Windows-only port scanner developed by Foundstone (McAfee). Features a user-friendly interface
+      with built-in tools for ping sweeps, port scanning, and Windows enumeration. Popular among
+      Windows administrators despite being discontinued.
+    </p>
+    <div class="tool-meta">
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Developer:</span>
+        <span class="tool-meta-value">Foundstone/McAfee</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Status:</span>
+        <span class="tool-meta-value">Discontinued</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Interface:</span>
+        <span class="tool-meta-value">GUI only</span>
+      </div>
+      <div class="tool-meta-item">
+        <span class="tool-meta-label">Platform:</span>
+        <span class="tool-meta-value">Windows XP-10</span>
+      </div>
+    </div>
+    <div class="tool-features">
+      <div class="tool-features-title">KEY FEATURES</div>
+      <div class="tool-features-list">
+        <span class="feature-tag">windows enum</span>
+        <span class="feature-tag">netbios scan</span>
+        <span class="feature-tag">banner grabbing</span>
+        <span class="feature-tag">udp scanning</span>
+        <span class="feature-tag">host discovery</span>
+        <span class="feature-tag">whois lookup</span>
+      </div>
+    </div>
+  </div>
+</div>
+</BaseLayout>

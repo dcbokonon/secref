@@ -1,0 +1,59 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    @apply bg-gray-950 text-gray-100;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  /* Monospace for code/terminal elements only */
+  pre, code, .mono {
+    font-family: 'Fira Code', 'JetBrains Mono', Consolas, Monaco, monospace;
+  }
+
+  /* Link styles - no underline by default */
+  a {
+    @apply transition-colors;
+  }
+
+  /* Selection colors */
+  ::selection {
+    @apply bg-green-500 text-black;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 hover:bg-gray-600;
+  }
+
+  /* Code blocks */
+  pre {
+    @apply bg-gray-900 p-4 overflow-x-auto;
+  }
+
+  code {
+    @apply text-green-400 bg-gray-900 px-1 rounded;
+  }
+
+  pre code {
+    @apply text-gray-100 bg-transparent px-0;
+  }
+}
+
+@layer components {
+  /* Remove all the fancy styling */
+}

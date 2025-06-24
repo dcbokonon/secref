@@ -134,3 +134,27 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Claude/AI related files
+CLAUDE.md
+claude.md
+.claude/
+*.claude
+.cursorrules
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Astro build
+dist/
+.astro/
+
+# Local env files
+.env*.local

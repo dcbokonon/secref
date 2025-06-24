@@ -1,0 +1,88 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Security resources" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} - SecRef</title>
+    <style>
+      body {
+        background: #000;
+        color: #0f0;
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+      }
+      a {
+        color: #0ff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      pre {
+        margin: 0;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .dim {
+        color: #080;
+      }
+      .bright {
+        color: #0f0;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <pre>
+  _____ ______ _____ _____  ______ ______ 
+ / ____|  ____/ ____|  __ \|  ____|  ____|
+| (___ | |__ | |    | |__) | |__  | |__   
+ \___ \|  __|| |    |  _  /|  __| |  __|  
+ ____) | |___| |____| | \ \| |____| |     
+|_____/|______\_____|_|  \_\______|_|     
+                                          
+Security Reference // No BS
+==================================================
+      </pre>
+      
+      <nav style="margin: 20px 0;">
+        [<a href="/">home</a>]
+        [<a href="/tools">tools</a>]
+        [<a href="/learn">learn</a>]
+        [<a href="/events">events</a>]
+        [<a href="/groups">groups</a>]
+      </nav>
+      
+      <hr style="border: none; border-top: 1px solid #0f0; margin: 20px 0;">
+      
+      <main>
+        <slot />
+      </main>
+      
+      <hr style="border: none; border-top: 1px solid #0f0; margin: 40px 0 20px;">
+      
+      <footer>
+        <pre class="dim">
+EOF
+No cookies. No tracking. No JS (except search).
+        </pre>
+      </footer>
+    </div>
+  </body>
+</html>
