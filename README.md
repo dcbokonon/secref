@@ -1,2 +1,2 @@
 # secref
-Security resources without the bullshit
+Community-driven cybersecurity resource directory
