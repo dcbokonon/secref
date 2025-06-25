@@ -49,27 +49,10 @@ const { title, description = "Security resources" } = Astro.props;
   </head>
   <body>
     <div class="container">
-      <pre>
-  _____ ______ _____ _____  ______ ______ 
- / ____|  ____/ ____|  __ \|  ____|  ____|
-| (___ | |__ | |    | |__) | |__  | |__   
- \___ \|  __|| |    |  _  /|  __| |  __|  
- ____) | |___| |____| | \ \| |____| |     
-|_____/|______\_____|_|  \_\______|_|     
-                                          
-Security Reference // No BS
-==================================================
-      </pre>
-      
-      <nav style="margin: 20px 0;">
-        [<a href="/">home</a>]
-        [<a href="/tools">tools</a>]
-        [<a href="/learn">learn</a>]
-        [<a href="/events">events</a>]
-        [<a href="/groups">groups</a>]
-      </nav>
-      
-      <hr style="border: none; border-top: 1px solid #0f0; margin: 20px 0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #333; margin-bottom: 20px;">
+        <div style="font-size: 16px; font-weight: bold; color: #0f0;">SECREF.ORG</div>
+        <div style="font-size: 12px; color: #666;">[/] Search &nbsp;&nbsp; [Tab] Navigate</div>
+      </div>
       
       <main>
         <slot />
@@ -80,7 +63,7 @@ Security Reference // No BS
       <footer>
         <pre class="dim">
 EOF
-No cookies. No tracking. No JS (except search).
+No cookies. No tracking. No BS.
         </pre>
       </footer>
     </div>

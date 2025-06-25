@@ -1,71 +1,230 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Import all our organized JSON data
+const toolsFiles = [
+  'reconnaissance', 'vulnerability-assessment', 'exploitation', 
+  'defense-monitoring', 'forensics-ir', 'cryptography', 
+  'mobile-security', 'cloud-security', 'hardware-physical', 
+  'development-security'
+];
+
+const learningFiles = [
+  'certifications', 'training-platforms', 'books-publications', 'academic-programs'
+];
+
+const communityFiles = [
+  'physical-communities', 'online-communities', 'conferences-events'
+];
+
+const careerFiles = [
+  'job-search', 'interview-prep', 'salary-compensation'
+];
+
+const practiceFiles = [
+  'ctf', 'vulnerable-apps', 'bug-bounty'
+];
+
+const specializedFiles = [
+  'cloud-security', 'iot-ics', 'mobile-security', 'automotive', 'blockchain'
+];
+
+const referencesFiles = [
+  'standards-frameworks', 'tool-documentation', 'research-whitepapers'
+];
+
+const newsFiles = [
+  'news-sites', 'podcasts-videos', 'social-media'
+];
+
+// Helper function to extract top items from nested JSON structure
+function getTopItems(jsonData, count = 4) {
+  const items = [];
+  
+  function extractItems(obj) {
+    if (obj.items && Array.isArray(obj.items)) {
+      obj.items.forEach(item => {
+        if (item.name) {
+          const notation = item.type === 'paid' ? '*' : '';
+          items.push(item.name + notation);
+        }
+      });
+    }
+    if (obj.subcategories && Array.isArray(obj.subcategories)) {
+      obj.subcategories.forEach(sub => extractItems(sub));
+    }
+    if (obj.categories && Array.isArray(obj.categories)) {
+      obj.categories.forEach(cat => extractItems(cat));
+    }
+  }
+  
+  extractItems(jsonData);
+  return items.slice(0, count);
+}
+
+// Load full JSON data including all categories and items
+const toolsData = await Promise.all(
+  toolsFiles.map(async (file) => {
+    const data = await import(`../data/tools/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const learningData = await Promise.all(
+  learningFiles.map(async (file) => {
+    const data = await import(`../data/learning/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const communityData = await Promise.all(
+  communityFiles.map(async (file) => {
+    const data = await import(`../data/communities/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const careerData = await Promise.all(
+  careerFiles.map(async (file) => {
+    const data = await import(`../data/career/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const practiceData = await Promise.all(
+  practiceFiles.map(async (file) => {
+    const data = await import(`../data/practice/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const specializedData = await Promise.all(
+  specializedFiles.map(async (file) => {
+    const data = await import(`../data/specialized-domains/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const referencesData = await Promise.all(
+  referencesFiles.map(async (file) => {
+    const data = await import(`../data/references/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+const newsData = await Promise.all(
+  newsFiles.map(async (file) => {
+    const data = await import(`../data/news/${file}.json`);
+    return { file, ...data.metadata, fullData: data };
+  })
+);
+
+// Calculate totals
+const totalTools = toolsData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalLearning = learningData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalCommunity = communityData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalCareer = careerData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalPractice = practiceData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalSpecialized = specializedData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalReferences = referencesData.reduce((sum, item) => sum + item.totalItems, 0);
+const totalNews = newsData.reduce((sum, item) => sum + item.totalItems, 0);
+
+// Reorganize tools by category with full data
+const toolsByPhase = {
+  reconnaissance: toolsData.find(t => t.file === 'reconnaissance'),
+  vulnerability: toolsData.find(t => t.file === 'vulnerability-assessment'),
+  exploitation: toolsData.find(t => t.file === 'exploitation'),
+  defense: toolsData.find(t => t.file === 'defense-monitoring'),
+  forensics: toolsData.find(t => t.file === 'forensics-ir'),
+  crypto: toolsData.find(t => t.file === 'cryptography'),
+  mobile: toolsData.find(t => t.file === 'mobile-security'),
+  cloud: toolsData.find(t => t.file === 'cloud-security'),
+  hardware: toolsData.find(t => t.file === 'hardware-physical'),
+  development: toolsData.find(t => t.file === 'development-security')
+};
+
+// Additional tool categories we need but don't have files for yet
+const webSecurityData = { totalItems: 124, topTools: ['Burp Suite', 'OWASP ZAP', 'SQLMap', 'Nikto'] };
+const networkTestingData = { totalItems: 89, topTools: ['Nmap', 'Wireshark', 'tcpdump', 'Masscan'] };
+const siemData = { totalItems: 43, topTools: ['Splunk*', 'ELK Stack', 'QRadar*', 'Graylog'] };
+const networkMonitoringData = { totalItems: 67, topTools: ['Snort', 'Suricata', 'Zeek', 'ntopng'] };
+const endpointData = { totalItems: 52, topTools: ['CrowdStrike*', 'Sysmon', 'osquery', 'Carbon Black*'] };
+const threatIntelData = { totalItems: 38, topTools: ['MISP', 'OpenCTI', 'ThreatConnect*', 'AlienVault'] };
+const incidentResponseData = { totalItems: 45, topTools: ['TheHive', 'Velociraptor', 'GRR', 'KAPE'] };
+const malwareAnalysisData = { totalItems: 73, topTools: ['Cuckoo', 'YARA', 'IDA Pro*', 'Ghidra'] };
+const logAnalysisData = { totalItems: 41, topTools: ['Splunk', 'ELK', 'Graylog', 'LogParser'] };
+const icsScadaData = { totalItems: 31, topTools: ['Shodan', 'PLCScan', 'S7comm', 'ISF'] };
+const wirelessData = { totalItems: 64, topTools: ['Aircrack-ng', 'Kismet', 'WiFite', 'Reaver'] };
+const osintData = { totalItems: 89, topTools: ['Shodan', 'theHarvester', 'SpiderFoot', 'Maltego*'] };
+
+// Placeholder data for new sections
+const complianceData = [
+  { file: 'pci-dss', title: 'PCI-DSS', totalItems: 24, topItems: ['PCI DSS v4.0 Requirements', 'SAQ Templates', 'Scoping Guidance', 'Compensating Controls'] },
+  { file: 'hipaa', title: 'HIPAA', totalItems: 18, topItems: ['Security Rule', 'Privacy Rule', 'Breach Notification', 'Risk Assessment'] },
+  { file: 'gdpr', title: 'GDPR', totalItems: 31, topItems: ['Data Protection Principles', 'DPIA Templates', 'Privacy Notices', 'Breach Response'] },
+  { file: 'iso27001', title: 'ISO 27001', totalItems: 42, topItems: ['Control Objectives', 'Risk Register', 'ISMS Documentation', 'Audit Checklists'] },
+  { file: 'soc2', title: 'SOC 2', totalItems: 27, topItems: ['Trust Service Criteria', 'Control Activities', 'Evidence Collection', 'Report Types'] }
+];
+const totalCompliance = complianceData.reduce((sum, item) => sum + item.totalItems, 0);
+
+const vulnIntelData = [
+  { file: 'cve-databases', title: 'CVE Databases', totalItems: 15, topItems: ['NVD', 'MITRE CVE', 'CVE Details', 'VulDB'] },
+  { file: 'exploit-databases', title: 'Exploit Databases', totalItems: 12, topItems: ['Exploit-DB', 'Metasploit DB', '0day.today*', 'Packet Storm'] },
+  { file: 'vulnerability-feeds', title: 'Vulnerability Feeds', totalItems: 18, topItems: ['US-CERT', 'Full Disclosure', 'Vulners API', 'SecurityFocus'] },
+  { file: 'bug-bounty-platforms', title: 'Bug Bounty Platforms', totalItems: 11, topItems: ['HackerOne', 'Bugcrowd', 'Synack*', 'YesWeHack'] }
+];
+const totalVulnIntel = vulnIntelData.reduce((sum, item) => sum + item.totalItems, 0);
+
+const distrosData = [
+  { file: 'offensive', title: 'Offensive Security', totalItems: 8, topItems: ['Kali Linux', 'Parrot Security', 'BlackArch', 'Pentoo'] },
+  { file: 'defensive', title: 'Defensive Security', totalItems: 7, topItems: ['Security Onion', 'SIFT Workstation', 'REMnux', 'CAINE'] },
+  { file: 'privacy', title: 'Privacy Focused', totalItems: 6, topItems: ['Tails', 'Whonix', 'Qubes OS', 'Kodachi'] }
+];
+const totalDistros = distrosData.reduce((sum, item) => sum + item.totalItems, 0);
 ---
 
 <BaseLayout title="Home">
 <style>
-  .hero {
-    text-align: center;
-    margin: 40px 0 60px 0;
-  }
-  .tagline {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
   .directory {
     max-width: 1000px;
-    margin: 60px auto;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.4;
   }
   .section {
-    margin-bottom: 30px;
-    border: 1px solid #333;
-    background: #0a0a0a;
+    margin-bottom: 8px;
   }
   .section-header {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
     cursor: pointer;
     user-select: none;
-    border-bottom: 1px solid #333;
+    padding: 4px 0;
   }
-  .section-header:hover {
-    background: #111;
+  .section-header:hover .section-title {
+    text-decoration: underline;
+  }
+  .section-icon {
+    font-family: monospace;
+    font-size: 12px;
+    margin-right: 8px;
+    width: 12px;
+    color: #666;
   }
   .section-title {
-    color: #0ff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
     flex: 1;
   }
-  .section-desc {
-    color: #666;
-    font-size: 13px;
-    margin-right: 20px;
-  }
   .section-count {
-    color: #666;
-    font-size: 14px;
-    margin-right: 20px;
-  }
-  .toggle-icon {
-    color: #0f0;
-    font-size: 14px;
-    font-family: monospace;
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.6;
   }
   .section-content {
     display: none;
-    padding: 20px;
-  }
-  .section-intro {
-    color: #999;
-    font-size: 13px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #222;
+    padding-left: 20px;
   }
   .toggle-checkbox {
     display: none;
@@ -73,773 +232,553 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .toggle-checkbox:checked ~ .section-content {
     display: block;
   }
-  .toggle-checkbox:checked ~ .section-header .toggle-icon::before {
-    content: "[-]";
+  .toggle-checkbox:checked ~ .section-header .section-icon {
+    content: "▼";
   }
-  .toggle-checkbox:not(:checked) ~ .section-header .toggle-icon::before {
-    content: "[+]";
+  .toggle-checkbox:not(:checked) ~ .section-header .section-icon {
+    content: "▶";
   }
-  .tools-tree {
+  .section-icon::before {
+    content: "▶";
+  }
+  .toggle-checkbox:checked ~ .section-header .section-icon::before {
+    content: "▼";
+  }
+  .subsection-category {
+    margin-bottom: 12px;
+  }
+  .category-title {
     font-size: 13px;
-    line-height: 1.8;
-  }
-  .tool-group {
-    margin-bottom: 30px;
-  }
-  .tool-group-title {
+    font-weight: bold;
     color: #0ff;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #333;
+    margin-bottom: 4px;
+    padding: 4px 0;
   }
-  .tool-category {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  .tool-category-title {
-    color: #0f0;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  .tool-category-title::before {
-    content: "▸ ";
-    color: #666;
-  }
-  .tool-list {
-    margin-left: 20px;
-    list-style: none;
-    padding: 0;
-  }
-  .tool-list li {
+  .subsection {
+    padding: 2px 0 2px 20px;
     position: relative;
-    padding-left: 15px;
-    margin-bottom: 3px;
   }
-  .tool-list li::before {
-    content: "→";
+  .subsection::before {
+    content: '▶';
     position: absolute;
-    left: 0;
+    left: 8px;
     color: #666;
+    font-size: 10px;
   }
-  .tool-list a {
-    color: #999;
+  .subsection-title {
+    font-size: 12px;
+    font-weight: normal;
+    display: inline;
+  }
+  .subsection-desc {
+    display: none;
+  }
+  .subsection-count {
+    font-size: 11px;
+    font-weight: normal;
+    opacity: 0.6;
+    margin-left: 4px;
+  }
+  .subsection-link {
+    display: none;
+  }
+  .subsection-preview {
+    font-size: 11px;
+    color: #888;
+    margin-left: 4px;
+  }
+  
+  /* Professional hierarchy-based color scheme */
+  
+  /* Top level sections - Bright Green */
+  .tools { color: #0f0; }
+  .learning { color: #0f0; }
+  .practice { color: #0f0; }
+  .community { color: #0f0; }
+  .career { color: #0f0; }
+  .references { color: #0f0; }
+  .news { color: #0f0; }
+  .compliance { color: #0f0; }
+  .vulnintel { color: #0f0; }
+  .distros { color: #0f0; }
+  
+  /* Sub-level categories - Cyan */
+  .recon { color: #0ff; }
+  .vuln { color: #0ff; }
+  .exploit { color: #0ff; }
+  .defense { color: #0ff; }
+  .forensics { color: #0ff; }
+  .crypto { color: #0ff; }
+  .mobile { color: #0ff; }
+  .cloud { color: #0ff; }
+  .hardware { color: #0ff; }
+  .dev { color: #0ff; }
+  .specialized { color: #0ff; }
+  
+  /* Counts - Dim Yellow */
+  .section-count { color: #cc0; }
+  .subsection-count { color: #cc0; }
+  
+  /* Links */
+  a.subsection-title { 
+    color: inherit;
     text-decoration: none;
   }
-  .tool-list a:hover {
-    color: #0f0;
+  a.subsection-title:hover {
+    text-decoration: underline;
   }
-  .count {
-    color: #666;
-    font-size: 12px;
-    margin-left: 5px;
-  }
-  .events-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  .event-category {
-    background: #111;
-    border: 1px solid #222;
-    padding: 15px;
-  }
-  .event-category h3 {
-    color: #0ff;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-  }
-  .event-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .event-list li {
-    color: #999;
-    font-size: 12px;
-    margin-bottom: 8px;
-    padding-left: 15px;
-    position: relative;
-  }
-  .event-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #666;
-  }
-  .event-date {
-    color: #0f0;
-    font-weight: bold;
-  }
-  .groups-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  .group-category {
-    margin-bottom: 20px;
-  }
-  .group-category h3 {
-    color: #0ff;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #333;
-  }
-  .group-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .group-list li {
-    margin-bottom: 5px;
-  }
-  .group-list a {
-    color: #999;
-    font-size: 13px;
-  }
-  .group-list a:hover {
-    color: #0f0;
-  }
+  
   .footer-stats {
     text-align: center;
     color: #666;
-    font-size: 12px;
-    margin: 60px 0 40px 0;
-    padding-top: 40px;
+    font-size: 11px;
+    margin: 20px 0;
+    padding-top: 12px;
     border-top: 1px solid #333;
   }
 </style>
 
-<div class="hero">
-  <div class="tagline">The cybersecurity resource directory. No BS.</div>
-</div>
-
 <div class="directory">
-  <!-- Security Tools -->
+  <!-- SECURITY TOOLS -->
   <div class="section">
-    <input type="checkbox" id="tools" class="toggle-checkbox" checked>
-    <label for="tools" class="section-header">
-      <div class="section-title">Security Tools</div>
-      <div class="section-desc">Software, scripts, and utilities</div>
-      <div class="section-count">892 tools</div>
-      <div class="toggle-icon"></div>
+    <input type="checkbox" id="security-tools" class="toggle-checkbox" />
+    <label for="security-tools" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title tools">SECURITY TOOLS</div>
+      <div class="section-count">({totalTools})</div>
     </label>
     <div class="section-content">
-      <div class="section-intro">
-        Free and commercial security tools organized by purpose. Each tool includes description, 
-        download links, documentation, and whether it's free or paid.
+      <!-- Assessment & Testing -->
+      <div class="subsection-category">
+        <div class="category-title">▼ Assessment & Testing</div>
+        
+        <div class="subsection">
+          <a href="/tools/reconnaissance" class="subsection-title recon">
+            Reconnaissance
+          </a>
+          <span class="subsection-count">({toolsByPhase.reconnaissance.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.reconnaissance.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/vulnerability-assessment" class="subsection-title vuln">
+            Vulnerability Scanners
+          </a>
+          <span class="subsection-count">({toolsByPhase.vulnerability.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.vulnerability.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/web-security" class="subsection-title">
+            Web Application Testing
+          </a>
+          <span class="subsection-count">({webSecurityData.totalItems})</span>
+          <span class="subsection-preview">→ {webSecurityData.topTools.join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/network-testing" class="subsection-title">
+            Network Testing
+          </a>
+          <span class="subsection-count">({networkTestingData.totalItems})</span>
+          <span class="subsection-preview">→ {networkTestingData.topTools.join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/exploitation" class="subsection-title exploit">
+            Penetration Testing
+          </a>
+          <span class="subsection-count">({toolsByPhase.exploitation.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.exploitation.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/osint" class="subsection-title">
+            OSINT Tools
+          </a>
+          <span class="subsection-count">({osintData.totalItems})</span>
+          <span class="subsection-preview">→ {osintData.topTools.join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/api-security" class="subsection-title">
+            API Security Testing
+          </a>
+          <span class="subsection-count">(56)</span>
+          <span class="subsection-preview">→ Postman, Insomnia, OWASP API Top 10, Burp API Scanner...</span>
+        </div>
       </div>
       
-      <div class="tools-tree">
-        <!-- Reconnaissance & Information Gathering -->
-        <div class="tool-group">
-          <div class="tool-group-title">Reconnaissance & Information Gathering</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Network Discovery</div>
-            <ul class="tool-list">
-              <li><a href="/tools/recon/port-scanners">Port Scanners <span class="count">(12)</span></a></li>
-              <li><a href="/tools/recon/host-discovery">Host Discovery <span class="count">(8)</span></a></li>
-              <li><a href="/tools/recon/service-enum">Service Enumeration <span class="count">(15)</span></a></li>
-              <li><a href="/tools/recon/os-fingerprint">OS Fingerprinting <span class="count">(7)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">OSINT (Open Source Intelligence)</div>
-            <ul class="tool-list">
-              <li><a href="/tools/osint/search-engines">Search Engines & Dorking <span class="count">(14)</span></a></li>
-              <li><a href="/tools/osint/social-media">Social Media Analysis <span class="count">(22)</span></a></li>
-              <li><a href="/tools/osint/people-search">People & Identity <span class="count">(18)</span></a></li>
-              <li><a href="/tools/osint/domain-research">Domain & DNS Intel <span class="count">(16)</span></a></li>
-              <li><a href="/tools/osint/metadata">Metadata Analysis <span class="count">(9)</span></a></li>
-              <li><a href="/tools/osint/dark-web">Dark Web Monitoring <span class="count">(7)</span></a></li>
-            </ul>
-          </div>
+      <!-- Monitoring & Detection -->
+      <div class="subsection-category">
+        <div class="category-title">▼ Monitoring & Detection</div>
+        
+        <div class="subsection">
+          <a href="/tools/siem" class="subsection-title">
+            SIEM Platforms
+          </a>
+          <span class="subsection-count">({siemData.totalItems})</span>
+          <span class="subsection-preview">→ {siemData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Vulnerability Assessment -->
-        <div class="tool-group">
-          <div class="tool-group-title">Vulnerability Assessment</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Vulnerability Scanners</div>
-            <ul class="tool-list">
-              <li><a href="/tools/vuln/network-scanners">Network Vuln Scanners <span class="count">(11)</span></a></li>
-              <li><a href="/tools/vuln/web-scanners">Web App Scanners <span class="count">(19)</span></a></li>
-              <li><a href="/tools/vuln/database">Database Scanners <span class="count">(8)</span></a></li>
-              <li><a href="/tools/vuln/container">Container Scanners <span class="count">(12)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Configuration & Compliance</div>
-            <ul class="tool-list">
-              <li><a href="/tools/config/auditing">Configuration Auditing <span class="count">(14)</span></a></li>
-              <li><a href="/tools/config/benchmarks">Security Benchmarks <span class="count">(9)</span></a></li>
-              <li><a href="/tools/config/compliance">Compliance Scanning <span class="count">(11)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/network-monitoring" class="subsection-title">
+            Network Monitoring
+          </a>
+          <span class="subsection-count">({networkMonitoringData.totalItems})</span>
+          <span class="subsection-preview">→ {networkMonitoringData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Exploitation & Pentesting -->
-        <div class="tool-group">
-          <div class="tool-group-title">Exploitation & Penetration Testing</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Exploitation Frameworks</div>
-            <ul class="tool-list">
-              <li><a href="/tools/exploit/frameworks">General Frameworks <span class="count">(8)</span></a></li>
-              <li><a href="/tools/exploit/web">Web Exploitation <span class="count">(24)</span></a></li>
-              <li><a href="/tools/exploit/network">Network Exploitation <span class="count">(16)</span></a></li>
-              <li><a href="/tools/exploit/wireless">Wireless Exploitation <span class="count">(13)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Post-Exploitation</div>
-            <ul class="tool-list">
-              <li><a href="/tools/post/c2">Command & Control (C2) <span class="count">(15)</span></a></li>
-              <li><a href="/tools/post/persistence">Persistence Tools <span class="count">(11)</span></a></li>
-              <li><a href="/tools/post/lateral">Lateral Movement <span class="count">(9)</span></a></li>
-              <li><a href="/tools/post/privesc">Privilege Escalation <span class="count">(18)</span></a></li>
-              <li><a href="/tools/post/exfil">Data Exfiltration <span class="count">(7)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Platform-Specific</div>
-            <ul class="tool-list">
-              <li><a href="/tools/platform/windows">Windows Tools <span class="count">(32)</span></a></li>
-              <li><a href="/tools/platform/linux">Linux Tools <span class="count">(28)</span></a></li>
-              <li><a href="/tools/platform/macos">macOS Tools <span class="count">(14)</span></a></li>
-              <li><a href="/tools/platform/mobile">Mobile Tools <span class="count">(26)</span></a></li>
-              <li><a href="/tools/platform/cloud">Cloud Tools <span class="count">(23)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/endpoint-detection" class="subsection-title">
+            Endpoint Detection
+          </a>
+          <span class="subsection-count">({endpointData.totalItems})</span>
+          <span class="subsection-preview">→ {endpointData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Defense & Monitoring -->
-        <div class="tool-group">
-          <div class="tool-group-title">Defense & Monitoring</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Network Defense</div>
-            <ul class="tool-list">
-              <li><a href="/tools/defense/firewalls">Firewalls <span class="count">(16)</span></a></li>
-              <li><a href="/tools/defense/ids-ips">IDS/IPS Systems <span class="count">(14)</span></a></li>
-              <li><a href="/tools/defense/honeypots">Honeypots & Deception <span class="count">(12)</span></a></li>
-              <li><a href="/tools/defense/nac">Network Access Control <span class="count">(8)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Security Monitoring</div>
-            <ul class="tool-list">
-              <li><a href="/tools/monitor/siem">SIEM Platforms <span class="count">(15)</span></a></li>
-              <li><a href="/tools/monitor/log">Log Management <span class="count">(19)</span></a></li>
-              <li><a href="/tools/monitor/netflow">Network Flow Analysis <span class="count">(11)</span></a></li>
-              <li><a href="/tools/monitor/endpoint">Endpoint Detection (EDR) <span class="count">(13)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Threat Intelligence</div>
-            <ul class="tool-list">
-              <li><a href="/tools/threat/platforms">TI Platforms <span class="count">(12)</span></a></li>
-              <li><a href="/tools/threat/feeds">Threat Feeds <span class="count">(18)</span></a></li>
-              <li><a href="/tools/threat/ioc">IOC Management <span class="count">(9)</span></a></li>
-              <li><a href="/tools/threat/hunting">Threat Hunting <span class="count">(11)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/threat-intelligence" class="subsection-title">
+            Threat Intelligence
+          </a>
+          <span class="subsection-count">({threatIntelData.totalItems})</span>
+          <span class="subsection-preview">→ {threatIntelData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Forensics & Incident Response -->
-        <div class="tool-group">
-          <div class="tool-group-title">Forensics & Incident Response</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Digital Forensics</div>
-            <ul class="tool-list">
-              <li><a href="/tools/forensics/disk">Disk Forensics <span class="count">(16)</span></a></li>
-              <li><a href="/tools/forensics/memory">Memory Forensics <span class="count">(12)</span></a></li>
-              <li><a href="/tools/forensics/network">Network Forensics <span class="count">(14)</span></a></li>
-              <li><a href="/tools/forensics/mobile">Mobile Forensics <span class="count">(11)</span></a></li>
-              <li><a href="/tools/forensics/cloud">Cloud Forensics <span class="count">(8)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Incident Response</div>
-            <ul class="tool-list">
-              <li><a href="/tools/ir/collection">Evidence Collection <span class="count">(15)</span></a></li>
-              <li><a href="/tools/ir/analysis">Incident Analysis <span class="count">(13)</span></a></li>
-              <li><a href="/tools/ir/case-mgmt">Case Management <span class="count">(7)</span></a></li>
-              <li><a href="/tools/ir/orchestration">IR Orchestration <span class="count">(9)</span></a></li>
-            </ul>
-          </div>
+      </div>
+      
+      <!-- Response & Analysis -->
+      <div class="subsection-category">
+        <div class="category-title">▼ Response & Analysis</div>
+        
+        <div class="subsection">
+          <a href="/tools/incident-response" class="subsection-title">
+            Incident Response
+          </a>
+          <span class="subsection-count">({incidentResponseData.totalItems})</span>
+          <span class="subsection-preview">→ {incidentResponseData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Cryptography & Privacy -->
-        <div class="tool-group">
-          <div class="tool-group-title">Cryptography & Privacy</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Cryptography Tools</div>
-            <ul class="tool-list">
-              <li><a href="/tools/crypto/encryption">Encryption Tools <span class="count">(18)</span></a></li>
-              <li><a href="/tools/crypto/password">Password Tools <span class="count">(22)</span></a></li>
-              <li><a href="/tools/crypto/certificates">Certificate Management <span class="count">(11)</span></a></li>
-              <li><a href="/tools/crypto/analysis">Crypto Analysis <span class="count">(9)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Privacy & Anonymity</div>
-            <ul class="tool-list">
-              <li><a href="/tools/privacy/anonymity">Anonymity Networks <span class="count">(8)</span></a></li>
-              <li><a href="/tools/privacy/vpn">VPN Tools <span class="count">(14)</span></a></li>
-              <li><a href="/tools/privacy/messaging">Secure Messaging <span class="count">(12)</span></a></li>
-              <li><a href="/tools/privacy/data">Data Sanitization <span class="count">(10)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/forensics-ir" class="subsection-title forensics">
+            Digital Forensics
+          </a>
+          <span class="subsection-count">({toolsByPhase.forensics.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.forensics.fullData).join(', ')}...</span>
         </div>
-
-        <!-- Binary Analysis & Reverse Engineering -->
-        <div class="tool-group">
-          <div class="tool-group-title">Binary Analysis & Reverse Engineering</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Static Analysis</div>
-            <ul class="tool-list">
-              <li><a href="/tools/binary/disassemblers">Disassemblers <span class="count">(11)</span></a></li>
-              <li><a href="/tools/binary/decompilers">Decompilers <span class="count">(9)</span></a></li>
-              <li><a href="/tools/binary/hex">Hex Editors <span class="count">(8)</span></a></li>
-              <li><a href="/tools/binary/pe">PE Analysis <span class="count">(12)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Dynamic Analysis</div>
-            <ul class="tool-list">
-              <li><a href="/tools/binary/debuggers">Debuggers <span class="count">(14)</span></a></li>
-              <li><a href="/tools/binary/sandboxes">Malware Sandboxes <span class="count">(10)</span></a></li>
-              <li><a href="/tools/binary/behavior">Behavior Analysis <span class="count">(11)</span></a></li>
-              <li><a href="/tools/binary/unpacking">Unpackers <span class="count">(7)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/malware-analysis" class="subsection-title">
+            Malware Analysis
+          </a>
+          <span class="subsection-count">({malwareAnalysisData.totalItems})</span>
+          <span class="subsection-preview">→ {malwareAnalysisData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Development Security -->
-        <div class="tool-group">
-          <div class="tool-group-title">Development Security</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Code Analysis</div>
-            <ul class="tool-list">
-              <li><a href="/tools/devsec/sast">SAST Tools <span class="count">(21)</span></a></li>
-              <li><a href="/tools/devsec/dast">DAST Tools <span class="count">(16)</span></a></li>
-              <li><a href="/tools/devsec/iast">IAST Tools <span class="count">(8)</span></a></li>
-              <li><a href="/tools/devsec/sca">Software Composition <span class="count">(14)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">DevSecOps</div>
-            <ul class="tool-list">
-              <li><a href="/tools/devsecops/ci">CI/CD Security <span class="count">(13)</span></a></li>
-              <li><a href="/tools/devsecops/secrets">Secret Scanning <span class="count">(11)</span></a></li>
-              <li><a href="/tools/devsecops/container">Container Security <span class="count">(17)</span></a></li>
-              <li><a href="/tools/devsecops/iac">IaC Security <span class="count">(9)</span></a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/log-analysis" class="subsection-title">
+            Log Analysis
+          </a>
+          <span class="subsection-count">({logAnalysisData.totalItems})</span>
+          <span class="subsection-preview">→ {logAnalysisData.topTools.join(', ')}...</span>
         </div>
-
-        <!-- Physical & Hardware Security -->
-        <div class="tool-group">
-          <div class="tool-group-title">Physical & Hardware Security</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Hardware Hacking</div>
-            <ul class="tool-list">
-              <li><a href="/tools/hardware/usb">USB Tools <span class="count">(12)</span></a></li>
-              <li><a href="/tools/hardware/rfid">RFID/NFC Tools <span class="count">(14)</span></a></li>
-              <li><a href="/tools/hardware/sdr">Software Defined Radio <span class="count">(11)</span></a></li>
-              <li><a href="/tools/hardware/jtag">JTAG/Debug Tools <span class="count">(8)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Physical Security</div>
-            <ul class="tool-list">
-              <li><a href="/tools/physical/lockpicking">Lock Picking <span class="count">(9)</span></a></li>
-              <li><a href="/tools/physical/access">Access Control <span class="count">(11)</span></a></li>
-              <li><a href="/tools/physical/surveillance">Surveillance Systems <span class="count">(13)</span></a></li>
-            </ul>
-          </div>
+      </div>
+      
+      <!-- Specialized Domains -->
+      <div class="subsection-category">
+        <div class="category-title">▶ Specialized Domains</div>
+        
+        <div class="subsection">
+          <a href="/tools/cloud-security" class="subsection-title cloud">
+            Cloud Security
+          </a>
+          <span class="subsection-count">({toolsByPhase.cloud.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.cloud.fullData).join(', ')}...</span>
         </div>
-
-        <!-- Operating Systems & Distributions -->
-        <div class="tool-group">
-          <div class="tool-group-title">Security Distributions & Platforms</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Penetration Testing</div>
-            <ul class="tool-list">
-              <li><a href="/tools/distros/kali">Kali Linux</a></li>
-              <li><a href="/tools/distros/parrot">Parrot Security</a></li>
-              <li><a href="/tools/distros/blackarch">BlackArch</a></li>
-              <li><a href="/tools/distros/pentoo">Pentoo</a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Defensive & Forensics</div>
-            <ul class="tool-list">
-              <li><a href="/tools/distros/security-onion">Security Onion</a></li>
-              <li><a href="/tools/distros/sift">SANS SIFT</a></li>
-              <li><a href="/tools/distros/remnux">REMnux</a></li>
-              <li><a href="/tools/distros/caine">CAINE</a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Privacy Focused</div>
-            <ul class="tool-list">
-              <li><a href="/tools/distros/tails">Tails</a></li>
-              <li><a href="/tools/distros/whonix">Whonix</a></li>
-              <li><a href="/tools/distros/qubes">Qubes OS</a></li>
-              <li><a href="/tools/distros/kodachi">Kodachi</a></li>
-            </ul>
-          </div>
+        
+        <div class="subsection">
+          <a href="/tools/mobile-security" class="subsection-title mobile">
+            Mobile Security
+          </a>
+          <span class="subsection-count">({toolsByPhase.mobile.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.mobile.fullData).join(', ')}...</span>
         </div>
+        
+        <div class="subsection">
+          <a href="/tools/ics-scada" class="subsection-title">
+            ICS/SCADA Security
+          </a>
+          <span class="subsection-count">({icsScadaData.totalItems})</span>
+          <span class="subsection-preview">→ {icsScadaData.topTools.join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/wireless" class="subsection-title">
+            Wireless Security
+          </a>
+          <span class="subsection-count">({wirelessData.totalItems})</span>
+          <span class="subsection-preview">→ {wirelessData.topTools.join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/hardware-physical" class="subsection-title hardware">
+            Hardware Security
+          </a>
+          <span class="subsection-count">({toolsByPhase.hardware.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.hardware.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/cryptography" class="subsection-title crypto">
+            Cryptography Tools
+          </a>
+          <span class="subsection-count">({toolsByPhase.crypto.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.crypto.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/development-security" class="subsection-title dev">
+            DevSecOps Tools
+          </a>
+          <span class="subsection-count">({toolsByPhase.development.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(toolsByPhase.development.fullData).join(', ')}...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/container-security" class="subsection-title">
+            Container Security
+          </a>
+          <span class="subsection-count">(48)</span>
+          <span class="subsection-preview">→ Trivy, Falco, Sysdig*, Twistlock*...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/supply-chain-security" class="subsection-title">
+            Supply Chain Security
+          </a>
+          <span class="subsection-count">(37)</span>
+          <span class="subsection-preview">→ Dependabot, Snyk*, OWASP Dependency-Check, Nancy...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/zero-trust" class="subsection-title">
+            Zero Trust Architecture
+          </a>
+          <span class="subsection-count">(29)</span>
+          <span class="subsection-preview">→ Cloudflare Zero Trust, Zscaler*, Palo Alto Prisma*, BeyondCorp...</span>
+        </div>
+        
+        <div class="subsection">
+          <a href="/tools/ai-ml-security" class="subsection-title">
+            AI/ML Security
+          </a>
+          <span class="subsection-count">(31)</span>
+          <span class="subsection-preview">→ Adversarial Robustness Toolbox, CleverHans, Foolbox, ModelScan...</span>
+        </div>
+        
+        {specializedData.map((item) => (
+          <div class="subsection">
+            <a href={`/specialized/${item.file}`} class="subsection-title specialized">
+              {item.title}
+            </a>
+            <span class="subsection-count">({item.totalItems})</span>
+            <span class="subsection-preview">→ {getTopItems(item.fullData).join(', ')}...</span>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 
-  <!-- Learning Resources -->
+  <!-- LEARNING RESOURCES -->
   <div class="section">
-    <input type="checkbox" id="learn" class="toggle-checkbox" checked>
-    <label for="learn" class="section-header">
-      <div class="section-title">Learning Resources</div>
-      <div class="section-desc">Education, training, and reference materials</div>
-      <div class="section-count">1,247 resources</div>
-      <div class="toggle-icon"></div>
+    <input type="checkbox" id="learning" class="toggle-checkbox" />
+    <label for="learning" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title learning">LEARNING RESOURCES</div>
+      <div class="section-count">({totalLearning})</div>
     </label>
     <div class="section-content">
-      <div class="section-intro">
-        Educational content ranging from beginner tutorials to advanced certification paths. 
-        Includes free courses, paid training, books, and documentation.
-      </div>
-      
-      <div class="tools-tree">
-        <!-- Certifications -->
-        <div class="tool-group">
-          <div class="tool-group-title">Certifications</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Entry Level</div>
-            <ul class="tool-list">
-              <li><a href="/learn/certs/comptia">CompTIA (Security+, Network+) <span class="count">(8)</span></a></li>
-              <li><a href="/learn/certs/isc2-cc">(ISC)² CC <span class="count">(3)</span></a></li>
-              <li><a href="/learn/certs/google">Google Cybersecurity <span class="count">(4)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Offensive Security</div>
-            <ul class="tool-list">
-              <li><a href="/learn/certs/offensive-security">Offensive Security (OSCP, OSEP) <span class="count">(12)</span></a></li>
-              <li><a href="/learn/certs/sans-offensive">SANS Offensive (GPEN, GWAPT) <span class="count">(15)</span></a></li>
-              <li><a href="/learn/certs/eccouncil">EC-Council (CEH, LPT) <span class="count">(6)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Management & Governance</div>
-            <ul class="tool-list">
-              <li><a href="/learn/certs/cissp">CISSP</a></li>
-              <li><a href="/learn/certs/cism">CISM</a></li>
-              <li><a href="/learn/certs/cisa">CISA</a></li>
-            </ul>
-          </div>
+      {learningData.map((resource) => (
+        <div class="subsection">
+          <a href={`/learning/${resource.file}`} class="subsection-title learning">
+            {resource.title}
+          </a>
+          <span class="subsection-count">({resource.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(resource.fullData).join(', ')}...</span>
         </div>
-
-        <!-- Training Platforms -->
-        <div class="tool-group">
-          <div class="tool-group-title">Training Platforms</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Hands-On Labs</div>
-            <ul class="tool-list">
-              <li><a href="/learn/labs/tryhackme">TryHackMe <span class="count">(free/paid)</span></a></li>
-              <li><a href="/learn/labs/hackthebox">Hack The Box <span class="count">(free/paid)</span></a></li>
-              <li><a href="/learn/labs/pentesterlab">PentesterLab <span class="count">(paid)</span></a></li>
-              <li><a href="/learn/labs/portswigger">PortSwigger Academy <span class="count">(free)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">CTF Platforms</div>
-            <ul class="tool-list">
-              <li><a href="/learn/ctf/picoctf">picoCTF <span class="count">(beginner)</span></a></li>
-              <li><a href="/learn/ctf/overthewire">OverTheWire <span class="count">(wargames)</span></a></li>
-              <li><a href="/learn/ctf/ctftime">CTFtime <span class="count">(calendar)</span></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Documentation & References -->
-        <div class="tool-group">
-          <div class="tool-group-title">Documentation & References</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Methodology Guides</div>
-            <ul class="tool-list">
-              <li><a href="/learn/guides/ptes">PTES <span class="count">(pentest standard)</span></a></li>
-              <li><a href="/learn/guides/owasp">OWASP Testing Guide</a></li>
-              <li><a href="/learn/guides/mitre">MITRE ATT&CK</a></li>
-              <li><a href="/learn/guides/nist">NIST Frameworks</a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Cheat Sheets</div>
-            <ul class="tool-list">
-              <li><a href="/learn/cheatsheets/sans">SANS Cheat Sheets <span class="count">(42)</span></a></li>
-              <li><a href="/learn/cheatsheets/pentest">Pentest Cheat Sheets <span class="count">(28)</span></a></li>
-              <li><a href="/learn/cheatsheets/re">Reverse Engineering <span class="count">(15)</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 
-  <!-- Upcoming Events -->
+  <!-- PRACTICE & CHALLENGES -->
   <div class="section">
-    <input type="checkbox" id="events" class="toggle-checkbox" checked>
-    <label for="events" class="section-header">
-      <div class="section-title">Upcoming Events</div>
-      <div class="section-desc">Conferences, CFPs, competitions, and training</div>
-      <div class="section-count">87 events</div>
-      <div class="toggle-icon"></div>
-    </label>
-    <div class="section-content">
-      <div class="section-intro">
-        Security conferences, call for papers deadlines, CTF competitions, and training events. 
-        Updated weekly with community contributions.
-      </div>
-      
-      <div class="events-grid">
-        <div class="event-category">
-          <h3>Conferences</h3>
-          <ul class="event-list">
-            <li><span class="event-date">AUG 8-11</span> DEF CON 33 - Las Vegas</li>
-            <li><span class="event-date">AUG 3-8</span> Black Hat USA - Las Vegas</li>
-            <li><span class="event-date">SEP 15-17</span> BSides Augusta</li>
-            <li><span class="event-date">OCT 1-3</span> DerbyCon X - Louisville</li>
-            <li><span class="event-date">NOV 8-9</span> BSides Philly</li>
-          </ul>
-        </div>
-        
-        <div class="event-category">
-          <h3>CFP Deadlines</h3>
-          <ul class="event-list">
-            <li><span class="event-date">JUL 15</span> BSides SF 2025</li>
-            <li><span class="event-date">JUL 31</span> ShmooCon 2025</li>
-            <li><span class="event-date">AUG 10</span> RSA Conference 2025</li>
-            <li><span class="event-date">AUG 20</span> CanSecWest 2025</li>
-          </ul>
-        </div>
-        
-        <div class="event-category">
-          <h3>Competitions</h3>
-          <ul class="event-list">
-            <li><span class="event-date">JUL 20-22</span> Google CTF 2024</li>
-            <li><span class="event-date">AUG 2-4</span> DEF CON CTF Finals</li>
-            <li><span class="event-date">SEP 1-30</span> Pwn2Own Miami</li>
-            <li><span class="event-date">OCT 15</span> Hack-A-Sat Finals</li>
-          </ul>
-        </div>
-        
-        <div class="event-category">
-          <h3>Training Deadlines</h3>
-          <ul class="event-list">
-            <li><span class="event-date">JUL 25</span> SANS SEC504 Early Bird</li>
-            <li><span class="event-date">AUG 1</span> Offensive Security OSCP</li>
-            <li><span class="event-date">AUG 15</span> Black Hat Training</li>
-            <li><span class="event-date">SEP 5</span> Wild West Hackin' Fest</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Local Groups -->
-  <div class="section">
-    <input type="checkbox" id="groups" class="toggle-checkbox" checked>
-    <label for="groups" class="section-header">
-      <div class="section-title">Local Groups</div>
-      <div class="section-desc">Physical meetups and online communities</div>
-      <div class="section-count">342 groups</div>
-      <div class="toggle-icon"></div>
-    </label>
-    <div class="section-content">
-      <div class="section-intro">
-        Find cybersecurity communities near you or online. Includes physical meetups, 
-        professional chapters, online forums, and special interest groups.
-      </div>
-      
-      <div class="groups-content">
-        <div>
-          <div class="group-category">
-            <h3>Physical Meetups</h3>
-            <ul class="group-list">
-              <li><a href="/groups/2600">2600 Meetings <span class="count">(worldwide)</span></a></li>
-              <li><a href="/groups/defcon-groups">DEF CON Groups <span class="count">(245 cities)</span></a></li>
-              <li><a href="/groups/owasp">OWASP Chapters <span class="count">(280+ chapters)</span></a></li>
-              <li><a href="/groups/isc2">ISC2 Chapters <span class="count">(150+ chapters)</span></a></li>
-              <li><a href="/groups/isaca">ISACA Chapters <span class="count">(200+ chapters)</span></a></li>
-              <li><a href="/groups/infragard">InfraGard <span class="count">(US only)</span></a></li>
-              <li><a href="/groups/hackerspaces">Hackerspaces <span class="count">(global)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="group-category">
-            <h3>Special Interest Groups</h3>
-            <ul class="group-list">
-              <li><a href="/groups/wicys">Women in CyberSecurity</a></li>
-              <li><a href="/groups/minorities">Minorities in Security</a></li>
-              <li><a href="/groups/veterans">Veterans in Security</a></li>
-              <li><a href="/groups/students">Student Groups</a></li>
-              <li><a href="/groups/lgbtq">LGBTQ+ in Tech</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <div>
-          <div class="group-category">
-            <h3>Online Communities</h3>
-            <ul class="group-list">
-              <li><a href="/groups/discord">Discord Servers <span class="count">(42)</span></a></li>
-              <li><a href="/groups/slack">Slack Workspaces <span class="count">(28)</span></a></li>
-              <li><a href="/groups/reddit">Reddit Communities <span class="count">(35)</span></a></li>
-              <li><a href="/groups/forums">Security Forums <span class="count">(18)</span></a></li>
-              <li><a href="/groups/irc">IRC Channels <span class="count">(22)</span></a></li>
-              <li><a href="/groups/matrix">Matrix Rooms <span class="count">(15)</span></a></li>
-              <li><a href="/groups/telegram">Telegram Groups <span class="count">(31)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="group-category">
-            <h3>Professional Associations</h3>
-            <ul class="group-list">
-              <li><a href="/groups/issa">ISSA Chapters</a></li>
-              <li><a href="/groups/htcia">HTCIA Chapters</a></li>
-              <li><a href="/groups/iacis">IACIS</a></li>
-              <li><a href="/groups/adfsl">ADFSL</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Practice Resources -->
-  <div class="section">
-    <input type="checkbox" id="practice" class="toggle-checkbox" checked>
+    <input type="checkbox" id="practice" class="toggle-checkbox" />
     <label for="practice" class="section-header">
-      <div class="section-title">Practice Resources</div>
-      <div class="section-desc">Vulnerable apps, CTFs, and labs</div>
-      <div class="section-count">418 resources</div>
-      <div class="toggle-icon"></div>
+      <div class="section-icon"></div>
+      <div class="section-title practice">PRACTICE & CHALLENGES</div>
+      <div class="section-count">({totalPractice})</div>
     </label>
     <div class="section-content">
-      <div class="section-intro">
-        Hands-on practice environments including intentionally vulnerable applications, 
-        capture the flag challenges, and virtual labs for skill development.
-      </div>
-      
-      <div class="tools-tree">
-        <div class="tool-group">
-          <div class="tool-group-title">Vulnerable Applications</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Web Applications</div>
-            <ul class="tool-list">
-              <li><a href="/practice/web/dvwa">DVWA <span class="count">(beginner)</span></a></li>
-              <li><a href="/practice/web/webgoat">WebGoat <span class="count">(OWASP)</span></a></li>
-              <li><a href="/practice/web/juice-shop">Juice Shop <span class="count">(modern)</span></a></li>
-              <li><a href="/practice/web/mutillidae">Mutillidae II</a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Operating Systems</div>
-            <ul class="tool-list">
-              <li><a href="/practice/os/metasploitable">Metasploitable <span class="count">(3 versions)</span></a></li>
-              <li><a href="/practice/os/vulnhub">VulnHub VMs <span class="count">(600+)</span></a></li>
-              <li><a href="/practice/os/hackthebox">HackTheBox Machines</a></li>
-            </ul>
-          </div>
+      {practiceData.map((practice) => (
+        <div class="subsection">
+          <a href={`/practice/${practice.file}`} class="subsection-title practice">
+            {practice.title}
+          </a>
+          <span class="subsection-count">({practice.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(practice.fullData).join(', ')}...</span>
         </div>
-      </div>
+      ))}
     </div>
   </div>
 
-  <!-- Career Resources -->
+  <!-- COMMUNITY -->
   <div class="section">
-    <input type="checkbox" id="career" class="toggle-checkbox" checked>
-    <label for="career" class="section-header">
-      <div class="section-title">Career Resources</div>
-      <div class="section-desc">Job boards, interview prep, and career paths</div>
-      <div class="section-count">298 resources</div>
-      <div class="toggle-icon"></div>
+    <input type="checkbox" id="community" class="toggle-checkbox" />
+    <label for="community" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title community">COMMUNITY</div>
+      <div class="section-count">({totalCommunity})</div>
     </label>
     <div class="section-content">
-      <div class="section-intro">
-        Career development resources including job boards, interview preparation, 
-        salary data, and professional development paths.
-      </div>
-      
-      <div class="tools-tree">
-        <div class="tool-group">
-          <div class="tool-group-title">Job Search</div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Job Boards</div>
-            <ul class="tool-list">
-              <li><a href="/career/boards/general">General Tech <span class="count">(12)</span></a></li>
-              <li><a href="/career/boards/security">Security-Specific <span class="count">(18)</span></a></li>
-              <li><a href="/career/boards/remote">Remote Only <span class="count">(8)</span></a></li>
-              <li><a href="/career/boards/clearance">Clearance Required <span class="count">(5)</span></a></li>
-            </ul>
-          </div>
-          
-          <div class="tool-category">
-            <div class="tool-category-title">Career Development</div>
-            <ul class="tool-list">
-              <li><a href="/career/paths">Career Roadmaps <span class="count">(15)</span></a></li>
-              <li><a href="/career/interview">Interview Prep <span class="count">(32)</span></a></li>
-              <li><a href="/career/salary">Salary Data <span class="count">(11)</span></a></li>
-              <li><a href="/career/resume">Resume Templates <span class="count">(19)</span></a></li>
-            </ul>
-          </div>
+      {communityData.map((community) => (
+        <div class="subsection">
+          <a href={`/community/${community.file}`} class="subsection-title community">
+            {community.title}
+          </a>
+          <span class="subsection-count">({community.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(community.fullData).join(', ')}...</span>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- CAREER RESOURCES -->
+  <div class="section">
+    <input type="checkbox" id="career" class="toggle-checkbox" />
+    <label for="career" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title career">CAREER RESOURCES</div>
+      <div class="section-count">({totalCareer})</div>
+    </label>
+    <div class="section-content">
+      {careerData.map((career) => (
+        <div class="subsection">
+          <a href={`/career/${career.file}`} class="subsection-title career">
+            {career.title}
+          </a>
+          <span class="subsection-count">({career.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(career.fullData).join(', ')}...</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- REFERENCES & DOCUMENTATION -->
+  <div class="section">
+    <input type="checkbox" id="references" class="toggle-checkbox" />
+    <label for="references" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title references">REFERENCES & DOCUMENTATION</div>
+      <div class="section-count">({totalReferences})</div>
+    </label>
+    <div class="section-content">
+      {referencesData.map((reference) => (
+        <div class="subsection">
+          <a href={`/references/${reference.file}`} class="subsection-title references">
+            {reference.title}
+          </a>
+          <span class="subsection-count">({reference.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(reference.fullData).join(', ')}...</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- NEWS & INFORMATION -->
+  <div class="section">
+    <input type="checkbox" id="news" class="toggle-checkbox" />
+    <label for="news" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title news">NEWS & INFORMATION</div>
+      <div class="section-count">({totalNews})</div>
+    </label>
+    <div class="section-content">
+      {newsData.map((newsItem) => (
+        <div class="subsection">
+          <a href={`/news/${newsItem.file}`} class="subsection-title news">
+            {newsItem.title}
+          </a>
+          <span class="subsection-count">({newsItem.totalItems})</span>
+          <span class="subsection-preview">→ {getTopItems(newsItem.fullData).join(', ')}...</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- COMPLIANCE & STANDARDS -->
+  <div class="section">
+    <input type="checkbox" id="compliance" class="toggle-checkbox" />
+    <label for="compliance" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title compliance">COMPLIANCE & STANDARDS</div>
+      <div class="section-count">({totalCompliance})</div>
+    </label>
+    <div class="section-content">
+      {complianceData.map((item) => (
+        <div class="subsection">
+          <a href={`/compliance/${item.file}`} class="subsection-title compliance">
+            {item.title}
+          </a>
+          <span class="subsection-count">({item.totalItems})</span>
+          <span class="subsection-preview">→ {item.topItems.join(', ')}...</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- VULNERABILITY INTELLIGENCE -->
+  <div class="section">
+    <input type="checkbox" id="vuln-intel" class="toggle-checkbox" />
+    <label for="vuln-intel" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title vulnintel">VULNERABILITY INTELLIGENCE</div>
+      <div class="section-count">({totalVulnIntel})</div>
+    </label>
+    <div class="section-content">
+      {vulnIntelData.map((item) => (
+        <div class="subsection">
+          <a href={`/vulnerability-intelligence/${item.file}`} class="subsection-title vulnintel">
+            {item.title}
+          </a>
+          <span class="subsection-count">({item.totalItems})</span>
+          <span class="subsection-preview">→ {item.topItems.join(', ')}...</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- SECURITY DISTRIBUTIONS -->
+  <div class="section">
+    <input type="checkbox" id="distros" class="toggle-checkbox" />
+    <label for="distros" class="section-header">
+      <div class="section-icon"></div>
+      <div class="section-title distros">SECURITY DISTRIBUTIONS</div>
+      <div class="section-count">({totalDistros})</div>
+    </label>
+    <div class="section-content">
+      {distrosData.map((item) => (
+        <div class="subsection">
+          <a href={`/distributions/${item.file}`} class="subsection-title distros">
+            {item.title}
+          </a>
+          <span class="subsection-count">({item.totalItems})</span>
+          <span class="subsection-preview">→ {item.topItems.join(', ')}...</span>
+        </div>
+      ))}
     </div>
   </div>
 </div>
 
 <div class="footer-stats">
-  <pre>3,847 resources | * = paid | <a href="https://github.com/dcbokonon/secref" style="color: #666;">contribute</a></pre>
+  {totalTools + totalLearning + totalCommunity + totalCareer + totalPractice + totalSpecialized + totalReferences + totalNews + totalCompliance + totalVulnIntel + totalDistros} resources | Updated: {new Date().toLocaleDateString()}
 </div>
 </BaseLayout>
