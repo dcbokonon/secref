@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ToolDetails } from './ToolDetails';
 
 interface TreeNode {
   name: string;
@@ -10,6 +11,11 @@ interface TreeNode {
   category?: string;
   notation?: string;
   pricingNote?: string;
+  description?: string;
+  type?: string;
+  platforms?: string[];
+  tags?: string[];
+  difficulty?: string;
 }
 
 interface TreeItemProps {
@@ -41,7 +47,11 @@ const getNotationClass = (notation: string): string => {
   return '';
 };
 
-const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
+interface ExtendedTreeItemProps extends TreeItemProps {
+  onToolClick: (tool: any) => void;
+}
+
+const TreeItem: React.FC<ExtendedTreeItemProps> = ({ node, level, basePath, onToolClick }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [children, setChildren] = useState<TreeNode[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,10 +64,8 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
     e.preventDefault();
     
     if (!hasChildren) {
-      // Leaf node - navigate to URL
-      if (node.url) {
-        window.location.href = node.url;
-      }
+      // Leaf node - show details instead of navigating
+      onToolClick(node);
       return;
     }
 
@@ -106,7 +114,12 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                             url: item.url || item.link,
                             count: 0,
                             notation: item.notation,
-                            pricingNote: item.pricingNote
+                            pricingNote: item.pricingNote,
+                            description: item.description,
+                            type: item.type,
+                            platforms: item.platforms,
+                            tags: item.tags,
+                            difficulty: item.difficulty
                           })) || []
                         }))
                       });
@@ -120,7 +133,12 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                           url: item.url || item.link,
                           count: 0,
                           notation: item.notation,
-                          pricingNote: item.pricingNote
+                          pricingNote: item.pricingNote,
+                          description: item.description,
+                          type: item.type,
+                          platforms: item.platforms,
+                          tags: item.tags,
+                          difficulty: item.difficulty
                         })) || []
                       });
                     }
@@ -135,7 +153,12 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                       url: item.url || item.link,
                       count: 0,
                       notation: item.notation,
-                      pricingNote: item.pricingNote
+                      pricingNote: item.pricingNote,
+                      description: item.description,
+                      type: item.type,
+                      platforms: item.platforms,
+                      tags: item.tags,
+                      difficulty: item.difficulty
                     }))
                   });
                 }
@@ -150,7 +173,12 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                   url: item.url || item.link,
                   count: 0,
                   notation: item.notation,
-                  pricingNote: item.pricingNote
+                  pricingNote: item.pricingNote,
+                  description: item.description,
+                  type: item.type,
+                  platforms: item.platforms,
+                  tags: item.tags,
+                  difficulty: item.difficulty
                 }))
               });
             }
@@ -163,7 +191,12 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
               url: item.url || item.link,
               count: 0,
               notation: item.notation,
-              pricingNote: item.pricingNote
+              pricingNote: item.pricingNote,
+              description: item.description,
+              type: item.type,
+              platforms: item.platforms,
+              tags: item.tags,
+              difficulty: item.difficulty
             });
           });
         }
@@ -212,6 +245,7 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
               node={child} 
               level={level + 1}
               basePath={child.category || basePath}
+              onToolClick={onToolClick}
             />
           ))}
           {node.children?.map((child, index) => (
@@ -220,6 +254,7 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
               node={child} 
               level={level + 1}
               basePath={child.category || basePath}
+              onToolClick={onToolClick}
             />
           ))}
         </div>
@@ -233,6 +268,11 @@ interface TreeNavigationProps {
 }
 
 export const TreeNavigation: React.FC<TreeNavigationProps> = ({ data }) => {
+  const [selectedTool, setSelectedTool] = useState<any>(null);
+
+  const handleToolClick = (tool: any) => {
+    setSelectedTool(tool);
+  };
   const sections = [
     {
       name: 'SECURITY TOOLS',
@@ -373,15 +413,24 @@ export const TreeNavigation: React.FC<TreeNavigationProps> = ({ data }) => {
   ];
 
   return (
-    <div className="tree-navigation">
-      {sections.map((section, index) => (
-        <TreeItem 
-          key={index} 
-          node={section} 
-          level={0}
-          basePath={section.category || ''}
+    <>
+      <div className={`tree-navigation ${selectedTool ? 'has-details' : ''}`}>
+        {sections.map((section, index) => (
+          <TreeItem 
+            key={index} 
+            node={section} 
+            level={0}
+            basePath={section.category || ''}
+            onToolClick={handleToolClick}
+          />
+        ))}
+      </div>
+      {selectedTool && (
+        <ToolDetails 
+          tool={selectedTool} 
+          onClose={() => setSelectedTool(null)} 
         />
-      ))}
-    </div>
+      )}
+    </>
   );
 };

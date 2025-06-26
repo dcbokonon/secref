@@ -28,28 +28,10 @@
                   "description": "TCP-focused port scanning tools",
                   "items": [
                     {
-                      "name": "Nmap",
-                      "type": "free",
-                      "url": "https://nmap.org",
-                      "description": "The most popular network mapper for port scanning and service detection",
-                      "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "service-detection", "network-mapping", "tcp"],
-                      "difficulty": "beginner"
-                    },
-                    {
-                      "name": "Masscan",
-                      "type": "free",
-                      "url": "https://github.com/robertdavidgraham/masscan",
-                      "description": "High-speed TCP port scanner capable of scanning the entire internet",
-                      "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "high-speed", "tcp", "internet-scale"],
-                      "difficulty": "intermediate"
-                    },
-                    {
                       "name": "Zmap",
                       "type": "free",
                       "url": "https://zmap.io",
-                      "description": "Fast internet-wide network scanner for research",
+                      "description": "Fast internet-wide TCP network scanner designed for research",
                       "platforms": ["linux"],
                       "tags": ["port-scanning", "internet-scanning", "research", "tcp"],
                       "difficulty": "advanced"
@@ -58,7 +40,7 @@
                       "name": "RustScan",
                       "type": "free",
                       "url": "https://github.com/RustScan/RustScan",
-                      "description": "Fast port scanner written in Rust, designed to pipe results to Nmap",
+                      "description": "Fast TCP port scanner written in Rust, designed to pipe results to Nmap",
                       "platforms": ["linux", "windows", "macos"],
                       "tags": ["port-scanning", "rust", "fast", "tcp"],
                       "difficulty": "beginner"
@@ -91,9 +73,27 @@
                 },
                 {
                   "id": "combined-scanners",
-                  "title": "Combined Scanners",
-                  "description": "Port scanners supporting multiple protocols",
+                  "title": "Multi-Protocol Scanners",
+                  "description": "Port scanners supporting multiple protocols (TCP, UDP, SCTP, etc.)",
                   "items": [
+                    {
+                      "name": "Nmap",
+                      "type": "free",
+                      "url": "https://nmap.org",
+                      "description": "The most comprehensive network scanner supporting TCP, UDP, SCTP, and IP protocol scanning with OS detection and service versioning",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "service-detection", "network-mapping", "tcp", "udp", "sctp", "os-detection"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Masscan",
+                      "type": "free",
+                      "url": "https://github.com/robertdavidgraham/masscan",
+                      "description": "High-speed port scanner supporting both TCP (SYN) and UDP scanning, capable of scanning the entire internet",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "high-speed", "tcp", "udp", "internet-scale"],
+                      "difficulty": "intermediate"
+                    },
                     {
                       "name": "Angry IP Scanner",
                       "type": "free",

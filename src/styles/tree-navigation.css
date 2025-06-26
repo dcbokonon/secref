@@ -2,6 +2,12 @@
   font-family: monospace;
   font-size: 14px;
   line-height: 1.8;
+  transition: margin-right 0.3s ease-out;
+}
+
+/* Adjust layout when details panel is shown */
+.tree-navigation.has-details {
+  margin-right: 400px;
 }
 
 .tree-item {
