@@ -21,7 +21,12 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: |
+          echo "Node version: $(node --version)"
+          echo "NPM version: $(npm --version)"
+          echo "Files in directory:"
+          ls -la
+          npm ci
       
       - name: Build site
         run: npm run build
