@@ -5,6 +5,11 @@ interface TreeNode {
   name: string;
   count?: number;
   url?: string;
+  links?: Array<{
+    url: string;
+    label: string;
+    type: 'docs' | 'tutorial' | 'cheatsheet' | 'tool' | 'other';
+  }>;
   children?: TreeNode[];
   items?: any[];
   file?: string;
@@ -13,9 +18,13 @@ interface TreeNode {
   pricingNote?: string;
   description?: string;
   type?: string;
+  resourceType?: 'tool' | 'technique' | 'service' | 'platform';
   platforms?: string[];
   tags?: string[];
   difficulty?: string;
+  isCommunityFavorite?: boolean;
+  isIndustryStandard?: boolean;
+  popularityNote?: string;
 }
 
 interface TreeItemProps {
@@ -117,9 +126,14 @@ const TreeItem: React.FC<ExtendedTreeItemProps> = ({ node, level, basePath, onTo
                             pricingNote: item.pricingNote,
                             description: item.description,
                             type: item.type,
+                            resourceType: item.resourceType,
                             platforms: item.platforms,
                             tags: item.tags,
-                            difficulty: item.difficulty
+                            difficulty: item.difficulty,
+                            links: item.links,
+                            isCommunityFavorite: item.isCommunityFavorite,
+                            isIndustryStandard: item.isIndustryStandard,
+                            popularityNote: item.popularityNote
                           })) || []
                         }))
                       });
@@ -221,7 +235,11 @@ const TreeItem: React.FC<ExtendedTreeItemProps> = ({ node, level, basePath, onTo
         <span className="tree-icon">
           {hasChildren ? (isExpanded ? '▼' : '▶') : '→'}
         </span>
-        <span className="tree-name">{node.name}</span>
+        <span className="tree-name">
+          {node.name}
+          {node.isCommunityFavorite && <span className="tree-badge-favorite" title="Community Favorite">⭐</span>}
+          {node.isIndustryStandard && <span className="tree-badge-standard" title="Industry Standard">🏆</span>}
+        </span>
         {node.notation && (
           <span 
             className={`notation ${getNotationClass(node.notation)}`}

@@ -35,6 +35,23 @@
 .tree-name {
   color: #0f0;
   margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tree-badge-favorite,
+.tree-badge-standard {
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.tree-badge-favorite {
+  color: #f1fa8c;
+}
+
+.tree-badge-standard {
+  color: #ffb86c;
 }
 
 .tree-count {

@@ -29,6 +29,25 @@
   font-size: 18px;
   color: #0f0;
   text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-favorite,
+.badge-standard {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.badge-favorite {
+  color: #f1fa8c;
+  text-shadow: 0 0 10px rgba(241, 250, 140, 0.8);
+}
+
+.badge-standard {
+  color: #ffb86c;
+  text-shadow: 0 0 10px rgba(255, 184, 108, 0.8);
 }
 
 .close-button {
@@ -191,6 +210,73 @@
   border-color: #8be9fd;
   text-decoration: none;
   box-shadow: 0 0 10px rgba(139, 233, 253, 0.3);
+}
+
+.popularity-section {
+  background: #282a36;
+  padding: 10px;
+  border-radius: 3px;
+  border-left: 3px solid #f1fa8c;
+}
+
+.popularity-note {
+  color: #f1fa8c;
+  font-style: italic;
+  margin: 0;
+}
+
+.resource-type {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.resource-type-tool {
+  background: #282a36;
+  color: #8be9fd;
+  border: 1px solid #8be9fd;
+}
+
+.resource-type-technique {
+  background: #282a36;
+  color: #ff79c6;
+  border: 1px solid #ff79c6;
+}
+
+.resource-type-service {
+  background: #282a36;
+  color: #bd93f9;
+  border: 1px solid #bd93f9;
+}
+
+.resource-type-platform {
+  background: #282a36;
+  color: #50fa7b;
+  border: 1px solid #50fa7b;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-type-docs {
+  border-color: #8be9fd;
+}
+
+.link-type-tutorial {
+  border-color: #50fa7b;
+}
+
+.link-type-cheatsheet {
+  border-color: #f1fa8c;
+}
+
+.link-type-tool {
+  border-color: #ff79c6;
 }
 
 /* Overlay for mobile/smaller screens */

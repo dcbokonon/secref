@@ -4,13 +4,22 @@ interface ToolDetailsProps {
   tool: {
     name: string;
     url?: string;
+    links?: Array<{
+      url: string;
+      label: string;
+      type: 'docs' | 'tutorial' | 'cheatsheet' | 'tool' | 'other';
+    }>;
     description?: string;
     type?: string;
+    resourceType?: 'tool' | 'technique' | 'service' | 'platform';
     notation?: string;
     pricingNote?: string;
     platforms?: string[];
     tags?: string[];
     difficulty?: string;
+    isCommunityFavorite?: boolean;
+    isIndustryStandard?: boolean;
+    popularityNote?: string;
   } | null;
   onClose: () => void;
 }
@@ -21,7 +30,11 @@ export const ToolDetails: React.FC<ToolDetailsProps> = ({ tool, onClose }) => {
   return (
     <div className="tool-details">
       <div className="tool-details-header">
-        <h3>{tool.name}</h3>
+        <h3>
+          {tool.name}
+          {tool.isCommunityFavorite && <span className="badge-favorite" title="Community Favorite">⭐</span>}
+          {tool.isIndustryStandard && <span className="badge-standard" title="Industry Standard">🏆</span>}
+        </h3>
         <button className="close-button" onClick={onClose} aria-label="Close">×</button>
       </div>
       
@@ -33,7 +46,13 @@ export const ToolDetails: React.FC<ToolDetailsProps> = ({ tool, onClose }) => {
           </div>
         )}
         
-        {tool.type && (
+        {tool.popularityNote && (
+          <div className="detail-section popularity-section">
+            <p className="popularity-note">{tool.popularityNote}</p>
+          </div>
+        )}
+        
+        {tool.type && tool.resourceType !== 'technique' && (
           <div className="detail-section">
             <h4>License</h4>
             <p className={`license-type ${tool.type}`}>
@@ -43,6 +62,15 @@ export const ToolDetails: React.FC<ToolDetailsProps> = ({ tool, onClose }) => {
               {tool.notation && <span className={`notation ${getNotationClass(tool.notation)}`}> {tool.notation}</span>}
             </p>
             {tool.pricingNote && <p className="pricing-note">{tool.pricingNote}</p>}
+          </div>
+        )}
+        
+        {tool.resourceType && (
+          <div className="detail-section">
+            <h4>Resource Type</h4>
+            <p className={`resource-type resource-type-${tool.resourceType}`}>
+              {tool.resourceType.charAt(0).toUpperCase() + tool.resourceType.slice(1)}
+            </p>
           </div>
         )}
         
@@ -79,7 +107,24 @@ export const ToolDetails: React.FC<ToolDetailsProps> = ({ tool, onClose }) => {
           </div>
         )}
         
-        {tool.url && (
+        {(tool.links && tool.links.length > 0) ? (
+          <div className="detail-section">
+            <h4>Resources</h4>
+            <div className="links-list">
+              {tool.links.map((link, idx) => (
+                <a 
+                  key={idx}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={`external-link link-type-${link.type}`}
+                >
+                  {link.label} →
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : tool.url && (
           <div className="detail-section">
             <a 
               href={tool.url} 

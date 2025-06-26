@@ -24,26 +24,32 @@
               "subcategories": [
                 {
                   "id": "tcp-scanners",
-                  "title": "TCP Scanners",
-                  "description": "TCP-focused port scanning tools",
+                  "title": "TCP-Only Scanners",
+                  "description": "Port scanners optimized for TCP-only scanning",
                   "items": [
                     {
                       "name": "Zmap",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://zmap.io",
-                      "description": "Fast internet-wide TCP network scanner designed for research",
+                      "description": "Single-packet network scanner optimized for Internet-wide TCP surveys. Can scan entire IPv4 space in 45 minutes",
                       "platforms": ["linux"],
-                      "tags": ["port-scanning", "internet-scanning", "research", "tcp"],
-                      "difficulty": "advanced"
+                      "tags": ["port-scanning", "internet-scanning", "research", "tcp", "single-packet"],
+                      "difficulty": "advanced",
+                      "isCommunityFavorite": true,
+                      "popularityNote": "Preferred tool for Internet-wide research and mapping"
                     },
                     {
                       "name": "RustScan",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://github.com/RustScan/RustScan",
-                      "description": "Fast TCP port scanner written in Rust, designed to pipe results to Nmap",
+                      "description": "Lightning-fast TCP port scanner that can scan all 65k ports in 3 seconds, then pipes results to Nmap for detailed analysis",
                       "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "rust", "fast", "tcp"],
-                      "difficulty": "beginner"
+                      "tags": ["port-scanning", "rust", "fast", "tcp", "nmap-frontend"],
+                      "difficulty": "beginner",
+                      "isCommunityFavorite": true,
+                      "popularityNote": "Popular for its speed - performs rapid discovery before handing off to Nmap"
                     }
                   ]
                 },
@@ -63,54 +69,89 @@
                     {
                       "name": "unicornscan",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://github.com/dneufeld/unicornscan",
-                      "description": "Flexible and efficient network probing tool with UDP scanning capabilities",
+                      "description": "Asynchronous TCP/UDP scanner with its own userland TCP/IP stack. Supports advanced protocol-specific probes",
                       "platforms": ["linux"],
-                      "tags": ["port-scanning", "udp", "tcp", "network-probing"],
-                      "difficulty": "intermediate"
+                      "tags": ["port-scanning", "udp", "tcp", "asynchronous", "stateless"],
+                      "difficulty": "advanced",
+                      "popularityNote": "Less maintained but powerful for advanced users needing custom TCP/IP manipulation"
                     }
                   ]
                 },
                 {
                   "id": "combined-scanners",
                   "title": "Multi-Protocol Scanners",
-                  "description": "Port scanners supporting multiple protocols (TCP, UDP, SCTP, etc.)",
+                  "description": "Comprehensive scanners supporting multiple protocols (TCP, UDP, SCTP, IP)",
                   "items": [
                     {
                       "name": "Nmap",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://nmap.org",
-                      "description": "The most comprehensive network scanner supporting TCP, UDP, SCTP, and IP protocol scanning with OS detection and service versioning",
+                      "description": "The de facto standard for network discovery and security auditing. Supports TCP, UDP, SCTP, IP protocol scanning, OS detection, version detection, and scriptable interaction via NSE",
                       "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "service-detection", "network-mapping", "tcp", "udp", "sctp", "os-detection"],
-                      "difficulty": "beginner"
+                      "tags": ["port-scanning", "service-detection", "network-mapping", "tcp", "udp", "sctp", "os-detection", "nse"],
+                      "difficulty": "beginner",
+                      "isIndustryStandard": true,
+                      "isCommunityFavorite": true,
+                      "popularityNote": "The industry standard network scanner used by security professionals worldwide. Featured in every security course and certification",
+                      "links": [
+                        {
+                          "url": "https://nmap.org",
+                          "label": "Official Website",
+                          "type": "docs"
+                        },
+                        {
+                          "url": "https://nmap.org/book/man.html",
+                          "label": "Complete Reference Guide",
+                          "type": "docs"
+                        },
+                        {
+                          "url": "https://github.com/nmap/nmap",
+                          "label": "GitHub Repository",
+                          "type": "tool"
+                        },
+                        {
+                          "url": "https://nmap.org/nsedoc/",
+                          "label": "NSE Script Documentation",
+                          "type": "docs"
+                        }
+                      ]
                     },
                     {
                       "name": "Masscan",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://github.com/robertdavidgraham/masscan",
-                      "description": "High-speed port scanner supporting both TCP (SYN) and UDP scanning, capable of scanning the entire internet",
+                      "description": "The fastest Internet port scanner. Can scan the entire Internet in under 5 minutes using custom TCP/IP stack. Primarily TCP with banner grabbing",
                       "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "high-speed", "tcp", "udp", "internet-scale"],
-                      "difficulty": "intermediate"
+                      "tags": ["port-scanning", "high-speed", "tcp", "internet-scale", "asynchronous"],
+                      "difficulty": "intermediate",
+                      "isCommunityFavorite": true,
+                      "popularityNote": "Fastest scanner available - transmits up to 10 million packets/second. Used for Internet-wide surveys and large network discovery"
                     },
                     {
                       "name": "Angry IP Scanner",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://angryip.org",
-                      "description": "Cross-platform network scanner with GUI interface",
+                      "description": "Fast and user-friendly network scanner with GUI. Supports TCP port scanning, ping scanning, and NetBIOS information gathering",
                       "platforms": ["linux", "windows", "macos"],
-                      "tags": ["port-scanning", "gui", "cross-platform", "network-scanning"],
-                      "difficulty": "beginner"
+                      "tags": ["port-scanning", "gui", "cross-platform", "ping", "netbios"],
+                      "difficulty": "beginner",
+                      "popularityNote": "Popular among network administrators for its simple GUI and no installation requirement"
                     },
                     {
                       "name": "Advanced Port Scanner",
                       "type": "free",
+                      "resourceType": "tool",
                       "url": "https://www.advanced-port-scanner.com",
-                      "description": "Fast port scanner for Windows with additional network tools",
+                      "description": "Windows-focused network scanner with RDP/Radmin integration, Wake-On-LAN, and remote shutdown capabilities",
                       "platforms": ["windows"],
-                      "tags": ["port-scanning", "windows", "gui", "network-tools"],
-                      "difficulty": "beginner"
+                      "tags": ["port-scanning", "windows", "gui", "rdp", "remote-access"],
+                      "difficulty": "beginner",
+                      "popularityNote": "Preferred by Windows administrators for its integration with Windows-specific protocols and remote management features"
                     }
                   ]
                 }
@@ -470,12 +511,35 @@
                   "items": [
                     {
                       "name": "Google Dorking",
-                      "type": "free",
-                      "url": "https://www.google.com",
-                      "description": "Advanced Google search operators for finding specific information",
+                      "resourceType": "technique",
+                      "description": "Advanced search techniques using Google's search operators to find specific information, exposed data, and vulnerabilities",
                       "platforms": ["web"],
-                      "tags": ["google", "dorks", "search-operators", "osint"],
-                      "difficulty": "beginner"
+                      "tags": ["google", "dorks", "search-operators", "osint", "technique"],
+                      "difficulty": "beginner",
+                      "isCommunityFavorite": true,
+                      "popularityNote": "Essential OSINT technique for passive reconnaissance",
+                      "links": [
+                        {
+                          "url": "https://www.exploit-db.com/google-hacking-database",
+                          "label": "Google Hacking Database (GHDB)",
+                          "type": "cheatsheet"
+                        },
+                        {
+                          "url": "https://gist.github.com/sundowndev/283efaddbcf896ab405488330d1bbc06",
+                          "label": "Google Dorks Cheat Sheet",
+                          "type": "cheatsheet"
+                        },
+                        {
+                          "url": "https://www.boxpiper.com/posts/google-dork-list",
+                          "label": "Comprehensive Dork List",
+                          "type": "tutorial"
+                        },
+                        {
+                          "url": "https://github.com/Dorks-collections/Dorks-collections",
+                          "label": "Dorks Collections Repository",
+                          "type": "cheatsheet"
+                        }
+                      ]
                     },
                     {
                       "name": "Bing Search",
@@ -788,18 +852,30 @@
                   "items": [
                     {
                       "name": "Graph Search techniques",
-                      "type": "free",
-                      "description": "Advanced Facebook search techniques using Graph Search",
+                      "resourceType": "technique",
+                      "description": "Advanced Facebook search techniques using Graph Search syntax for finding profiles, posts, and connections",
                       "platforms": ["web"],
                       "tags": ["facebook", "graph-search", "techniques", "osint"],
-                      "difficulty": "intermediate"
+                      "difficulty": "intermediate",
+                      "links": [
+                        {
+                          "url": "https://www.social-searcher.com/facebook-search/",
+                          "label": "Facebook Search Guide",
+                          "type": "tutorial"
+                        },
+                        {
+                          "url": "https://github.com/adityaks/facebook-graph-search",
+                          "label": "Graph Search Examples",
+                          "type": "cheatsheet"
+                        }
+                      ]
                     },
                     {
                       "name": "Facebook Directory",
-                      "type": "free",
-                      "description": "Directory-based Facebook profile discovery methods",
+                      "resourceType": "technique",
+                      "description": "Directory-based Facebook profile discovery methods using URL manipulation and search patterns",
                       "platforms": ["web"],
-                      "tags": ["facebook", "directory", "profiles", "discovery"],
+                      "tags": ["facebook", "directory", "profiles", "discovery", "technique"],
                       "difficulty": "intermediate"
                     },
                     {
