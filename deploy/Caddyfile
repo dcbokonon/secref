@@ -1,0 +1,22 @@
+secref.org {
+    root * /var/www/secref
+    file_server
+    encode gzip
+    
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy no-referrer-when-downgrade
+    }
+}
+
+# Explicitly handle HTTP and redirect to HTTPS
+http://secref.org {
+    redir https://secref.org{uri} permanent
+}
+
+# Also handle www subdomain
+www.secref.org {
+    redir https://secref.org{uri} permanent
+}
