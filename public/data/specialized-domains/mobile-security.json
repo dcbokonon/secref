@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "section": "5.3",
+    "title": "Mobile Security",
+    "description": "Security tools and resources for Android and iOS mobile platforms",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 25
+  },
+  "categories": [
+    {
+      "id": "android-security",
+      "title": "Android Security",
+      "description": "Security assessment tools for Android applications and devices",
+      "subcategories": [
+        {
+          "id": "android-assessment-tools",
+          "title": "Android Assessment Tools",
+          "description": "Static and dynamic analysis tools for Android applications",
+          "items": [
+            {
+              "name": "MobSF",
+              "type": "free",
+              "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+              "description": "Mobile security testing framework",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "ios", "framework", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "QARK",
+              "type": "free",
+              "url": "https://github.com/linkedin/qark",
+              "description": "Quick Android Review Kit",
+              "platforms": ["linux", "macos"],
+              "tags": ["android", "static-analysis", "review", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AndroBugs",
+              "type": "free",
+              "url": "https://github.com/AndroBugs/AndroBugs_Framework",
+              "description": "Android vulnerability scanner",
+              "platforms": ["linux"],
+              "tags": ["android", "vulnerability", "scanner", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "APKTool",
+              "type": "free",
+              "url": "https://ibotpeaches.github.io/Apktool/",
+              "description": "APK reverse engineering tool",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "reverse-engineering", "apk", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Frida",
+              "type": "free",
+              "url": "https://frida.re/",
+              "description": "Dynamic instrumentation toolkit",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "ios", "dynamic", "instrumentation", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Objection",
+              "type": "free",
+              "url": "https://github.com/sensepost/objection",
+              "description": "Runtime mobile exploration toolkit",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "ios", "runtime", "exploration", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Drozer",
+              "type": "free",
+              "url": "https://github.com/FSecureLABS/drozer",
+              "description": "Android security testing framework",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "security", "testing", "framework", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Android Debug Bridge",
+              "type": "free",
+              "url": "https://developer.android.com/studio/command-line/adb",
+              "description": "Command-line tool for Android devices",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "debugging", "command-line", "official"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "android-malware",
+          "title": "Android Malware Analysis",
+          "description": "Tools for analyzing Android malware and suspicious applications",
+          "items": [
+            {
+              "name": "Androguard",
+              "type": "free",
+              "url": "https://github.com/androguard/androguard",
+              "description": "Reverse engineering and malware analysis toolkit",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["android", "malware", "reverse-engineering", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "DroidBox",
+              "type": "free",
+              "url": "https://github.com/pjlantz/droidbox",
+              "description": "Dynamic analysis sandbox for Android",
+              "platforms": ["linux"],
+              "tags": ["android", "sandbox", "dynamic-analysis", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "APKiD",
+              "type": "free",
+              "url": "https://github.com/rednaga/APKiD",
+              "description": "Android application identifier",
+              "platforms": ["linux", "macos"],
+              "tags": ["android", "identification", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Cuckoo Droid",
+              "type": "free",
+              "url": "https://github.com/idanr1986/cuckoo-droid",
+              "description": "Android extension for Cuckoo Sandbox",
+              "platforms": ["linux"],
+              "tags": ["android", "sandbox", "cuckoo", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Joe Sandbox Mobile",
+              "type": "paid",
+              "url": "https://joesandbox.com/",
+              "description": "Commercial mobile malware analysis",
+              "platforms": ["web"],
+              "tags": ["android", "ios", "sandbox", "commercial"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ios-security",
+      "title": "iOS Security",
+      "description": "Security tools and techniques for iOS applications and devices",
+      "subcategories": [
+        {
+          "id": "ios-assessment",
+          "title": "iOS Assessment Tools",
+          "description": "Jailbreaking tools and security assessment platforms for iOS",
+          "items": [
+            {
+              "name": "checkra1n",
+              "type": "free",
+              "url": "https://checkra.in/",
+              "description": "Hardware-based jailbreak for iOS",
+              "platforms": ["macos", "linux"],
+              "tags": ["ios", "jailbreak", "hardware", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "unc0ver",
+              "type": "free",
+              "url": "https://unc0ver.dev/",
+              "description": "Semi-untethered jailbreak tool",
+              "platforms": ["ios"],
+              "tags": ["ios", "jailbreak", "semi-untethered", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Chimera",
+              "type": "free",
+              "url": "https://chimera.coolstar.org/",
+              "description": "iOS jailbreak with Sileo package manager",
+              "platforms": ["ios"],
+              "tags": ["ios", "jailbreak", "sileo", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Needle",
+              "type": "free",
+              "url": "https://github.com/FSecureLABS/needle",
+              "description": "iOS security testing framework",
+              "platforms": ["linux", "macos"],
+              "tags": ["ios", "security", "testing", "framework", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "idb",
+              "type": "free",
+              "url": "https://github.com/dmayer/idb",
+              "description": "iOS app security assessment tool",
+              "platforms": ["macos"],
+              "tags": ["ios", "assessment", "security", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Cycript",
+              "type": "free",
+              "url": "http://www.cycript.org/",
+              "description": "Runtime analysis for iOS and macOS",
+              "platforms": ["ios", "macos"],
+              "tags": ["ios", "runtime", "analysis", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "SSL Kill Switch",
+              "type": "free",
+              "url": "https://github.com/nabla-c0d3/ssl-kill-switch2",
+              "description": "iOS SSL certificate validation disabler",
+              "platforms": ["ios"],
+              "tags": ["ios", "ssl", "bypass", "testing", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "class-dump",
+              "type": "free",
+              "url": "https://github.com/nygard/class-dump",
+              "description": "Objective-C runtime information utility",
+              "platforms": ["macos"],
+              "tags": ["ios", "objective-c", "static-analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "otool",
+              "type": "free",
+              "description": "Object file display tool (part of Xcode)",
+              "platforms": ["macos"],
+              "tags": ["ios", "macos", "analysis", "xcode", "official"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Hopper Disassembler",
+              "type": "paid",
+              "url": "https://hopperapp.com/",
+              "description": "Reverse engineering tool for macOS and Linux",
+              "platforms": ["macos", "linux"],
+              "tags": ["ios", "disassembler", "reverse-engineering", "commercial"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "ios-forensics",
+          "title": "iOS Forensics",
+          "description": "Data acquisition and analysis tools for iOS devices",
+          "items": [
+            {
+              "name": "libimobiledevice",
+              "type": "free",
+              "url": "https://libimobiledevice.org/",
+              "description": "Cross-platform library for iOS device communication",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["ios", "forensics", "communication", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "iOS Backup Tools",
+              "type": "free",
+              "description": "Collection of tools for iOS backup analysis",
+              "platforms": ["macos", "windows"],
+              "tags": ["ios", "backup", "analysis", "forensics"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "iPhone Backup Analyzer",
+              "type": "free",
+              "url": "https://www.iphonebackupanalyzer.com/",
+              "description": "Free iOS backup analysis tool",
+              "platforms": ["windows"],
+              "tags": ["ios", "backup", "analysis", "forensics"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "iBackup Viewer",
+              "type": "freemium",
+              "url": "https://ibackupviewer.com/",
+              "description": "iOS backup browser and extractor",
+              "platforms": ["windows", "macos"],
+              "tags": ["ios", "backup", "browser", "extraction"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Commercial Forensics Tools",
+              "type": "paid",
+              "description": "Enterprise iOS forensics platforms (Cellebrite, Oxygen, etc.)",
+              "platforms": ["windows"],
+              "tags": ["ios", "forensics", "commercial", "enterprise"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

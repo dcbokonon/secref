@@ -1,0 +1,386 @@
+{
+  "metadata": {
+    "section": "1.8",
+    "title": "Cloud Security Tools",
+    "description": "Tools for securing and assessing cloud infrastructure, containers, and cloud-native applications",
+    "lastUpdated": "2025-01-25",
+    "totalItems": 26
+  },
+  "categories": [
+    {
+      "id": "multi-cloud-security",
+      "title": "Multi-Cloud Security",
+      "description": "Tools that work across multiple cloud platforms",
+      "subcategories": [
+        {
+          "id": "cspm",
+          "title": "Cloud Security Posture Management (CSPM)",
+          "description": "Tools for managing cloud security configuration and compliance",
+          "subcategories": [
+            {
+              "id": "open-source-cspm",
+              "title": "Open Source CSPM",
+              "description": "Free and open source cloud security posture management tools",
+              "items": [
+                {
+                  "name": "Cloud Custodian",
+                  "type": "free",
+                  "url": "https://cloudcustodian.io/",
+                  "description": "Rules engine for cloud security, compliance, and governance",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["cloud", "multi-cloud", "compliance", "governance"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "ScoutSuite",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/ScoutSuite",
+                  "description": "Multi-cloud security auditing tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["cloud", "multi-cloud", "auditing", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "CloudSploit",
+                  "type": "free",
+                  "url": "https://github.com/aquasecurity/cloudsploit",
+                  "description": "Cloud security configuration scanner",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["cloud", "scanner", "configuration", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Prowler",
+                  "type": "free",
+                  "url": "https://github.com/prowler-cloud/prowler",
+                  "description": "AWS security best practices assessment tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["aws", "security", "assessment", "compliance"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "commercial-cspm",
+              "title": "Commercial CSPM",
+              "description": "Enterprise-grade cloud security posture management solutions",
+              "items": [
+                {
+                  "name": "Prisma Cloud",
+                  "type": "paid",
+                  "url": "https://www.paloaltonetworks.com/prisma/cloud",
+                  "description": "Comprehensive cloud native security platform",
+                  "platforms": ["web"],
+                  "tags": ["cloud", "multi-cloud", "enterprise", "comprehensive"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Dome9",
+                  "type": "paid",
+                  "url": "https://www.checkpoint.com/products/cloud-security/",
+                  "description": "Check Point cloud security platform",
+                  "platforms": ["web"],
+                  "tags": ["cloud", "multi-cloud", "checkpoint", "enterprise"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Lacework",
+                  "type": "paid",
+                  "url": "https://www.lacework.com/",
+                  "description": "Cloud security platform with anomaly detection",
+                  "platforms": ["web"],
+                  "tags": ["cloud", "security", "anomaly-detection", "enterprise"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Orca Security",
+                  "type": "paid",
+                  "url": "https://orca.security/",
+                  "description": "Agentless cloud security platform",
+                  "platforms": ["web"],
+                  "tags": ["cloud", "agentless", "security", "platform"],
+                  "difficulty": "expert"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cloud-workload-protection",
+          "title": "Cloud Workload Protection",
+          "description": "Tools for protecting cloud workloads and containers",
+          "subcategories": [
+            {
+              "id": "container-security",
+              "title": "Container Security",
+              "description": "Tools for securing containerized applications",
+              "items": [
+                {
+                  "name": "Trivy",
+                  "type": "free",
+                  "url": "https://trivy.dev/",
+                  "description": "Comprehensive vulnerability scanner for containers",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["container", "vulnerability", "scanner", "docker"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Clair",
+                  "type": "free",
+                  "url": "https://quay.github.io/clair/",
+                  "description": "Vulnerability static analysis for containers",
+                  "platforms": ["linux"],
+                  "tags": ["container", "vulnerability", "static-analysis"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Anchore",
+                  "type": "freemium",
+                  "url": "https://anchore.com/",
+                  "description": "Container image inspection and vulnerability scanning",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["container", "image", "vulnerability", "scanning"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Twistlock",
+                  "type": "paid",
+                  "url": "https://www.paloaltonetworks.com/prisma/cloud",
+                  "description": "Container security platform (now part of Prisma Cloud)",
+                  "platforms": ["web"],
+                  "tags": ["container", "security", "platform", "enterprise"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Falco",
+                  "type": "free",
+                  "url": "https://falco.org/",
+                  "description": "Runtime security monitoring for containers",
+                  "platforms": ["linux"],
+                  "tags": ["container", "runtime", "monitoring", "security"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Sysdig",
+                  "type": "paid",
+                  "url": "https://sysdig.com/",
+                  "description": "Container security and monitoring platform",
+                  "platforms": ["web"],
+                  "tags": ["container", "security", "monitoring", "platform"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Aqua Security",
+                  "type": "paid",
+                  "url": "https://www.aquasec.com/",
+                  "description": "Full lifecycle container security platform",
+                  "platforms": ["web"],
+                  "tags": ["container", "security", "lifecycle", "platform"],
+                  "difficulty": "expert"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud-specific-tools",
+      "title": "Cloud-Specific Tools",
+      "description": "Tools designed for specific cloud providers",
+      "subcategories": [
+        {
+          "id": "aws-security",
+          "title": "AWS Security",
+          "description": "Tools specifically for Amazon Web Services security",
+          "subcategories": [
+            {
+              "id": "aws-assessment-tools",
+              "title": "Assessment Tools",
+              "description": "Tools for assessing AWS security posture",
+              "items": [
+                {
+                  "name": "Prowler",
+                  "type": "free",
+                  "url": "https://github.com/prowler-cloud/prowler",
+                  "description": "AWS security best practices assessment",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["aws", "assessment", "security", "compliance"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "ScoutSuite",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/ScoutSuite",
+                  "description": "AWS security configuration review",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["aws", "configuration", "review", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "CloudMapper",
+                  "type": "free",
+                  "url": "https://github.com/duo-labs/cloudmapper",
+                  "description": "AWS environment visualization and assessment",
+                  "platforms": ["linux", "macos"],
+                  "tags": ["aws", "visualization", "assessment", "mapping"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "PacBot",
+                  "type": "free",
+                  "url": "https://github.com/tmobile/pacbot",
+                  "description": "Compliance monitoring and remediation for AWS",
+                  "platforms": ["linux"],
+                  "tags": ["aws", "compliance", "monitoring", "remediation"],
+                  "difficulty": "advanced"
+                }
+              ]
+            },
+            {
+              "id": "aws-exploitation-tools",
+              "title": "Exploitation Tools",
+              "description": "Tools for testing AWS security through exploitation",
+              "items": [
+                {
+                  "name": "Pacu",
+                  "type": "free",
+                  "url": "https://github.com/RhinoSecurityLabs/pacu",
+                  "description": "AWS exploitation framework",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["aws", "exploitation", "framework", "pentesting"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "WeirdAAL",
+                  "type": "free",
+                  "url": "https://github.com/carnal0wnage/weirdAAL",
+                  "description": "AWS attack library",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["aws", "attack", "library", "pentesting"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Nimbostratus",
+                  "type": "free",
+                  "url": "https://github.com/andresriancho/nimbostratus",
+                  "description": "Tools for fingerprinting and exploiting AWS",
+                  "platforms": ["linux"],
+                  "tags": ["aws", "fingerprinting", "exploitation"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "azure-security",
+          "title": "Azure Security",
+          "description": "Tools specifically for Microsoft Azure security",
+          "subcategories": [
+            {
+              "id": "azure-assessment-tools",
+              "title": "Assessment Tools",
+              "description": "Tools for assessing Azure security posture",
+              "items": [
+                {
+                  "name": "Azucar",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/azucar",
+                  "description": "Azure security configuration auditing tool",
+                  "platforms": ["windows", "linux"],
+                  "tags": ["azure", "auditing", "configuration", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "ScoutSuite",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/ScoutSuite",
+                  "description": "Azure security configuration review",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["azure", "configuration", "review", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Skyark",
+                  "type": "free",
+                  "url": "https://github.com/cyberark/SkyArk",
+                  "description": "Azure security discovery and assessment",
+                  "platforms": ["windows"],
+                  "tags": ["azure", "discovery", "assessment", "security"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "azure-exploitation-tools",
+              "title": "Exploitation Tools",
+              "description": "Tools for testing Azure security through exploitation",
+              "items": [
+                {
+                  "name": "MicroBurst",
+                  "type": "free",
+                  "url": "https://github.com/NetSPI/MicroBurst",
+                  "description": "PowerShell toolkit for Azure security assessment",
+                  "platforms": ["windows"],
+                  "tags": ["azure", "powershell", "assessment", "toolkit"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "PowerZure",
+                  "type": "free",
+                  "url": "https://github.com/hausec/PowerZure",
+                  "description": "PowerShell framework for Azure red team operations",
+                  "platforms": ["windows"],
+                  "tags": ["azure", "powershell", "red-team", "framework"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gcp-security",
+          "title": "GCP Security",
+          "description": "Tools specifically for Google Cloud Platform security",
+          "subcategories": [
+            {
+              "id": "gcp-assessment-tools",
+              "title": "Assessment Tools",
+              "description": "Tools for assessing GCP security posture",
+              "items": [
+                {
+                  "name": "ScoutSuite",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/ScoutSuite",
+                  "description": "GCP security configuration review",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["gcp", "configuration", "review", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Forseti Security",
+                  "type": "free",
+                  "url": "https://github.com/forseti-security/forseti-security",
+                  "description": "GCP security monitoring and compliance tool",
+                  "platforms": ["linux"],
+                  "tags": ["gcp", "monitoring", "compliance", "security"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "G-Scout",
+                  "type": "free",
+                  "url": "https://github.com/nccgroup/G-Scout",
+                  "description": "GCP security configuration auditing",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["gcp", "auditing", "configuration", "security"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

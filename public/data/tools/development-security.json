@@ -1,0 +1,485 @@
+{
+  "metadata": {
+    "section": "1.10",
+    "title": "Development Security Tools",
+    "description": "Tools for securing software development lifecycle, including SAST, SCA, and DevSecOps",
+    "lastUpdated": "2025-01-25",
+    "totalItems": 32
+  },
+  "categories": [
+    {
+      "id": "sast",
+      "title": "Static Application Security Testing (SAST)",
+      "description": "Tools for analyzing source code for security vulnerabilities",
+      "subcategories": [
+        {
+          "id": "commercial-sast",
+          "title": "Commercial SAST",
+          "description": "Enterprise-grade static analysis security tools",
+          "subcategories": [
+            {
+              "id": "enterprise-solutions",
+              "title": "Enterprise Solutions",
+              "description": "High-end commercial SAST platforms",
+              "items": [
+                {
+                  "name": "Checkmarx",
+                  "type": "paid",
+                  "url": "https://checkmarx.com/",
+                  "description": "Enterprise static code analysis platform",
+                  "platforms": ["web"],
+                  "tags": ["sast", "enterprise", "static-analysis", "security"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Fortify",
+                  "type": "paid",
+                  "url": "https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer",
+                  "description": "Static code analyzer for security vulnerabilities",
+                  "platforms": ["web"],
+                  "tags": ["sast", "enterprise", "static-analysis", "fortify"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Veracode",
+                  "type": "paid",
+                  "url": "https://www.veracode.com/",
+                  "description": "Cloud-based application security platform",
+                  "platforms": ["web"],
+                  "tags": ["sast", "cloud", "application-security", "platform"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Coverity",
+                  "type": "paid",
+                  "url": "https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html",
+                  "description": "Static analysis for finding critical defects",
+                  "platforms": ["web"],
+                  "tags": ["sast", "static-analysis", "defects", "synopsys"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "CodeQL",
+                  "type": "freemium",
+                  "url": "https://codeql.github.com/",
+                  "description": "GitHub's semantic code analysis engine",
+                  "platforms": ["web"],
+                  "tags": ["sast", "github", "semantic-analysis", "queries"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "open-source-sast",
+          "title": "Open Source SAST",
+          "description": "Free and open source static analysis tools",
+          "subcategories": [
+            {
+              "id": "multi-language",
+              "title": "Multi-Language",
+              "description": "SAST tools supporting multiple programming languages",
+              "items": [
+                {
+                  "name": "SonarQube",
+                  "type": "freemium",
+                  "url": "https://www.sonarqube.org/",
+                  "description": "Code quality and security analysis platform",
+                  "platforms": ["web"],
+                  "tags": ["sast", "code-quality", "multi-language", "platform"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Semgrep",
+                  "type": "free",
+                  "url": "https://semgrep.dev/",
+                  "description": "Fast static analysis with custom rules",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "static-analysis", "rules", "fast"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "PMD",
+                  "type": "free",
+                  "url": "https://pmd.github.io/",
+                  "description": "Source code analyzer for multiple languages",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "source-code", "analyzer", "multi-language"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "SpotBugs",
+                  "type": "free",
+                  "url": "https://spotbugs.github.io/",
+                  "description": "Static analysis tool for Java bytecode",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "java", "bytecode", "static-analysis"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "language-specific",
+              "title": "Language Specific",
+              "description": "SAST tools designed for specific programming languages",
+              "items": [
+                {
+                  "name": "Bandit",
+                  "type": "free",
+                  "url": "https://bandit.readthedocs.io/",
+                  "description": "Security linter for Python code",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "python", "security", "linter"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "PyLint",
+                  "type": "free",
+                  "url": "https://pylint.org/",
+                  "description": "Python static code analysis tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "python", "static-analysis", "code-quality"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Safety",
+                  "type": "free",
+                  "url": "https://pyup.io/safety/",
+                  "description": "Python dependency vulnerability scanner",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["python", "dependency", "vulnerability", "scanner"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "ESLint",
+                  "type": "free",
+                  "url": "https://eslint.org/",
+                  "description": "JavaScript code analysis and linting tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "javascript", "linting", "analysis"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "JSHint",
+                  "type": "free",
+                  "url": "https://jshint.com/",
+                  "description": "JavaScript code quality tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "javascript", "code-quality", "linting"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "NodeJsScan",
+                  "type": "free",
+                  "url": "https://github.com/ajinabraham/NodeJsScan",
+                  "description": "Static security code scanner for Node.js",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "nodejs", "security", "scanner"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "FindSecBugs",
+                  "type": "free",
+                  "url": "https://find-sec-bugs.github.io/",
+                  "description": "Security audit plugin for SpotBugs",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "java", "security", "audit"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "OWASP Dependency Check",
+                  "type": "free",
+                  "url": "https://owasp.org/www-project-dependency-check/",
+                  "description": "Detects publicly disclosed vulnerabilities",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "dependency", "vulnerability", "owasp"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Flawfinder",
+                  "type": "free",
+                  "url": "https://dwheeler.com/flawfinder/",
+                  "description": "Static analysis tool for C/C++ code",
+                  "platforms": ["linux", "macos"],
+                  "tags": ["sast", "c", "cpp", "static-analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "cppcheck",
+                  "type": "free",
+                  "url": "http://cppcheck.sourceforge.net/",
+                  "description": "Static analysis tool for C/C++",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "c", "cpp", "static-analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "PVS-Studio",
+                  "type": "freemium",
+                  "url": "https://pvs-studio.com/",
+                  "description": "Static analyzer for C, C++, C#, and Java",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sast", "c", "cpp", "csharp", "java"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sca",
+      "title": "Software Composition Analysis (SCA)",
+      "description": "Tools for analyzing and managing open source dependencies",
+      "subcategories": [
+        {
+          "id": "dependency-scanning",
+          "title": "Dependency Scanning",
+          "description": "Tools for scanning and managing software dependencies",
+          "subcategories": [
+            {
+              "id": "commercial-solutions",
+              "title": "Commercial Solutions",
+              "description": "Enterprise dependency scanning platforms",
+              "items": [
+                {
+                  "name": "Snyk",
+                  "type": "paid",
+                  "url": "https://snyk.io/",
+                  "description": "Developer-first security platform",
+                  "platforms": ["web"],
+                  "tags": ["sca", "dependency", "security", "developer"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "WhiteSource",
+                  "type": "paid",
+                  "url": "https://www.whitesourcesoftware.com/",
+                  "description": "Open source security and license compliance",
+                  "platforms": ["web"],
+                  "tags": ["sca", "open-source", "compliance", "license"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Black Duck",
+                  "type": "paid",
+                  "url": "https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html",
+                  "description": "Comprehensive software composition analysis",
+                  "platforms": ["web"],
+                  "tags": ["sca", "composition", "analysis", "synopsys"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Sonatype Nexus",
+                  "type": "paid",
+                  "url": "https://www.sonatype.com/nexus/repository-pro",
+                  "description": "Repository management with security scanning",
+                  "platforms": ["web"],
+                  "tags": ["sca", "repository", "management", "security"],
+                  "difficulty": "expert"
+                }
+              ]
+            },
+            {
+              "id": "open-source",
+              "title": "Open Source",
+              "description": "Free dependency scanning tools",
+              "items": [
+                {
+                  "name": "OWASP Dependency Check",
+                  "type": "free",
+                  "url": "https://owasp.org/www-project-dependency-check/",
+                  "description": "Identifies vulnerable components in projects",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "dependency", "vulnerability", "owasp"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "RetireJS",
+                  "type": "free",
+                  "url": "https://retirejs.github.io/retire.js/",
+                  "description": "Scanner for JavaScript libraries with vulnerabilities",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "javascript", "vulnerability", "scanner"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "bundler-audit",
+                  "type": "free",
+                  "url": "https://github.com/rubysec/bundler-audit",
+                  "description": "Ruby vulnerability scanner for bundler",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "ruby", "bundler", "audit"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "npm audit",
+                  "type": "free",
+                  "url": "https://docs.npmjs.com/cli/v8/commands/npm-audit",
+                  "description": "Built-in npm vulnerability scanner",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "npm", "javascript", "built-in"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "pip-audit",
+                  "type": "free",
+                  "url": "https://github.com/pypa/pip-audit",
+                  "description": "Python package vulnerability scanner",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["sca", "python", "pip", "audit"],
+                  "difficulty": "beginner"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devsecops-tools",
+      "title": "DevSecOps Tools",
+      "description": "Tools for integrating security into development and deployment pipelines",
+      "subcategories": [
+        {
+          "id": "ci-cd-security",
+          "title": "CI/CD Security",
+          "description": "Tools for securing continuous integration and deployment pipelines",
+          "subcategories": [
+            {
+              "id": "pipeline-security",
+              "title": "Pipeline Security",
+              "description": "Tools for securing development pipelines",
+              "items": [
+                {
+                  "name": "GitLeaks",
+                  "type": "free",
+                  "url": "https://github.com/zricethezav/gitleaks",
+                  "description": "Scan git repos for secrets and sensitive information",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["devsecops", "secrets", "git", "scanner"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "TruffleHog",
+                  "type": "free",
+                  "url": "https://github.com/trufflesecurity/trufflehog",
+                  "description": "Find secrets in git repositories",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["devsecops", "secrets", "git", "detection"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "detect-secrets",
+                  "type": "free",
+                  "url": "https://github.com/Yelp/detect-secrets",
+                  "description": "Enterprise-friendly secret detection tool",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["devsecops", "secrets", "detection", "enterprise"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Trivy",
+                  "type": "free",
+                  "url": "https://trivy.dev/",
+                  "description": "Container and code vulnerability scanner",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["devsecops", "container", "vulnerability", "scanner"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Grype",
+                  "type": "free",
+                  "url": "https://github.com/anchore/grype",
+                  "description": "Vulnerability scanner for container images",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["devsecops", "container", "vulnerability", "scanner"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Clair",
+                  "type": "free",
+                  "url": "https://quay.github.io/clair/",
+                  "description": "Vulnerability static analysis for containers",
+                  "platforms": ["linux"],
+                  "tags": ["devsecops", "container", "static-analysis", "vulnerability"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "iac-security",
+          "title": "Infrastructure as Code (IaC) Security",
+          "description": "Tools for securing infrastructure code and configurations",
+          "subcategories": [
+            {
+              "id": "iac-scanners",
+              "title": "IaC Scanners",
+              "description": "Tools for scanning infrastructure as code for security issues",
+              "items": [
+                {
+                  "name": "Checkov",
+                  "type": "free",
+                  "url": "https://www.checkov.io/",
+                  "description": "Static analysis for Terraform, CloudFormation, and more",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "terraform", "cloudformation", "static-analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Terrascan",
+                  "type": "free",
+                  "url": "https://runterrascan.io/",
+                  "description": "Static code analyzer for Terraform",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "terraform", "static-analysis", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "tfsec",
+                  "type": "free",
+                  "url": "https://aquasecurity.github.io/tfsec/",
+                  "description": "Security scanner for Terraform code",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "terraform", "security", "scanner"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "kubesec",
+                  "type": "free",
+                  "url": "https://kubesec.io/",
+                  "description": "Security risk analysis for Kubernetes manifests",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "kubernetes", "security", "analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "kube-score",
+                  "type": "free",
+                  "url": "https://github.com/zegl/kube-score",
+                  "description": "Kubernetes object analysis with security focus",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "kubernetes", "analysis", "security"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Polaris",
+                  "type": "free",
+                  "url": "https://polaris.docs.fairwinds.com/",
+                  "description": "Kubernetes configuration validation",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["iac", "kubernetes", "configuration", "validation"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

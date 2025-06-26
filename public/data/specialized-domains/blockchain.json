@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "section": "5.5",
+    "title": "Blockchain & Cryptocurrency",
+    "description": "Security tools and resources for blockchain and cryptocurrency systems",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 21
+  },
+  "categories": [
+    {
+      "id": "blockchain-security",
+      "title": "Blockchain Security",
+      "description": "Tools for smart contract security and blockchain analysis",
+      "subcategories": [
+        {
+          "id": "smart-contract-security",
+          "title": "Smart Contract Security",
+          "description": "Audit tools and development frameworks for smart contracts",
+          "items": [
+            {
+              "name": "MythX",
+              "type": "freemium",
+              "url": "https://mythx.io/",
+              "description": "Smart contract security analysis platform",
+              "platforms": ["web"],
+              "tags": ["smart-contracts", "audit", "analysis", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Slither",
+              "type": "free",
+              "url": "https://github.com/crytic/slither",
+              "description": "Solidity static analysis framework",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["solidity", "static-analysis", "ethereum", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Mythril",
+              "type": "free",
+              "url": "https://github.com/ConsenSys/mythril",
+              "description": "Security analysis tool for Ethereum smart contracts",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["ethereum", "security", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Oyente",
+              "type": "free",
+              "url": "https://github.com/melonproject/oyente",
+              "description": "Symbolic execution tool for Ethereum",
+              "platforms": ["linux"],
+              "tags": ["ethereum", "symbolic-execution", "analysis", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Securify",
+              "type": "free",
+              "url": "https://github.com/eth-sri/securify2",
+              "description": "Security scanner for Ethereum smart contracts",
+              "platforms": ["linux"],
+              "tags": ["ethereum", "scanner", "security", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "OpenZeppelin",
+              "type": "free",
+              "url": "https://openzeppelin.com/",
+              "description": "Secure smart contract development library",
+              "platforms": ["web"],
+              "tags": ["development", "library", "secure", "opensource"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Truffle Suite",
+              "type": "free",
+              "url": "https://trufflesuite.com/",
+              "description": "Development environment for Ethereum",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["development", "ethereum", "environment", "opensource"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Hardhat",
+              "type": "free",
+              "url": "https://hardhat.org/",
+              "description": "Ethereum development environment",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["development", "ethereum", "testing", "opensource"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Remix IDE",
+              "type": "free",
+              "url": "https://remix.ethereum.org/",
+              "description": "Web-based Solidity IDE",
+              "platforms": ["web"],
+              "tags": ["ide", "solidity", "web", "development"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "blockchain-analysis",
+          "title": "Blockchain Analysis",
+          "description": "Transaction analysis and forensics tools for blockchain networks",
+          "items": [
+            {
+              "name": "Chainalysis",
+              "type": "paid",
+              "url": "https://chainalysis.com/",
+              "description": "Professional blockchain analysis platform",
+              "platforms": ["web"],
+              "tags": ["analysis", "forensics", "compliance", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Elliptic",
+              "type": "paid",
+              "url": "https://elliptic.co/",
+              "description": "Blockchain analytics and compliance",
+              "platforms": ["web"],
+              "tags": ["analytics", "compliance", "investigation", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CipherTrace",
+              "type": "paid",
+              "url": "https://ciphertrace.com/",
+              "description": "Cryptocurrency investigation and compliance",
+              "platforms": ["web"],
+              "tags": ["investigation", "compliance", "cryptocurrency", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Crystal Blockchain",
+              "type": "paid",
+              "url": "https://crystalblockchain.com/",
+              "description": "Blockchain investigation and compliance tool",
+              "platforms": ["web"],
+              "tags": ["investigation", "compliance", "blockchain", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Blockchain Explorers",
+              "type": "free",
+              "description": "Public blockchain transaction explorers",
+              "platforms": ["web"],
+              "tags": ["explorer", "transactions", "public", "investigation"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Address Clustering",
+              "type": "free",
+              "description": "Techniques for grouping related addresses",
+              "platforms": ["web"],
+              "tags": ["clustering", "analysis", "forensics", "investigation"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Transaction Analysis",
+              "type": "free",
+              "description": "Methods for analyzing blockchain transactions",
+              "platforms": ["web"],
+              "tags": ["transactions", "analysis", "patterns", "forensics"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cryptocurrency-security",
+      "title": "Cryptocurrency Security",
+      "description": "Security tools and practices for cryptocurrency wallets and exchanges",
+      "subcategories": [
+        {
+          "id": "wallet-security",
+          "title": "Wallet Security",
+          "description": "Hardware and software wallet security solutions",
+          "items": [
+            {
+              "name": "Ledger Hardware Wallets",
+              "type": "paid",
+              "url": "https://ledger.com/",
+              "description": "Hardware cryptocurrency wallet",
+              "platforms": ["hardware"],
+              "tags": ["hardware-wallet", "security", "cryptocurrency", "commercial"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Trezor",
+              "type": "paid",
+              "url": "https://trezor.io/",
+              "description": "Hardware cryptocurrency wallet",
+              "platforms": ["hardware"],
+              "tags": ["hardware-wallet", "security", "cryptocurrency", "commercial"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "KeepKey",
+              "type": "paid",
+              "url": "https://keepkey.com/",
+              "description": "Hardware cryptocurrency wallet",
+              "platforms": ["hardware"],
+              "tags": ["hardware-wallet", "security", "cryptocurrency", "commercial"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "ColdCard",
+              "type": "paid",
+              "url": "https://coldcard.com/",
+              "description": "Bitcoin-focused hardware wallet",
+              "platforms": ["hardware"],
+              "tags": ["hardware-wallet", "bitcoin", "security", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Desktop Wallets",
+              "type": "free",
+              "description": "Software wallets for desktop computers",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["software-wallet", "desktop", "cryptocurrency"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Mobile Wallets",
+              "type": "free",
+              "description": "Cryptocurrency wallets for mobile devices",
+              "platforms": ["mobile"],
+              "tags": ["software-wallet", "mobile", "cryptocurrency"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Web Wallets",
+              "type": "free",
+              "description": "Browser-based cryptocurrency wallets",
+              "platforms": ["web"],
+              "tags": ["web-wallet", "browser", "cryptocurrency"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "exchange-security",
+          "title": "Exchange Security",
+          "description": "Security practices and assessment for cryptocurrency exchanges",
+          "items": [
+            {
+              "name": "API Security Assessment",
+              "type": "free",
+              "description": "Security testing of exchange APIs",
+              "platforms": ["web"],
+              "tags": ["api", "security", "testing", "exchange"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Hot/Cold Wallet Architecture",
+              "type": "free",
+              "description": "Security architecture for exchange wallets",
+              "platforms": ["architecture"],
+              "tags": ["architecture", "wallets", "security", "design"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "KYC/AML Compliance",
+              "type": "free",
+              "description": "Know Your Customer and Anti-Money Laundering practices",
+              "platforms": ["compliance"],
+              "tags": ["kyc", "aml", "compliance", "regulations"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "DDoS Protection",
+              "type": "paid",
+              "description": "Protection against distributed denial of service attacks",
+              "platforms": ["network"],
+              "tags": ["ddos", "protection", "network", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Multi-signature Implementation",
+              "type": "free",
+              "description": "Multi-signature wallet security practices",
+              "platforms": ["implementation"],
+              "tags": ["multisig", "security", "implementation", "best-practices"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

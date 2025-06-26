@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "section": "4.3",
+    "title": "Salary & Compensation",
+    "description": "Salary data, negotiation strategies, and compensation information for cybersecurity professionals",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 22
+  },
+  "categories": [
+    {
+      "id": "salary-data",
+      "title": "Salary Data Sources",
+      "description": "Sources for cybersecurity salary information and market data",
+      "subcategories": [
+        {
+          "id": "salary-surveys",
+          "title": "Industry Salary Surveys",
+          "description": "Professional surveys and reports on cybersecurity compensation",
+          "items": [
+            {
+              "name": "(ISC)² Cybersecurity Workforce Study",
+              "type": "free",
+              "url": "https://isc2.org/Research",
+              "description": "Annual comprehensive cybersecurity workforce and salary study",
+              "tags": ["survey", "workforce", "annual", "comprehensive"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Robert Half Salary Guide",
+              "type": "free",
+              "url": "https://roberthalf.com/salary-guide",
+              "description": "Technology salary guide including cybersecurity roles",
+              "tags": ["salary-guide", "technology", "annual"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "CyberSeek.org Data",
+              "type": "free",
+              "url": "https://cyberseek.org",
+              "description": "Government-sponsored cybersecurity career and salary data",
+              "tags": ["government", "career", "data"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "crowdsourced-data",
+          "title": "Crowdsourced Salary Data",
+          "description": "Community-driven salary information platforms",
+          "items": [
+            {
+              "name": "Glassdoor",
+              "type": "free",
+              "url": "https://glassdoor.com",
+              "description": "Employee-reported salary data and company reviews",
+              "tags": ["crowdsourced", "reviews", "employee-reported"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Payscale",
+              "type": "free",
+              "url": "https://payscale.com",
+              "description": "Salary data and compensation analysis",
+              "tags": ["salary", "compensation", "analysis"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Levels.fyi",
+              "type": "free",
+              "url": "https://levels.fyi",
+              "description": "Tech company compensation data including security roles",
+              "tags": ["tech", "compensation", "levels"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Blind App",
+              "type": "free",
+              "url": "https://teamblind.com",
+              "description": "Anonymous professional network with salary discussions",
+              "tags": ["anonymous", "professional", "discussions"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "factors-affecting-salary",
+          "title": "Salary Influencing Factors",
+          "description": "Key factors that impact cybersecurity compensation",
+          "items": [
+            {
+              "name": "Geographic Location",
+              "type": "free",
+              "description": "Major tech hubs, cost of living, remote work impact",
+              "tags": ["location", "cost-of-living", "remote"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Experience Level Categories",
+              "type": "free",
+              "description": "Entry (0-2 years), Mid (3-5 years), Senior (5-10 years), Principal (10+ years)",
+              "tags": ["experience", "career-levels", "progression"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Security Specializations",
+              "type": "free",
+              "description": "Cloud security premium, AI/ML security, ICS/SCADA specialists",
+              "tags": ["specialization", "premium", "emerging"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negotiation",
+      "title": "Negotiation Strategies",
+      "description": "Strategies and tactics for salary and benefit negotiation",
+      "subcategories": [
+        {
+          "id": "negotiation-strategies",
+          "title": "Negotiation Approaches",
+          "description": "Proven strategies for compensation negotiation",
+          "items": [
+            {
+              "name": "Market Research",
+              "type": "free",
+              "description": "Researching market rates, company standards, and total compensation",
+              "tags": ["research", "market-rates", "preparation"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Negotiation Tactics",
+              "type": "free",
+              "description": "Multiple offers, timing, non-salary benefits strategies",
+              "tags": ["tactics", "timing", "leverage"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "compensation-components",
+          "title": "Total Compensation Components",
+          "description": "Understanding all elements of compensation packages",
+          "items": [
+            {
+              "name": "Base Salary",
+              "type": "free",
+              "description": "Core annual salary component",
+              "tags": ["base", "salary", "core"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Bonus Structure",
+              "type": "free",
+              "description": "Signing bonus, performance bonus, retention bonus",
+              "tags": ["bonus", "performance", "retention"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Equity Compensation",
+              "type": "free",
+              "description": "RSUs, stock options, ESPP programs",
+              "tags": ["equity", "stock", "ownership"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Benefits Package",
+              "type": "free",
+              "description": "Health insurance, 401k matching, PTO, professional development",
+              "tags": ["benefits", "health", "development"],
+              "difficulty": "beginner"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

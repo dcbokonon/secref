@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "section": "2.3",
+    "title": "Books & Publications",
+    "description": "Essential books, reference materials, cheat sheets, and methodology guides for cybersecurity professionals",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 28
+  },
+  "categories": [
+    {
+      "id": "foundational-books",
+      "title": "Foundational Books",
+      "description": "Essential reading for building strong cybersecurity knowledge",
+      "subcategories": [
+        {
+          "id": "general-security",
+          "title": "General Security",
+          "description": "Core cybersecurity concepts and fundamentals",
+          "items": [
+            {
+              "name": "The Web Application Hacker's Handbook",
+              "type": "paid",
+              "url": "https://portswigger.net/web-security/web-application-hackers-handbook",
+              "description": "Comprehensive guide to web application security testing",
+              "platforms": ["all"],
+              "tags": ["web-security", "foundational", "comprehensive", "classic"],
+              "difficulty": "beginner",
+              "authors": ["Dafydd Stuttard", "Marcus Pinto"]
+            },
+            {
+              "name": "Network Security for Beginners",
+              "type": "paid",
+              "description": "Introduction to network security concepts and practices",
+              "platforms": ["all"],
+              "tags": ["network-security", "beginner", "fundamentals"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Cybersecurity for Beginners",
+              "type": "paid",
+              "description": "General introduction to cybersecurity field",
+              "platforms": ["all"],
+              "tags": ["general", "beginner", "overview"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Hacking: The Art of Exploitation",
+              "type": "paid",
+              "url": "https://nostarch.com/hacking2.htm",
+              "description": "Deep dive into exploitation techniques and programming",
+              "platforms": ["linux"],
+              "tags": ["exploitation", "programming", "low-level", "intermediate"],
+              "difficulty": "intermediate",
+              "authors": ["Jon Erickson"]
+            },
+            {
+              "name": "The Tangled Web",
+              "type": "paid",
+              "url": "https://nostarch.com/tangledweb",
+              "description": "Understanding web browser security models",
+              "platforms": ["web"],
+              "tags": ["web-security", "browser", "security-models"],
+              "difficulty": "intermediate",
+              "authors": ["Michal Zalewski"]
+            },
+            {
+              "name": "Practical Malware Analysis",
+              "type": "paid",
+              "url": "https://nostarch.com/malware",
+              "description": "Hands-on approach to malware analysis and reverse engineering",
+              "platforms": ["windows"],
+              "tags": ["malware-analysis", "reverse-engineering", "practical"],
+              "difficulty": "intermediate",
+              "authors": ["Michael Sikorski", "Andrew Honig"]
+            }
+          ]
+        },
+        {
+          "id": "specialized-topics",
+          "title": "Specialized Topics",
+          "description": "Books focusing on specific cybersecurity domains",
+          "items": [
+            {
+              "name": "Web Application Security (Andrew Hoffman)",
+              "type": "paid",
+              "description": "Modern web application security techniques",
+              "platforms": ["web"],
+              "tags": ["web-security", "modern", "application-security"],
+              "difficulty": "intermediate",
+              "authors": ["Andrew Hoffman"]
+            },
+            {
+              "name": "Real-World Bug Hunting",
+              "type": "paid",
+              "url": "https://nostarch.com/bughunting",
+              "description": "Field guide to web hacking and bug bounty hunting",
+              "platforms": ["web"],
+              "tags": ["bug-bounty", "web-hacking", "real-world"],
+              "difficulty": "intermediate",
+              "authors": ["Peter Yaworski"]
+            },
+            {
+              "name": "The Browser Hacker's Handbook",
+              "type": "paid",
+              "description": "Advanced browser security and exploitation techniques",
+              "platforms": ["web"],
+              "tags": ["browser-security", "exploitation", "advanced"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Network Security Assessment",
+              "type": "paid",
+              "url": "https://oreilly.com/library/view/network-security-assessment/9781491910955/",
+              "description": "Comprehensive network penetration testing methodology",
+              "platforms": ["all"],
+              "tags": ["network-security", "penetration-testing", "methodology"],
+              "difficulty": "intermediate",
+              "authors": ["Chris McNab"]
+            },
+            {
+              "name": "Nmap Network Scanning",
+              "type": "paid",
+              "url": "https://nmap.org/book/",
+              "description": "Official guide to Nmap network discovery and security auditing",
+              "platforms": ["all"],
+              "tags": ["nmap", "network-scanning", "official"],
+              "difficulty": "intermediate",
+              "authors": ["Gordon Fyodor Lyon"]
+            },
+            {
+              "name": "Applied Network Security Monitoring",
+              "type": "paid",
+              "url": "https://www.oreilly.com/library/view/applied-network-security/9780124172081/",
+              "description": "Collection, detection, and analysis for incident response",
+              "platforms": ["all"],
+              "tags": ["network-monitoring", "incident-response", "detection"],
+              "difficulty": "intermediate",
+              "authors": ["Chris Sanders", "Jason Smith"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reference-materials",
+      "title": "Reference Materials",
+      "description": "Quick reference guides and practical resources",
+      "subcategories": [
+        {
+          "id": "cheat-sheets",
+          "title": "Cheat Sheets",
+          "description": "Quick reference guides for tools and techniques",
+          "items": [
+            {
+              "name": "SANS Cheat Sheets",
+              "type": "free",
+              "url": "https://sans.org/security-resources/sec560/misc_tools_sheet_v1.pdf",
+              "description": "Free PDF downloads covering various security topics",
+              "platforms": ["all"],
+              "tags": ["sans", "reference", "pdf", "comprehensive"],
+              "difficulty": "beginner",
+              "features": [
+                "Free PDF downloads",
+                "Quick reference guides",
+                "Tool usage guides",
+                "Multiple topics covered"
+              ]
+            },
+            {
+              "name": "PayloadsAllTheThings",
+              "type": "free",
+              "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+              "description": "Community-maintained collection of useful payloads and bypasses",
+              "platforms": ["all"],
+              "tags": ["payloads", "community", "github", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "HackTricks",
+              "type": "free",
+              "url": "https://book.hacktricks.xyz/",
+              "description": "Comprehensive penetration testing methodology and tricks",
+              "platforms": ["all"],
+              "tags": ["methodology", "penetration-testing", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Pentest Cheat Sheets",
+              "type": "free",
+              "description": "Various community-contributed penetration testing references",
+              "platforms": ["all"],
+              "tags": ["penetration-testing", "community", "reference"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "methodology-guides",
+          "title": "Methodology Guides",
+          "description": "Standardized approaches and frameworks for security testing",
+          "items": [
+            {
+              "name": "PTES (Penetration Testing Execution Standard)",
+              "type": "free",
+              "url": "http://www.pentest-standard.org/index.php/Main_Page",
+              "description": "Comprehensive standard for penetration testing methodology",
+              "platforms": ["all"],
+              "tags": ["standard", "methodology", "penetration-testing", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "OWASP Testing Guide",
+              "type": "free",
+              "url": "https://owasp.org/www-project-web-security-testing-guide/",
+              "description": "Complete guide to web application security testing",
+              "platforms": ["web"],
+              "tags": ["owasp", "web-security", "testing", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "NIST Cybersecurity Framework",
+              "type": "free",
+              "url": "https://www.nist.gov/cyberframework",
+              "description": "Framework for improving critical infrastructure cybersecurity",
+              "platforms": ["all"],
+              "tags": ["nist", "framework", "governance", "enterprise"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "MITRE ATT&CK",
+              "type": "free",
+              "url": "https://attack.mitre.org/",
+              "description": "Globally-accessible knowledge base of adversary tactics and techniques",
+              "platforms": ["all"],
+              "tags": ["mitre", "attack", "tactics", "techniques", "threat-intelligence"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Cyber Kill Chain",
+              "type": "free",
+              "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html",
+              "description": "Framework for understanding and stopping cyber intrusions",
+              "platforms": ["all"],
+              "tags": ["kill-chain", "framework", "intrusion", "defense"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Diamond Model",
+              "type": "free",
+              "description": "Framework for analyzing cyber intrusion events",
+              "platforms": ["all"],
+              "tags": ["diamond-model", "analysis", "intrusion", "framework"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

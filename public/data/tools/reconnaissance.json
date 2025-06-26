@@ -1,0 +1,1807 @@
+{
+  "metadata": {
+    "section": "1.1",
+    "title": "Reconnaissance & Information Gathering",
+    "description": "Tools and techniques for passive and active information gathering, network discovery, OSINT, and infrastructure intelligence",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 89
+  },
+  "categories": [
+    {
+      "id": "network-discovery",
+      "title": "Network Discovery & Mapping",
+      "description": "Tools for discovering and mapping network infrastructure through active and passive methods",
+      "subcategories": [
+        {
+          "id": "active-scanning",
+          "title": "Active Scanning",
+          "description": "Direct scanning techniques for port discovery, host identification, and service enumeration",
+          "subcategories": [
+            {
+              "id": "port-scanners",
+              "title": "Port Scanners",
+              "description": "Tools for discovering open ports and services",
+              "subcategories": [
+                {
+                  "id": "tcp-scanners",
+                  "title": "TCP Scanners",
+                  "description": "TCP-focused port scanning tools",
+                  "items": [
+                    {
+                      "name": "Nmap",
+                      "type": "free",
+                      "url": "https://nmap.org",
+                      "description": "The most popular network mapper for port scanning and service detection",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "service-detection", "network-mapping", "tcp"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Masscan",
+                      "type": "free",
+                      "url": "https://github.com/robertdavidgraham/masscan",
+                      "description": "High-speed TCP port scanner capable of scanning the entire internet",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "high-speed", "tcp", "internet-scale"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Zmap",
+                      "type": "free",
+                      "url": "https://zmap.io",
+                      "description": "Fast internet-wide network scanner for research",
+                      "platforms": ["linux"],
+                      "tags": ["port-scanning", "internet-scanning", "research", "tcp"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "RustScan",
+                      "type": "free",
+                      "url": "https://github.com/RustScan/RustScan",
+                      "description": "Fast port scanner written in Rust, designed to pipe results to Nmap",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "rust", "fast", "tcp"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "udp-scanners",
+                  "title": "UDP Scanners",
+                  "description": "UDP-focused port scanning tools",
+                  "items": [
+                    {
+                      "name": "udp-proto-scanner",
+                      "type": "free",
+                      "description": "UDP protocol scanner for discovering UDP services",
+                      "platforms": ["linux"],
+                      "tags": ["port-scanning", "udp", "protocol-scanning"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "unicornscan",
+                      "type": "free",
+                      "url": "https://github.com/dneufeld/unicornscan",
+                      "description": "Flexible and efficient network probing tool with UDP scanning capabilities",
+                      "platforms": ["linux"],
+                      "tags": ["port-scanning", "udp", "tcp", "network-probing"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "combined-scanners",
+                  "title": "Combined Scanners",
+                  "description": "Port scanners supporting multiple protocols",
+                  "items": [
+                    {
+                      "name": "Angry IP Scanner",
+                      "type": "free",
+                      "url": "https://angryip.org",
+                      "description": "Cross-platform network scanner with GUI interface",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["port-scanning", "gui", "cross-platform", "network-scanning"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Advanced Port Scanner",
+                      "type": "free",
+                      "url": "https://www.advanced-port-scanner.com",
+                      "description": "Fast port scanner for Windows with additional network tools",
+                      "platforms": ["windows"],
+                      "tags": ["port-scanning", "windows", "gui", "network-tools"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "host-discovery",
+              "title": "Host Discovery",
+              "description": "Tools for discovering active hosts on networks",
+              "subcategories": [
+                {
+                  "id": "arp-based",
+                  "title": "ARP-based Discovery",
+                  "description": "Host discovery using ARP protocol",
+                  "items": [
+                    {
+                      "name": "arp-scan",
+                      "type": "free",
+                      "url": "https://github.com/royhills/arp-scan",
+                      "description": "ARP scanner for discovering hosts on local networks",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["host-discovery", "arp", "local-network"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "netdiscover",
+                      "type": "free",
+                      "description": "Active/passive network address discovering tool using ARP",
+                      "platforms": ["linux"],
+                      "tags": ["host-discovery", "arp", "active", "passive"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "icmp-based",
+                  "title": "ICMP-based Discovery",
+                  "description": "Host discovery using ICMP protocol",
+                  "items": [
+                    {
+                      "name": "fping",
+                      "type": "free",
+                      "url": "https://fping.org",
+                      "description": "Fast ping utility for pinging multiple hosts simultaneously",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["host-discovery", "icmp", "ping", "fast"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "hping3",
+                      "type": "free",
+                      "url": "https://github.com/antirez/hping",
+                      "description": "Network tool for crafting and sending custom packets",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["packet-crafting", "icmp", "tcp", "host-discovery"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "multi-protocol",
+                  "title": "Multi-protocol Discovery",
+                  "description": "Host discovery using multiple protocols",
+                  "items": [
+                    {
+                      "name": "nmap discovery modes",
+                      "type": "free",
+                      "description": "Various host discovery techniques available in Nmap",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["host-discovery", "multi-protocol", "nmap", "comprehensive"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "service-enumeration",
+              "title": "Service Enumeration",
+              "description": "Tools for enumerating and fingerprinting network services",
+              "subcategories": [
+                {
+                  "id": "smb-netbios",
+                  "title": "SMB/NetBIOS Enumeration",
+                  "description": "Tools for enumerating SMB shares and NetBIOS information",
+                  "items": [
+                    {
+                      "name": "enum4linux",
+                      "type": "free",
+                      "url": "https://github.com/CiscoCXSecurity/enum4linux",
+                      "description": "Linux alternative to enum.exe for enumerating Windows and Samba hosts",
+                      "platforms": ["linux"],
+                      "tags": ["smb", "netbios", "enumeration", "windows", "samba"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "smbmap",
+                      "type": "free",
+                      "url": "https://github.com/ShawnDEvans/smbmap",
+                      "description": "SMB enumeration tool for listing shares and permissions",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["smb", "shares", "permissions", "enumeration"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "smbclient",
+                      "type": "free",
+                      "description": "Command-line SMB client for accessing Windows shares",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["smb", "client", "shares", "windows"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "rpcclient",
+                      "type": "free",
+                      "description": "Command-line RPC client for Windows RPC services",
+                      "platforms": ["linux"],
+                      "tags": ["rpc", "windows", "enumeration", "client"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "nbtscan",
+                      "type": "free",
+                      "description": "NetBIOS scanner for enumerating NetBIOS name information",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["netbios", "scanner", "enumeration", "names"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "snmp",
+                  "title": "SNMP Enumeration",
+                  "description": "Tools for SNMP service enumeration",
+                  "items": [
+                    {
+                      "name": "snmpwalk",
+                      "type": "free",
+                      "description": "Command-line tool for querying SNMP-enabled devices",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["snmp", "enumeration", "oid", "mib"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "snmpenum",
+                      "type": "free",
+                      "description": "SNMP enumeration script for extracting system information",
+                      "platforms": ["linux"],
+                      "tags": ["snmp", "enumeration", "system-info"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "onesixtyone",
+                      "type": "free",
+                      "url": "https://github.com/trailofbits/onesixtyone",
+                      "description": "Fast SNMP scanner for finding SNMP community strings",
+                      "platforms": ["linux"],
+                      "tags": ["snmp", "scanner", "community-strings", "fast"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "ldap",
+                  "title": "LDAP Enumeration",
+                  "description": "Tools for LDAP service enumeration",
+                  "items": [
+                    {
+                      "name": "ldapsearch",
+                      "type": "free",
+                      "description": "Command-line tool for searching LDAP directories",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["ldap", "search", "directory", "enumeration"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "ldapenum",
+                      "type": "free",
+                      "description": "LDAP enumeration tool for extracting directory information",
+                      "platforms": ["linux"],
+                      "tags": ["ldap", "enumeration", "directory"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "dns",
+                  "title": "DNS Enumeration",
+                  "description": "Tools for DNS service enumeration",
+                  "items": [
+                    {
+                      "name": "dnsrecon",
+                      "type": "free",
+                      "url": "https://github.com/darkoperator/dnsrecon",
+                      "description": "DNS enumeration and reconnaissance tool",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["dns", "enumeration", "reconnaissance", "zone-transfer"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "dnsenum",
+                      "type": "free",
+                      "url": "https://github.com/fwaeytens/dnsenum",
+                      "description": "DNS enumeration tool for gathering DNS information",
+                      "platforms": ["linux"],
+                      "tags": ["dns", "enumeration", "subdomains", "zone-transfer"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "web-services",
+                  "title": "Web Services Enumeration",
+                  "description": "Tools for web service enumeration and fingerprinting",
+                  "items": [
+                    {
+                      "name": "whatweb",
+                      "type": "free",
+                      "url": "https://github.com/urbanadventurer/whatweb",
+                      "description": "Web scanner for identifying technologies used by websites",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["web", "fingerprinting", "technologies", "scanner"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "wappalyzer",
+                      "type": "free",
+                      "url": "https://www.wappalyzer.com",
+                      "description": "Browser extension and API for identifying web technologies",
+                      "platforms": ["web"],
+                      "tags": ["web", "fingerprinting", "technologies", "browser-extension"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "passive-reconnaissance",
+          "title": "Passive Reconnaissance",
+          "description": "Non-intrusive information gathering techniques",
+          "subcategories": [
+            {
+              "id": "network-monitoring",
+              "title": "Network Monitoring",
+              "description": "Tools for passive network traffic analysis",
+              "subcategories": [
+                {
+                  "id": "packet-capture",
+                  "title": "Packet Capture & Analysis",
+                  "description": "Tools for capturing and analyzing network packets",
+                  "items": [
+                    {
+                      "name": "tcpdump",
+                      "type": "free",
+                      "description": "Command-line packet analyzer for Unix-like systems",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["packet-capture", "analysis", "command-line", "pcap"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Wireshark",
+                      "type": "free",
+                      "url": "https://www.wireshark.org",
+                      "description": "Popular network protocol analyzer with GUI",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["packet-analysis", "gui", "protocol-analysis", "pcap"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "tshark",
+                      "type": "free",
+                      "description": "Command-line version of Wireshark",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["packet-analysis", "command-line", "wireshark", "pcap"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "flow-analysis",
+                  "title": "Flow Analysis",
+                  "description": "Tools for analyzing network flow data",
+                  "items": [
+                    {
+                      "name": "ntopng",
+                      "type": "free",
+                      "url": "https://www.ntop.org/products/traffic-analysis/ntop/",
+                      "description": "Web-based network traffic monitoring tool",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["flow-analysis", "web-interface", "monitoring", "netflow"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "softflowd",
+                      "type": "free",
+                      "url": "https://github.com/irino/softflowd",
+                      "description": "Software-based NetFlow probe for traffic flow monitoring",
+                      "platforms": ["linux"],
+                      "tags": ["netflow", "flow-monitoring", "probe", "traffic-analysis"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "passive-os-fingerprinting",
+                  "title": "Passive OS Fingerprinting",
+                  "description": "Tools for passive operating system identification",
+                  "items": [
+                    {
+                      "name": "p0f",
+                      "type": "free",
+                      "url": "https://lcamtuf.coredump.cx/p0f3/",
+                      "description": "Passive OS fingerprinting tool",
+                      "platforms": ["linux"],
+                      "tags": ["os-fingerprinting", "passive", "network-analysis"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "NetworkMiner",
+                      "type": "freemium",
+                      "url": "https://www.netresec.com/?page=NetworkMiner",
+                      "description": "Network forensic analysis tool with passive OS detection",
+                      "platforms": ["windows"],
+                      "tags": ["network-forensics", "os-fingerprinting", "gui", "packet-analysis"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osint",
+      "title": "OSINT (Open Source Intelligence)",
+      "description": "Open source intelligence gathering tools and techniques",
+      "subcategories": [
+        {
+          "id": "search-engines-aggregators",
+          "title": "Search Engines & Aggregators",
+          "description": "Search engines and aggregation services for OSINT",
+          "subcategories": [
+            {
+              "id": "general-purpose",
+              "title": "General Purpose Search",
+              "description": "General-purpose search engines and operators",
+              "subcategories": [
+                {
+                  "id": "search-operators",
+                  "title": "Search Operators & Techniques",
+                  "description": "Search engine operators and advanced search techniques",
+                  "items": [
+                    {
+                      "name": "Google Dorking",
+                      "type": "free",
+                      "url": "https://www.google.com",
+                      "description": "Advanced Google search operators for finding specific information",
+                      "platforms": ["web"],
+                      "tags": ["google", "dorks", "search-operators", "osint"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Bing Search",
+                      "type": "free",
+                      "url": "https://www.bing.com",
+                      "description": "Microsoft's search engine with unique indexing capabilities",
+                      "platforms": ["web"],
+                      "tags": ["bing", "search", "microsoft", "osint"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Yandex",
+                      "type": "free",
+                      "url": "https://yandex.com",
+                      "description": "Russian search engine with strong reverse image search",
+                      "platforms": ["web"],
+                      "tags": ["yandex", "search", "russian", "reverse-image"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Baidu",
+                      "type": "free",
+                      "url": "https://www.baidu.com",
+                      "description": "Chinese search engine for Chinese content",
+                      "platforms": ["web"],
+                      "tags": ["baidu", "search", "chinese", "china"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "meta-search",
+                  "title": "Meta Search Engines",
+                  "description": "Search engines that aggregate results from multiple sources",
+                  "items": [
+                    {
+                      "name": "Searx",
+                      "type": "free",
+                      "url": "https://searx.org",
+                      "description": "Privacy-respecting meta search engine",
+                      "platforms": ["web"],
+                      "tags": ["meta-search", "privacy", "aggregation", "open-source"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "MetaGer",
+                      "type": "free",
+                      "url": "https://metager.org",
+                      "description": "German meta search engine focused on privacy",
+                      "platforms": ["web"],
+                      "tags": ["meta-search", "privacy", "german", "aggregation"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "specialized-search",
+              "title": "Specialized Search Engines",
+              "description": "Search engines for specific types of content or systems",
+              "subcategories": [
+                {
+                  "id": "device-service-search",
+                  "title": "Device/Service Search",
+                  "description": "Search engines for finding internet-connected devices and services",
+                  "items": [
+                    {
+                      "name": "Shodan",
+                      "type": "freemium",
+                      "url": "https://www.shodan.io",
+                      "description": "Search engine for Internet-connected devices",
+                      "platforms": ["web"],
+                      "tags": ["iot", "devices", "services", "internet-scanning"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Censys",
+                      "type": "freemium",
+                      "url": "https://censys.io",
+                      "description": "Search engine for internet-wide scanning data",
+                      "platforms": ["web"],
+                      "tags": ["internet-scanning", "certificates", "devices", "services"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "ZoomEye",
+                      "type": "freemium",
+                      "url": "https://www.zoomeye.org",
+                      "description": "Chinese cyberspace search engine",
+                      "platforms": ["web"],
+                      "tags": ["cyberspace", "devices", "services", "chinese"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Fofa",
+                      "type": "freemium",
+                      "url": "https://fofa.so",
+                      "description": "Cyberspace search engine for assets and vulnerabilities",
+                      "platforms": ["web"],
+                      "tags": ["cyberspace", "assets", "vulnerabilities", "chinese"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "BinaryEdge",
+                      "type": "paid",
+                      "url": "https://www.binaryedge.io",
+                      "description": "Internet-wide scanner and search platform",
+                      "platforms": ["web"],
+                      "tags": ["internet-scanning", "cybersecurity", "threat-intelligence"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Onyphe",
+                      "type": "freemium",
+                      "url": "https://www.onyphe.io",
+                      "description": "Cyber defense search engine for threat intelligence",
+                      "platforms": ["web"],
+                      "tags": ["threat-intelligence", "cyber-defense", "scanning"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "iot-specific",
+                  "title": "IoT Specific Search",
+                  "description": "Search engines specifically for IoT devices",
+                  "items": [
+                    {
+                      "name": "Thingful",
+                      "type": "free",
+                      "url": "https://www.thingful.net",
+                      "description": "Search engine for Internet of Things devices",
+                      "platforms": ["web"],
+                      "tags": ["iot", "devices", "sensors", "data"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "IoT Search engines",
+                      "type": "free",
+                      "description": "Various specialized IoT device search engines",
+                      "platforms": ["web"],
+                      "tags": ["iot", "devices", "specialized"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "code-search",
+                  "title": "Code Search Engines",
+                  "description": "Search engines for source code repositories",
+                  "items": [
+                    {
+                      "name": "GitHub Search",
+                      "type": "free",
+                      "url": "https://github.com/search",
+                      "description": "GitHub's built-in code and repository search",
+                      "platforms": ["web"],
+                      "tags": ["github", "code-search", "repositories", "git"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "GitLab Search",
+                      "type": "free",
+                      "url": "https://gitlab.com/search",
+                      "description": "GitLab's code and project search functionality",
+                      "platforms": ["web"],
+                      "tags": ["gitlab", "code-search", "repositories", "git"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Bitbucket Search",
+                      "type": "free",
+                      "url": "https://bitbucket.org/search",
+                      "description": "Atlassian Bitbucket code search",
+                      "platforms": ["web"],
+                      "tags": ["bitbucket", "code-search", "repositories", "git"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "SourceGraph",
+                      "type": "freemium",
+                      "url": "https://sourcegraph.com",
+                      "description": "Universal code search across repositories",
+                      "platforms": ["web"],
+                      "tags": ["code-search", "universal", "cross-repository"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "SearchCode",
+                      "type": "free",
+                      "url": "https://searchcode.com",
+                      "description": "Source code search engine across multiple platforms",
+                      "platforms": ["web"],
+                      "tags": ["code-search", "multi-platform", "source-code"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "dark-web-search",
+                  "title": "Dark Web Search Engines",
+                  "description": "Search engines for dark web content",
+                  "items": [
+                    {
+                      "name": "Ahmia",
+                      "type": "free",
+                      "url": "https://ahmia.fi",
+                      "description": "Search engine for Tor hidden services",
+                      "platforms": ["web"],
+                      "tags": ["dark-web", "tor", "hidden-services", "onion"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Torch",
+                      "type": "free",
+                      "description": "Dark web search engine for onion sites",
+                      "platforms": ["web"],
+                      "tags": ["dark-web", "tor", "onion", "search"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Not Evil",
+                      "type": "free",
+                      "description": "Dark web search engine",
+                      "platforms": ["web"],
+                      "tags": ["dark-web", "tor", "search"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Kilos",
+                      "type": "free",
+                      "description": "Dark web search engine for marketplaces",
+                      "platforms": ["web"],
+                      "tags": ["dark-web", "marketplaces", "tor"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "social-media-intelligence",
+          "title": "Social Media Intelligence",
+          "description": "Tools for gathering intelligence from social media platforms",
+          "subcategories": [
+            {
+              "id": "platform-specific-tools",
+              "title": "Platform-Specific Tools",
+              "description": "Tools designed for specific social media platforms",
+              "subcategories": [
+                {
+                  "id": "twitter-x",
+                  "title": "Twitter/X Tools",
+                  "description": "Tools for Twitter/X intelligence gathering",
+                  "items": [
+                    {
+                      "name": "TweetDeck",
+                      "type": "free",
+                      "url": "https://tweetdeck.twitter.com",
+                      "description": "Official Twitter dashboard for monitoring and managing accounts",
+                      "platforms": ["web"],
+                      "tags": ["twitter", "monitoring", "dashboard", "official"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Twint",
+                      "type": "free",
+                      "url": "https://github.com/twintproject/twint",
+                      "description": "Advanced Twitter scraping tool without using Twitter's API",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["twitter", "scraping", "osint", "no-api"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "TwitterAudit",
+                      "type": "free",
+                      "url": "https://www.twitteraudit.com",
+                      "description": "Tool for analyzing Twitter followers for fake accounts",
+                      "platforms": ["web"],
+                      "tags": ["twitter", "audit", "fake-followers", "analysis"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Followerwonk",
+                      "type": "freemium",
+                      "url": "https://followerwonk.com",
+                      "description": "Twitter analytics and follower analysis tool",
+                      "platforms": ["web"],
+                      "tags": ["twitter", "analytics", "followers", "analysis"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "TweetBeaver",
+                      "type": "free",
+                      "url": "https://tweetbeaver.com",
+                      "description": "Collection of Twitter analytics tools",
+                      "platforms": ["web"],
+                      "tags": ["twitter", "analytics", "tools", "collection"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "facebook",
+                  "title": "Facebook Tools",
+                  "description": "Tools for Facebook intelligence gathering",
+                  "items": [
+                    {
+                      "name": "Graph Search techniques",
+                      "type": "free",
+                      "description": "Advanced Facebook search techniques using Graph Search",
+                      "platforms": ["web"],
+                      "tags": ["facebook", "graph-search", "techniques", "osint"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Facebook Directory",
+                      "type": "free",
+                      "description": "Directory-based Facebook profile discovery methods",
+                      "platforms": ["web"],
+                      "tags": ["facebook", "directory", "profiles", "discovery"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "StalkFace",
+                      "type": "free",
+                      "url": "https://github.com/zzeeaa/StalkFace",
+                      "description": "Facebook stalking tool for OSINT purposes",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["facebook", "osint", "stalking", "investigation"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "linkedin",
+                  "title": "LinkedIn Tools",
+                  "description": "Tools for LinkedIn intelligence gathering",
+                  "items": [
+                    {
+                      "name": "Sales Navigator",
+                      "type": "paid",
+                      "url": "https://business.linkedin.com/sales-solutions/sales-navigator",
+                      "description": "LinkedIn's premium search and lead generation tool",
+                      "platforms": ["web"],
+                      "tags": ["linkedin", "premium", "search", "leads"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Recruiter",
+                      "type": "paid",
+                      "url": "https://business.linkedin.com/talent-solutions/recruiter",
+                      "description": "LinkedIn's recruiting platform with advanced search",
+                      "platforms": ["web"],
+                      "tags": ["linkedin", "recruiting", "premium", "search"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "CrossLinked",
+                      "type": "free",
+                      "url": "https://github.com/m8r0wn/CrossLinked",
+                      "description": "LinkedIn enumeration tool for collecting employee names",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["linkedin", "enumeration", "employees", "osint"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "instagram",
+                  "title": "Instagram Tools",
+                  "description": "Tools for Instagram intelligence gathering",
+                  "items": [
+                    {
+                      "name": "Instagram-scraper",
+                      "type": "free",
+                      "url": "https://github.com/arc298/instagram-scraper",
+                      "description": "Command-line Instagram scraper",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["instagram", "scraper", "command-line", "osint"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Instalooter",
+                      "type": "free",
+                      "url": "https://github.com/althonos/InstaLooter",
+                      "description": "Instagram scraper for downloading pictures and videos",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["instagram", "scraper", "download", "media"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "InstaLooter",
+                      "type": "free",
+                      "url": "https://github.com/althonos/InstaLooter",
+                      "description": "Alternative Instagram media downloader",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["instagram", "downloader", "media", "alternative"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "tiktok",
+                  "title": "TikTok Tools",
+                  "description": "Tools for TikTok intelligence gathering",
+                  "items": [
+                    {
+                      "name": "TikTok-scraper",
+                      "type": "free",
+                      "url": "https://github.com/drawrowfly/tiktok-scraper",
+                      "description": "TikTok scraper for videos, users, and hashtags",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["tiktok", "scraper", "videos", "users"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "TikTok-Api",
+                      "type": "free",
+                      "url": "https://github.com/davidteather/TikTok-Api",
+                      "description": "Unofficial TikTok API for data extraction",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["tiktok", "api", "unofficial", "extraction"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "reddit",
+                  "title": "Reddit Tools",
+                  "description": "Tools for Reddit intelligence gathering",
+                  "items": [
+                    {
+                      "name": "Reddit Investigator",
+                      "type": "free",
+                      "url": "https://www.redditinvestigator.com",
+                      "description": "Tool for analyzing Reddit user activity and behavior",
+                      "platforms": ["web"],
+                      "tags": ["reddit", "user-analysis", "investigation", "behavior"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "RedditMetis",
+                      "type": "free",
+                      "url": "https://redditmetis.com",
+                      "description": "Reddit user analysis and profiling tool",
+                      "platforms": ["web"],
+                      "tags": ["reddit", "user-profiling", "analysis", "osint"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Reddit User Analyzer",
+                      "type": "free",
+                      "description": "Various tools for analyzing Reddit user patterns",
+                      "platforms": ["web"],
+                      "tags": ["reddit", "user-analysis", "patterns", "tools"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cross-platform-tools",
+              "title": "Cross-Platform Tools",
+              "description": "Tools that work across multiple social media platforms",
+              "subcategories": [
+                {
+                  "id": "username-search",
+                  "title": "Username Search Tools",
+                  "description": "Tools for finding usernames across multiple platforms",
+                  "items": [
+                    {
+                      "name": "Sherlock",
+                      "type": "free",
+                      "url": "https://github.com/sherlock-project/sherlock",
+                      "description": "Hunt down social media accounts by username across social networks",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["username", "social-media", "osint", "cross-platform"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "WhatsMyName",
+                      "type": "free",
+                      "url": "https://github.com/WebBreacher/WhatsMyName",
+                      "description": "Tool for finding usernames across many websites",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["username", "websites", "osint", "investigation"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Namechk",
+                      "type": "free",
+                      "url": "https://namechk.com",
+                      "description": "Check username availability across social networks",
+                      "platforms": ["web"],
+                      "tags": ["username", "availability", "social-networks", "check"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "KnowEm",
+                      "type": "free",
+                      "url": "https://knowem.com",
+                      "description": "Username search across 500+ social networks",
+                      "platforms": ["web"],
+                      "tags": ["username", "social-networks", "500-plus", "search"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Namecheckr",
+                      "type": "free",
+                      "url": "https://www.namecheckr.com",
+                      "description": "Social media username availability checker",
+                      "platforms": ["web"],
+                      "tags": ["username", "availability", "social-media", "checker"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "social-aggregators",
+                  "title": "Social Media Aggregators",
+                  "description": "Tools that aggregate data from multiple social platforms",
+                  "items": [
+                    {
+                      "name": "Maltego",
+                      "type": "freemium",
+                      "url": "https://www.maltego.com",
+                      "description": "Link analysis and data visualization tool for OSINT",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["link-analysis", "visualization", "osint", "intelligence"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "SpiderFoot",
+                      "type": "free",
+                      "url": "https://www.spiderfoot.net",
+                      "description": "Automated OSINT collection tool",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["osint", "automation", "intelligence", "reconnaissance"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Social Searcher",
+                      "type": "freemium",
+                      "url": "https://www.social-searcher.com",
+                      "description": "Social media search engine and monitoring tool",
+                      "platforms": ["web"],
+                      "tags": ["social-media", "search-engine", "monitoring", "analytics"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Mention",
+                      "type": "paid",
+                      "url": "https://mention.com",
+                      "description": "Social media monitoring and analytics platform",
+                      "platforms": ["web"],
+                      "tags": ["social-media", "monitoring", "analytics", "brand"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Brand24",
+                      "type": "paid",
+                      "url": "https://brand24.com",
+                      "description": "Social media monitoring and analytics tool",
+                      "platforms": ["web"],
+                      "tags": ["social-media", "monitoring", "analytics", "brand"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "people-identity-research",
+          "title": "People & Identity Research",
+          "description": "Tools for researching individuals and their digital identities",
+          "subcategories": [
+            {
+              "id": "people-search-engines",
+              "title": "People Search Engines",
+              "description": "Search engines specifically designed for finding people",
+              "subcategories": [
+                {
+                  "id": "us-focused",
+                  "title": "US-focused People Search",
+                  "description": "People search engines focused on US individuals",
+                  "items": [
+                    {
+                      "name": "Pipl",
+                      "type": "paid",
+                      "url": "https://pipl.com",
+                      "description": "Deep web people search engine",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "deep-web", "us", "comprehensive"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "BeenVerified",
+                      "type": "paid",
+                      "url": "https://www.beenverified.com",
+                      "description": "Background check and people search service",
+                      "platforms": ["web"],
+                      "tags": ["background-check", "people-search", "us", "records"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Spokeo",
+                      "type": "paid",
+                      "url": "https://www.spokeo.com",
+                      "description": "People search and background check service",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "background-check", "us", "contact-info"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Whitepages",
+                      "type": "freemium",
+                      "url": "https://www.whitepages.com",
+                      "description": "Online phone directory and people search",
+                      "platforms": ["web"],
+                      "tags": ["phone-directory", "people-search", "us", "addresses"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "TruePeopleSearch",
+                      "type": "free",
+                      "url": "https://www.truepeoplesearch.com",
+                      "description": "Free people search engine for US residents",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "free", "us", "addresses"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "FastPeopleSearch",
+                      "type": "free",
+                      "url": "https://www.fastpeoplesearch.com",
+                      "description": "Free people search and public records",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "free", "public-records", "us"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "international",
+                  "title": "International People Search",
+                  "description": "People search engines for international use",
+                  "items": [
+                    {
+                      "name": "Yasni",
+                      "type": "free",
+                      "url": "https://www.yasni.com",
+                      "description": "European people search engine",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "europe", "international", "profiles"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "192.com",
+                      "type": "freemium",
+                      "url": "https://www.192.com",
+                      "description": "UK people finder and electoral roll search",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "uk", "electoral-roll", "addresses"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Canada411",
+                      "type": "free",
+                      "url": "https://www.canada411.ca",
+                      "description": "Canadian phone directory and people search",
+                      "platforms": ["web"],
+                      "tags": ["people-search", "canada", "phone-directory", "addresses"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "email-intelligence",
+              "title": "Email Intelligence",
+              "description": "Tools for gathering intelligence about email addresses",
+              "subcategories": [
+                {
+                  "id": "email-finders",
+                  "title": "Email Address Finders",
+                  "description": "Tools for finding email addresses",
+                  "items": [
+                    {
+                      "name": "Hunter.io",
+                      "type": "freemium",
+                      "url": "https://hunter.io",
+                      "description": "Email finder and verifier for professionals",
+                      "platforms": ["web"],
+                      "tags": ["email-finder", "verification", "professional", "domain"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Voila Norbert",
+                      "type": "paid",
+                      "url": "https://www.voilanorbert.com",
+                      "description": "Email finder for finding anyone's contact information",
+                      "platforms": ["web"],
+                      "tags": ["email-finder", "contact-info", "professional", "leads"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "FindThatLead",
+                      "type": "freemium",
+                      "url": "https://findthatlead.com",
+                      "description": "Email finder and lead generation tool",
+                      "platforms": ["web"],
+                      "tags": ["email-finder", "lead-generation", "prospecting", "sales"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Clearbit",
+                      "type": "paid",
+                      "url": "https://clearbit.com",
+                      "description": "Business intelligence and email finding platform",
+                      "platforms": ["web"],
+                      "tags": ["business-intelligence", "email-finder", "company-data", "api"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "email-verification",
+                  "title": "Email Verification Tools",
+                  "description": "Tools for verifying email addresses",
+                  "items": [
+                    {
+                      "name": "EmailRep",
+                      "type": "free",
+                      "url": "https://emailrep.io",
+                      "description": "Email reputation and risk assessment service",
+                      "platforms": ["web"],
+                      "tags": ["email-reputation", "risk-assessment", "threat-intelligence", "api"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Email Checker",
+                      "type": "free",
+                      "url": "https://email-checker.net",
+                      "description": "Free email verification and validation tool",
+                      "platforms": ["web"],
+                      "tags": ["email-verification", "validation", "free", "checker"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Verify Email",
+                      "type": "free",
+                      "url": "https://verify-email.org",
+                      "description": "Email address verification service",
+                      "platforms": ["web"],
+                      "tags": ["email-verification", "validation", "service", "api"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "breach-checking",
+                  "title": "Data Breach Checking",
+                  "description": "Tools for checking if emails appear in data breaches",
+                  "items": [
+                    {
+                      "name": "Have I Been Pwned",
+                      "type": "free",
+                      "url": "https://haveibeenpwned.com",
+                      "description": "Check if email addresses have been compromised in breaches",
+                      "platforms": ["web"],
+                      "tags": ["data-breach", "pwned", "compromise", "security"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "DeHashed",
+                      "type": "paid",
+                      "url": "https://dehashed.com",
+                      "description": "Search engine for hacked databases and credentials",
+                      "platforms": ["web"],
+                      "tags": ["hacked-databases", "credentials", "breach-data", "search"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "WeLeakInfo",
+                      "type": "paid",
+                      "description": "Database of leaked credentials and personal information",
+                      "platforms": ["web"],
+                      "tags": ["leaked-credentials", "personal-info", "breach-data"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "BreachDirectory",
+                      "type": "free",
+                      "url": "https://breachdirectory.tk",
+                      "description": "Free database of breached credentials",
+                      "platforms": ["web"],
+                      "tags": ["breach-data", "credentials", "free", "database"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "phone-intelligence",
+              "title": "Phone Number Intelligence",
+              "description": "Tools for gathering intelligence about phone numbers",
+              "subcategories": [
+                {
+                  "id": "reverse-lookup",
+                  "title": "Reverse Phone Lookup",
+                  "description": "Tools for reverse phone number lookups",
+                  "items": [
+                    {
+                      "name": "TrueCaller",
+                      "type": "freemium",
+                      "url": "https://www.truecaller.com",
+                      "description": "Caller ID and spam blocking with reverse lookup",
+                      "platforms": ["web", "mobile"],
+                      "tags": ["caller-id", "reverse-lookup", "spam-blocking", "mobile"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "WhitePages",
+                      "type": "freemium",
+                      "url": "https://www.whitepages.com",
+                      "description": "Phone directory with reverse lookup capabilities",
+                      "platforms": ["web"],
+                      "tags": ["phone-directory", "reverse-lookup", "us", "addresses"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "NumLookup",
+                      "type": "free",
+                      "url": "https://www.numlookup.com",
+                      "description": "Free reverse phone lookup service",
+                      "platforms": ["web"],
+                      "tags": ["reverse-lookup", "free", "phone-numbers", "search"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "carrier-lookup",
+                  "title": "Carrier Information Lookup",
+                  "description": "Tools for identifying phone number carriers",
+                  "items": [
+                    {
+                      "name": "CarrierLookup",
+                      "type": "free",
+                      "url": "https://www.carrierlookup.com",
+                      "description": "Free phone carrier lookup service",
+                      "platforms": ["web"],
+                      "tags": ["carrier-lookup", "phone-numbers", "free", "mobile"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Phone Validator",
+                      "type": "paid",
+                      "url": "https://www.phonevalidator.com",
+                      "description": "Phone number validation and carrier identification",
+                      "platforms": ["web"],
+                      "tags": ["phone-validation", "carrier-lookup", "api", "service"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "domain-infrastructure-intelligence",
+      "title": "Domain & Infrastructure Intelligence",
+      "description": "Tools for researching domains, DNS, and internet infrastructure",
+      "subcategories": [
+        {
+          "id": "domain-research",
+          "title": "Domain Research",
+          "description": "Tools for investigating domain names and registration information",
+          "subcategories": [
+            {
+              "id": "whois-registration",
+              "title": "WHOIS & Registration Data",
+              "description": "Tools for querying domain registration information",
+              "subcategories": [
+                {
+                  "id": "cli-tools",
+                  "title": "Command Line WHOIS Tools",
+                  "description": "Command-line tools for WHOIS queries",
+                  "items": [
+                    {
+                      "name": "whois",
+                      "type": "free",
+                      "description": "Standard Unix WHOIS client for domain registration queries",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["whois", "command-line", "domain-registration", "cli"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "jwhois",
+                      "type": "free",
+                      "description": "Enhanced WHOIS client with additional features",
+                      "platforms": ["linux"],
+                      "tags": ["whois", "enhanced", "command-line", "features"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "web-services",
+                  "title": "Web-based WHOIS Services",
+                  "description": "Web-based WHOIS lookup services",
+                  "items": [
+                    {
+                      "name": "DomainTools",
+                      "type": "paid",
+                      "url": "https://www.domaintools.com",
+                      "description": "Comprehensive domain intelligence and investigation platform",
+                      "platforms": ["web"],
+                      "tags": ["domain-intelligence", "whois", "comprehensive", "investigation"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "WhoisXML API",
+                      "type": "freemium",
+                      "url": "https://www.whoisxmlapi.com",
+                      "description": "WHOIS and domain intelligence API service",
+                      "platforms": ["web"],
+                      "tags": ["whois", "api", "domain-intelligence", "service"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "ViewDNS",
+                      "type": "free",
+                      "url": "https://viewdns.info",
+                      "description": "Free DNS and domain investigation tools",
+                      "platforms": ["web"],
+                      "tags": ["dns", "domain", "investigation", "free"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "historical-data",
+              "title": "Historical Domain Data",
+              "description": "Tools for accessing historical domain and website data",
+              "items": [
+                {
+                  "name": "Wayback Machine",
+                  "type": "free",
+                  "url": "https://web.archive.org",
+                  "description": "Internet Archive's historical website snapshots",
+                  "platforms": ["web"],
+                  "tags": ["historical", "website-archive", "snapshots", "internet-archive"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Archive.today",
+                  "type": "free",
+                  "url": "https://archive.today",
+                  "description": "Website archiving service and historical snapshots",
+                  "platforms": ["web"],
+                  "tags": ["archiving", "snapshots", "historical", "preservation"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "CachedView",
+                  "type": "free",
+                  "url": "https://cachedview.com",
+                  "description": "View cached versions of websites from multiple sources",
+                  "platforms": ["web"],
+                  "tags": ["cached", "multiple-sources", "historical", "aggregator"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Google Cache",
+                  "type": "free",
+                  "description": "Google's cached versions of web pages",
+                  "platforms": ["web"],
+                  "tags": ["google", "cache", "search-engine", "snapshots"],
+                  "difficulty": "beginner"
+                }
+              ]
+            },
+            {
+              "id": "domain-reputation",
+              "title": "Domain Reputation & Security",
+              "description": "Tools for checking domain reputation and security status",
+              "items": [
+                {
+                  "name": "URLVoid",
+                  "type": "free",
+                  "url": "https://www.urlvoid.com",
+                  "description": "URL and domain reputation checker using multiple engines",
+                  "platforms": ["web"],
+                  "tags": ["url-reputation", "domain-reputation", "security", "multiple-engines"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Sucuri SiteCheck",
+                  "type": "free",
+                  "url": "https://sitecheck.sucuri.net",
+                  "description": "Website security and malware scanner",
+                  "platforms": ["web"],
+                  "tags": ["website-security", "malware-scanner", "security-check", "free"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Norton Safe Web",
+                  "type": "free",
+                  "url": "https://safeweb.norton.com",
+                  "description": "Norton's website safety checker",
+                  "platforms": ["web"],
+                  "tags": ["website-safety", "norton", "security-check", "reputation"],
+                  "difficulty": "beginner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dns-intelligence",
+          "title": "DNS Intelligence",
+          "description": "Tools for DNS enumeration and intelligence gathering",
+          "subcategories": [
+            {
+              "id": "dns-enumeration",
+              "title": "DNS Enumeration Tools",
+              "description": "Tools for basic DNS enumeration and queries",
+              "subcategories": [
+                {
+                  "id": "basic-tools",
+                  "title": "Basic DNS Tools",
+                  "description": "Fundamental DNS query tools",
+                  "items": [
+                    {
+                      "name": "dig",
+                      "type": "free",
+                      "description": "DNS lookup utility for detailed DNS queries",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["dns", "lookup", "detailed", "command-line"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "nslookup",
+                      "type": "free",
+                      "description": "Network administration command-line tool for DNS queries",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["dns", "network-admin", "queries", "cross-platform"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "host",
+                      "type": "free",
+                      "description": "DNS lookup utility for resolving hostnames",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["dns", "hostname-resolution", "lookup", "simple"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "advanced-tools",
+                  "title": "Advanced DNS Enumeration",
+                  "description": "Advanced DNS enumeration and reconnaissance tools",
+                  "items": [
+                    {
+                      "name": "dnsrecon",
+                      "type": "free",
+                      "url": "https://github.com/darkoperator/dnsrecon",
+                      "description": "DNS enumeration and reconnaissance tool",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["dns", "enumeration", "reconnaissance", "zone-transfer"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "dnsenum",
+                      "type": "free",
+                      "url": "https://github.com/fwaeytens/dnsenum",
+                      "description": "DNS enumeration tool for gathering DNS information",
+                      "platforms": ["linux"],
+                      "tags": ["dns", "enumeration", "subdomains", "zone-transfer"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "fierce",
+                      "type": "free",
+                      "url": "https://github.com/mschwager/fierce",
+                      "description": "Domain scanner for locating non-contiguous IP space",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["domain-scanner", "ip-space", "dns", "reconnaissance"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "dnsmap",
+                      "type": "free",
+                      "description": "DNS domain name brute forcer",
+                      "platforms": ["linux"],
+                      "tags": ["dns", "brute-force", "domain-names", "enumeration"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "subdomain-discovery",
+              "title": "Subdomain Discovery",
+              "description": "Tools and techniques for discovering subdomains",
+              "subcategories": [
+                {
+                  "id": "passive-methods",
+                  "title": "Passive Subdomain Discovery",
+                  "description": "Non-intrusive methods for subdomain discovery",
+                  "subcategories": [
+                    {
+                      "id": "certificate-transparency",
+                      "title": "Certificate Transparency Logs",
+                      "description": "Using CT logs for subdomain discovery",
+                      "items": [
+                        {
+                          "name": "crt.sh",
+                          "type": "free",
+                          "url": "https://crt.sh",
+                          "description": "Certificate Transparency log search",
+                          "platforms": ["web"],
+                          "tags": ["certificate-transparency", "ct-logs", "subdomains", "certificates"],
+                          "difficulty": "beginner"
+                        },
+                        {
+                          "name": "Censys CT",
+                          "type": "free",
+                          "url": "https://censys.io",
+                          "description": "Certificate transparency search via Censys",
+                          "platforms": ["web"],
+                          "tags": ["censys", "certificate-transparency", "certificates", "search"],
+                          "difficulty": "intermediate"
+                        },
+                        {
+                          "name": "Facebook CT",
+                          "type": "free",
+                          "url": "https://developers.facebook.com/tools/ct/",
+                          "description": "Facebook's Certificate Transparency monitoring",
+                          "platforms": ["web"],
+                          "tags": ["facebook", "certificate-transparency", "monitoring", "api"],
+                          "difficulty": "intermediate"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "search-engine",
+                      "title": "Search Engine Methods",
+                      "description": "Using search engines for subdomain discovery",
+                      "items": [
+                        {
+                          "name": "Google site: operator",
+                          "type": "free",
+                          "description": "Using Google's site: operator for subdomain discovery",
+                          "platforms": ["web"],
+                          "tags": ["google", "site-operator", "search", "subdomains"],
+                          "difficulty": "beginner"
+                        },
+                        {
+                          "name": "Bing site: operator",
+                          "type": "free",
+                          "description": "Using Bing's site: operator for subdomain discovery",
+                          "platforms": ["web"],
+                          "tags": ["bing", "site-operator", "search", "subdomains"],
+                          "difficulty": "beginner"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "dns-aggregators",
+                      "title": "DNS Aggregator Services",
+                      "description": "Services that aggregate DNS data for subdomain discovery",
+                      "items": [
+                        {
+                          "name": "DNSDumpster",
+                          "type": "free",
+                          "url": "https://dnsdumpster.com",
+                          "description": "DNS recon and research tool for finding subdomains",
+                          "platforms": ["web"],
+                          "tags": ["dns-recon", "subdomains", "research", "free"],
+                          "difficulty": "beginner"
+                        },
+                        {
+                          "name": "SecurityTrails",
+                          "type": "freemium",
+                          "url": "https://securitytrails.com",
+                          "description": "DNS history and subdomain discovery platform",
+                          "platforms": ["web"],
+                          "tags": ["dns-history", "subdomains", "intelligence", "api"],
+                          "difficulty": "intermediate"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "active-methods",
+                  "title": "Active Subdomain Discovery",
+                  "description": "Active methods for subdomain discovery",
+                  "subcategories": [
+                    {
+                      "id": "brute-force",
+                      "title": "Brute Force Enumeration",
+                      "description": "Brute force tools for subdomain discovery",
+                      "items": [
+                        {
+                          "name": "Sublist3r",
+                          "type": "free",
+                          "url": "https://github.com/aboul3la/Sublist3r",
+                          "description": "Python tool for enumerating subdomains using multiple sources",
+                          "platforms": ["linux", "windows", "macos"],
+                          "tags": ["python", "subdomains", "enumeration", "multiple-sources"],
+                          "difficulty": "beginner"
+                        },
+                        {
+                          "name": "Amass",
+                          "type": "free",
+                          "url": "https://github.com/OWASP/Amass",
+                          "description": "OWASP Amass tool for network mapping and subdomain enumeration",
+                          "platforms": ["linux", "windows", "macos"],
+                          "tags": ["owasp", "network-mapping", "subdomains", "comprehensive"],
+                          "difficulty": "intermediate"
+                        },
+                        {
+                          "name": "Subfinder",
+                          "type": "free",
+                          "url": "https://github.com/projectdiscovery/subfinder",
+                          "description": "Fast subdomain discovery tool using passive sources",
+                          "platforms": ["linux", "windows", "macos"],
+                          "tags": ["fast", "passive", "subdomains", "go-lang"],
+                          "difficulty": "intermediate"
+                        },
+                        {
+                          "name": "Assetfinder",
+                          "type": "free",
+                          "url": "https://github.com/tomnomnom/assetfinder",
+                          "description": "Simple tool to find domains and subdomains",
+                          "platforms": ["linux", "windows", "macos"],
+                          "tags": ["simple", "domains", "subdomains", "go-lang"],
+                          "difficulty": "beginner"
+                        },
+                        {
+                          "name": "Findomain",
+                          "type": "free",
+                          "url": "https://github.com/Findomain/Findomain",
+                          "description": "Fast and cross-platform subdomain enumerator",
+                          "platforms": ["linux", "windows", "macos"],
+                          "tags": ["fast", "cross-platform", "subdomains", "rust"],
+                          "difficulty": "intermediate"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "permutation",
+                      "title": "Subdomain Permutation",
+                      "description": "Tools for generating subdomain permutations",
+                      "items": [
+                        {
+                          "name": "dnsgen",
+                          "type": "free",
+                          "url": "https://github.com/ProjectAnte/dnsgen",
+                          "description": "DNS hostname generator for subdomain permutations",
+                          "platforms": ["linux", "macos"],
+                          "tags": ["dns", "hostname-generator", "permutations", "python"],
+                          "difficulty": "intermediate"
+                        },
+                        {
+                          "name": "altdns",
+                          "type": "free",
+                          "url": "https://github.com/infosec-au/altdns",
+                          "description": "Subdomain discovery through alterations and permutations",
+                          "platforms": ["linux", "macos"],
+                          "tags": ["alterations", "permutations", "subdomains", "python"],
+                          "difficulty": "intermediate"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "vhost-discovery",
+                      "title": "Virtual Host Discovery",
+                      "description": "Tools for discovering virtual hosts",
+                      "items": [
+                        {
+                          "name": "virtual-host-discovery",
+                          "type": "free",
+                          "url": "https://github.com/jobertabma/virtual-host-discovery",
+                          "description": "Tool for discovering virtual hosts on web servers",
+                          "platforms": ["linux", "macos"],
+                          "tags": ["virtual-hosts", "web-servers", "discovery", "ruby"],
+                          "difficulty": "intermediate"
+                        },
+                        {
+                          "name": "VHostScan",
+                          "type": "free",
+                          "url": "https://github.com/codingo/VHostScan",
+                          "description": "Virtual host scanner for discovering additional hosts",
+                          "platforms": ["linux", "macos"],
+                          "tags": ["virtual-hosts", "scanner", "additional-hosts", "python"],
+                          "difficulty": "intermediate"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

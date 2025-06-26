@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "section": "6.3",
+    "title": "Bug Bounty",
+    "description": "Bug bounty platforms, programs, and resources for vulnerability research",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 25
+  },
+  "categories": [
+    {
+      "id": "bug-bounty-platforms",
+      "title": "Bug Bounty Platforms",
+      "description": "Platforms connecting security researchers with organizations",
+      "subcategories": [
+        {
+          "id": "major-platforms",
+          "title": "Major Bug Bounty Platforms",
+          "description": "Primary platforms hosting public and private bug bounty programs",
+          "items": [
+            {
+              "name": "HackerOne",
+              "type": "free",
+              "url": "https://hackerone.com/",
+              "description": "Leading bug bounty and vulnerability disclosure platform",
+              "platforms": ["web"],
+              "tags": ["platform", "disclosure", "bounty", "community"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Bugcrowd",
+              "type": "free",
+              "url": "https://bugcrowd.com/",
+              "description": "Crowdsourced cybersecurity platform",
+              "platforms": ["web"],
+              "tags": ["platform", "crowdsourced", "security", "bounty"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Synack",
+              "type": "free",
+              "url": "https://synack.com/",
+              "description": "Invitation-only bug bounty platform",
+              "platforms": ["web"],
+              "tags": ["platform", "invitation-only", "exclusive", "vetted"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "YesWeHack",
+              "type": "free",
+              "url": "https://yeswehack.com/",
+              "description": "European bug bounty platform",
+              "platforms": ["web"],
+              "tags": ["platform", "european", "bounty", "disclosure"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Intigriti",
+              "type": "free",
+              "url": "https://intigriti.com/",
+              "description": "European ethical hacking platform",
+              "platforms": ["web"],
+              "tags": ["platform", "european", "ethical", "hacking"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Open Bug Bounty",
+              "type": "free",
+              "url": "https://openbugbounty.org/",
+              "description": "Responsible disclosure platform for any website",
+              "platforms": ["web"],
+              "tags": ["disclosure", "responsible", "open", "free"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Cobalt",
+              "type": "paid",
+              "url": "https://cobalt.io/",
+              "description": "Pentesting as a Service with bounty elements",
+              "platforms": ["web"],
+              "tags": ["pentest", "service", "bounty", "professional"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Federacy",
+              "type": "free",
+              "url": "https://federacy.com/",
+              "description": "Continuous security testing platform",
+              "platforms": ["web"],
+              "tags": ["continuous", "testing", "security", "platform"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "direct-programs",
+          "title": "Direct Bug Bounty Programs",
+          "description": "Companies running their own bug bounty programs",
+          "items": [
+            {
+              "name": "Google VRP",
+              "type": "free",
+              "url": "https://bughunters.google.com/",
+              "description": "Google Vulnerability Reward Program",
+              "platforms": ["web"],
+              "tags": ["google", "vrp", "high-rewards", "tech"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Facebook Bug Bounty",
+              "type": "free",
+              "url": "https://facebook.com/whitehat",
+              "description": "Meta/Facebook security bug bounty program",
+              "platforms": ["web"],
+              "tags": ["facebook", "meta", "social", "bounty"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Microsoft Bug Bounty",
+              "type": "free",
+              "url": "https://microsoft.com/msrc/bounty",
+              "description": "Microsoft Security Response Center bounty programs",
+              "platforms": ["web"],
+              "tags": ["microsoft", "msrc", "enterprise", "software"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Apple Security Bounty",
+              "type": "free",
+              "url": "https://developer.apple.com/security-bounty/",
+              "description": "Apple Security Research Device Program",
+              "platforms": ["web"],
+              "tags": ["apple", "ios", "macos", "hardware"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "GitHub Security Bug Bounty",
+              "type": "free",
+              "url": "https://bounty.github.com/",
+              "description": "GitHub platform security bounty program",
+              "platforms": ["web"],
+              "tags": ["github", "platform", "development", "code"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Uber Bug Bounty",
+              "type": "free",
+              "url": "https://hackerone.com/uber",
+              "description": "Uber technologies bug bounty program",
+              "platforms": ["web"],
+              "tags": ["uber", "transportation", "mobile", "platform"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Airbnb Bug Bounty",
+              "type": "free",
+              "url": "https://hackerone.com/airbnb",
+              "description": "Airbnb platform security program",
+              "platforms": ["web"],
+              "tags": ["airbnb", "travel", "platform", "booking"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "PayPal Bug Bounty",
+              "type": "free",
+              "url": "https://hackerone.com/paypal",
+              "description": "PayPal payment platform security program",
+              "platforms": ["web"],
+              "tags": ["paypal", "fintech", "payments", "financial"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bug-bounty-resources",
+      "title": "Bug Bounty Learning Resources",
+      "description": "Educational materials and tools for bug bounty hunters",
+      "subcategories": [
+        {
+          "id": "learning-resources",
+          "title": "Bug Bounty Learning Materials",
+          "description": "Methodologies, guides, and educational content",
+          "items": [
+            {
+              "name": "Bug Bounty Methodology",
+              "type": "free",
+              "description": "Systematic approach to bug bounty hunting",
+              "platforms": ["web"],
+              "tags": ["methodology", "systematic", "approach", "hunting"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Jason Haddix Presentations",
+              "type": "free",
+              "url": "https://github.com/jhaddix",
+              "description": "Bug bounty methodology and research presentations",
+              "platforms": ["web"],
+              "tags": ["presentations", "methodology", "research", "expert"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "NahamSec Resources",
+              "type": "free",
+              "url": "https://nahamsec.com/",
+              "description": "Bug bounty tutorials and live streams",
+              "platforms": ["web"],
+              "tags": ["tutorials", "streams", "community", "education"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "STÖK Resources",
+              "type": "free",
+              "url": "https://stok.rocks/",
+              "description": "Bug bounty videos and educational content",
+              "platforms": ["web"],
+              "tags": ["videos", "education", "community", "practical"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "HackerOne Hacktivity",
+              "type": "free",
+              "url": "https://hackerone.com/hacktivity",
+              "description": "Public vulnerability reports and write-ups",
+              "platforms": ["web"],
+              "tags": ["reports", "writeups", "public", "learning"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Pentester Land",
+              "type": "free",
+              "url": "https://pentester.land/",
+              "description": "Bug bounty write-ups and tutorials",
+              "platforms": ["web"],
+              "tags": ["writeups", "tutorials", "community", "learning"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Bug Bounty POC",
+              "type": "free",
+              "description": "Proof-of-concept examples for vulnerabilities",
+              "platforms": ["web"],
+              "tags": ["poc", "examples", "vulnerabilities", "demonstration"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "InfoSec Writeups",
+              "type": "free",
+              "url": "https://infosecwriteups.com/",
+              "description": "Community platform for security writeups",
+              "platforms": ["web"],
+              "tags": ["writeups", "community", "security", "medium"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "tools-automation",
+          "title": "Bug Bounty Tools & Automation",
+          "description": "Tools for reconnaissance, scanning, and automation",
+          "items": [
+            {
+              "name": "ReconFTW",
+              "type": "free",
+              "url": "https://github.com/six2dez/reconftw",
+              "description": "Automated reconnaissance framework",
+              "platforms": ["linux"],
+              "tags": ["recon", "automation", "framework", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "LazyRecon",
+              "type": "free",
+              "url": "https://github.com/nahamsec/lazyrecon",
+              "description": "Automated reconnaissance script",
+              "platforms": ["linux"],
+              "tags": ["recon", "automation", "script", "beginner-friendly"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Sudomy",
+              "type": "free",
+              "url": "https://github.com/Screetsec/Sudomy",
+              "description": "Subdomain enumeration tool",
+              "platforms": ["linux"],
+              "tags": ["subdomain", "enumeration", "recon", "comprehensive"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Subcert",
+              "type": "free",
+              "url": "https://github.com/yassineaboukir/subcert",
+              "description": "Certificate transparency subdomain finder",
+              "platforms": ["linux"],
+              "tags": ["subdomain", "certificate", "transparency", "passive"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Nuclei Templates",
+              "type": "free",
+              "url": "https://github.com/projectdiscovery/nuclei-templates",
+              "description": "Community-powered vulnerability scanner templates",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["scanner", "templates", "community", "automation"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Custom Scanners",
+              "type": "free",
+              "description": "Custom-built vulnerability scanners for specific targets",
+              "platforms": ["linux"],
+              "tags": ["custom", "scanners", "targeted", "specialized"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Fuzzing Tools",
+              "type": "free",
+              "description": "Tools for parameter and endpoint fuzzing",
+              "platforms": ["linux"],
+              "tags": ["fuzzing", "parameters", "endpoints", "discovery"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Report Templates",
+              "type": "free",
+              "description": "Professional vulnerability report templates",
+              "platforms": ["web"],
+              "tags": ["reports", "templates", "professional", "documentation"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "POC Development",
+              "type": "free",
+              "description": "Tools and techniques for proof-of-concept development",
+              "platforms": ["web"],
+              "tags": ["poc", "development", "demonstration", "exploitation"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

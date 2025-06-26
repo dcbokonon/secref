@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "section": "8.3",
+    "title": "Social Media",
+    "description": "Social media resources for cybersecurity news, networking, and community engagement",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 18
+  },
+  "categories": [
+    {
+      "id": "twitter-x",
+      "title": "Twitter/X Security Community",
+      "description": "Key accounts, lists, and hashtags for cybersecurity on Twitter/X",
+      "subcategories": [
+        {
+          "id": "key-accounts",
+          "title": "Key Security Twitter Accounts",
+          "description": "Notable security researchers, experts, and news accounts",
+          "items": [
+            {
+              "name": "@malwareunicorn",
+              "type": "free",
+              "url": "https://twitter.com/malwareunicorn",
+              "description": "Amanda Rousseau - Malware reverse engineer and researcher",
+              "platforms": ["social"],
+              "tags": ["malware", "reverse-engineering", "researcher", "education"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "@SwiftOnSecurity",
+              "type": "free",
+              "url": "https://twitter.com/SwiftOnSecurity",
+              "description": "Security awareness and commentary",
+              "platforms": ["social"],
+              "tags": ["security-awareness", "commentary", "humor", "education"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "@troyhunt",
+              "type": "free",
+              "url": "https://twitter.com/troyhunt",
+              "description": "Troy Hunt - Web security expert, Have I Been Pwned creator",
+              "platforms": ["social"],
+              "tags": ["web-security", "breaches", "hibp", "expert"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "@mikko",
+              "type": "free",
+              "url": "https://twitter.com/mikko",
+              "description": "Mikko Hyppönen - F-Secure Chief Research Officer",
+              "platforms": ["social"],
+              "tags": ["researcher", "malware", "f-secure", "expert"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "@briankrebs",
+              "type": "free",
+              "url": "https://twitter.com/briankrebs",
+              "description": "Brian Krebs - Investigative cybersecurity journalist",
+              "platforms": ["social"],
+              "tags": ["journalism", "investigation", "cybercrime", "news"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "@threatpost",
+              "type": "free",
+              "url": "https://twitter.com/threatpost",
+              "description": "Threatpost cybersecurity news",
+              "platforms": ["social"],
+              "tags": ["news", "threats", "vulnerabilities", "media"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "@TheHackersNews",
+              "type": "free",
+              "url": "https://twitter.com/TheHackersNews",
+              "description": "The Hacker News publication",
+              "platforms": ["social"],
+              "tags": ["news", "hacking", "cybersecurity", "media"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "@USCERT_gov",
+              "type": "free",
+              "url": "https://twitter.com/USCERT_gov",
+              "description": "US-CERT cybersecurity alerts and advisories",
+              "platforms": ["social"],
+              "tags": ["government", "alerts", "advisories", "official"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "lists-hashtags",
+          "title": "Twitter Lists & Hashtags",
+          "description": "Curated lists and hashtags for following security content",
+          "items": [
+            {
+              "name": "InfoSec Twitter Lists",
+              "type": "free",
+              "description": "Curated lists of information security professionals",
+              "platforms": ["social"],
+              "tags": ["lists", "infosec", "professionals", "curated"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Security Researcher Lists",
+              "type": "free",
+              "description": "Collections of security researchers and academics",
+              "platforms": ["social"],
+              "tags": ["researchers", "academics", "security", "lists"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Blue Team Twitter Lists",
+              "type": "free",
+              "description": "Defensive security and SOC analyst accounts",
+              "platforms": ["social"],
+              "tags": ["blue-team", "defensive", "soc", "analysts"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Red Team Twitter Lists",
+              "type": "free",
+              "description": "Offensive security and penetration testing accounts",
+              "platforms": ["social"],
+              "tags": ["red-team", "offensive", "pentest", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "#infosec",
+              "type": "free",
+              "description": "General information security hashtag",
+              "platforms": ["social"],
+              "tags": ["hashtag", "infosec", "general", "security"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "#cybersecurity",
+              "type": "free",
+              "description": "Cybersecurity news and discussion hashtag",
+              "platforms": ["social"],
+              "tags": ["hashtag", "cybersecurity", "news", "discussion"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "#bugbounty",
+              "type": "free",
+              "description": "Bug bounty hunting and vulnerability research",
+              "platforms": ["social"],
+              "tags": ["hashtag", "bug-bounty", "vulnerability", "research"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "#threatintel",
+              "type": "free",
+              "description": "Threat intelligence and analysis hashtag",
+              "platforms": ["social"],
+              "tags": ["hashtag", "threat-intel", "analysis", "intelligence"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-platforms",
+      "title": "Other Social Platforms",
+      "description": "Alternative social media platforms for cybersecurity professionals",
+      "subcategories": [
+        {
+          "id": "linkedin",
+          "title": "LinkedIn Security Community",
+          "description": "Professional networking and groups on LinkedIn",
+          "items": [
+            {
+              "name": "Information Security Community",
+              "type": "free",
+              "url": "https://linkedin.com/groups/38412/",
+              "description": "Large LinkedIn group for security professionals",
+              "platforms": ["social"],
+              "tags": ["linkedin", "group", "professionals", "networking"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Cybersecurity Professionals",
+              "type": "free",
+              "description": "LinkedIn group for cybersecurity career discussions",
+              "platforms": ["social"],
+              "tags": ["linkedin", "cybersecurity", "career", "professionals"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Ethical Hackers",
+              "type": "free",
+              "description": "LinkedIn group for ethical hacking discussions",
+              "platforms": ["social"],
+              "tags": ["linkedin", "ethical-hacking", "discussions", "community"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Security Industry Leaders",
+              "type": "free",
+              "description": "LinkedIn network of security industry executives",
+              "platforms": ["social"],
+              "tags": ["linkedin", "leaders", "executives", "industry"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "CISO Community",
+              "type": "free",
+              "description": "Chief Information Security Officers network",
+              "platforms": ["social"],
+              "tags": ["linkedin", "ciso", "leadership", "executives"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Security Thought Leaders",
+              "type": "free",
+              "description": "Influential voices in cybersecurity",
+              "platforms": ["social"],
+              "tags": ["linkedin", "thought-leaders", "influence", "security"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "alternative-platforms",
+          "title": "Alternative Social Platforms",
+          "description": "Decentralized and alternative social media for security",
+          "items": [
+            {
+              "name": "infosec.exchange (Mastodon)",
+              "type": "free",
+              "url": "https://infosec.exchange/",
+              "description": "Information security focused Mastodon instance",
+              "platforms": ["social"],
+              "tags": ["mastodon", "decentralized", "infosec", "community"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ioc.exchange (Mastodon)",
+              "type": "free",
+              "url": "https://ioc.exchange/",
+              "description": "Indicators of Compromise sharing Mastodon instance",
+              "platforms": ["social"],
+              "tags": ["mastodon", "ioc", "threat-intel", "sharing"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Security Discord Servers",
+              "type": "free",
+              "description": "Real-time chat communities for security professionals",
+              "platforms": ["social"],
+              "tags": ["discord", "chat", "real-time", "community"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Tool-Specific Discord Servers",
+              "type": "free",
+              "description": "Discord servers for specific security tools and platforms",
+              "platforms": ["social"],
+              "tags": ["discord", "tools", "specific", "support"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Security Telegram Channels",
+              "type": "free",
+              "description": "Telegram channels for security news and updates",
+              "platforms": ["social"],
+              "tags": ["telegram", "channels", "news", "updates"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Security News Channels",
+              "type": "free",
+              "description": "Automated security news delivery via Telegram",
+              "platforms": ["social"],
+              "tags": ["telegram", "automated", "news", "delivery"],
+              "difficulty": "beginner"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

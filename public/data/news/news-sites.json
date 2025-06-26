@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "section": "8.1",
+    "title": "News Sites",
+    "description": "Breaking news sources, blogs, and information sites for cybersecurity professionals",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 20
+  },
+  "categories": [
+    {
+      "id": "breaking-news",
+      "title": "Breaking Security News",
+      "description": "Primary sources for cybersecurity news and incident reporting",
+      "subcategories": [
+        {
+          "id": "primary-sources",
+          "title": "Independent Security News Sites",
+          "description": "Dedicated cybersecurity news publications and blogs",
+          "items": [
+            {
+              "name": "Krebs on Security",
+              "type": "free",
+              "url": "https://krebsonsecurity.com/",
+              "description": "Brian Krebs' investigative cybersecurity journalism",
+              "platforms": ["web"],
+              "tags": ["investigative", "journalism", "breaches", "fraud"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "The Hacker News",
+              "type": "free",
+              "url": "https://thehackernews.com/",
+              "description": "Breaking cybersecurity news and analysis",
+              "platforms": ["web"],
+              "tags": ["breaking-news", "analysis", "cyber-attacks", "vulnerabilities"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "BleepingComputer",
+              "type": "free",
+              "url": "https://bleepingcomputer.com/",
+              "description": "Computer security news and malware analysis",
+              "platforms": ["web"],
+              "tags": ["security-news", "malware", "analysis", "tutorials"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "SecurityWeek",
+              "type": "free",
+              "url": "https://securityweek.com/",
+              "description": "Enterprise security news and analysis",
+              "platforms": ["web"],
+              "tags": ["enterprise", "security", "business", "analysis"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ThreatPost",
+              "type": "free",
+              "url": "https://threatpost.com/",
+              "description": "Independent news site focused on cybersecurity threats",
+              "platforms": ["web"],
+              "tags": ["threats", "vulnerabilities", "news", "independent"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "tech-news-security",
+          "title": "Tech News (Security Sections)",
+          "description": "General technology news sites with strong security coverage",
+          "items": [
+            {
+              "name": "Ars Technica Security",
+              "type": "free",
+              "url": "https://arstechnica.com/security/",
+              "description": "In-depth technology and security analysis",
+              "platforms": ["web"],
+              "tags": ["technology", "in-depth", "analysis", "technical"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "The Register Security",
+              "type": "free",
+              "url": "https://theregister.com/security/",
+              "description": "UK-based technology news with security focus",
+              "platforms": ["web"],
+              "tags": ["uk", "technology", "security", "enterprise"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ZDNet Security",
+              "type": "free",
+              "url": "https://zdnet.com/topic/security/",
+              "description": "Business technology and security news",
+              "platforms": ["web"],
+              "tags": ["business", "technology", "enterprise", "security"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Wired Security",
+              "type": "freemium",
+              "url": "https://wired.com/category/security/",
+              "description": "Consumer-focused technology and security coverage",
+              "platforms": ["web"],
+              "tags": ["consumer", "technology", "culture", "security"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "aggregators",
+          "title": "News Aggregators",
+          "description": "Sites that aggregate security news from multiple sources",
+          "items": [
+            {
+              "name": "Security News Portal",
+              "type": "free",
+              "description": "Aggregated cybersecurity news from multiple sources",
+              "platforms": ["web"],
+              "tags": ["aggregator", "multiple-sources", "cybersecurity", "news"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "AllInfoSec News",
+              "type": "free",
+              "description": "Information security news aggregation",
+              "platforms": ["web"],
+              "tags": ["infosec", "aggregation", "news", "security"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Cyber Defense Magazine",
+              "type": "free",
+              "url": "https://cyberdefensemagazine.com/",
+              "description": "Cybersecurity industry magazine and news",
+              "platforms": ["web"],
+              "tags": ["magazine", "industry", "defense", "cybersecurity"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Reddit r/netsec",
+              "type": "free",
+              "url": "https://reddit.com/r/netsec",
+              "description": "Community-driven network security news",
+              "platforms": ["web"],
+              "tags": ["reddit", "community", "network-security", "discussion"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Hacker News",
+              "type": "free",
+              "url": "https://news.ycombinator.com/",
+              "description": "Tech community news aggregator",
+              "platforms": ["web"],
+              "tags": ["tech", "community", "aggregator", "discussion"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Lobsters",
+              "type": "free",
+              "url": "https://lobste.rs/",
+              "description": "Computing-focused community news site",
+              "platforms": ["web"],
+              "tags": ["computing", "community", "technical", "discussion"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blogs-personal-sites",
+      "title": "Blogs & Personal Sites",
+      "description": "Individual researcher blogs and company security blogs",
+      "subcategories": [
+        {
+          "id": "researcher-blogs",
+          "title": "Notable Security Researcher Blogs",
+          "description": "Personal blogs from prominent security researchers and experts",
+          "items": [
+            {
+              "name": "Bruce Schneier",
+              "type": "free",
+              "url": "https://schneier.com/",
+              "description": "Cryptography and security expert blog",
+              "platforms": ["web"],
+              "tags": ["cryptography", "expert", "analysis", "policy"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Graham Cluley",
+              "type": "free",
+              "url": "https://grahamcluley.com/",
+              "description": "Computer security news and commentary",
+              "platforms": ["web"],
+              "tags": ["security", "commentary", "malware", "analysis"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Troy Hunt (Have I Been Pwned)",
+              "type": "free",
+              "url": "https://troyhunt.com/",
+              "description": "Web security expert and breach analysis",
+              "platforms": ["web"],
+              "tags": ["web-security", "breaches", "analysis", "expert"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Daniel Miessler",
+              "type": "free",
+              "url": "https://danielmiessler.com/",
+              "description": "Security, technology, and philosophy blog",
+              "platforms": ["web"],
+              "tags": ["security", "technology", "philosophy", "analysis"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Rob Graham (Errata Security)",
+              "type": "free",
+              "url": "https://blog.erratasec.com/",
+              "description": "Security researcher and penetration testing blog",
+              "platforms": ["web"],
+              "tags": ["research", "penetration-testing", "analysis", "technical"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "company-blogs",
+          "title": "Company Security Blogs",
+          "description": "Security research blogs from technology companies",
+          "items": [
+            {
+              "name": "Google Project Zero",
+              "type": "free",
+              "url": "https://googleprojectzero.blogspot.com/",
+              "description": "Google's zero-day vulnerability research",
+              "platforms": ["web"],
+              "tags": ["google", "zero-day", "vulnerability", "research"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Trail of Bits",
+              "type": "free",
+              "url": "https://blog.trailofbits.com/",
+              "description": "Security consulting and research blog",
+              "platforms": ["web"],
+              "tags": ["consulting", "research", "technical", "security"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "NCC Group Research",
+              "type": "free",
+              "url": "https://research.nccgroup.com/",
+              "description": "Security research and vulnerability disclosure",
+              "platforms": ["web"],
+              "tags": ["research", "vulnerability", "disclosure", "technical"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "PortSwigger Research",
+              "type": "free",
+              "url": "https://portswigger.net/research",
+              "description": "Web security research from Burp Suite creators",
+              "platforms": ["web"],
+              "tags": ["web-security", "research", "burp", "technical"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "technical-blogs",
+          "title": "Technical Security Blogs",
+          "description": "Blogs focused on technical security topics and techniques",
+          "items": [
+            {
+              "name": "Corelan Security",
+              "type": "free",
+              "url": "https://corelan.be/",
+              "description": "Exploit development and vulnerability research",
+              "platforms": ["web"],
+              "tags": ["exploit-development", "vulnerability", "research", "technical"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Fuzzy Security",
+              "type": "free",
+              "url": "https://fuzzysecurity.com/",
+              "description": "Windows exploitation and security research",
+              "platforms": ["web"],
+              "tags": ["windows", "exploitation", "research", "technical"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "InfoSec Institute Resources",
+              "type": "freemium",
+              "url": "https://resources.infosecinstitute.com/",
+              "description": "Security training and educational resources",
+              "platforms": ["web"],
+              "tags": ["training", "education", "resources", "learning"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "SANS ISC",
+              "type": "free",
+              "url": "https://isc.sans.edu/",
+              "description": "Internet Storm Center security diary",
+              "platforms": ["web"],
+              "tags": ["sans", "storm-center", "diary", "threats"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Malware Traffic Analysis",
+              "type": "free",
+              "url": "https://malware-traffic-analysis.net/",
+              "description": "Malware analysis and network traffic tutorials",
+              "platforms": ["web"],
+              "tags": ["malware", "traffic-analysis", "tutorials", "technical"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Windows Security Blog",
+              "type": "free",
+              "url": "https://techcommunity.microsoft.com/t5/microsoft-security-and/bg-p/MicrosoftSecurityandCompliance",
+              "description": "Microsoft's official security and compliance blog",
+              "platforms": ["web"],
+              "tags": ["microsoft", "windows", "security", "compliance"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "metadata": {
+    "section": "1.5",
+    "title": "Forensics & Incident Response",
+    "description": "Tools for digital forensics investigation and incident response activities",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 58
+  },
+  "categories": [
+    {
+      "id": "digital-forensics",
+      "title": "Digital Forensics",
+      "description": "Tools for digital evidence acquisition, analysis, and investigation",
+      "subcategories": [
+        {
+          "id": "disk-forensics",
+          "title": "Disk Forensics",
+          "description": "Tools for disk imaging and file system analysis",
+          "subcategories": [
+            {
+              "id": "imaging-tools",
+              "title": "Imaging Tools",
+              "description": "Tools for creating forensic images of storage devices",
+              "subcategories": [
+                {
+                  "id": "open-source-imaging",
+                  "title": "Open Source Imaging Tools",
+                  "description": "Free and open source disk imaging utilities",
+                  "items": [
+                    {
+                      "name": "dd/dcfldd",
+                      "type": "free",
+                      "description": "Classic Unix disk duplication and data conversion tools",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["disk-imaging", "bit-for-bit", "command-line", "unix"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "dc3dd",
+                      "type": "free",
+                      "url": "https://tools.kali.org/forensics/dc3dd",
+                      "description": "Patched version of dd with forensic features",
+                      "platforms": ["linux"],
+                      "tags": ["forensic-dd", "hashing", "progress", "verification"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "FTK Imager",
+                      "type": "free",
+                      "url": "https://accessdata.com/product-download/ftk-imager-version-4-5",
+                      "description": "Free disk imaging tool by AccessData",
+                      "platforms": ["windows"],
+                      "tags": ["gui", "free", "commercial-grade", "evidence"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Guymager",
+                      "type": "free",
+                      "url": "https://guymager.sourceforge.io",
+                      "description": "Free forensic imager for media acquisition",
+                      "platforms": ["linux"],
+                      "tags": ["gui", "multi-threaded", "compression", "verification"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-imaging",
+                  "title": "Commercial Imaging Tools",
+                  "description": "Professional commercial disk imaging solutions",
+                  "items": [
+                    {
+                      "name": "EnCase",
+                      "type": "paid",
+                      "url": "https://security.opentext.com/encase-forensic",
+                      "description": "Industry-standard digital forensics platform",
+                      "platforms": ["windows"],
+                      "tags": ["industry-standard", "comprehensive", "court-accepted", "enterprise"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "X-Ways Forensics",
+                      "type": "paid",
+                      "url": "https://www.x-ways.net/forensics/",
+                      "description": "Integrated forensics environment for experts",
+                      "platforms": ["windows"],
+                      "tags": ["expert-level", "efficient", "comprehensive", "hex-editor"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "analysis-platforms",
+              "title": "Analysis Platforms",
+              "description": "Comprehensive forensic analysis platforms",
+              "subcategories": [
+                {
+                  "id": "open-source-analysis",
+                  "title": "Open Source Analysis Platforms",
+                  "description": "Free forensic analysis and investigation platforms",
+                  "items": [
+                    {
+                      "name": "Autopsy",
+                      "type": "free",
+                      "url": "https://www.autopsy.com",
+                      "description": "Digital forensics platform and GUI for The Sleuth Kit",
+                      "platforms": ["windows", "linux"],
+                      "tags": ["gui", "timeline", "keyword-search", "case-management"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "The Sleuth Kit",
+                      "type": "free",
+                      "url": "https://www.sleuthkit.org",
+                      "description": "Command-line tools for digital forensic analysis",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["command-line", "file-system", "timeline", "open-source"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Digital Forensics Framework",
+                      "type": "free",
+                      "url": "https://github.com/ArxSys/dff",
+                      "description": "Open source forensic framework with GUI",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["framework", "python", "modules", "gui"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-analysis",
+                  "title": "Commercial Analysis Platforms",
+                  "description": "Professional commercial forensic analysis tools",
+                  "items": [
+                    {
+                      "name": "EnCase Forensic",
+                      "type": "paid",
+                      "url": "https://security.opentext.com/encase-forensic",
+                      "description": "Comprehensive digital investigation platform",
+                      "platforms": ["windows"],
+                      "tags": ["comprehensive", "enterprise", "scripting", "court-accepted"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "FTK (Forensic Toolkit)",
+                      "type": "paid",
+                      "url": "https://accessdata.com/products-services/forensic-toolkit-ftk",
+                      "description": "Complete digital forensics platform by AccessData",
+                      "platforms": ["windows"],
+                      "tags": ["complete", "database", "known-file-filter", "distributed"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "X-Ways Forensics",
+                      "type": "paid",
+                      "url": "https://www.x-ways.net/forensics/",
+                      "description": "Integrated forensics environment with advanced features",
+                      "platforms": ["windows"],
+                      "tags": ["advanced", "efficient", "scripting", "carving"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "memory-forensics",
+          "title": "Memory Forensics",
+          "description": "Tools for memory acquisition and analysis",
+          "subcategories": [
+            {
+              "id": "memory-acquisition",
+              "title": "Memory Acquisition",
+              "description": "Tools for acquiring memory dumps from systems",
+              "subcategories": [
+                {
+                  "id": "windows-memory",
+                  "title": "Windows Memory Acquisition",
+                  "description": "Tools for acquiring memory from Windows systems",
+                  "items": [
+                    {
+                      "name": "DumpIt",
+                      "type": "free",
+                      "url": "https://www.comae.com/",
+                      "description": "Simple Windows memory acquisition tool",
+                      "platforms": ["windows"],
+                      "tags": ["simple", "portable", "raw-format", "fast"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "WinPMEM",
+                      "type": "free",
+                      "url": "https://github.com/Velocidex/WinPmem",
+                      "description": "Windows physical memory acquisition tool",
+                      "platforms": ["windows"],
+                      "tags": ["physical-memory", "kernel-driver", "multiple-formats", "open-source"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Magnet RAM Capture",
+                      "type": "free",
+                      "url": "https://www.magnetforensics.com/resources/magnet-ram-capture/",
+                      "description": "Free memory acquisition tool by Magnet Forensics",
+                      "platforms": ["windows"],
+                      "tags": ["free", "commercial-grade", "simple", "reliable"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "linux-memory",
+                  "title": "Linux Memory Acquisition",
+                  "description": "Tools for acquiring memory from Linux systems",
+                  "items": [
+                    {
+                      "name": "LiME",
+                      "type": "free",
+                      "url": "https://github.com/504ensicsLabs/LiME",
+                      "description": "Linux Memory Extractor loadable kernel module",
+                      "platforms": ["linux"],
+                      "tags": ["kernel-module", "loadable", "network", "local"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "AVML",
+                      "type": "free",
+                      "url": "https://github.com/microsoft/avml",
+                      "description": "Azure VM memory acquisition tool by Microsoft",
+                      "platforms": ["linux"],
+                      "tags": ["azure", "microsoft", "cloud", "static-binary"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "macos-memory",
+                  "title": "macOS Memory Acquisition",
+                  "description": "Tools for acquiring memory from macOS systems",
+                  "items": [
+                    {
+                      "name": "osxpmem",
+                      "type": "free",
+                      "url": "https://github.com/google/rekall/tree/master/tools/osx/MacPmem",
+                      "description": "macOS physical memory acquisition tool",
+                      "platforms": ["macos"],
+                      "tags": ["macos", "physical-memory", "google", "rekall"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "memory-analysis",
+              "title": "Memory Analysis",
+              "description": "Tools for analyzing memory dumps and extracting artifacts",
+              "subcategories": [
+                {
+                  "id": "frameworks",
+                  "title": "Memory Analysis Frameworks",
+                  "description": "Comprehensive memory analysis frameworks",
+                  "items": [
+                    {
+                      "name": "Volatility 2/3",
+                      "type": "free",
+                      "url": "https://www.volatilityfoundation.org",
+                      "description": "Advanced memory forensics framework",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["advanced", "plugins", "python", "comprehensive"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Rekall",
+                      "type": "free",
+                      "url": "https://github.com/google/rekall",
+                      "description": "Advanced memory analysis framework by Google",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["google", "advanced", "live-analysis", "python"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "MemProcFS",
+                      "type": "free",
+                      "url": "https://github.com/ufrisk/MemProcFS",
+                      "description": "Easy and convenient way to access memory as files",
+                      "platforms": ["windows"],
+                      "tags": ["file-system", "easy", "virtual-fs", "convenient"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-memory",
+                  "title": "Commercial Memory Analysis",
+                  "description": "Commercial memory analysis solutions",
+                  "items": [
+                    {
+                      "name": "Volexity Surge",
+                      "type": "paid",
+                      "url": "https://www.volexity.com/products-overview/surge/",
+                      "description": "Commercial memory analysis platform",
+                      "platforms": ["windows"],
+                      "tags": ["commercial", "enterprise", "gui", "automated"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Magnet AXIOM",
+                      "type": "paid",
+                      "url": "https://www.magnetforensics.com/products/magnet-axiom/",
+                      "description": "Comprehensive digital investigation platform",
+                      "platforms": ["windows"],
+                      "tags": ["comprehensive", "automated", "gui", "artifacts"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "network-forensics",
+          "title": "Network Forensics",
+          "description": "Tools for network traffic analysis and investigation",
+          "subcategories": [
+            {
+              "id": "packet-analysis",
+              "title": "Packet Analysis",
+              "description": "Tools for capturing and analyzing network packets",
+              "subcategories": [
+                {
+                  "id": "capture-analysis",
+                  "title": "Capture & Analysis Tools",
+                  "description": "Tools for packet capture and deep analysis",
+                  "items": [
+                    {
+                      "name": "Wireshark",
+                      "type": "free",
+                      "url": "https://www.wireshark.org",
+                      "description": "World's foremost network protocol analyzer",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["protocol-analyzer", "gui", "filters", "comprehensive"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "NetworkMiner",
+                      "type": "freemium",
+                      "url": "https://www.netresec.com/?page=NetworkMiner",
+                      "description": "Network forensic analysis tool for Windows",
+                      "platforms": ["windows"],
+                      "tags": ["forensic-analysis", "file-extraction", "gui", "artifacts"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "tcpdump/tshark",
+                      "type": "free",
+                      "description": "Command-line packet capture and analysis tools",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["command-line", "capture", "filtering", "scripting"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "carving-reconstruction",
+                  "title": "Carving & Reconstruction Tools",
+                  "description": "Tools for reconstructing network sessions and carving data",
+                  "items": [
+                    {
+                      "name": "Xplico",
+                      "type": "free",
+                      "url": "https://www.xplico.org",
+                      "description": "Network forensic analysis tool for data extraction",
+                      "platforms": ["linux"],
+                      "tags": ["data-extraction", "reconstruction", "web-interface", "protocols"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "NetWitness",
+                      "type": "paid",
+                      "url": "https://www.rsa.com/en-us/products/threat-detection-response/netwitness-network",
+                      "description": "RSA NetWitness network analysis platform",
+                      "platforms": ["linux"],
+                      "tags": ["enterprise", "real-time", "threat-detection", "visualization"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "flow-analysis",
+              "title": "Flow Analysis",
+              "description": "Tools for analyzing network flow data",
+              "subcategories": [
+                {
+                  "id": "open-source-flow",
+                  "title": "Open Source Flow Tools",
+                  "description": "Free tools for network flow analysis",
+                  "items": [
+                    {
+                      "name": "SiLK",
+                      "type": "free",
+                      "url": "https://tools.netsa.cert.org/silk/",
+                      "description": "System for Internet-Level Knowledge flow analysis",
+                      "platforms": ["linux"],
+                      "tags": ["flow-analysis", "internet-scale", "command-line", "cert"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Argus",
+                      "type": "free",
+                      "url": "https://qosient.com/argus/",
+                      "description": "Network activity audit system",
+                      "platforms": ["linux"],
+                      "tags": ["audit", "real-time", "flow-monitoring", "performance"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "nfdump/nfsen",
+                      "type": "free",
+                      "url": "https://github.com/phaag/nfdump",
+                      "description": "Netflow capture and analysis tools",
+                      "platforms": ["linux"],
+                      "tags": ["netflow", "capture", "web-interface", "filtering"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "incident-response",
+      "title": "Incident Response",
+      "description": "Tools and platforms for managing and responding to security incidents",
+      "subcategories": [
+        {
+          "id": "ir-platforms",
+          "title": "IR Platforms",
+          "description": "Comprehensive incident response management platforms",
+          "subcategories": [
+            {
+              "id": "orchestration-automation",
+              "title": "Orchestration & Automation",
+              "description": "Platforms for automating incident response processes",
+              "subcategories": [
+                {
+                  "id": "open-source-soar",
+                  "title": "Open Source SOAR Platforms",
+                  "description": "Free security orchestration, automation and response platforms",
+                  "items": [
+                    {
+                      "name": "TheHive",
+                      "type": "free",
+                      "url": "https://thehive-project.org",
+                      "description": "Scalable security incident response platform",
+                      "platforms": ["linux"],
+                      "tags": ["case-management", "collaboration", "observables", "scalable"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Cortex",
+                      "type": "free",
+                      "url": "https://github.com/TheHive-Project/Cortex",
+                      "description": "Observable analysis and active response engine",
+                      "platforms": ["linux"],
+                      "tags": ["analysis-engine", "observables", "automation", "thehive"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "MISP",
+                      "type": "free",
+                      "url": "https://www.misp-project.org",
+                      "description": "Malware Information Sharing Platform",
+                      "platforms": ["linux"],
+                      "tags": ["threat-intelligence", "sharing", "iocs", "community"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "GRR Rapid Response",
+                      "type": "free",
+                      "url": "https://github.com/google/grr",
+                      "description": "Remote live forensics framework by Google",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["remote-forensics", "google", "live-response", "scalable"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-soar",
+                  "title": "Commercial SOAR Platforms",
+                  "description": "Enterprise security orchestration and automation platforms",
+                  "items": [
+                    {
+                      "name": "Phantom (Splunk SOAR)",
+                      "type": "paid",
+                      "url": "https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation-response.html",
+                      "description": "Splunk's security orchestration platform",
+                      "platforms": ["linux"],
+                      "tags": ["splunk", "orchestration", "playbooks", "enterprise"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Demisto (Palo Alto XSOAR)",
+                      "type": "paid",
+                      "url": "https://www.paloaltonetworks.com/cortex/xsoar",
+                      "description": "Palo Alto Networks security orchestration platform",
+                      "platforms": ["linux"],
+                      "tags": ["palo-alto", "orchestration", "machine-learning", "enterprise"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "IBM Resilient",
+                      "type": "paid",
+                      "url": "https://www.ibm.com/products/resilient-soar",
+                      "description": "IBM Security SOAR platform",
+                      "platforms": ["linux"],
+                      "tags": ["ibm", "resilient", "workflow", "enterprise"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "evidence-collection",
+          "title": "Evidence Collection",
+          "description": "Tools for collecting digital evidence during incident response",
+          "subcategories": [
+            {
+              "id": "live-response",
+              "title": "Live Response",
+              "description": "Tools for collecting evidence from live systems",
+              "subcategories": [
+                {
+                  "id": "windows-live-response",
+                  "title": "Windows Live Response Tools",
+                  "description": "Tools for collecting evidence from live Windows systems",
+                  "items": [
+                    {
+                      "name": "KAPE",
+                      "type": "free",
+                      "url": "https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape",
+                      "description": "Kroll Artifact Parser and Extractor",
+                      "platforms": ["windows"],
+                      "tags": ["artifact-collection", "parsing", "targets", "modules"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "CyLR",
+                      "type": "free",
+                      "url": "https://github.com/orlikoski/CyLR",
+                      "description": "Live Response Collection tool",
+                      "platforms": ["windows", "linux", "macos"],
+                      "tags": ["live-response", "collection", "zip", "portable"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "Redline",
+                      "type": "free",
+                      "url": "https://www.fireeye.com/services/freeware/redline.html",
+                      "description": "FireEye's free endpoint security tool",
+                      "platforms": ["windows"],
+                      "tags": ["fireeye", "endpoint", "iocs", "memory-analysis"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "cross-platform-live",
+                  "title": "Cross-Platform Live Response",
+                  "description": "Live response tools that work across multiple platforms",
+                  "items": [
+                    {
+                      "name": "Velociraptor",
+                      "type": "free",
+                      "url": "https://www.velocidex.com/golang/velociraptor/",
+                      "description": "Advanced digital forensics and incident response tool",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["cross-platform", "vql", "scalable", "artifacts"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "osquery",
+                      "type": "free",
+                      "url": "https://osquery.io",
+                      "description": "SQL-based operating system instrumentation framework",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["sql", "instrumentation", "monitoring", "facebook"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Google Rapid Response (GRR)",
+                      "type": "free",
+                      "url": "https://github.com/google/grr",
+                      "description": "Remote live forensics for incident response",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["remote-forensics", "google", "scalable", "python"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

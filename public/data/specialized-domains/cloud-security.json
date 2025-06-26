@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "section": "5.1",
+    "title": "Cloud Security",
+    "description": "Comprehensive cloud security tools and resources across major platforms",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 29
+  },
+  "categories": [
+    {
+      "id": "cloud-platforms",
+      "title": "Cloud Platform Security",
+      "description": "Native and third-party security tools for major cloud platforms",
+      "subcategories": [
+        {
+          "id": "aws-security",
+          "title": "AWS Security",
+          "description": "Amazon Web Services security tools and assessment platforms",
+          "items": [
+            {
+              "name": "AWS IAM",
+              "type": "free",
+              "url": "https://aws.amazon.com/iam/",
+              "description": "Identity and Access Management service",
+              "platforms": ["web"],
+              "tags": ["aws", "iam", "access-control", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AWS GuardDuty",
+              "type": "paid",
+              "url": "https://aws.amazon.com/guardduty/",
+              "description": "Threat detection service using machine learning",
+              "platforms": ["web"],
+              "tags": ["aws", "threat-detection", "ml", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AWS Security Hub",
+              "type": "paid",
+              "url": "https://aws.amazon.com/security-hub/",
+              "description": "Central security findings dashboard",
+              "platforms": ["web"],
+              "tags": ["aws", "dashboard", "findings", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AWS Inspector",
+              "type": "paid",
+              "url": "https://aws.amazon.com/inspector/",
+              "description": "Application security assessment service",
+              "platforms": ["web"],
+              "tags": ["aws", "assessment", "vulnerability", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AWS Macie",
+              "type": "paid",
+              "url": "https://aws.amazon.com/macie/",
+              "description": "Data security and privacy service",
+              "platforms": ["web"],
+              "tags": ["aws", "data-security", "privacy", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "AWS Shield/WAF",
+              "type": "freemium",
+              "url": "https://aws.amazon.com/shield/",
+              "description": "DDoS protection and web application firewall",
+              "platforms": ["web"],
+              "tags": ["aws", "ddos", "waf", "protection", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Prowler",
+              "type": "free",
+              "url": "https://github.com/prowler-cloud/prowler",
+              "description": "AWS security assessment tool",
+              "platforms": ["linux", "macos"],
+              "tags": ["aws", "assessment", "cli", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ScoutSuite",
+              "type": "free",
+              "url": "https://github.com/nccgroup/ScoutSuite",
+              "description": "Multi-cloud security auditing tool",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["aws", "audit", "multi-cloud", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CloudMapper",
+              "type": "free",
+              "url": "https://github.com/duo-labs/cloudmapper",
+              "description": "AWS environment analysis and visualization",
+              "platforms": ["linux", "macos"],
+              "tags": ["aws", "visualization", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Pacu",
+              "type": "free",
+              "url": "https://github.com/RhinoSecurityLabs/pacu",
+              "description": "AWS exploitation framework",
+              "platforms": ["linux", "macos"],
+              "tags": ["aws", "exploitation", "framework", "offensive"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "azure-security",
+          "title": "Azure Security",
+          "description": "Microsoft Azure security tools and platforms",
+          "items": [
+            {
+              "name": "Azure Active Directory",
+              "type": "freemium",
+              "url": "https://azure.microsoft.com/en-us/services/active-directory/",
+              "description": "Identity and access management service",
+              "platforms": ["web"],
+              "tags": ["azure", "ad", "identity", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Azure Security Center",
+              "type": "freemium",
+              "url": "https://azure.microsoft.com/en-us/services/security-center/",
+              "description": "Unified security management and threat protection",
+              "platforms": ["web"],
+              "tags": ["azure", "security-center", "protection", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Azure Sentinel",
+              "type": "paid",
+              "url": "https://azure.microsoft.com/en-us/services/azure-sentinel/",
+              "description": "Cloud-native SIEM and SOAR solution",
+              "platforms": ["web"],
+              "tags": ["azure", "siem", "soar", "native"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Azure Key Vault",
+              "type": "paid",
+              "url": "https://azure.microsoft.com/en-us/services/key-vault/",
+              "description": "Secrets and key management service",
+              "platforms": ["web"],
+              "tags": ["azure", "secrets", "keys", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Azure Policy",
+              "type": "free",
+              "url": "https://azure.microsoft.com/en-us/services/azure-policy/",
+              "description": "Governance and compliance management",
+              "platforms": ["web"],
+              "tags": ["azure", "policy", "governance", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Azucar",
+              "type": "free",
+              "url": "https://github.com/nccgroup/azucar",
+              "description": "Azure security assessment tool",
+              "platforms": ["windows", "linux"],
+              "tags": ["azure", "assessment", "powershell", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Skyark",
+              "type": "free",
+              "url": "https://github.com/cyberark/SkyArk",
+              "description": "Azure privilege escalation discovery tool",
+              "platforms": ["windows"],
+              "tags": ["azure", "privilege-escalation", "discovery", "opensource"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "gcp-security",
+          "title": "GCP Security",
+          "description": "Google Cloud Platform security tools and services",
+          "items": [
+            {
+              "name": "Cloud IAM",
+              "type": "free",
+              "url": "https://cloud.google.com/iam",
+              "description": "Identity and access management for GCP",
+              "platforms": ["web"],
+              "tags": ["gcp", "iam", "access-control", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Security Command Center",
+              "type": "freemium",
+              "url": "https://cloud.google.com/security-command-center",
+              "description": "Centralized security and risk management",
+              "platforms": ["web"],
+              "tags": ["gcp", "security-center", "risk", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Cloud Armor",
+              "type": "paid",
+              "url": "https://cloud.google.com/armor",
+              "description": "DDoS protection and web application firewall",
+              "platforms": ["web"],
+              "tags": ["gcp", "ddos", "waf", "protection", "native"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Binary Authorization",
+              "type": "free",
+              "url": "https://cloud.google.com/binary-authorization",
+              "description": "Container image security and compliance",
+              "platforms": ["web"],
+              "tags": ["gcp", "containers", "compliance", "native"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Forseti Security",
+              "type": "free",
+              "url": "https://github.com/forseti-security/forseti-security",
+              "description": "GCP security monitoring and compliance",
+              "platforms": ["linux"],
+              "tags": ["gcp", "monitoring", "compliance", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "G-Scout",
+              "type": "free",
+              "url": "https://github.com/nccgroup/g-scout",
+              "description": "GCP security assessment tool",
+              "platforms": ["linux", "macos"],
+              "tags": ["gcp", "assessment", "security", "opensource"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "container-security",
+      "title": "Container Security",
+      "description": "Security tools for Docker, Kubernetes, and container environments",
+      "subcategories": [
+        {
+          "id": "docker-security",
+          "title": "Docker Security",
+          "description": "Security tools and practices for Docker containers",
+          "items": [
+            {
+              "name": "Trivy",
+              "type": "free",
+              "url": "https://github.com/aquasecurity/trivy",
+              "description": "Vulnerability scanner for container images",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["docker", "vulnerability", "scanner", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Clair",
+              "type": "free",
+              "url": "https://github.com/quay/clair",
+              "description": "Static analysis for container vulnerabilities",
+              "platforms": ["linux"],
+              "tags": ["docker", "static-analysis", "vulnerability", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Anchore",
+              "type": "freemium",
+              "url": "https://anchore.com/",
+              "description": "Container security and compliance platform",
+              "platforms": ["linux", "web"],
+              "tags": ["docker", "compliance", "platform", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Docker Bench",
+              "type": "free",
+              "url": "https://github.com/docker/docker-bench-security",
+              "description": "Docker security configuration checker",
+              "platforms": ["linux"],
+              "tags": ["docker", "configuration", "benchmark", "opensource"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Falco",
+              "type": "free",
+              "url": "https://falco.org/",
+              "description": "Runtime security monitoring for containers",
+              "platforms": ["linux"],
+              "tags": ["docker", "runtime", "monitoring", "opensource"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "kubernetes-security",
+          "title": "Kubernetes Security",
+          "description": "Security tools for Kubernetes container orchestration",
+          "items": [
+            {
+              "name": "kube-bench",
+              "type": "free",
+              "url": "https://github.com/aquasecurity/kube-bench",
+              "description": "Kubernetes CIS benchmark checker",
+              "platforms": ["linux"],
+              "tags": ["kubernetes", "benchmark", "cis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "kube-score",
+              "type": "free",
+              "url": "https://github.com/zegl/kube-score",
+              "description": "Kubernetes configuration analysis",
+              "platforms": ["linux", "macos", "windows"],
+              "tags": ["kubernetes", "configuration", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "kubesec",
+              "type": "free",
+              "url": "https://kubesec.io/",
+              "description": "Security analysis for Kubernetes manifests",
+              "platforms": ["web", "linux"],
+              "tags": ["kubernetes", "security", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Polaris",
+              "type": "free",
+              "url": "https://github.com/FairwindsOps/polaris",
+              "description": "Kubernetes configuration validation",
+              "platforms": ["linux"],
+              "tags": ["kubernetes", "configuration", "validation", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "OPA (Open Policy Agent)",
+              "type": "free",
+              "url": "https://openpolicyagent.org/",
+              "description": "Policy engine for Kubernetes and cloud native",
+              "platforms": ["linux"],
+              "tags": ["kubernetes", "policy", "governance", "opensource"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

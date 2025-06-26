@@ -1,0 +1,82 @@
+.tree-navigation {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tree-item {
+  margin: 0;
+}
+
+.tree-node {
+  cursor: pointer;
+  padding: 2px 0;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.tree-node:hover {
+  background: #111;
+}
+
+.tree-icon {
+  display: inline-block;
+  width: 20px;
+  color: #666;
+  text-align: center;
+}
+
+.tree-name {
+  color: #0f0;
+  margin-right: 8px;
+}
+
+.tree-count {
+  color: #cc0;
+  font-size: 12px;
+}
+
+.loading {
+  color: #666;
+  margin-left: 8px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Different colors for different levels */
+.tree-item .tree-item .tree-name {
+  color: #0ff;
+}
+
+.tree-item .tree-item .tree-item .tree-name {
+  color: #0f0;
+}
+
+.tree-item .tree-item .tree-item .tree-item .tree-name {
+  color: #ff0;
+}
+
+/* Leaf nodes (clickable links) */
+.tree-node.leaf .tree-name {
+  text-decoration: none;
+}
+
+.tree-node.leaf:hover .tree-name {
+  text-decoration: underline;
+}
+
+/* Category-specific colors */
+.tools { color: #0f0; }
+.learning { color: #0f0; }
+.practice { color: #0f0; }
+.community { color: #0f0; }
+.career { color: #0f0; }
+.references { color: #0f0; }
+.news { color: #0f0; }
+.compliance { color: #0f0; }
+.vulnintel { color: #0f0; }
+.distros { color: #0f0; }

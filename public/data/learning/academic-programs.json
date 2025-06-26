@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "section": "2.4",
+    "title": "Academic Programs",
+    "description": "Formal degree programs, online education, and intensive bootcamps for cybersecurity education",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 19
+  },
+  "categories": [
+    {
+      "id": "degree-programs",
+      "title": "Degree Programs",
+      "description": "Formal university degree programs in cybersecurity and related fields",
+      "subcategories": [
+        {
+          "id": "undergraduate",
+          "title": "Undergraduate",
+          "description": "Bachelor's degree programs in cybersecurity and information security",
+          "items": [
+            {
+              "name": "Computer Science (Security Focus)",
+              "type": "paid",
+              "description": "Traditional computer science degree with cybersecurity concentration",
+              "platforms": ["all"],
+              "tags": ["computer-science", "traditional", "broad-foundation"],
+              "difficulty": "intermediate",
+              "duration": "4 years",
+              "features": [
+                "Strong programming foundation",
+                "Broad technical knowledge",
+                "Security electives",
+                "Research opportunities"
+              ]
+            },
+            {
+              "name": "Cybersecurity Bachelor's",
+              "type": "paid",
+              "description": "Dedicated cybersecurity undergraduate programs",
+              "platforms": ["all"],
+              "tags": ["cybersecurity", "specialized", "dedicated"],
+              "difficulty": "intermediate",
+              "duration": "4 years",
+              "features": [
+                "Focused curriculum",
+                "Industry partnerships",
+                "Hands-on labs",
+                "Certification preparation"
+              ]
+            },
+            {
+              "name": "Information Systems Security",
+              "type": "paid",
+              "description": "Business-focused security degree with technical components",
+              "platforms": ["all"],
+              "tags": ["business-focused", "management", "technical"],
+              "difficulty": "intermediate",
+              "duration": "4 years"
+            },
+            {
+              "name": "WGU Cybersecurity",
+              "type": "paid",
+              "url": "https://www.wgu.edu/online-it-degrees/cybersecurity-information-assurance-bachelors-program.html",
+              "description": "Competency-based online cybersecurity program",
+              "platforms": ["online"],
+              "tags": ["online", "competency-based", "accelerated", "certifications"],
+              "difficulty": "intermediate",
+              "duration": "2-4 years",
+              "features": [
+                "Self-paced learning",
+                "Industry certifications included",
+                "Affordable tuition",
+                "Working professional friendly"
+              ]
+            },
+            {
+              "name": "Penn State World Campus",
+              "type": "paid",
+              "url": "https://www.worldcampus.psu.edu/degrees-and-certificates/information-sciences-and-technology-bachelor/overview",
+              "description": "Online information sciences and technology with security focus",
+              "platforms": ["online"],
+              "tags": ["online", "penn-state", "established"],
+              "difficulty": "intermediate",
+              "duration": "4 years"
+            },
+            {
+              "name": "UMGC Cybersecurity",
+              "type": "paid",
+              "url": "https://www.umgc.edu/academic-programs/bachelors-degrees/cybersecurity-major.cfm",
+              "description": "University of Maryland Global Campus cybersecurity program",
+              "platforms": ["online"],
+              "tags": ["online", "university-of-maryland", "flexible"],
+              "difficulty": "intermediate",
+              "duration": "4 years"
+            }
+          ]
+        },
+        {
+          "id": "graduate",
+          "title": "Graduate",
+          "description": "Master's and doctoral programs for advanced cybersecurity study",
+          "items": [
+            {
+              "name": "MS in Cybersecurity",
+              "type": "paid",
+              "description": "Master's degree focused specifically on cybersecurity",
+              "platforms": ["all"],
+              "tags": ["master's", "specialized", "advanced"],
+              "difficulty": "advanced",
+              "duration": "1.5-2 years",
+              "features": [
+                "Advanced technical courses",
+                "Research opportunities",
+                "Thesis or capstone project",
+                "Industry connections"
+              ]
+            },
+            {
+              "name": "MS in Information Security",
+              "type": "paid",
+              "description": "Broader information security master's program",
+              "platforms": ["all"],
+              "tags": ["master's", "information-security", "comprehensive"],
+              "difficulty": "advanced",
+              "duration": "1.5-2 years"
+            },
+            {
+              "name": "MBA with Cybersecurity Focus",
+              "type": "paid",
+              "description": "Business administration degree with cybersecurity concentration",
+              "platforms": ["all"],
+              "tags": ["mba", "business", "management", "leadership"],
+              "difficulty": "advanced",
+              "duration": "2 years",
+              "features": [
+                "Business leadership skills",
+                "Strategic thinking",
+                "Risk management",
+                "Executive preparation"
+              ]
+            },
+            {
+              "name": "PhD in Computer Science (Security)",
+              "type": "paid",
+              "description": "Doctoral research program in computer science with security focus",
+              "platforms": ["all"],
+              "tags": ["phd", "research", "academic", "expert"],
+              "difficulty": "expert",
+              "duration": "4-6 years",
+              "features": [
+                "Original research",
+                "Academic career preparation",
+                "Advanced technical expertise",
+                "Publication opportunities"
+              ]
+            },
+            {
+              "name": "PhD in Information Systems",
+              "type": "paid",
+              "description": "Doctoral program focused on information systems and security",
+              "platforms": ["all"],
+              "tags": ["phd", "information-systems", "research"],
+              "difficulty": "expert",
+              "duration": "4-6 years"
+            },
+            {
+              "name": "Doctor of Cybersecurity",
+              "type": "paid",
+              "description": "Professional doctoral degree in cybersecurity practice",
+              "platforms": ["all"],
+              "tags": ["doctorate", "professional", "practice-focused"],
+              "difficulty": "expert",
+              "duration": "3-4 years"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bootcamps",
+      "title": "Bootcamps",
+      "description": "Intensive, accelerated cybersecurity training programs",
+      "subcategories": [
+        {
+          "id": "intensive-programs",
+          "title": "Intensive Programs",
+          "description": "Full-time and part-time intensive cybersecurity bootcamps",
+          "items": [
+            {
+              "name": "Fullstack Cyber Bootcamp",
+              "type": "paid",
+              "url": "https://www.fullstackcyber.com/",
+              "description": "Comprehensive full-time cybersecurity training program",
+              "platforms": ["all"],
+              "tags": ["full-time", "comprehensive", "career-change"],
+              "difficulty": "beginner",
+              "duration": "12-24 weeks",
+              "features": [
+                "Hands-on labs",
+                "Industry mentorship",
+                "Job placement assistance",
+                "Portfolio development"
+              ]
+            },
+            {
+              "name": "SecureSet Academy",
+              "type": "paid",
+              "description": "Denver-based cybersecurity bootcamp with job guarantee",
+              "platforms": ["all"],
+              "tags": ["job-guarantee", "denver", "intensive"],
+              "difficulty": "beginner",
+              "duration": "24 weeks"
+            },
+            {
+              "name": "Evolve Security Academy",
+              "type": "paid",
+              "url": "https://evolvesecurity.com/",
+              "description": "Cybersecurity bootcamp with multiple specialization tracks",
+              "platforms": ["all"],
+              "tags": ["specialization-tracks", "chicago", "multiple-locations"],
+              "difficulty": "beginner",
+              "duration": "24 weeks"
+            },
+            {
+              "name": "Springboard Cybersecurity",
+              "type": "paid",
+              "url": "https://www.springboard.com/courses/cyber-security-career-track/",
+              "description": "Online mentored cybersecurity bootcamp",
+              "platforms": ["online"],
+              "tags": ["online", "mentored", "flexible", "part-time"],
+              "difficulty": "beginner",
+              "duration": "6-9 months",
+              "features": [
+                "1-on-1 mentoring",
+                "Flexible schedule",
+                "Job guarantee",
+                "Portfolio projects"
+              ]
+            },
+            {
+              "name": "Thinkful Cybersecurity",
+              "type": "paid",
+              "url": "https://www.thinkful.com/bootcamp/cybersecurity/",
+              "description": "Online cybersecurity bootcamp with job guarantee",
+              "platforms": ["online"],
+              "tags": ["online", "job-guarantee", "flexible"],
+              "difficulty": "beginner",
+              "duration": "6 months"
+            },
+            {
+              "name": "Flatiron School",
+              "type": "paid",
+              "url": "https://flatironschool.com/career-courses/cybersecurity-bootcamp/",
+              "description": "Cybersecurity bootcamp from established coding school",
+              "platforms": ["all"],
+              "tags": ["established", "multiple-locations", "career-services"],
+              "difficulty": "beginner",
+              "duration": "15 weeks"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
