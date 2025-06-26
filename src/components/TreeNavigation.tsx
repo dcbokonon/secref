@@ -92,17 +92,38 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                 if (sub.subcategories && sub.subcategories.length > 0) {
                   // Nested subcategories
                   sub.subcategories.forEach((subsub: any) => {
-                    items.push({
-                      name: subsub.title,
-                      count: subsub.items?.length || 0,
-                      children: subsub.items?.map((item: any) => ({
-                        name: item.name,
-                        url: item.url || item.link,
-                        count: 0,
-                        notation: item.notation,
-                        pricingNote: item.pricingNote
-                      })) || []
-                    });
+                    // Check if this subcategory has even more subcategories
+                    if (subsub.subcategories && subsub.subcategories.length > 0) {
+                      // Even deeper nesting - handle it
+                      items.push({
+                        name: subsub.title,
+                        count: subsub.subcategories.reduce((sum: number, s: any) => sum + (s.items?.length || 0), 0),
+                        children: subsub.subcategories.map((subsubsub: any) => ({
+                          name: subsubsub.title,
+                          count: subsubsub.items?.length || 0,
+                          children: subsubsub.items?.map((item: any) => ({
+                            name: item.name,
+                            url: item.url || item.link,
+                            count: 0,
+                            notation: item.notation,
+                            pricingNote: item.pricingNote
+                          })) || []
+                        }))
+                      });
+                    } else {
+                      // Regular handling for subcategories with items
+                      items.push({
+                        name: subsub.title,
+                        count: subsub.items?.length || 0,
+                        children: subsub.items?.map((item: any) => ({
+                          name: item.name,
+                          url: item.url || item.link,
+                          count: 0,
+                          notation: item.notation,
+                          pricingNote: item.pricingNote
+                        })) || []
+                      });
+                    }
                   });
                 } else if (sub.items && sub.items.length > 0) {
                   // Direct items under subcategory
