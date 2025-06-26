@@ -222,30 +222,30 @@ export const TreeNavigation: React.FC<TreeNavigationProps> = ({ data }) => {
           name: 'Assessment & Testing',
           children: [
             { name: 'Reconnaissance', file: 'reconnaissance', count: data.toolsByPhase.reconnaissance.totalItems, category: 'tools' },
-            { name: 'Vulnerability Scanners', file: 'vulnerability-assessment', count: data.toolsByPhase.vulnerability.totalItems, category: 'tools' },
-            { name: 'Web Application Testing', file: 'web-security', count: data.webSecurityData.totalItems, category: 'tools' },
-            { name: 'Network Testing', file: 'network-testing', count: data.networkTestingData.totalItems, category: 'tools' },
-            { name: 'Penetration Testing', file: 'exploitation', count: data.toolsByPhase.exploitation.totalItems, category: 'tools' },
-            { name: 'OSINT Tools', file: 'osint', count: data.osintData.totalItems, category: 'tools' },
-            { name: 'API Security Testing', file: 'api-security', count: 56, category: 'tools' }
+            { name: 'Vulnerability Assessment', file: 'vulnerability-assessment', count: data.toolsByPhase.vulnerability.totalItems, category: 'tools' },
+            { name: 'Exploitation', file: 'exploitation', count: data.toolsByPhase.exploitation.totalItems, category: 'tools' }
           ]
         },
         {
           name: 'Monitoring & Detection',
           children: [
-            { name: 'SIEM Platforms', file: 'siem', count: data.siemData.totalItems, category: 'tools' },
-            { name: 'Network Monitoring', file: 'network-monitoring', count: data.networkMonitoringData.totalItems, category: 'tools' },
-            { name: 'Endpoint Detection', file: 'endpoint-detection', count: data.endpointData.totalItems, category: 'tools' },
-            { name: 'Threat Intelligence', file: 'threat-intelligence', count: data.threatIntelData.totalItems, category: 'tools' }
+            { name: 'Defense & Monitoring', file: 'defense-monitoring', count: data.toolsByPhase.defense.totalItems, category: 'tools' }
           ]
         },
         {
           name: 'Response & Analysis',
           children: [
-            { name: 'Incident Response', file: 'incident-response', count: data.incidentResponseData.totalItems, category: 'tools' },
-            { name: 'Digital Forensics', file: 'forensics-ir', count: data.toolsByPhase.forensics.totalItems, category: 'tools' },
-            { name: 'Malware Analysis', file: 'malware-analysis', count: data.malwareAnalysisData.totalItems, category: 'tools' },
-            { name: 'Log Analysis', file: 'log-analysis', count: data.logAnalysisData.totalItems, category: 'tools' }
+            { name: 'Forensics & Incident Response', file: 'forensics-ir', count: data.toolsByPhase.forensics.totalItems, category: 'tools' }
+          ]
+        },
+        {
+          name: 'Security Tools',
+          children: [
+            { name: 'Cryptography & Privacy', file: 'cryptography', count: data.toolsByPhase.crypto.totalItems, category: 'tools' },
+            { name: 'Development Security', file: 'development-security', count: data.toolsByPhase.development.totalItems, category: 'tools' },
+            { name: 'Hardware & Physical', file: 'hardware-physical', count: data.toolsByPhase.hardware.totalItems, category: 'tools' },
+            { name: 'Mobile Security', file: 'mobile-security', count: data.toolsByPhase.mobile.totalItems, category: 'tools' },
+            { name: 'Cloud Security', file: 'cloud-security', count: data.toolsByPhase.cloud.totalItems, category: 'tools' }
           ]
         },
         {
