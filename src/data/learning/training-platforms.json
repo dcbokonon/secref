@@ -20,6 +20,8 @@
             {
               "name": "TryHackMe",
               "type": "freemium",
+              "notation": "(F)",
+              "pricingNote": "Free tier available, Premium from $10.50/month",
               "url": "https://tryhackme.com",
               "description": "Gamified cybersecurity learning with guided rooms and learning paths",
               "platforms": ["web"],
@@ -36,6 +38,8 @@
             {
               "name": "PentesterLab",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Pro subscription $19.99/month or $199/year",
               "url": "https://pentesterlab.com",
               "description": "Web security focused platform with progressive difficulty",
               "platforms": ["web"],
@@ -73,6 +77,8 @@
             {
               "name": "HackTheBox",
               "type": "freemium",
+              "notation": "(F)†",
+              "pricingNote": "Free tier requires invite code, VIP from €13/month",
               "url": "https://hackthebox.com",
               "description": "Premier penetration testing platform with realistic machines",
               "platforms": ["web"],
@@ -104,6 +110,8 @@
             {
               "name": "PentesterAcademy",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "$99/month for full access",
               "url": "https://pentesteracademy.com",
               "description": "Video courses combined with hands-on labs",
               "platforms": ["web"],
@@ -174,6 +182,8 @@
             {
               "name": "Cybrary",
               "type": "freemium",
+              "notation": "(F)",
+              "pricingNote": "Limited free access, Insider Pro from $59/month",
               "url": "https://cybrary.it",
               "description": "Comprehensive cybersecurity training library",
               "platforms": ["web"],
@@ -183,6 +193,8 @@
             {
               "name": "InfoSec Skills",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Individual plans from $49/month",
               "url": "https://infosecinstitute.com/skills/",
               "description": "Hands-on cybersecurity skills training",
               "platforms": ["web"],
@@ -228,6 +240,8 @@
             {
               "name": "Udemy",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Per-course pricing, typically $10-200",
               "url": "https://udemy.com",
               "description": "Marketplace of cybersecurity courses from various instructors",
               "platforms": ["web"],
@@ -237,6 +251,8 @@
             {
               "name": "Coursera",
               "type": "freemium",
+              "notation": "(F)",
+              "pricingNote": "Audit free, certificates from $49/month",
               "url": "https://coursera.org",
               "description": "University-level courses including cybersecurity programs",
               "platforms": ["web"],

@@ -74,6 +74,8 @@
             {
               "name": "Cobalt",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Enterprise PtaaS - contact sales",
               "url": "https://cobalt.io/",
               "description": "Pentesting as a Service with bounty elements",
               "platforms": ["web"],

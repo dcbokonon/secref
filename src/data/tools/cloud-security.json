@@ -68,6 +68,8 @@
                 {
                   "name": "Prisma Cloud",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://www.paloaltonetworks.com/prisma/cloud",
                   "description": "Comprehensive cloud native security platform",
                   "platforms": ["web"],
@@ -77,6 +79,8 @@
                 {
                   "name": "Dome9",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://www.checkpoint.com/products/cloud-security/",
                   "description": "Check Point cloud security platform",
                   "platforms": ["web"],
@@ -86,6 +90,8 @@
                 {
                   "name": "Lacework",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://www.lacework.com/",
                   "description": "Cloud security platform with anomaly detection",
                   "platforms": ["web"],
@@ -95,6 +101,8 @@
                 {
                   "name": "Orca Security",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://orca.security/",
                   "description": "Agentless cloud security platform",
                   "platforms": ["web"],
@@ -136,6 +144,8 @@
                 {
                   "name": "Anchore",
                   "type": "freemium",
+                  "notation": "(F)",
+                  "pricingNote": "Open source free, Enterprise from custom pricing",
                   "url": "https://anchore.com/",
                   "description": "Container image inspection and vulnerability scanning",
                   "platforms": ["linux", "macos", "windows"],
@@ -145,6 +155,8 @@
                 {
                   "name": "Twistlock",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Now part of Prisma Cloud - enterprise pricing",
                   "url": "https://www.paloaltonetworks.com/prisma/cloud",
                   "description": "Container security platform (now part of Prisma Cloud)",
                   "platforms": ["web"],
@@ -163,6 +175,8 @@
                 {
                   "name": "Sysdig",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://sysdig.com/",
                   "description": "Container security and monitoring platform",
                   "platforms": ["web"],
@@ -172,6 +186,8 @@
                 {
                   "name": "Aqua Security",
                   "type": "paid",
+                  "notation": "(E)",
+                  "pricingNote": "Enterprise pricing - contact sales",
                   "url": "https://www.aquasec.com/",
                   "description": "Full lifecycle container security platform",
                   "platforms": ["web"],

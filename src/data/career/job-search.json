@@ -86,6 +86,8 @@
         {
           "name": "FlexJobs",
           "type": "paid",
+          "notation": "($)",
+          "pricingNote": "Subscription from $14.95/month",
           "url": "https://www.flexjobs.com",
           "description": "Curated remote and flexible job listings",
           "tags": ["jobs", "remote", "flexible", "curated"],

@@ -20,6 +20,8 @@
             {
               "name": "DEF CON",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "$365 for 4-day pass (cash only)",
               "url": "https://defcon.org/",
               "description": "Premier hacker conference held annually in Las Vegas",
               "platforms": ["physical"],
@@ -42,6 +44,8 @@
             {
               "name": "Black Hat",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Briefings ~$2,495, Trainings $3,200-$5,600",
               "url": "https://blackhat.com/",
               "description": "Professional security conference with technical trainings",
               "platforms": ["physical"],
@@ -65,6 +69,8 @@
             {
               "name": "ShmooCon",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "$150 (tickets sell out in minutes)",
               "url": "https://shmoocon.org/",
               "description": "Intimate hacker conference in Washington DC",
               "platforms": ["physical"],
@@ -92,6 +98,8 @@
             {
               "name": "RSA Conference",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Full pass ~$2,495, Expo pass free",
               "url": "https://rsaconference.com/",
               "description": "Premier business-focused cybersecurity conference",
               "platforms": ["physical", "virtual"],
@@ -111,6 +119,8 @@
             {
               "name": "InfoSec World",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Conference pass from ~$1,295",
               "url": "https://infosecworldusa.com/",
               "description": "Information security conference and exposition",
               "platforms": ["physical", "virtual"],
@@ -120,6 +130,8 @@
             {
               "name": "ISC2 Security Congress",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Member pricing from ~$895, non-member ~$1,295",
               "url": "https://cloud.connect.isc2.org/events/security-congress",
               "description": "Annual conference for (ISC)² members and security professionals",
               "platforms": ["physical", "virtual"],
@@ -187,6 +199,8 @@
             {
               "name": "CarolinaCon",
               "type": "paid",
+              "notation": "($)",
+              "pricingNote": "Tickets from ~$40-60",
               "url": "https://carolinacon.org/",
               "description": "North Carolina information security conference",
               "platforms": ["physical"],
@@ -221,6 +235,8 @@
             {
               "name": "Virtual Security Conferences",
               "type": "freemium",
+              "notation": "(F)",
+              "pricingNote": "Many offer free streaming with paid full access",
               "description": "Various security conferences offering virtual attendance",
               "platforms": ["virtual"],
               "tags": ["virtual", "remote", "accessible"],
@@ -337,6 +353,8 @@
             {
               "name": "HackTheBox",
               "type": "freemium",
+              "notation": "(F)†",
+              "pricingNote": "Free tier requires invite code, VIP from €13/month",
               "url": "https://hackthebox.com/",
               "description": "Continuous penetration testing challenges",
               "platforms": ["virtual"],
@@ -346,6 +364,8 @@
             {
               "name": "TryHackMe",
               "type": "freemium",
+              "notation": "(F)",
+              "pricingNote": "Free tier available, Premium from $10.50/month",
               "url": "https://tryhackme.com/",
               "description": "Gamified cybersecurity learning platform",
               "platforms": ["virtual"],
