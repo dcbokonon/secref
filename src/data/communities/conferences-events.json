@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "section": "3.3",
+    "title": "Conferences & Events",
+    "description": "Major cybersecurity conferences, regional events, virtual gatherings, and competitive events",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 23
+  },
+  "categories": [
+    {
+      "id": "major-conferences",
+      "title": "Major Conferences",
+      "description": "Premier cybersecurity conferences drawing international audiences",
+      "subcategories": [
+        {
+          "id": "hacker-conferences",
+          "title": "Hacker Conferences",
+          "description": "Technical conferences focused on hacker culture and cutting-edge research",
+          "items": [
+            {
+              "name": "DEF CON",
+              "type": "paid",
+              "url": "https://defcon.org/",
+              "description": "Premier hacker conference held annually in Las Vegas",
+              "platforms": ["physical"],
+              "tags": ["hacker-culture", "villages", "contests", "workshops", "premier"],
+              "difficulty": "intermediate",
+              "location": "Las Vegas, Nevada",
+              "schedule": "August annually",
+              "features": [
+                "Technical villages (Hardware, Car, IoT, etc.)",
+                "Capture the Flag competition",
+                "Security workshops and trainings",
+                "Vendor exhibition",
+                "Social events and parties",
+                "Wall of Sheep",
+                "Lock picking village",
+                "Social engineering village"
+              ],
+              "cost": "$300-400 for weekend pass"
+            },
+            {
+              "name": "Black Hat",
+              "type": "paid",
+              "url": "https://blackhat.com/",
+              "description": "Professional security conference with technical trainings",
+              "platforms": ["physical"],
+              "tags": ["professional", "technical", "training", "research"],
+              "difficulty": "intermediate",
+              "features": [
+                "Multi-day technical trainings",
+                "Research presentations",
+                "Arsenal tool demonstrations",
+                "Business hall",
+                "Professional networking"
+              ],
+              "locations": [
+                "USA (Las Vegas)",
+                "Europe (London)",
+                "Asia (Singapore)",
+                "MEA (Riyadh)"
+              ],
+              "cost": "$2000+ for briefings, $5000+ for trainings"
+            },
+            {
+              "name": "ShmooCon",
+              "type": "paid",
+              "url": "https://shmoocon.org/",
+              "description": "Intimate hacker conference in Washington DC",
+              "platforms": ["physical"],
+              "tags": ["intimate", "limited-tickets", "washington-dc", "hacker-culture"],
+              "difficulty": "intermediate",
+              "location": "Washington, DC",
+              "schedule": "January annually",
+              "features": [
+                "Limited attendance (~3000 people)",
+                "Tickets sell out in minutes",
+                "Three-day event",
+                "Technical presentations",
+                "HackerBot competitions",
+                "Fireside chats"
+              ],
+              "cost": "$150 (if you can get tickets)"
+            }
+          ]
+        },
+        {
+          "id": "business-conferences",
+          "title": "Business Conferences",
+          "description": "Enterprise-focused cybersecurity conferences",
+          "items": [
+            {
+              "name": "RSA Conference",
+              "type": "paid",
+              "url": "https://rsaconference.com/",
+              "description": "Premier business-focused cybersecurity conference",
+              "platforms": ["physical", "virtual"],
+              "tags": ["business", "enterprise", "vendor", "networking"],
+              "difficulty": "beginner",
+              "location": "San Francisco, CA",
+              "schedule": "May annually",
+              "features": [
+                "Massive vendor exhibition",
+                "Executive keynotes",
+                "Business networking",
+                "Innovation sandbox",
+                "Security awards"
+              ],
+              "cost": "$2000+ for full conference"
+            },
+            {
+              "name": "InfoSec World",
+              "type": "paid",
+              "url": "https://infosecworldusa.com/",
+              "description": "Information security conference and exposition",
+              "platforms": ["physical", "virtual"],
+              "tags": ["business", "professional", "training"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ISC2 Security Congress",
+              "type": "paid",
+              "url": "https://cloud.connect.isc2.org/events/security-congress",
+              "description": "Annual conference for (ISC)² members and security professionals",
+              "platforms": ["physical", "virtual"],
+              "tags": ["professional", "cpe", "cissp", "networking"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional-events",
+      "title": "Regional Events",
+      "description": "Local and regional cybersecurity conferences and meetups",
+      "subcategories": [
+        {
+          "id": "bsides",
+          "title": "BSides",
+          "description": "Community-driven security conferences worldwide",
+          "items": [
+            {
+              "name": "BSides Las Vegas",
+              "type": "free",
+              "url": "https://bsideslv.org/",
+              "description": "The original BSides conference held alongside DEF CON",
+              "platforms": ["physical"],
+              "tags": ["community", "free", "las-vegas", "original"],
+              "difficulty": "beginner",
+              "location": "Las Vegas, Nevada",
+              "schedule": "August (during DEF CON)"
+            },
+            {
+              "name": "BSides Events Worldwide",
+              "type": "free",
+              "url": "http://www.securitybsides.com/",
+              "description": "100+ community-driven BSides events globally",
+              "platforms": ["physical"],
+              "tags": ["community", "global", "free", "grassroots"],
+              "difficulty": "beginner",
+              "features": [
+                "100+ cities worldwide",
+                "Community driven content",
+                "Free or low cost attendance",
+                "Local speaker focus",
+                "Diverse topics and skill levels",
+                "Welcoming environment"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "local-seccons",
+          "title": "Local SecCons",
+          "description": "Regional security conferences with local focus",
+          "items": [
+            {
+              "name": "DerbyCon",
+              "type": "paid",
+              "description": "Louisville security conference (ended 2019)",
+              "platforms": ["physical"],
+              "tags": ["ended", "historical", "louisville"],
+              "difficulty": "intermediate",
+              "status": "Discontinued"
+            },
+            {
+              "name": "CarolinaCon",
+              "type": "paid",
+              "url": "https://carolinacon.org/",
+              "description": "North Carolina information security conference",
+              "platforms": ["physical"],
+              "tags": ["north-carolina", "regional", "annual"],
+              "difficulty": "intermediate",
+              "location": "Raleigh, North Carolina"
+            },
+            {
+              "name": "CircleCityCon",
+              "type": "paid",
+              "url": "https://circlecitycon.com/",
+              "description": "Indianapolis cybersecurity and hacker conference",
+              "platforms": ["physical"],
+              "tags": ["indianapolis", "midwest", "hacker-culture"],
+              "difficulty": "intermediate",
+              "location": "Indianapolis, Indiana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "virtual-events",
+      "title": "Virtual Events",
+      "description": "Online conferences, webinars, and virtual training events",
+      "subcategories": [
+        {
+          "id": "online-conferences",
+          "title": "Online Conferences",
+          "description": "Major conferences with virtual attendance options",
+          "items": [
+            {
+              "name": "Virtual Security Conferences",
+              "type": "freemium",
+              "description": "Various security conferences offering virtual attendance",
+              "platforms": ["virtual"],
+              "tags": ["virtual", "remote", "accessible"],
+              "difficulty": "beginner",
+              "features": [
+                "Remote accessibility",
+                "Lower cost than physical attendance",
+                "Recorded sessions",
+                "Virtual networking",
+                "Chat interactions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "webinar-series",
+          "title": "Webinar Series",
+          "description": "Regular educational webinars and online training",
+          "items": [
+            {
+              "name": "SANS Webcasts",
+              "type": "free",
+              "url": "https://www.sans.org/webcasts/",
+              "description": "Free educational webcasts from SANS Institute",
+              "platforms": ["virtual"],
+              "tags": ["sans", "educational", "free", "regular"],
+              "difficulty": "beginner",
+              "features": [
+                "Free attendance",
+                "Expert instructors",
+                "Recorded for later viewing",
+                "CPE credits available",
+                "Regular schedule"
+              ]
+            },
+            {
+              "name": "Vendor Webinars",
+              "type": "free",
+              "description": "Product demonstrations and security education from vendors",
+              "platforms": ["virtual"],
+              "tags": ["vendor", "product-demos", "marketing"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Tool Demonstrations",
+              "type": "free",
+              "description": "Live demonstrations of security tools and techniques",
+              "platforms": ["virtual"],
+              "tags": ["tools", "demonstrations", "hands-on"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctf-competitions",
+      "title": "CTF Competitions",
+      "description": "Competitive cybersecurity events and challenges",
+      "subcategories": [
+        {
+          "id": "major-ctfs",
+          "title": "Major CTFs",
+          "description": "Premier competitive capture the flag events",
+          "items": [
+            {
+              "name": "DEF CON CTF",
+              "type": "free",
+              "url": "https://www.oooverflow.io/",
+              "description": "Premier CTF competition at DEF CON",
+              "platforms": ["physical"],
+              "tags": ["premier", "defcon", "qualification", "expert-level"],
+              "difficulty": "expert",
+              "features": [
+                "Multi-round qualification process",
+                "Finals at DEF CON",
+                "Attack/defense format",
+                "Top international teams",
+                "Significant prestige"
+              ]
+            },
+            {
+              "name": "Google CTF",
+              "type": "free",
+              "url": "https://capturetheflag.withgoogle.com/",
+              "description": "Annual CTF competition hosted by Google",
+              "platforms": ["virtual"],
+              "tags": ["google", "annual", "qualification", "beginners-quest"],
+              "difficulty": "intermediate",
+              "features": [
+                "Beginner's quest for newcomers",
+                "Qualification rounds",
+                "Finals competition",
+                "High-quality challenges",
+                "Global participation"
+              ]
+            },
+            {
+              "name": "PlaidCTF",
+              "type": "free",
+              "url": "https://plaidctf.com/",
+              "description": "CTF hosted by Carnegie Mellon's Plaid Parliament of Pwning",
+              "platforms": ["virtual"],
+              "tags": ["carnegie-mellon", "academic", "high-quality"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "continuous-ctfs",
+          "title": "Continuous CTFs",
+          "description": "Always-available competitive platforms",
+          "items": [
+            {
+              "name": "HackTheBox",
+              "type": "freemium",
+              "url": "https://hackthebox.com/",
+              "description": "Continuous penetration testing challenges",
+              "platforms": ["virtual"],
+              "tags": ["continuous", "penetration-testing", "machines"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "TryHackMe",
+              "type": "freemium",
+              "url": "https://tryhackme.com/",
+              "description": "Gamified cybersecurity learning platform",
+              "platforms": ["virtual"],
+              "tags": ["gamified", "learning", "beginner-friendly"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "RootMe",
+              "type": "free",
+              "url": "https://root-me.org/",
+              "description": "Free hacking and information security learning platform",
+              "platforms": ["virtual"],
+              "tags": ["free", "learning", "challenges"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

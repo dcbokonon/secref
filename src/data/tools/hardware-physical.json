@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "section": "1.9",
+    "title": "Hardware & Physical Security",
+    "description": "Tools and hardware for physical security testing, hardware hacking, and surveillance",
+    "lastUpdated": "2025-01-25",
+    "totalItems": 25
+  },
+  "categories": [
+    {
+      "id": "hardware-hacking",
+      "title": "Hardware Hacking",
+      "description": "Tools and devices for hardware security testing and analysis",
+      "subcategories": [
+        {
+          "id": "usb-attacks",
+          "title": "USB Attacks",
+          "description": "Hardware and tools for USB-based security testing",
+          "subcategories": [
+            {
+              "id": "hid-attacks",
+              "title": "HID Attacks",
+              "description": "Human Interface Device attack tools",
+              "items": [
+                {
+                  "name": "USB Rubber Ducky",
+                  "type": "paid",
+                  "url": "https://shop.hak5.org/products/usb-rubber-ducky",
+                  "description": "Keystroke injection attack platform",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "hid", "keystroke", "injection"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Bash Bunny",
+                  "type": "paid",
+                  "url": "https://shop.hak5.org/products/bash-bunny",
+                  "description": "Multi-function USB attack tool",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "multi-function", "attack", "payload"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "P4wnP1",
+                  "type": "free",
+                  "url": "https://github.com/RoganDawes/P4wnP1",
+                  "description": "Raspberry Pi Zero based USB attack platform",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "raspberry-pi", "open-source", "diy"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Digispark",
+                  "type": "free",
+                  "url": "http://digistump.com/products/1",
+                  "description": "Tiny Arduino-compatible board for USB attacks",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "arduino", "tiny", "diy"],
+                  "difficulty": "advanced"
+                }
+              ]
+            },
+            {
+              "id": "usb-implants",
+              "title": "USB Implants",
+              "description": "Covert USB devices for long-term access",
+              "items": [
+                {
+                  "name": "LAN Turtle",
+                  "type": "paid",
+                  "url": "https://shop.hak5.org/products/lan-turtle",
+                  "description": "Covert remote access and man-in-the-middle device",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "network", "covert", "remote-access"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "USB Armory",
+                  "type": "paid",
+                  "url": "https://usbarmory.com/",
+                  "description": "Open source flash-drive-sized computer",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "computer", "open-source", "arm"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "PoisonTap",
+                  "type": "free",
+                  "url": "https://github.com/samyk/poisontap",
+                  "description": "Raspberry Pi Zero exploit for locked computers",
+                  "platforms": ["hardware"],
+                  "tags": ["usb", "raspberry-pi", "exploit", "diy"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rfid-nfc-tools",
+          "title": "RFID/NFC Tools",
+          "description": "Hardware and software for RFID and NFC security testing",
+          "subcategories": [
+            {
+              "id": "reading-writing",
+              "title": "Reading/Writing",
+              "description": "Hardware for reading and writing RFID/NFC cards",
+              "items": [
+                {
+                  "name": "Proxmark3",
+                  "type": "paid",
+                  "url": "https://proxmark.com/",
+                  "description": "Advanced RFID research tool",
+                  "platforms": ["hardware"],
+                  "tags": ["rfid", "nfc", "research", "advanced"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "ChameleonMini",
+                  "type": "paid",
+                  "url": "https://chameleonmini.github.io/",
+                  "description": "RFID card emulation device",
+                  "platforms": ["hardware"],
+                  "tags": ["rfid", "emulation", "portable", "open-source"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "ACR122U",
+                  "type": "paid",
+                  "url": "https://www.acs.com.hk/en/products/3/acr122u-usb-nfc-reader/",
+                  "description": "USB NFC reader/writer",
+                  "platforms": ["hardware"],
+                  "tags": ["nfc", "usb", "reader", "writer"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "PN532 boards",
+                  "type": "paid",
+                  "url": "https://www.nxp.com/products/rfid-nfc/nfc-hf/nfc-readers/pn532-nfc-controller:PN532",
+                  "description": "NFC development boards",
+                  "platforms": ["hardware"],
+                  "tags": ["nfc", "development", "diy", "arduino"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "software",
+              "title": "Software",
+              "description": "Software tools for RFID/NFC analysis",
+              "items": [
+                {
+                  "name": "MFCUK",
+                  "type": "free",
+                  "url": "https://github.com/nfc-tools/mfcuk",
+                  "description": "MiFare Classic Universal toolKit",
+                  "platforms": ["linux"],
+                  "tags": ["rfid", "mifare", "cracking", "analysis"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "MFOC",
+                  "type": "free",
+                  "url": "https://github.com/nfc-tools/mfoc",
+                  "description": "MiFare Classic Offline Cracker",
+                  "platforms": ["linux"],
+                  "tags": ["rfid", "mifare", "cracking", "offline"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "LibNFC tools",
+                  "type": "free",
+                  "url": "http://nfc-tools.org/",
+                  "description": "Low-level NFC communication library and tools",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["nfc", "library", "low-level", "development"],
+                  "difficulty": "advanced"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hardware-debugging",
+          "title": "Hardware Debugging",
+          "description": "Tools for hardware debugging and reverse engineering",
+          "subcategories": [
+            {
+              "id": "jtag-swd",
+              "title": "JTAG/SWD",
+              "description": "Debug interface tools and adapters",
+              "items": [
+                {
+                  "name": "OpenOCD",
+                  "type": "free",
+                  "url": "http://openocd.org/",
+                  "description": "Open source on-chip debugger",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["jtag", "swd", "debugging", "open-source"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "J-Link",
+                  "type": "paid",
+                  "url": "https://www.segger.com/products/debug-probes/j-link/",
+                  "description": "Professional debug and programming probe",
+                  "platforms": ["hardware"],
+                  "tags": ["jtag", "swd", "professional", "debugging"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "ST-Link",
+                  "type": "paid",
+                  "url": "https://www.st.com/en/development-tools/st-link-v2.html",
+                  "description": "STMicroelectronics debug and programming probe",
+                  "platforms": ["hardware"],
+                  "tags": ["jtag", "swd", "stm32", "debugging"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Black Magic Probe",
+                  "type": "paid",
+                  "url": "https://github.com/blacksphere/blackmagic",
+                  "description": "Open source debug probe",
+                  "platforms": ["hardware"],
+                  "tags": ["jtag", "swd", "open-source", "gdb"],
+                  "difficulty": "expert"
+                }
+              ]
+            },
+            {
+              "id": "logic-analyzers",
+              "title": "Logic Analyzers",
+              "description": "Tools for analyzing digital signals and protocols",
+              "items": [
+                {
+                  "name": "Saleae Logic",
+                  "type": "paid",
+                  "url": "https://www.saleae.com/",
+                  "description": "Professional logic analyzer with excellent software",
+                  "platforms": ["hardware"],
+                  "tags": ["logic-analyzer", "professional", "protocol", "analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "PulseView",
+                  "type": "free",
+                  "url": "https://sigrok.org/wiki/PulseView",
+                  "description": "Open source logic analyzer software",
+                  "platforms": ["linux", "macos", "windows"],
+                  "tags": ["logic-analyzer", "open-source", "sigrok"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "DSLogic",
+                  "type": "paid",
+                  "url": "https://www.dreamsourcelab.com/",
+                  "description": "Affordable logic analyzer hardware",
+                  "platforms": ["hardware"],
+                  "tags": ["logic-analyzer", "affordable", "usb"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "physical-security",
+      "title": "Physical Security",
+      "description": "Tools and techniques for physical security assessment",
+      "subcategories": [
+        {
+          "id": "lock-picking",
+          "title": "Lock Picking",
+          "description": "Tools and hardware for lock security testing",
+          "subcategories": [
+            {
+              "id": "pick-sets",
+              "title": "Pick Sets",
+              "description": "Traditional lock picking tools and sets",
+              "items": [
+                {
+                  "name": "Sparrows Lock Picks",
+                  "type": "paid",
+                  "url": "https://www.sparrowslockpicks.com/",
+                  "description": "High-quality lock picking tools and training",
+                  "platforms": ["hardware"],
+                  "tags": ["lock-picking", "tools", "training", "quality"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Peterson Lock Picks",
+                  "type": "paid",
+                  "url": "https://www.thinkpeterson.com/",
+                  "description": "Professional lock picking tools",
+                  "platforms": ["hardware"],
+                  "tags": ["lock-picking", "professional", "tools"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Southord Lock Picks",
+                  "type": "paid",
+                  "url": "https://www.southord.com/",
+                  "description": "Affordable lock picking tool sets",
+                  "platforms": ["hardware"],
+                  "tags": ["lock-picking", "affordable", "beginner"],
+                  "difficulty": "beginner"
+                }
+              ]
+            },
+            {
+              "id": "electronic-locks",
+              "title": "Electronic Locks",
+              "description": "Tools for testing electronic and smart locks",
+              "items": [
+                {
+                  "name": "Proxmark3",
+                  "type": "paid",
+                  "url": "https://proxmark.com/",
+                  "description": "RFID research tool for card-based locks",
+                  "platforms": ["hardware"],
+                  "tags": ["rfid", "electronic-locks", "research"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Flipper Zero",
+                  "type": "paid",
+                  "url": "https://flipperzero.one/",
+                  "description": "Multi-tool for digital exploration",
+                  "platforms": ["hardware"],
+                  "tags": ["multi-tool", "rfid", "infrared", "digital"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "HackRF",
+                  "type": "paid",
+                  "url": "https://greatscottgadgets.com/hackrf/",
+                  "description": "Software-defined radio for RF analysis",
+                  "platforms": ["hardware"],
+                  "tags": ["sdr", "rf", "radio", "analysis"],
+                  "difficulty": "expert"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "surveillance",
+          "title": "Surveillance",
+          "description": "Tools and techniques for surveillance and counter-surveillance",
+          "subcategories": [
+            {
+              "id": "camera-systems",
+              "title": "Camera Systems",
+              "description": "Tools for testing and analyzing camera security systems",
+              "items": [
+                {
+                  "name": "Shodan",
+                  "type": "freemium",
+                  "url": "https://www.shodan.io/",
+                  "description": "Search engine for finding exposed cameras",
+                  "platforms": ["web"],
+                  "tags": ["search", "cameras", "exposed", "iot"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "iSpy",
+                  "type": "free",
+                  "url": "https://www.ispyconnect.com/",
+                  "description": "Open source video surveillance software",
+                  "platforms": ["windows"],
+                  "tags": ["surveillance", "video", "open-source"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "counter-surveillance",
+              "title": "Counter-Surveillance",
+              "description": "Tools for detecting surveillance devices",
+              "items": [
+                {
+                  "name": "Camera Detectors",
+                  "type": "paid",
+                  "description": "Devices for detecting hidden cameras",
+                  "platforms": ["hardware"],
+                  "tags": ["detection", "cameras", "hidden", "privacy"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "RF Detectors",
+                  "type": "paid",
+                  "description": "Devices for detecting RF surveillance equipment",
+                  "platforms": ["hardware"],
+                  "tags": ["detection", "rf", "surveillance", "privacy"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

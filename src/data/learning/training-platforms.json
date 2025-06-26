@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "section": "2.2",
+    "title": "Training Platforms",
+    "description": "Comprehensive collection of hands-on labs, video training, and practice platforms for cybersecurity skill development",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 34
+  },
+  "categories": [
+    {
+      "id": "hands-on-labs",
+      "title": "Hands-On Labs",
+      "description": "Interactive learning environments with practical exercises and challenges",
+      "subcategories": [
+        {
+          "id": "beginner-friendly",
+          "title": "Beginner Friendly",
+          "description": "Guided learning platforms suitable for newcomers to cybersecurity",
+          "items": [
+            {
+              "name": "TryHackMe",
+              "type": "freemium",
+              "url": "https://tryhackme.com",
+              "description": "Gamified cybersecurity learning with guided rooms and learning paths",
+              "platforms": ["web"],
+              "tags": ["beginner-friendly", "guided", "gamified", "certification-prep"],
+              "difficulty": "beginner",
+              "features": [
+                "Learning Paths",
+                "Beginner friendly rooms",
+                "Certifications prep",
+                "King of the Hill",
+                "Monthly competitions"
+              ]
+            },
+            {
+              "name": "PentesterLab",
+              "type": "paid",
+              "url": "https://pentesterlab.com",
+              "description": "Web security focused platform with progressive difficulty",
+              "platforms": ["web"],
+              "tags": ["web-security", "progressive", "hands-on"],
+              "difficulty": "beginner",
+              "features": [
+                "Web security focus",
+                "Progressive difficulty",
+                "Real vulnerabilities",
+                "ISO downloads"
+              ]
+            },
+            {
+              "name": "PortSwigger Web Security Academy",
+              "type": "free",
+              "url": "https://portswigger.net/web-security",
+              "description": "High-quality web security training from the makers of Burp Suite",
+              "platforms": ["web"],
+              "tags": ["web-security", "high-quality", "burp-suite", "free"],
+              "difficulty": "beginner",
+              "features": [
+                "Web-specific content",
+                "High quality materials",
+                "Burp Suite integration",
+                "Real-world scenarios"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ctf-practice",
+          "title": "CTF & Practice Platforms",
+          "description": "Competitive and continuous challenge platforms",
+          "items": [
+            {
+              "name": "HackTheBox",
+              "type": "freemium",
+              "url": "https://hackthebox.com",
+              "description": "Premier penetration testing platform with realistic machines",
+              "platforms": ["web"],
+              "tags": ["realistic", "challenging", "community", "oscp-prep"],
+              "difficulty": "intermediate",
+              "features": [
+                "Active/Retired Machines",
+                "Challenges",
+                "Pro Labs",
+                "Academy",
+                "Certifications"
+              ]
+            },
+            {
+              "name": "VulnHub",
+              "type": "free",
+              "url": "https://vulnhub.com",
+              "description": "Collection of vulnerable VMs for download and practice",
+              "platforms": ["local"],
+              "tags": ["vulnerable-vms", "download", "offline", "boot2root"],
+              "difficulty": "intermediate",
+              "features": [
+                "Vulnerable VMs",
+                "Walkthroughs",
+                "Community contributed",
+                "Offline practice"
+              ]
+            },
+            {
+              "name": "PentesterAcademy",
+              "type": "paid",
+              "url": "https://pentesteracademy.com",
+              "description": "Video courses combined with hands-on labs",
+              "platforms": ["web"],
+              "tags": ["video-courses", "labs", "comprehensive"],
+              "difficulty": "intermediate",
+              "features": [
+                "Video courses",
+                "Hands-on labs",
+                "Multiple domains",
+                "Expert instructors"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wargames",
+          "title": "Wargames",
+          "description": "Continuous challenge platforms with progressive difficulty",
+          "items": [
+            {
+              "name": "OverTheWire",
+              "type": "free",
+              "url": "https://overthewire.org/wargames/",
+              "description": "Classic wargames platform with multiple game types",
+              "platforms": ["ssh"],
+              "tags": ["classic", "ssh", "linux", "progressive"],
+              "difficulty": "beginner",
+              "games": [
+                "Bandit (Linux basics)",
+                "Natas (Web)",
+                "Leviathan (Misc)",
+                "Krypton (Crypto)",
+                "Narnia (Binary)"
+              ]
+            },
+            {
+              "name": "Under the Wire",
+              "type": "free",
+              "url": "https://underthewire.tech",
+              "description": "PowerShell-focused wargames for Windows skills",
+              "platforms": ["windows"],
+              "tags": ["powershell", "windows", "progressive"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "PicoCTF",
+              "type": "free",
+              "url": "https://picoctf.org",
+              "description": "Educational CTF from Carnegie Mellon University",
+              "platforms": ["web"],
+              "tags": ["educational", "academic", "beginner-friendly"],
+              "difficulty": "beginner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "video-training",
+      "title": "Video Training",
+      "description": "Video-based learning platforms and channels for cybersecurity education",
+      "subcategories": [
+        {
+          "id": "subscription-platforms",
+          "title": "Subscription Platforms",
+          "description": "Professional video training with subscription models",
+          "items": [
+            {
+              "name": "Cybrary",
+              "type": "freemium",
+              "url": "https://cybrary.it",
+              "description": "Comprehensive cybersecurity training library",
+              "platforms": ["web"],
+              "tags": ["comprehensive", "career-paths", "certifications"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "InfoSec Skills",
+              "type": "paid",
+              "url": "https://infosecinstitute.com/skills/",
+              "description": "Hands-on cybersecurity skills training",
+              "platforms": ["web"],
+              "tags": ["hands-on", "skills-based", "practical"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "StationX",
+              "type": "paid",
+              "url": "https://stationx.net",
+              "description": "Ethical hacking and cybersecurity courses",
+              "platforms": ["web"],
+              "tags": ["ethical-hacking", "practical", "beginner-friendly"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Pentester Academy",
+              "type": "paid",
+              "url": "https://pentesteracademy.com",
+              "description": "Advanced penetration testing video courses",
+              "platforms": ["web"],
+              "tags": ["advanced", "penetration-testing", "expert-level"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Pluralsight",
+              "type": "paid",
+              "url": "https://pluralsight.com",
+              "description": "Technology training platform with security courses",
+              "platforms": ["web"],
+              "tags": ["general-tech", "skill-assessments", "learning-paths"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "LinkedIn Learning",
+              "type": "paid",
+              "url": "https://linkedin.com/learning",
+              "description": "Professional development platform with security content",
+              "platforms": ["web"],
+              "tags": ["professional-development", "business-focused"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Udemy",
+              "type": "paid",
+              "url": "https://udemy.com",
+              "description": "Marketplace of cybersecurity courses from various instructors",
+              "platforms": ["web"],
+              "tags": ["marketplace", "varied-quality", "affordable"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Coursera",
+              "type": "freemium",
+              "url": "https://coursera.org",
+              "description": "University-level courses including cybersecurity programs",
+              "platforms": ["web"],
+              "tags": ["academic", "university-courses", "degrees"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "youtube-channels",
+          "title": "YouTube Channels",
+          "description": "Free educational content from cybersecurity practitioners",
+          "items": [
+            {
+              "name": "NetworkChuck",
+              "type": "free",
+              "url": "https://youtube.com/c/NetworkChuck",
+              "description": "Beginner-friendly networking and cybersecurity content",
+              "platforms": ["web"],
+              "tags": ["beginner", "networking", "entertaining"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Professor Messer",
+              "type": "free",
+              "url": "https://youtube.com/c/professormesser",
+              "description": "CompTIA certification training and study groups",
+              "platforms": ["web"],
+              "tags": ["comptia", "certifications", "study-groups"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "The Cyber Mentor",
+              "type": "free",
+              "url": "https://youtube.com/c/TheCyberMentor",
+              "description": "Practical ethical hacking and penetration testing",
+              "platforms": ["web"],
+              "tags": ["ethical-hacking", "practical", "beginner-friendly"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "IppSec",
+              "type": "free",
+              "url": "https://youtube.com/c/ippsec",
+              "description": "HackTheBox machine walkthroughs and methodologies",
+              "platforms": ["web"],
+              "tags": ["hackthebox", "walkthroughs", "methodology", "advanced"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "John Hammond",
+              "type": "free",
+              "url": "https://youtube.com/c/JohnHammond010",
+              "description": "CTF walkthroughs, malware analysis, and security research",
+              "platforms": ["web"],
+              "tags": ["ctf", "malware-analysis", "research"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "LiveOverflow",
+              "type": "free",
+              "url": "https://youtube.com/c/LiveOverflow",
+              "description": "Binary exploitation and low-level security concepts",
+              "platforms": ["web"],
+              "tags": ["binary-exploitation", "low-level", "advanced"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "STÖK",
+              "type": "free",
+              "url": "https://youtube.com/c/STOKfredrik",
+              "description": "Bug bounty hunting techniques and methodologies",
+              "platforms": ["web"],
+              "tags": ["bug-bounty", "web-security", "methodologies"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "conference-talks",
+          "title": "Conference Talks",
+          "description": "Recorded presentations from major cybersecurity conferences",
+          "items": [
+            {
+              "name": "DEF CON",
+              "type": "free",
+              "url": "https://youtube.com/user/DEFCONConference",
+              "description": "Presentations from the premier hacker conference",
+              "platforms": ["web"],
+              "tags": ["conference", "hacker-culture", "cutting-edge"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Black Hat",
+              "type": "free",
+              "url": "https://youtube.com/c/BlackHatOfficialYT",
+              "description": "Technical security research presentations",
+              "platforms": ["web"],
+              "tags": ["conference", "research", "technical"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "BSides",
+              "type": "free",
+              "url": "https://youtube.com/user/BSidesLV",
+              "description": "Community-driven security conference presentations",
+              "platforms": ["web"],
+              "tags": ["conference", "community", "diverse-topics"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

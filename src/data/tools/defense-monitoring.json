@@ -1,0 +1,842 @@
+{
+  "metadata": {
+    "section": "1.4",
+    "title": "Defense & Monitoring",
+    "description": "Tools and systems for network defense, security monitoring, and threat detection",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 73
+  },
+  "categories": [
+    {
+      "id": "network-defense",
+      "title": "Network Defense",
+      "description": "Tools and systems for protecting network infrastructure",
+      "subcategories": [
+        {
+          "id": "firewalls",
+          "title": "Firewalls",
+          "description": "Network filtering and access control systems",
+          "subcategories": [
+            {
+              "id": "software-firewalls",
+              "title": "Software Firewalls",
+              "description": "Software-based firewall solutions",
+              "subcategories": [
+                {
+                  "id": "open-source-firewalls",
+                  "title": "Open Source Firewalls",
+                  "description": "Free and open source firewall distributions",
+                  "items": [
+                    {
+                      "name": "pfSense",
+                      "type": "free",
+                      "url": "https://www.pfsense.org",
+                      "description": "Open source firewall and router distribution based on FreeBSD",
+                      "platforms": ["linux"],
+                      "tags": ["firewall", "router", "freebsd", "web-interface"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "OPNsense",
+                      "type": "free",
+                      "url": "https://opnsense.org",
+                      "description": "Open source firewall and routing platform",
+                      "platforms": ["linux"],
+                      "tags": ["firewall", "routing", "freebsd", "user-friendly"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "IPFire",
+                      "type": "free",
+                      "url": "https://www.ipfire.org",
+                      "description": "Hardened Linux distribution for firewalls",
+                      "platforms": ["linux"],
+                      "tags": ["firewall", "hardened", "linux", "intrusion-detection"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Smoothwall",
+                      "type": "free",
+                      "url": "https://www.smoothwall.org",
+                      "description": "Linux firewall distribution for SOHO environments",
+                      "platforms": ["linux"],
+                      "tags": ["firewall", "soho", "linux", "simple"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                },
+                {
+                  "id": "linux-native",
+                  "title": "Linux Native Firewalls",
+                  "description": "Built-in Linux firewall tools",
+                  "items": [
+                    {
+                      "name": "iptables",
+                      "type": "free",
+                      "description": "Traditional Linux packet filtering firewall",
+                      "platforms": ["linux"],
+                      "tags": ["packet-filtering", "netfilter", "command-line", "traditional"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "nftables",
+                      "type": "free",
+                      "description": "Modern replacement for iptables in Linux kernel",
+                      "platforms": ["linux"],
+                      "tags": ["packet-filtering", "modern", "kernel", "replacement"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "firewalld",
+                      "type": "free",
+                      "description": "Dynamic firewall management tool for Linux",
+                      "platforms": ["linux"],
+                      "tags": ["dynamic", "zones", "management", "systemd"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "ufw",
+                      "type": "free",
+                      "description": "Uncomplicated Firewall for Ubuntu/Debian",
+                      "platforms": ["linux"],
+                      "tags": ["simple", "ubuntu", "debian", "user-friendly"],
+                      "difficulty": "beginner"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "commercial-firewalls",
+              "title": "Commercial Firewalls",
+              "description": "Enterprise-grade commercial firewall solutions",
+              "subcategories": [
+                {
+                  "id": "enterprise-firewalls",
+                  "title": "Enterprise Firewalls",
+                  "description": "Enterprise-grade next-generation firewalls",
+                  "items": [
+                    {
+                      "name": "Palo Alto Networks",
+                      "type": "paid",
+                      "url": "https://www.paloaltonetworks.com",
+                      "description": "Next-generation firewall with application awareness",
+                      "platforms": ["linux"],
+                      "tags": ["ngfw", "application-awareness", "threat-prevention", "enterprise"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Fortinet FortiGate",
+                      "type": "paid",
+                      "url": "https://www.fortinet.com/products/next-generation-firewall",
+                      "description": "Security-driven networking platform",
+                      "platforms": ["linux"],
+                      "tags": ["security-fabric", "sd-wan", "utm", "threat-intelligence"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Check Point",
+                      "type": "paid",
+                      "url": "https://www.checkpoint.com/products/next-generation-firewall/",
+                      "description": "Unified threat management and NGFW solution",
+                      "platforms": ["linux"],
+                      "tags": ["utm", "threat-management", "sandblast", "enterprise"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Cisco ASA/Firepower",
+                      "type": "paid",
+                      "url": "https://www.cisco.com/c/en/us/products/security/firewalls/index.html",
+                      "description": "Cisco's adaptive security appliance and NGFW",
+                      "platforms": ["linux"],
+                      "tags": ["adaptive-security", "threat-defense", "cisco", "enterprise"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "cloud-native-firewalls",
+                  "title": "Cloud Native Firewalls",
+                  "description": "Cloud-based web application firewalls",
+                  "items": [
+                    {
+                      "name": "AWS WAF",
+                      "type": "paid",
+                      "url": "https://aws.amazon.com/waf/",
+                      "description": "Amazon Web Services Web Application Firewall",
+                      "platforms": ["web"],
+                      "tags": ["aws", "cloud", "web-application-firewall", "managed"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Azure Firewall",
+                      "type": "paid",
+                      "url": "https://azure.microsoft.com/en-us/services/azure-firewall/",
+                      "description": "Microsoft Azure managed firewall service",
+                      "platforms": ["web"],
+                      "tags": ["azure", "cloud", "managed", "threat-intelligence"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Cloudflare WAF",
+                      "type": "paid",
+                      "url": "https://www.cloudflare.com/waf/",
+                      "description": "Cloudflare Web Application Firewall",
+                      "platforms": ["web"],
+                      "tags": ["cloudflare", "waf", "ddos-protection", "edge"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intrusion-detection-prevention",
+          "title": "Intrusion Detection/Prevention",
+          "description": "Systems for detecting and preventing network intrusions",
+          "subcategories": [
+            {
+              "id": "network-ids-ips",
+              "title": "Network IDS/IPS",
+              "description": "Network-based intrusion detection and prevention systems",
+              "subcategories": [
+                {
+                  "id": "open-source-nids",
+                  "title": "Open Source Network IDS/IPS",
+                  "description": "Free and open source network intrusion detection systems",
+                  "items": [
+                    {
+                      "name": "Snort",
+                      "type": "free",
+                      "url": "https://www.snort.org",
+                      "description": "Open source network intrusion detection system",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["intrusion-detection", "signature-based", "packet-analysis", "rules"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Suricata",
+                      "type": "free",
+                      "url": "https://suricata-ids.org",
+                      "description": "High performance network IDS, IPS and NSM engine",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["high-performance", "multi-threaded", "protocol-analysis", "lua"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Zeek (formerly Bro)",
+                      "type": "free",
+                      "url": "https://zeek.org",
+                      "description": "Network security monitoring framework",
+                      "platforms": ["linux", "macos"],
+                      "tags": ["network-monitoring", "protocol-analysis", "scripting", "forensics"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "OSSEC",
+                      "type": "free",
+                      "url": "https://www.ossec.net",
+                      "description": "Host and network-based intrusion detection system",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["hids", "nids", "log-analysis", "file-integrity"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-nids",
+                  "title": "Commercial Network IDS/IPS",
+                  "description": "Commercial network intrusion detection and prevention systems",
+                  "items": [
+                    {
+                      "name": "Cisco IPS",
+                      "type": "paid",
+                      "url": "https://www.cisco.com/c/en/us/products/security/intrusion-prevention-system-ips/index.html",
+                      "description": "Cisco Intrusion Prevention System",
+                      "platforms": ["linux"],
+                      "tags": ["cisco", "intrusion-prevention", "enterprise", "threat-defense"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "TippingPoint",
+                      "type": "paid",
+                      "url": "https://www.trendmicro.com/en_us/business/products/network/intrusion-prevention.html",
+                      "description": "Trend Micro TippingPoint IPS",
+                      "platforms": ["linux"],
+                      "tags": ["trend-micro", "zero-day", "threat-intelligence", "enterprise"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "McAfee Network Security",
+                      "type": "paid",
+                      "url": "https://www.mcafee.com/enterprise/en-us/products/network-security-platform.html",
+                      "description": "McAfee Network Security Platform",
+                      "platforms": ["linux"],
+                      "tags": ["mcafee", "network-security", "threat-detection", "enterprise"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "host-ids-ips",
+              "title": "Host IDS/IPS",
+              "description": "Host-based intrusion detection and prevention systems",
+              "subcategories": [
+                {
+                  "id": "open-source-hids",
+                  "title": "Open Source Host IDS",
+                  "description": "Free and open source host-based intrusion detection",
+                  "items": [
+                    {
+                      "name": "AIDE",
+                      "type": "free",
+                      "url": "https://aide.github.io",
+                      "description": "Advanced Intrusion Detection Environment for file integrity",
+                      "platforms": ["linux"],
+                      "tags": ["file-integrity", "monitoring", "checksums", "baseline"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Samhain",
+                      "type": "free",
+                      "url": "https://www.la-samhna.de/samhain/",
+                      "description": "File integrity and host intrusion detection system",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["file-integrity", "rootkit-detection", "stealth", "central-management"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Tripwire Open Source",
+                      "type": "free",
+                      "url": "https://github.com/Tripwire/tripwire-open-source",
+                      "description": "Open source file integrity monitoring",
+                      "platforms": ["linux"],
+                      "tags": ["file-integrity", "monitoring", "policy-based", "reporting"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-hids",
+                  "title": "Commercial Host IDS",
+                  "description": "Commercial host-based intrusion detection systems",
+                  "items": [
+                    {
+                      "name": "Tripwire Enterprise",
+                      "type": "paid",
+                      "url": "https://www.tripwire.com/products/tripwire-enterprise",
+                      "description": "Enterprise file integrity monitoring solution",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["enterprise", "file-integrity", "compliance", "change-detection"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "OSSEC+",
+                      "type": "paid",
+                      "url": "https://www.ossec.net",
+                      "description": "Commercial version of OSSEC with additional features",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["commercial", "ossec", "enhanced", "support"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "honeypots-deception",
+          "title": "Honeypots & Deception",
+          "description": "Deception technologies and honeypot systems for threat detection",
+          "subcategories": [
+            {
+              "id": "low-interaction-honeypots",
+              "title": "Low Interaction Honeypots",
+              "description": "Lightweight honeypot systems that simulate services",
+              "subcategories": [
+                {
+                  "id": "multi-service-honeypots",
+                  "title": "Multi-Service Honeypots",
+                  "description": "Honeypots that can simulate multiple services",
+                  "items": [
+                    {
+                      "name": "Honeyd",
+                      "type": "free",
+                      "url": "http://www.honeyd.org",
+                      "description": "Framework for creating virtual honeypots",
+                      "platforms": ["linux"],
+                      "tags": ["virtual-honeypots", "framework", "network-topology", "simulation"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Dionaea",
+                      "type": "free",
+                      "url": "https://github.com/DinoTools/dionaea",
+                      "description": "Low-interaction honeypot for capturing malware",
+                      "platforms": ["linux"],
+                      "tags": ["malware-capture", "low-interaction", "python", "smb"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Conpot",
+                      "type": "free",
+                      "url": "https://github.com/mushorg/conpot",
+                      "description": "ICS/SCADA honeypot for industrial control systems",
+                      "platforms": ["linux"],
+                      "tags": ["ics", "scada", "industrial", "python"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "web-specific-honeypots",
+                  "title": "Web-Specific Honeypots",
+                  "description": "Honeypots designed for web applications",
+                  "items": [
+                    {
+                      "name": "Glastopf",
+                      "type": "free",
+                      "url": "https://github.com/mushorg/glastopf",
+                      "description": "Web application honeypot",
+                      "platforms": ["linux"],
+                      "tags": ["web-application", "honeypot", "python", "vulnerability-emulation"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "WebTrap",
+                      "type": "free",
+                      "description": "Web-based honeypot for detecting web attacks",
+                      "platforms": ["linux"],
+                      "tags": ["web-attacks", "detection", "honeypot", "logging"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "ssh-specific-honeypots",
+                  "title": "SSH-Specific Honeypots",
+                  "description": "Honeypots designed to capture SSH attacks",
+                  "items": [
+                    {
+                      "name": "Cowrie",
+                      "type": "free",
+                      "url": "https://github.com/cowrie/cowrie",
+                      "description": "Medium to high interaction SSH and Telnet honeypot",
+                      "platforms": ["linux"],
+                      "tags": ["ssh", "telnet", "medium-interaction", "python"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Kippo",
+                      "type": "free",
+                      "url": "https://github.com/desaster/kippo",
+                      "description": "SSH honeypot designed to log brute force attacks",
+                      "platforms": ["linux"],
+                      "tags": ["ssh", "brute-force", "logging", "python"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "high-interaction-honeypots",
+              "title": "High Interaction Honeypots",
+              "description": "Full system honeypots with real operating systems",
+              "subcategories": [
+                {
+                  "id": "full-systems",
+                  "title": "Full System Honeypots",
+                  "description": "Complete honeypot distributions and platforms",
+                  "items": [
+                    {
+                      "name": "HoneyDrive",
+                      "type": "free",
+                      "url": "https://sourceforge.net/projects/honeydrive/",
+                      "description": "Pre-configured honeypot Linux distribution",
+                      "platforms": ["linux"],
+                      "tags": ["distribution", "pre-configured", "multiple-honeypots", "vm"],
+                      "difficulty": "beginner"
+                    },
+                    {
+                      "name": "T-Pot",
+                      "type": "free",
+                      "url": "https://github.com/telekom-security/tpotce",
+                      "description": "Multi-honeypot platform by Deutsche Telekom",
+                      "platforms": ["linux"],
+                      "tags": ["multi-honeypot", "docker", "elasticsearch", "kibana"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "commercial-deception",
+                  "title": "Commercial Deception Platforms",
+                  "description": "Enterprise deception technology platforms",
+                  "items": [
+                    {
+                      "name": "Illusive Networks",
+                      "type": "paid",
+                      "url": "https://www.illusivenetworks.com",
+                      "description": "Deception-based breach detection platform",
+                      "platforms": ["windows", "linux"],
+                      "tags": ["deception", "breach-detection", "enterprise", "lateral-movement"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "TrapX",
+                      "type": "paid",
+                      "url": "https://trapx.com",
+                      "description": "Deception grid security platform",
+                      "platforms": ["windows", "linux"],
+                      "tags": ["deception-grid", "malware-detection", "enterprise", "forensics"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Attivo Networks",
+                      "type": "paid",
+                      "url": "https://www.attivonetworks.com",
+                      "description": "Threat detection and response platform",
+                      "platforms": ["windows", "linux"],
+                      "tags": ["threat-detection", "deception", "incident-response", "enterprise"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security-monitoring",
+      "title": "Security Monitoring",
+      "description": "Systems and tools for security event monitoring and analysis",
+      "subcategories": [
+        {
+          "id": "siem-platforms",
+          "title": "SIEM Platforms",
+          "description": "Security Information and Event Management systems",
+          "subcategories": [
+            {
+              "id": "open-source-siem",
+              "title": "Open Source SIEM",
+              "description": "Free and open source SIEM solutions",
+              "subcategories": [
+                {
+                  "id": "full-platforms",
+                  "title": "Full SIEM Platforms",
+                  "description": "Complete open source SIEM solutions",
+                  "items": [
+                    {
+                      "name": "Elastic Stack (ELK)",
+                      "type": "free",
+                      "url": "https://www.elastic.co/elastic-stack/",
+                      "description": "Elasticsearch, Logstash, and Kibana for log analysis",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["elasticsearch", "logstash", "kibana", "log-analysis"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Wazuh",
+                      "type": "free",
+                      "url": "https://wazuh.com",
+                      "description": "Open source security platform for threat detection",
+                      "platforms": ["linux"],
+                      "tags": ["threat-detection", "compliance", "incident-response", "ossec"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "OSSIM",
+                      "type": "free",
+                      "url": "https://www.alienvault.com/products/ossim",
+                      "description": "Open Source Security Information Management",
+                      "platforms": ["linux"],
+                      "tags": ["correlation", "vulnerability-assessment", "asset-discovery", "behavioral-monitoring"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Apache Metron",
+                      "type": "free",
+                      "url": "https://metron.apache.org",
+                      "description": "Real-time big data security analytics platform",
+                      "platforms": ["linux"],
+                      "tags": ["big-data", "real-time", "machine-learning", "hadoop"],
+                      "difficulty": "advanced"
+                    }
+                  ]
+                },
+                {
+                  "id": "log-management",
+                  "title": "Log Management Tools",
+                  "description": "Tools focused on log collection and management",
+                  "items": [
+                    {
+                      "name": "Graylog",
+                      "type": "freemium",
+                      "url": "https://www.graylog.org",
+                      "description": "Open source log management platform",
+                      "platforms": ["linux"],
+                      "tags": ["log-management", "search", "alerting", "dashboards"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Fluentd",
+                      "type": "free",
+                      "url": "https://www.fluentd.org",
+                      "description": "Unified logging layer for collecting and consuming log data",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["log-collection", "unified-logging", "plugins", "ruby"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "rsyslog",
+                      "type": "free",
+                      "url": "https://www.rsyslog.com",
+                      "description": "High-performance log processing system",
+                      "platforms": ["linux"],
+                      "tags": ["log-processing", "high-performance", "syslog", "filtering"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "commercial-siem",
+              "title": "Commercial SIEM",
+              "description": "Enterprise commercial SIEM solutions",
+              "subcategories": [
+                {
+                  "id": "enterprise-siem",
+                  "title": "Enterprise SIEM Solutions",
+                  "description": "Large-scale enterprise SIEM platforms",
+                  "items": [
+                    {
+                      "name": "Splunk Enterprise Security",
+                      "type": "paid",
+                      "url": "https://www.splunk.com/en_us/software/enterprise-security.html",
+                      "description": "Enterprise security information and event management",
+                      "platforms": ["linux", "windows"],
+                      "tags": ["enterprise", "machine-learning", "analytics", "correlation"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "IBM QRadar",
+                      "type": "paid",
+                      "url": "https://www.ibm.com/products/qradar-siem",
+                      "description": "Security intelligence platform with AI",
+                      "platforms": ["linux"],
+                      "tags": ["security-intelligence", "ai", "threat-hunting", "compliance"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "ArcSight ESM",
+                      "type": "paid",
+                      "url": "https://www.microfocus.com/en-us/products/siem-security-information-event-management/overview",
+                      "description": "Micro Focus ArcSight Enterprise Security Manager",
+                      "platforms": ["linux"],
+                      "tags": ["enterprise", "correlation", "compliance", "threat-detection"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "LogRhythm",
+                      "type": "paid",
+                      "url": "https://logrhythm.com/products/logrhythm-platform/",
+                      "description": "Security intelligence and analytics platform",
+                      "platforms": ["windows"],
+                      "tags": ["security-analytics", "threat-hunting", "soar", "forensics"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "cloud-native-siem",
+                  "title": "Cloud-Native SIEM",
+                  "description": "Cloud-based SIEM and security analytics platforms",
+                  "items": [
+                    {
+                      "name": "Azure Sentinel",
+                      "type": "paid",
+                      "url": "https://azure.microsoft.com/en-us/services/azure-sentinel/",
+                      "description": "Microsoft's cloud-native SIEM and SOAR solution",
+                      "platforms": ["web"],
+                      "tags": ["cloud-native", "azure", "soar", "machine-learning"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "AWS Security Hub",
+                      "type": "paid",
+                      "url": "https://aws.amazon.com/security-hub/",
+                      "description": "AWS centralized security findings management",
+                      "platforms": ["web"],
+                      "tags": ["aws", "security-findings", "compliance", "integration"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Google Chronicle",
+                      "type": "paid",
+                      "url": "https://chronicle.security",
+                      "description": "Google's cloud-native security analytics platform",
+                      "platforms": ["web"],
+                      "tags": ["cloud-native", "google", "threat-hunting", "machine-learning"],
+                      "difficulty": "advanced"
+                    },
+                    {
+                      "name": "Sumo Logic",
+                      "type": "paid",
+                      "url": "https://www.sumologic.com/solutions/cloud-siem/",
+                      "description": "Cloud-native security analytics platform",
+                      "platforms": ["web"],
+                      "tags": ["cloud-native", "analytics", "machine-learning", "devops"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "endpoint-detection-response",
+          "title": "Endpoint Detection & Response (EDR)",
+          "description": "Tools for endpoint monitoring, detection, and incident response",
+          "subcategories": [
+            {
+              "id": "open-source-edr",
+              "title": "Open Source EDR",
+              "description": "Free and open source endpoint detection and response tools",
+              "items": [
+                {
+                  "name": "osquery",
+                  "type": "free",
+                  "url": "https://osquery.io",
+                  "description": "SQL-based operating system instrumentation framework",
+                  "platforms": ["linux", "windows", "macos"],
+                  "tags": ["sql", "instrumentation", "monitoring", "facebook"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Velociraptor",
+                  "type": "free",
+                  "url": "https://www.velocidex.com/golang/velociraptor/",
+                  "description": "Digital forensics and incident response tool",
+                  "platforms": ["linux", "windows", "macos"],
+                  "tags": ["digital-forensics", "incident-response", "go", "artifacts"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "OSSEC",
+                  "type": "free",
+                  "url": "https://www.ossec.net",
+                  "description": "Host-based intrusion detection system",
+                  "platforms": ["linux", "windows", "macos"],
+                  "tags": ["hids", "file-integrity", "log-analysis", "real-time"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Sysmon + ELK",
+                  "type": "free",
+                  "description": "Windows Sysmon integrated with Elastic Stack",
+                  "platforms": ["windows"],
+                  "tags": ["sysmon", "windows", "elk", "logging"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "commercial-edr",
+              "title": "Commercial EDR",
+              "description": "Enterprise endpoint detection and response solutions",
+              "subcategories": [
+                {
+                  "id": "next-gen-solutions",
+                  "title": "Next-Generation EDR Solutions",
+                  "description": "Advanced EDR solutions with AI and machine learning",
+                  "items": [
+                    {
+                      "name": "CrowdStrike Falcon",
+                      "type": "paid",
+                      "url": "https://www.crowdstrike.com/products/endpoint-security/falcon-platform/",
+                      "description": "Cloud-native endpoint protection platform",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["cloud-native", "ai", "threat-intelligence", "behavioral-analysis"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Carbon Black",
+                      "type": "paid",
+                      "url": "https://www.vmware.com/products/carbon-black-cloud.html",
+                      "description": "VMware Carbon Black cloud endpoint protection",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["vmware", "cloud", "behavioral-edr", "threat-hunting"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "SentinelOne",
+                      "type": "paid",
+                      "url": "https://www.sentinelone.com",
+                      "description": "Autonomous endpoint protection platform",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["autonomous", "ai", "behavioral-ai", "rollback"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Cylance",
+                      "type": "paid",
+                      "url": "https://www.blackberry.com/us/en/products/cylance-endpoint-security",
+                      "description": "BlackBerry Cylance AI-powered endpoint security",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["ai", "machine-learning", "prevention", "blackberry"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                },
+                {
+                  "id": "traditional-av-evolution",
+                  "title": "Traditional AV Evolution",
+                  "description": "Traditional antivirus solutions evolved into EDR",
+                  "items": [
+                    {
+                      "name": "Symantec Endpoint",
+                      "type": "paid",
+                      "url": "https://www.broadcom.com/products/cyber-security/endpoint",
+                      "description": "Broadcom Symantec endpoint protection",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["symantec", "broadcom", "traditional", "integrated"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "McAfee Endpoint",
+                      "type": "paid",
+                      "url": "https://www.mcafee.com/enterprise/en-us/products/endpoint-security.html",
+                      "description": "McAfee comprehensive endpoint security",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["mcafee", "comprehensive", "threat-intelligence", "enterprise"],
+                      "difficulty": "intermediate"
+                    },
+                    {
+                      "name": "Trend Micro",
+                      "type": "paid",
+                      "url": "https://www.trendmicro.com/en_us/business/products/user-protection/sps/endpoint.html",
+                      "description": "Trend Micro endpoint security solutions",
+                      "platforms": ["linux", "windows", "macos"],
+                      "tags": ["trend-micro", "hybrid-cloud", "xdr", "enterprise"],
+                      "difficulty": "intermediate"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "metadata": {
+    "section": "5.4",
+    "title": "Automotive Security",
+    "description": "Security tools and resources for vehicle and automotive systems",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 15
+  },
+  "categories": [
+    {
+      "id": "vehicle-security",
+      "title": "Vehicle Security",
+      "description": "Tools and techniques for automotive security assessment",
+      "subcategories": [
+        {
+          "id": "can-bus-analysis",
+          "title": "CAN Bus Analysis",
+          "description": "Hardware and software tools for CAN bus security analysis",
+          "items": [
+            {
+              "name": "CANtact",
+              "type": "paid",
+              "url": "https://cantact.io/",
+              "description": "Open source CAN interface",
+              "platforms": ["hardware"],
+              "tags": ["can-bus", "hardware", "interface", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CANBadger",
+              "type": "paid",
+              "url": "https://github.com/CANBadger/CANBadger",
+              "description": "CAN bus security assessment tool",
+              "platforms": ["hardware"],
+              "tags": ["can-bus", "security", "assessment", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "PiCAN",
+              "type": "paid",
+              "description": "Raspberry Pi CAN bus interface board",
+              "platforms": ["hardware"],
+              "tags": ["can-bus", "raspberry-pi", "interface", "hardware"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "ValueCAN",
+              "type": "paid",
+              "url": "https://intrepidcs.com/products/vehicle-network-adapters/valuecan/",
+              "description": "Professional CAN interface device",
+              "platforms": ["hardware"],
+              "tags": ["can-bus", "professional", "interface", "commercial"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "can-utils",
+              "type": "free",
+              "url": "https://github.com/linux-can/can-utils",
+              "description": "Linux CAN utilities collection",
+              "platforms": ["linux"],
+              "tags": ["can-bus", "linux", "utilities", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CANToolz",
+              "type": "free",
+              "url": "https://github.com/CANToolz/CANToolz",
+              "description": "Framework for analysing CAN networks",
+              "platforms": ["linux", "windows"],
+              "tags": ["can-bus", "framework", "analysis", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "SavvyCAN",
+              "type": "free",
+              "url": "https://github.com/collin80/SavvyCAN",
+              "description": "Cross-platform CAN bus reverse engineering tool",
+              "platforms": ["linux", "windows", "macos"],
+              "tags": ["can-bus", "reverse-engineering", "cross-platform", "opensource"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Kayak",
+              "type": "free",
+              "url": "https://github.com/dschanoeh/Kayak",
+              "description": "Java-based CAN bus analysis tool",
+              "platforms": ["linux", "windows", "macos"],
+              "tags": ["can-bus", "java", "analysis", "opensource"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "automotive-protocols",
+          "title": "Automotive Protocol Analysis",
+          "description": "Tools for analyzing automotive communication protocols",
+          "items": [
+            {
+              "name": "UDS (Unified Diagnostic Services)",
+              "type": "free",
+              "description": "Diagnostic communication protocol analysis",
+              "platforms": ["linux", "windows"],
+              "tags": ["uds", "diagnostics", "protocol", "analysis"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "OBD-II Analysis",
+              "type": "free",
+              "description": "On-Board Diagnostics protocol tools",
+              "platforms": ["linux", "windows"],
+              "tags": ["obd2", "diagnostics", "protocol", "analysis"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CAN/CAN-FD Analysis",
+              "type": "free",
+              "description": "Controller Area Network protocol analysis",
+              "platforms": ["linux", "windows"],
+              "tags": ["can", "can-fd", "protocol", "analysis"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "FlexRay Analysis",
+              "type": "paid",
+              "description": "FlexRay automotive network protocol tools",
+              "platforms": ["windows"],
+              "tags": ["flexray", "protocol", "automotive", "commercial"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "MOST Analysis",
+              "type": "paid",
+              "description": "Media Oriented Systems Transport protocol",
+              "platforms": ["windows"],
+              "tags": ["most", "protocol", "media", "commercial"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "CaringCaribou",
+              "type": "free",
+              "url": "https://github.com/CaringCaribou/caringcaribou",
+              "description": "Tool for CAN bus security assessment",
+              "platforms": ["linux"],
+              "tags": ["can-bus", "security", "assessment", "opensource"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "UDSim",
+              "type": "free",
+              "url": "https://github.com/zombieCraig/UDSim",
+              "description": "UDS protocol simulator",
+              "platforms": ["linux"],
+              "tags": ["uds", "simulator", "protocol", "opensource"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "connected-vehicle-security",
+      "title": "Connected Vehicle Security",
+      "description": "Security assessment for connected and autonomous vehicles",
+      "items": [
+        {
+          "name": "Cellular Connectivity Assessment",
+          "type": "free",
+          "description": "Testing cellular connections in vehicles",
+          "platforms": ["linux", "windows"],
+          "tags": ["cellular", "connectivity", "telematics", "assessment"],
+          "difficulty": "intermediate"
+        },
+        {
+          "name": "WiFi/Bluetooth Testing",
+          "type": "free",
+          "description": "Wireless security assessment for vehicles",
+          "platforms": ["linux", "windows"],
+          "tags": ["wifi", "bluetooth", "wireless", "assessment"],
+          "difficulty": "intermediate"
+        },
+        {
+          "name": "Mobile App Analysis",
+          "type": "free",
+          "description": "Security testing of companion mobile applications",
+          "platforms": ["linux", "macos", "windows"],
+          "tags": ["mobile", "app", "companion", "analysis"],
+          "difficulty": "intermediate"
+        },
+        {
+          "name": "Backend API Testing",
+          "type": "free",
+          "description": "API security assessment for vehicle backend systems",
+          "platforms": ["web"],
+          "tags": ["api", "backend", "testing", "web"],
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ]
+}

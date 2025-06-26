@@ -1,0 +1,823 @@
+{
+  "sections": [
+    {
+      "id": "tools",
+      "title": "Security Tools",
+      "description": "Software, hardware, scripts, and utilities",
+      "count": "2,847 tools",
+      "expanded": false,
+      "intro": "Security tools organized by purpose and methodology. Categories align with industry standards including MITRE ATT&CK, NIST Cybersecurity Framework, and common security domains.",
+      "categories": [
+        {
+          "title": "Offensive Security Tools",
+          "items": [
+            {
+              "id": "tools-recon",
+              "title": "Reconnaissance",
+              "reference": "[MITRE: TA0043]",
+              "subcategories": [
+                {
+                  "id": "tools-active-scan",
+                  "title": "Active Scanning",
+                  "reference": "[T1595]",
+                  "items": [
+                    {
+                      "title": "Port Scanners",
+                      "url": "/tools/recon/port-scanners",
+                      "count": 18,
+                      "examples": [
+                        { "name": "Nmap", "type": "free" },
+                        { "name": "Masscan", "type": "free" },
+                        { "name": "Zmap", "type": "free" },
+                        { "name": "RustScan", "type": "free" }
+                      ]
+                    },
+                    {
+                      "title": "Service Enumeration",
+                      "url": "/tools/recon/service-enum",
+                      "count": 22,
+                      "examples": [
+                        { "name": "enum4linux", "type": "free" },
+                        { "name": "smbmap", "type": "free" },
+                        { "name": "rpcclient", "type": "free" }
+                      ]
+                    },
+                    {
+                      "title": "Vulnerability Identification",
+                      "url": "/tools/recon/vuln-scanning",
+                      "count": 15
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-open-source",
+                  "title": "Search Open Technical Databases",
+                  "reference": "[T1596]",
+                  "items": [
+                    {
+                      "title": "Device Search Engines",
+                      "url": "/tools/osint/device-search",
+                      "count": 12,
+                      "examples": [
+                        { "name": "Shodan", "type": "freemium" },
+                        { "name": "Censys", "type": "freemium" },
+                        { "name": "ZoomEye", "type": "freemium" }
+                      ]
+                    },
+                    {
+                      "title": "Certificate Transparency",
+                      "url": "/tools/osint/cert-transparency",
+                      "count": 8
+                    },
+                    {
+                      "title": "DNS Records",
+                      "url": "/tools/osint/dns-records",
+                      "count": 14
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-victim-id",
+                  "title": "Gather Victim Identity Information",
+                  "reference": "[T1589]",
+                  "items": [
+                    {
+                      "title": "Employee Information",
+                      "url": "/tools/osint/employee-search",
+                      "count": 16
+                    },
+                    {
+                      "title": "Email Harvesting",
+                      "url": "/tools/osint/email-harvest",
+                      "count": 11
+                    },
+                    {
+                      "title": "Social Media OSINT",
+                      "url": "/tools/osint/social-media",
+                      "count": 24
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-initial-access",
+              "title": "Initial Access",
+              "reference": "[MITRE: TA0001]",
+              "subcategories": [
+                {
+                  "id": "tools-web-exploit",
+                  "title": "Exploit Public-Facing Application",
+                  "reference": "[T1190]",
+                  "items": [
+                    {
+                      "title": "Web Vulnerability Scanners",
+                      "url": "/tools/web/scanners",
+                      "count": 28,
+                      "examples": [
+                        { "name": "Burp Suite Pro", "type": "paid" },
+                        { "name": "OWASP ZAP", "type": "free" },
+                        { "name": "Nikto", "type": "free" }
+                      ]
+                    },
+                    {
+                      "title": "Web Exploitation Tools",
+                      "url": "/tools/web/exploitation",
+                      "count": 35
+                    },
+                    {
+                      "title": "Web Fuzzing Tools",
+                      "url": "/tools/web/fuzzing",
+                      "count": 12
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-phishing",
+                  "title": "Phishing",
+                  "reference": "[T1566]",
+                  "items": [
+                    {
+                      "title": "Phishing Frameworks",
+                      "url": "/tools/phishing/frameworks",
+                      "count": 8
+                    },
+                    {
+                      "title": "Email Spoofing Tools",
+                      "url": "/tools/phishing/email-tools",
+                      "count": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-execution",
+              "title": "Execution",
+              "reference": "[MITRE: TA0002]",
+              "subcategories": [
+                {
+                  "id": "tools-exploit-frameworks",
+                  "title": "Exploitation Frameworks",
+                  "items": [
+                    {
+                      "title": "General Frameworks",
+                      "url": "/tools/frameworks/general",
+                      "count": 12,
+                      "examples": [
+                        { "name": "Metasploit Framework", "type": "free" },
+                        { "name": "Cobalt Strike", "type": "paid" },
+                        { "name": "Empire", "type": "free" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-c2",
+              "title": "Command and Control",
+              "reference": "[MITRE: TA0011]",
+              "subcategories": [
+                {
+                  "id": "tools-c2-frameworks",
+                  "title": "C2 Frameworks",
+                  "items": [
+                    {
+                      "title": "HTTP-Based C2",
+                      "url": "/tools/c2/http-based",
+                      "count": 18
+                    },
+                    {
+                      "title": "DNS-Based C2",
+                      "url": "/tools/c2/dns-based",
+                      "count": 7
+                    },
+                    {
+                      "title": "Custom Protocol C2",
+                      "url": "/tools/c2/custom-protocol",
+                      "count": 11
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Defensive Security Tools",
+          "items": [
+            {
+              "id": "tools-identify",
+              "title": "Identify",
+              "reference": "[NIST CSF: ID]",
+              "subcategories": [
+                {
+                  "id": "tools-asset-mgmt",
+                  "title": "Asset Management",
+                  "reference": "[ID.AM]",
+                  "items": [
+                    {
+                      "title": "Asset Discovery",
+                      "url": "/tools/asset/discovery",
+                      "count": 14
+                    },
+                    {
+                      "title": "Inventory Management",
+                      "url": "/tools/asset/inventory",
+                      "count": 11
+                    },
+                    {
+                      "title": "CMDB Tools",
+                      "url": "/tools/asset/cmdb",
+                      "count": 8
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-risk",
+                  "title": "Risk Assessment",
+                  "reference": "[ID.RA]",
+                  "items": [
+                    {
+                      "title": "Vulnerability Management",
+                      "url": "/tools/risk/vulnerability-management",
+                      "count": 22
+                    },
+                    {
+                      "title": "Threat Modeling",
+                      "url": "/tools/risk/threat-modeling",
+                      "count": 9
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-protect",
+              "title": "Protect",
+              "reference": "[NIST CSF: PR]",
+              "subcategories": [
+                {
+                  "id": "tools-access-control",
+                  "title": "Access Control",
+                  "reference": "[PR.AC]",
+                  "items": [
+                    {
+                      "title": "Identity Management",
+                      "url": "/tools/iam/identity",
+                      "count": 18
+                    },
+                    {
+                      "title": "Privileged Access Management",
+                      "url": "/tools/iam/pam",
+                      "count": 12
+                    },
+                    {
+                      "title": "Multi-Factor Authentication",
+                      "url": "/tools/iam/mfa",
+                      "count": 16
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-data-security",
+                  "title": "Data Security",
+                  "reference": "[PR.DS]",
+                  "items": [
+                    {
+                      "title": "Data Loss Prevention",
+                      "url": "/tools/data/dlp",
+                      "count": 14
+                    },
+                    {
+                      "title": "Encryption Tools",
+                      "url": "/tools/data/encryption",
+                      "count": 23
+                    },
+                    {
+                      "title": "Rights Management",
+                      "url": "/tools/data/rights-mgmt",
+                      "count": 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-detect",
+              "title": "Detect",
+              "reference": "[NIST CSF: DE]",
+              "subcategories": [
+                {
+                  "id": "tools-monitoring",
+                  "title": "Security Continuous Monitoring",
+                  "reference": "[DE.CM]",
+                  "items": [
+                    {
+                      "title": "SIEM Platforms",
+                      "url": "/tools/siem/platforms",
+                      "count": 18,
+                      "examples": [
+                        { "name": "Splunk Enterprise", "type": "paid" },
+                        { "name": "Elastic Security", "type": "free" },
+                        { "name": "QRadar", "type": "paid" }
+                      ]
+                    },
+                    {
+                      "title": "EDR Solutions",
+                      "url": "/tools/edr/solutions",
+                      "count": 15
+                    },
+                    {
+                      "title": "NDR Platforms",
+                      "url": "/tools/ndr/platforms",
+                      "count": 11
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Specialized Security Domains",
+          "items": [
+            {
+              "id": "tools-cloud",
+              "title": "Cloud Security",
+              "subcategories": [
+                {
+                  "id": "tools-cspm",
+                  "title": "Cloud Security Posture Management (CSPM)",
+                  "items": [
+                    {
+                      "title": "Multi-Cloud Tools",
+                      "url": "/tools/cloud/multi-cloud",
+                      "count": 16
+                    },
+                    {
+                      "title": "AWS Security Tools",
+                      "url": "/tools/cloud/aws",
+                      "count": 24
+                    },
+                    {
+                      "title": "Azure Security Tools",
+                      "url": "/tools/cloud/azure",
+                      "count": 19
+                    },
+                    {
+                      "title": "GCP Security Tools",
+                      "url": "/tools/cloud/gcp",
+                      "count": 15
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-container",
+                  "title": "Container & Kubernetes Security",
+                  "items": [
+                    {
+                      "title": "Image Scanning",
+                      "url": "/tools/container/image-scanning",
+                      "count": 14
+                    },
+                    {
+                      "title": "Runtime Protection",
+                      "url": "/tools/container/runtime",
+                      "count": 11
+                    },
+                    {
+                      "title": "Kubernetes Security",
+                      "url": "/tools/container/k8s",
+                      "count": 18
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-appsec",
+              "title": "Application Security",
+              "subcategories": [
+                {
+                  "id": "tools-app-testing",
+                  "title": "Application Security Testing",
+                  "items": [
+                    {
+                      "title": "Static Analysis (SAST)",
+                      "url": "/tools/appsec/sast",
+                      "count": 26
+                    },
+                    {
+                      "title": "Dynamic Analysis (DAST)",
+                      "url": "/tools/appsec/dast",
+                      "count": 18
+                    },
+                    {
+                      "title": "Interactive Testing (IAST)",
+                      "url": "/tools/appsec/iast",
+                      "count": 8
+                    },
+                    {
+                      "title": "Software Composition Analysis",
+                      "url": "/tools/appsec/sca",
+                      "count": 15
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-mobile",
+              "title": "Mobile Security",
+              "subcategories": [
+                {
+                  "id": "tools-android",
+                  "title": "Android Security",
+                  "items": [
+                    {
+                      "title": "Static Analysis",
+                      "url": "/tools/mobile/android-static",
+                      "count": 15
+                    },
+                    {
+                      "title": "Dynamic Analysis",
+                      "url": "/tools/mobile/android-dynamic",
+                      "count": 12
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-ios",
+                  "title": "iOS Security",
+                  "items": [
+                    {
+                      "title": "iOS Testing Tools",
+                      "url": "/tools/mobile/ios-tools",
+                      "count": 18
+                    },
+                    {
+                      "title": "Jailbreak Tools",
+                      "url": "/tools/mobile/ios-jailbreak",
+                      "count": 8
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Digital Forensics & Incident Response (DFIR)",
+          "items": [
+            {
+              "id": "tools-forensics",
+              "title": "Digital Forensics",
+              "subcategories": [
+                {
+                  "id": "tools-disk-forensics",
+                  "title": "Disk Forensics",
+                  "items": [
+                    {
+                      "title": "Disk Imaging",
+                      "url": "/tools/forensics/imaging",
+                      "count": 12
+                    },
+                    {
+                      "title": "File System Analysis",
+                      "url": "/tools/forensics/analysis",
+                      "count": 16
+                    },
+                    {
+                      "title": "Data Carving",
+                      "url": "/tools/forensics/carving",
+                      "count": 9
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-memory-forensics",
+                  "title": "Memory Forensics",
+                  "items": [
+                    {
+                      "title": "Memory Acquisition",
+                      "url": "/tools/forensics/memory-acquisition",
+                      "count": 8,
+                      "examples": [
+                        { "name": "DumpIt", "type": "free" },
+                        { "name": "WinPMEM", "type": "free" },
+                        { "name": "LiME (Linux)", "type": "free" }
+                      ]
+                    },
+                    {
+                      "title": "Memory Analysis",
+                      "url": "/tools/forensics/memory-analysis",
+                      "count": 6,
+                      "examples": [
+                        { "name": "Volatility 3", "type": "free" },
+                        { "name": "Rekall", "type": "free" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "tools-ir",
+              "title": "Incident Response",
+              "reference": "[NIST: RS]",
+              "subcategories": [
+                {
+                  "id": "tools-ir-platforms",
+                  "title": "IR Platforms & Orchestration",
+                  "items": [
+                    {
+                      "title": "SOAR Platforms",
+                      "url": "/tools/ir/soar",
+                      "count": 12
+                    },
+                    {
+                      "title": "Case Management",
+                      "url": "/tools/ir/case-mgmt",
+                      "count": 8
+                    },
+                    {
+                      "title": "Evidence Collection",
+                      "url": "/tools/ir/collection",
+                      "count": 14
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Hardware & IoT Security",
+          "items": [
+            {
+              "id": "tools-hardware",
+              "title": "Hardware Security Testing",
+              "subcategories": [
+                {
+                  "id": "tools-hw-interfaces",
+                  "title": "Hardware Interfaces",
+                  "items": [
+                    {
+                      "title": "JTAG/SWD Tools",
+                      "url": "/tools/hardware/jtag",
+                      "count": 11
+                    },
+                    {
+                      "title": "UART/Serial Tools",
+                      "url": "/tools/hardware/uart",
+                      "count": 8
+                    },
+                    {
+                      "title": "SPI/I2C Tools",
+                      "url": "/tools/hardware/spi-i2c",
+                      "count": 9
+                    }
+                  ]
+                },
+                {
+                  "id": "tools-radio",
+                  "title": "Radio Frequency (RF) Security",
+                  "items": [
+                    {
+                      "title": "Software Defined Radio",
+                      "url": "/tools/rf/sdr",
+                      "count": 14
+                    },
+                    {
+                      "title": "RFID/NFC Tools",
+                      "url": "/tools/rf/rfid-nfc",
+                      "count": 16
+                    },
+                    {
+                      "title": "Wireless Security",
+                      "url": "/tools/rf/wireless",
+                      "count": 22
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "learn",
+      "title": "Learning Resources",
+      "description": "Education, training, certifications, and references",
+      "count": "3,142 resources",
+      "expanded": false,
+      "intro": "Comprehensive learning paths from beginner to expert, including certifications, training platforms, books, videos, and hands-on labs.",
+      "categories": [
+        {
+          "title": "Certifications & Professional Development",
+          "items": [
+            {
+              "id": "learn-entry-certs",
+              "title": "Entry Level Certifications",
+              "subcategories": [
+                {
+                  "id": "learn-comptia",
+                  "title": "CompTIA Certifications",
+                  "items": [
+                    {
+                      "title": "Security+",
+                      "url": "/learn/certs/comptia/security-plus",
+                      "count": 42,
+                      "examples": [
+                        { "name": "Study Guides", "type": "paid" },
+                        { "name": "Video Courses", "type": "free" },
+                        { "name": "Practice Exams", "count": 8 },
+                        { "name": "Study Groups & Forums" }
+                      ]
+                    },
+                    {
+                      "title": "Network+",
+                      "url": "/learn/certs/comptia/network-plus",
+                      "count": 38
+                    },
+                    {
+                      "title": "CySA+",
+                      "url": "/learn/certs/comptia/cysa-plus",
+                      "count": 31
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "learn-offensive-certs",
+              "title": "Offensive Security Certifications",
+              "subcategories": [
+                {
+                  "id": "learn-practical-certs",
+                  "title": "Practical/Hands-On Certifications",
+                  "items": [
+                    {
+                      "title": "OSCP",
+                      "url": "/learn/certs/offensive-security/oscp",
+                      "count": 156,
+                      "examples": [
+                        { "name": "Official PEN-200 Course", "type": "paid", "price": "$1499" },
+                        { "name": "Preparation Platforms", "count": 12 },
+                        { "name": "Study Guides & Write-ups", "count": 47 }
+                      ]
+                    },
+                    {
+                      "title": "OSEP",
+                      "url": "/learn/certs/offensive-security/osep",
+                      "count": 89
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Hands-On Training Platforms",
+          "items": [
+            {
+              "id": "learn-guided",
+              "title": "Guided Learning Platforms",
+              "subcategories": [
+                {
+                  "id": "learn-beginner-platforms",
+                  "title": "Beginner-Friendly Platforms",
+                  "items": [
+                    {
+                      "title": "TryHackMe",
+                      "url": "/learn/platforms/tryhackme",
+                      "count": 847,
+                      "subtitle": "rooms",
+                      "examples": [
+                        { "name": "Complete Beginner Path", "type": "free/paid" },
+                        { "name": "Offensive Pentesting Path" },
+                        { "name": "Cyber Defense Path" }
+                      ]
+                    },
+                    {
+                      "title": "Hack The Box",
+                      "url": "/learn/platforms/hackthebox",
+                      "count": 573,
+                      "subtitle": "machines"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Upcoming Events",
+      "description": "Conferences, CFPs, competitions, and training",
+      "count": "87 events",
+      "expanded": true,
+      "intro": "Security conferences, call for papers deadlines, CTF competitions, and training events. Updated weekly with community contributions.",
+      "type": "events",
+      "categories": [
+        {
+          "title": "Conferences",
+          "events": [
+            { "date": "AUG 8-11", "name": "DEF CON 33 - Las Vegas" },
+            { "date": "AUG 3-8", "name": "Black Hat USA - Las Vegas" },
+            { "date": "SEP 15-17", "name": "BSides Augusta" },
+            { "date": "OCT 1-3", "name": "DerbyCon X - Louisville" },
+            { "date": "NOV 8-9", "name": "BSides Philly" }
+          ]
+        },
+        {
+          "title": "CFP Deadlines",
+          "events": [
+            { "date": "JUL 15", "name": "BSides SF 2025" },
+            { "date": "JUL 31", "name": "ShmooCon 2025" },
+            { "date": "AUG 10", "name": "RSA Conference 2025" },
+            { "date": "AUG 20", "name": "CanSecWest 2025" }
+          ]
+        },
+        {
+          "title": "Competitions",
+          "events": [
+            { "date": "JUL 20-22", "name": "Google CTF 2024" },
+            { "date": "AUG 2-4", "name": "DEF CON CTF Finals" },
+            { "date": "SEP 1-30", "name": "Pwn2Own Miami" },
+            { "date": "OCT 15", "name": "Hack-A-Sat Finals" }
+          ]
+        },
+        {
+          "title": "Training Deadlines",
+          "events": [
+            { "date": "JUL 25", "name": "SANS SEC504 Early Bird" },
+            { "date": "AUG 1", "name": "Offensive Security OSCP" },
+            { "date": "AUG 15", "name": "Black Hat Training" },
+            { "date": "SEP 5", "name": "Wild West Hackin' Fest" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "groups",
+      "title": "Local Groups",
+      "description": "Physical meetups and online communities",
+      "count": "342 groups",
+      "expanded": true,
+      "intro": "Find cybersecurity communities near you or online. Includes physical meetups, professional chapters, online forums, and special interest groups.",
+      "type": "groups",
+      "categories": [
+        {
+          "title": "Physical Meetups",
+          "items": [
+            { "name": "2600 Meetings", "url": "/groups/2600", "count": "worldwide" },
+            { "name": "DEF CON Groups", "url": "/groups/defcon-groups", "count": "245 cities" },
+            { "name": "OWASP Chapters", "url": "/groups/owasp", "count": "280+ chapters" },
+            { "name": "ISC2 Chapters", "url": "/groups/isc2", "count": "150+ chapters" },
+            { "name": "ISACA Chapters", "url": "/groups/isaca", "count": "200+ chapters" },
+            { "name": "InfraGard", "url": "/groups/infragard", "count": "US only" },
+            { "name": "Hackerspaces", "url": "/groups/hackerspaces", "count": "global" }
+          ]
+        },
+        {
+          "title": "Special Interest Groups",
+          "items": [
+            { "name": "Women in CyberSecurity", "url": "/groups/wicys" },
+            { "name": "Minorities in Security", "url": "/groups/minorities" },
+            { "name": "Veterans in Security", "url": "/groups/veterans" },
+            { "name": "Student Groups", "url": "/groups/students" },
+            { "name": "LGBTQ+ in Tech", "url": "/groups/lgbtq" }
+          ]
+        },
+        {
+          "title": "Online Communities",
+          "items": [
+            { "name": "Discord Servers", "url": "/groups/discord", "count": 42 },
+            { "name": "Slack Workspaces", "url": "/groups/slack", "count": 28 },
+            { "name": "Reddit Communities", "url": "/groups/reddit", "count": 35 },
+            { "name": "Security Forums", "url": "/groups/forums", "count": 18 },
+            { "name": "IRC Channels", "url": "/groups/irc", "count": 22 },
+            { "name": "Matrix Rooms", "url": "/groups/matrix", "count": 15 },
+            { "name": "Telegram Groups", "url": "/groups/telegram", "count": 31 }
+          ]
+        },
+        {
+          "title": "Professional Associations",
+          "items": [
+            { "name": "ISSA Chapters", "url": "/groups/issa" },
+            { "name": "HTCIA Chapters", "url": "/groups/htcia" },
+            { "name": "IACIS", "url": "/groups/iacis" },
+            { "name": "ADFSL", "url": "/groups/adfsl" }
+          ]
+        }
+      ]
+    }
+  ]
+}

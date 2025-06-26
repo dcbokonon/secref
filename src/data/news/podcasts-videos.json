@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "section": "8.2",
+    "title": "Podcasts & Videos",
+    "description": "Security podcasts, YouTube channels, and video content for cybersecurity professionals",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 25
+  },
+  "categories": [
+    {
+      "id": "podcasts",
+      "title": "Security Podcasts",
+      "description": "Audio podcasts covering cybersecurity news, interviews, and technical topics",
+      "subcategories": [
+        {
+          "id": "news-discussion",
+          "title": "News & Discussion Podcasts",
+          "description": "Weekly news roundups and security discussion formats",
+          "items": [
+            {
+              "name": "Security Now!",
+              "type": "free",
+              "url": "https://twit.tv/shows/security-now",
+              "description": "Steve Gibson's weekly security news and analysis",
+              "platforms": ["audio"],
+              "tags": ["weekly", "news", "analysis", "technical"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Risky Business",
+              "type": "free",
+              "url": "https://risky.biz/",
+              "description": "Weekly cybersecurity news from Australia",
+              "platforms": ["audio"],
+              "tags": ["weekly", "news", "australia", "industry"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CyberWire Daily",
+              "type": "free",
+              "url": "https://thecyberwire.com/podcasts/daily-podcast",
+              "description": "Daily cybersecurity news briefing",
+              "platforms": ["audio"],
+              "tags": ["daily", "news", "briefing", "current"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "SANS ISC StormCast",
+              "type": "free",
+              "url": "https://isc.sans.edu/podcast.html",
+              "description": "5-minute daily security podcast",
+              "platforms": ["audio"],
+              "tags": ["sans", "daily", "5-minute", "threats"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Darknet Diaries",
+              "type": "free",
+              "url": "https://darknetdiaries.com/",
+              "description": "True cybercrime stories and hacker interviews",
+              "platforms": ["audio"],
+              "tags": ["stories", "cybercrime", "interviews", "narrative"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Malicious Life",
+              "type": "free",
+              "url": "https://malicious.life/",
+              "description": "Stories from the dark side of cybersecurity",
+              "platforms": ["audio"],
+              "tags": ["stories", "cybersecurity", "history", "narrative"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Hacking Humans",
+              "type": "free",
+              "url": "https://thecyberwire.com/podcasts/hacking-humans",
+              "description": "Social engineering and human cybersecurity factors",
+              "platforms": ["audio"],
+              "tags": ["social-engineering", "humans", "psychology", "awareness"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Click Here",
+              "type": "free",
+              "url": "https://therecord.media/podcast/",
+              "description": "Cybersecurity journalism and investigation podcast",
+              "platforms": ["audio"],
+              "tags": ["journalism", "investigation", "news", "analysis"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "technical-podcasts",
+          "title": "Technical Security Podcasts",
+          "description": "Deep technical discussions and specialized security topics",
+          "items": [
+            {
+              "name": "Paul's Security Weekly",
+              "type": "free",
+              "url": "https://securityweekly.com/",
+              "description": "Technical security discussion and tool reviews",
+              "platforms": ["audio"],
+              "tags": ["technical", "tools", "reviews", "discussion"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Defensive Security Podcast",
+              "type": "free",
+              "url": "https://defensivesecurity.org/",
+              "description": "Blue team and defensive security focus",
+              "platforms": ["audio"],
+              "tags": ["defensive", "blue-team", "security", "operations"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Open Source Security Podcast",
+              "type": "free",
+              "url": "https://opensourcesecuritypodcast.com/",
+              "description": "Open source security tools and practices",
+              "platforms": ["audio"],
+              "tags": ["open-source", "tools", "practices", "community"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Privacy, Security, & OSINT",
+              "type": "free",
+              "url": "https://inteltechniques.com/podcast.html",
+              "description": "Privacy, security, and OSINT techniques",
+              "platforms": ["audio"],
+              "tags": ["privacy", "osint", "techniques", "investigation"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "The Industrial Security Podcast",
+              "type": "free",
+              "url": "https://waterfall-security.com/scada-security/podcasts/",
+              "description": "Industrial control systems security",
+              "platforms": ["audio"],
+              "tags": ["industrial", "ics", "scada", "ot"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Down the Security Rabbit Hole",
+              "type": "free",
+              "url": "https://podcast.wh1t3rabbit.net/",
+              "description": "Deep technical security discussions",
+              "platforms": ["audio"],
+              "tags": ["technical", "deep", "security", "advanced"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "youtube-channels",
+      "title": "YouTube Security Channels",
+      "description": "Educational and training videos on cybersecurity topics",
+      "subcategories": [
+        {
+          "id": "educational-channels",
+          "title": "Educational Security Channels",
+          "description": "Channels focused on cybersecurity education and training",
+          "items": [
+            {
+              "name": "NetworkChuck",
+              "type": "free",
+              "url": "https://youtube.com/c/NetworkChuck",
+              "description": "Networking and cybersecurity tutorials",
+              "platforms": ["video"],
+              "tags": ["networking", "tutorials", "beginner-friendly", "certification"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Professor Messer",
+              "type": "free",
+              "url": "https://youtube.com/c/professormesser",
+              "description": "CompTIA certification training videos",
+              "platforms": ["video"],
+              "tags": ["comptia", "certification", "training", "education"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "The Cyber Mentor",
+              "type": "free",
+              "url": "https://youtube.com/c/TheCyberMentor",
+              "description": "Ethical hacking and cybersecurity education",
+              "platforms": ["video"],
+              "tags": ["ethical-hacking", "education", "practical", "tutorials"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "David Bombal",
+              "type": "free",
+              "url": "https://youtube.com/c/DavidBombal",
+              "description": "Networking, Python, and cybersecurity content",
+              "platforms": ["video"],
+              "tags": ["networking", "python", "cybersecurity", "tutorials"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "IppSec",
+              "type": "free",
+              "url": "https://youtube.com/c/ippsec",
+              "description": "HackTheBox machine walkthroughs",
+              "platforms": ["video"],
+              "tags": ["hackthebox", "walkthroughs", "penetration-testing", "ctf"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "John Hammond",
+              "type": "free",
+              "url": "https://youtube.com/c/JohnHammond010",
+              "description": "Cybersecurity tutorials and CTF solutions",
+              "platforms": ["video"],
+              "tags": ["tutorials", "ctf", "malware-analysis", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "LiveOverflow",
+              "type": "free",
+              "url": "https://youtube.com/c/LiveOverflowCTF",
+              "description": "Binary exploitation and reverse engineering",
+              "platforms": ["video"],
+              "tags": ["binary-exploitation", "reverse-engineering", "ctf", "advanced"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "STÖK",
+              "type": "free",
+              "url": "https://youtube.com/c/STOKfredrik",
+              "description": "Bug bounty hunting and web security",
+              "platforms": ["video"],
+              "tags": ["bug-bounty", "web-security", "hunting", "practical"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "NahamSec",
+              "type": "free",
+              "url": "https://youtube.com/c/Nahamsec",
+              "description": "Bug bounty live streams and tutorials",
+              "platforms": ["video"],
+              "tags": ["bug-bounty", "live-streams", "tutorials", "community"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "conference-channels",
+          "title": "Conference Video Channels",
+          "description": "Official channels for security conferences and events",
+          "items": [
+            {
+              "name": "DEF CON Conference",
+              "type": "free",
+              "url": "https://youtube.com/user/DEFCONConference",
+              "description": "Official DEF CON conference presentations",
+              "platforms": ["video"],
+              "tags": ["defcon", "conference", "presentations", "hacking"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Black Hat",
+              "type": "free",
+              "url": "https://youtube.com/c/BlackHatOfficialYT",
+              "description": "Black Hat conference technical presentations",
+              "platforms": ["video"],
+              "tags": ["blackhat", "conference", "technical", "research"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "RSA Conference",
+              "type": "free",
+              "url": "https://youtube.com/user/RSAConference",
+              "description": "RSA Conference keynotes and sessions",
+              "platforms": ["video"],
+              "tags": ["rsa", "conference", "keynotes", "enterprise"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "OWASP Foundation",
+              "type": "free",
+              "url": "https://youtube.com/user/OWASPGLOBAL",
+              "description": "OWASP chapter meetings and presentations",
+              "platforms": ["video"],
+              "tags": ["owasp", "application-security", "presentations", "community"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "BSides Events",
+              "type": "free",
+              "description": "Local BSides conference recordings",
+              "platforms": ["video"],
+              "tags": ["bsides", "local", "community", "grassroots"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

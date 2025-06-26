@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "section": "6.1",
+    "title": "Capture The Flag (CTF)",
+    "description": "CTF platforms, competitions, and challenge categories for cybersecurity practice",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 32
+  },
+  "categories": [
+    {
+      "id": "ctf-platforms",
+      "title": "CTF Platforms",
+      "description": "Online platforms offering CTF challenges and competitions",
+      "subcategories": [
+        {
+          "id": "permanent-ctfs",
+          "title": "Permanent CTF Platforms",
+          "description": "Always-available CTF platforms for continuous learning",
+          "items": [
+            {
+              "name": "PicoCTF",
+              "type": "free",
+              "url": "https://picoctf.org/",
+              "description": "Beginner-friendly CTF platform by Carnegie Mellon",
+              "tags": ["ctf", "beginner", "education", "academic"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "OverTheWire",
+              "type": "free",
+              "url": "https://overthewire.org/",
+              "description": "Wargames and security challenges",
+              "tags": ["ctf", "wargames", "linux", "challenges"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "HackTheBox",
+              "type": "freemium",
+              "url": "https://hackthebox.com/",
+              "description": "Penetration testing labs and challenges",
+              "tags": ["ctf", "pentest", "machines", "challenges"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "TryHackMe",
+              "type": "freemium",
+              "url": "https://tryhackme.com/",
+              "description": "Guided cybersecurity learning platform",
+              "tags": ["ctf", "guided", "learning", "beginner-friendly"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "RootMe",
+              "type": "free",
+              "url": "https://root-me.org/",
+              "description": "Hacking and information security challenges",
+              "tags": ["ctf", "challenges", "security", "french"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "HackThisSite",
+              "type": "free",
+              "url": "https://hackthissite.org/",
+              "description": "Legal hacking challenges and community",
+              "tags": ["ctf", "challenges", "community", "legal"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Pentestit",
+              "type": "freemium",
+              "url": "https://lab.pentestit.ru/",
+              "description": "Hands-on penetration testing lab",
+              "tags": ["ctf", "pentest", "lab", "hands-on"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "RPISEC/MBE",
+              "type": "free",
+              "url": "https://github.com/RPISEC/MBE",
+              "description": "Modern Binary Exploitation course materials",
+              "tags": ["ctf", "binary", "exploitation", "academic"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "pwnable.kr",
+              "type": "free",
+              "url": "http://pwnable.kr/",
+              "description": "Binary exploitation challenges",
+              "tags": ["ctf", "pwn", "binary", "exploitation"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "pwnable.tw",
+              "type": "free",
+              "url": "https://pwnable.tw/",
+              "description": "Advanced binary exploitation challenges",
+              "tags": ["ctf", "pwn", "binary", "advanced"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "exploit.education",
+              "type": "free",
+              "url": "https://exploit.education/",
+              "description": "Educational exploitation challenges",
+              "tags": ["ctf", "exploitation", "education", "learning"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "competition-ctfs",
+          "title": "Competition CTFs",
+          "description": "Major CTF competitions and teams",
+          "items": [
+            {
+              "name": "DEF CON CTF",
+              "type": "free",
+              "url": "https://defcon.org/",
+              "description": "Premier CTF competition at DEF CON",
+              "tags": ["ctf", "competition", "defcon", "elite"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "PlaidCTF",
+              "type": "free",
+              "url": "https://plaidctf.com/",
+              "description": "Annual CTF by Carnegie Mellon's PPP team",
+              "tags": ["ctf", "competition", "academic", "elite"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "Google CTF",
+              "type": "free",
+              "url": "https://capturetheflag.withgoogle.com/",
+              "description": "Google's annual CTF competition",
+              "tags": ["ctf", "competition", "google", "corporate"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "HITCON CTF",
+              "type": "free",
+              "description": "Taiwan's premier security conference CTF",
+              "tags": ["ctf", "competition", "taiwan", "asia"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "0CTF/TCTF",
+              "type": "free",
+              "description": "Chinese CTF competition",
+              "tags": ["ctf", "competition", "china", "asia"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "PPP (Plaid Parliament of Pwning)",
+              "type": "free",
+              "description": "Elite CTF team from Carnegie Mellon",
+              "tags": ["ctf", "team", "elite", "academic"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "Dragon Sector",
+              "type": "free",
+              "description": "Polish CTF team",
+              "tags": ["ctf", "team", "poland", "elite"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "DEFKOR",
+              "type": "free",
+              "description": "Korean CTF team",
+              "tags": ["ctf", "team", "korea", "elite"],
+              "difficulty": "expert"
+            },
+            {
+              "name": "Tea Deliverers",
+              "type": "free",
+              "description": "Elite CTF team",
+              "tags": ["ctf", "team", "elite", "international"],
+              "difficulty": "expert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ctf-categories",
+      "title": "CTF Challenge Categories",
+      "description": "Different types of CTF challenges and their focus areas",
+      "subcategories": [
+        {
+          "id": "challenge-types",
+          "title": "Challenge Categories",
+          "description": "Common CTF challenge types and their characteristics",
+          "items": [
+            {
+              "name": "Web Exploitation",
+              "type": "free",
+              "description": "SQL injection, XSS, CSRF, authentication bypass, session hijacking",
+              "tags": ["web", "exploitation", "sql", "xss", "csrf"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Binary Exploitation",
+              "type": "free",
+              "description": "Buffer overflow, format strings, heap exploitation, ROP",
+              "tags": ["binary", "pwn", "overflow", "rop", "heap"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Cryptography",
+              "type": "free",
+              "description": "Classical ciphers, modern crypto attacks, side channels, implementation flaws",
+              "tags": ["crypto", "ciphers", "attacks", "cryptanalysis"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Forensics",
+              "type": "free",
+              "description": "File carving, memory analysis, network forensics, steganography",
+              "tags": ["forensics", "carving", "memory", "network", "steganography"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Reverse Engineering",
+              "type": "free",
+              "description": "x86/x64 assembly, ARM, obfuscation, anti-debugging",
+              "tags": ["reverse", "assembly", "obfuscation", "debugging"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Miscellaneous",
+              "type": "free",
+              "description": "Programming, recon/OSINT, blockchain, IoT challenges",
+              "tags": ["misc", "programming", "osint", "blockchain", "iot"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

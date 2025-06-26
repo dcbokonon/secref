@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "section": "1.6",
+    "title": "Cryptography & Privacy Tools",
+    "description": "Tools for encryption, decryption, password management, and privacy protection",
+    "lastUpdated": "2025-01-25",
+    "totalItems": 20
+  },
+  "categories": [
+    {
+      "id": "encryption-tools",
+      "title": "Encryption Tools",
+      "description": "Tools for encrypting and protecting data",
+      "subcategories": [
+        {
+          "id": "disk-encryption",
+          "title": "Disk Encryption",
+          "description": "Full disk and partition encryption solutions",
+          "subcategories": [
+            {
+              "id": "full-disk-encryption",
+              "title": "Full Disk Encryption",
+              "description": "Cross-platform and OS-specific full disk encryption tools",
+              "items": [
+                {
+                  "name": "VeraCrypt",
+                  "type": "free",
+                  "url": "https://www.veracrypt.fr/",
+                  "description": "Cross-platform disk encryption software",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["encryption", "disk", "cross-platform", "open-source"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Cryptomator",
+                  "type": "free",
+                  "url": "https://cryptomator.org/",
+                  "description": "Cloud storage encryption client",
+                  "platforms": ["windows", "macos", "linux", "mobile"],
+                  "tags": ["encryption", "cloud", "client-side"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "BitLocker",
+                  "type": "free",
+                  "description": "Windows built-in full disk encryption",
+                  "platforms": ["windows"],
+                  "tags": ["encryption", "windows", "built-in"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "FileVault",
+                  "type": "free",
+                  "description": "macOS built-in full disk encryption",
+                  "platforms": ["macos"],
+                  "tags": ["encryption", "macos", "built-in"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "LUKS",
+                  "type": "free",
+                  "description": "Linux Unified Key Setup disk encryption",
+                  "platforms": ["linux"],
+                  "tags": ["encryption", "linux", "open-source"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "file-encryption",
+          "title": "File Encryption",
+          "description": "Individual file and folder encryption tools",
+          "subcategories": [
+            {
+              "id": "individual-file-encryption",
+              "title": "Individual File Encryption",
+              "description": "Tools for encrypting specific files and folders",
+              "items": [
+                {
+                  "name": "AxCrypt",
+                  "type": "freemium",
+                  "url": "https://www.axcrypt.net/",
+                  "description": "Simple file encryption with GUI",
+                  "platforms": ["windows", "macos", "mobile"],
+                  "tags": ["encryption", "file", "gui", "simple"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "7-Zip",
+                  "type": "free",
+                  "url": "https://www.7-zip.org/",
+                  "description": "Archive utility with AES encryption",
+                  "platforms": ["windows", "linux"],
+                  "tags": ["encryption", "archive", "compression"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Gpg4win",
+                  "type": "free",
+                  "url": "https://www.gpg4win.org/",
+                  "description": "Windows GUI for GnuPG",
+                  "platforms": ["windows"],
+                  "tags": ["encryption", "pgp", "gui", "windows"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "GnuPG",
+                  "type": "free",
+                  "url": "https://gnupg.org/",
+                  "description": "Command-line OpenPGP implementation",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["encryption", "pgp", "command-line", "open-source"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "OpenSSL",
+                  "type": "free",
+                  "url": "https://www.openssl.org/",
+                  "description": "Cryptography toolkit and SSL/TLS library",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["encryption", "ssl", "tls", "toolkit"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "age",
+                  "type": "free",
+                  "url": "https://age-encryption.org/",
+                  "description": "Simple, modern file encryption tool",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["encryption", "modern", "simple", "command-line"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "password-tools",
+      "title": "Password Tools",
+      "description": "Password cracking, generation, and management tools",
+      "subcategories": [
+        {
+          "id": "password-cracking",
+          "title": "Password Cracking",
+          "description": "Tools for testing password strength and cracking hashes",
+          "subcategories": [
+            {
+              "id": "offline-cracking",
+              "title": "Offline Cracking",
+              "description": "Tools for offline password hash cracking",
+              "items": [
+                {
+                  "name": "Hashcat",
+                  "type": "free",
+                  "url": "https://hashcat.net/",
+                  "description": "Advanced GPU-accelerated password recovery",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["password", "cracking", "gpu", "hash"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "John the Ripper",
+                  "type": "free",
+                  "url": "https://www.openwall.com/john/",
+                  "description": "Fast CPU-based password cracker",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["password", "cracking", "cpu", "hash"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "RainbowCrack",
+                  "type": "free",
+                  "url": "http://project-rainbowcrack.com/",
+                  "description": "Rainbow table password cracker",
+                  "platforms": ["windows", "linux"],
+                  "tags": ["password", "cracking", "rainbow-tables"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Ophcrack",
+                  "type": "free",
+                  "url": "http://ophcrack.sourceforge.net/",
+                  "description": "Windows password cracker using rainbow tables",
+                  "platforms": ["windows", "linux"],
+                  "tags": ["password", "cracking", "windows", "rainbow-tables"],
+                  "difficulty": "beginner"
+                }
+              ]
+            },
+            {
+              "id": "online-cracking",
+              "title": "Online Cracking",
+              "description": "Web-based hash cracking services",
+              "items": [
+                {
+                  "name": "CrackStation",
+                  "type": "free",
+                  "url": "https://crackstation.net/",
+                  "description": "Free online hash cracking service",
+                  "platforms": ["web"],
+                  "tags": ["password", "cracking", "online", "hash"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "HashKiller",
+                  "type": "free",
+                  "url": "https://hashkiller.io/",
+                  "description": "Online hash cracking and decryption",
+                  "platforms": ["web"],
+                  "tags": ["password", "cracking", "online", "hash"],
+                  "difficulty": "beginner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "password-management",
+          "title": "Password Management",
+          "description": "Tools for securely storing and managing passwords",
+          "subcategories": [
+            {
+              "id": "personal-use",
+              "title": "Personal Use",
+              "description": "Password managers for individual users",
+              "items": [
+                {
+                  "name": "Bitwarden",
+                  "type": "freemium",
+                  "url": "https://bitwarden.com/",
+                  "description": "Open-source password manager with cloud sync",
+                  "platforms": ["windows", "macos", "linux", "web", "mobile"],
+                  "tags": ["password", "manager", "open-source", "cloud"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "KeePass",
+                  "type": "free",
+                  "url": "https://keepass.info/",
+                  "description": "Local password database manager",
+                  "platforms": ["windows"],
+                  "tags": ["password", "manager", "local", "open-source"],
+                  "difficulty": "intermediate",
+                  "alternatives": ["KeePassXC"]
+                },
+                {
+                  "name": "KeePassXC",
+                  "type": "free",
+                  "url": "https://keepassxc.org/",
+                  "description": "Cross-platform KeePass client",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["password", "manager", "cross-platform", "open-source"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "pass",
+                  "type": "free",
+                  "url": "https://www.passwordstore.org/",
+                  "description": "Unix password manager using GPG",
+                  "platforms": ["linux", "macos"],
+                  "tags": ["password", "manager", "unix", "command-line", "gpg"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "1Password",
+                  "type": "paid",
+                  "url": "https://1password.com/",
+                  "description": "Commercial password manager with advanced features",
+                  "platforms": ["windows", "macos", "linux", "web", "mobile"],
+                  "tags": ["password", "manager", "commercial", "premium"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "LastPass",
+                  "type": "freemium",
+                  "url": "https://www.lastpass.com/",
+                  "description": "Cloud-based password manager",
+                  "platforms": ["windows", "macos", "linux", "web", "mobile"],
+                  "tags": ["password", "manager", "cloud", "commercial"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "Dashlane",
+                  "type": "paid",
+                  "url": "https://www.dashlane.com/",
+                  "description": "Premium password manager with VPN",
+                  "platforms": ["windows", "macos", "web", "mobile"],
+                  "tags": ["password", "manager", "premium", "vpn"],
+                  "difficulty": "beginner"
+                }
+              ]
+            },
+            {
+              "id": "enterprise",
+              "title": "Enterprise",
+              "description": "Enterprise-grade password and secrets management",
+              "items": [
+                {
+                  "name": "CyberArk",
+                  "type": "paid",
+                  "url": "https://www.cyberark.com/",
+                  "description": "Enterprise privileged access management",
+                  "platforms": ["windows", "linux", "web"],
+                  "tags": ["password", "enterprise", "pam", "privileged-access"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "Thycotic Secret Server",
+                  "type": "paid",
+                  "url": "https://thycotic.com/",
+                  "description": "Enterprise password and secrets vault",
+                  "platforms": ["windows", "web"],
+                  "tags": ["password", "enterprise", "secrets", "vault"],
+                  "difficulty": "expert"
+                },
+                {
+                  "name": "HashiCorp Vault",
+                  "type": "freemium",
+                  "url": "https://www.vaultproject.io/",
+                  "description": "Cloud-native secrets management",
+                  "platforms": ["windows", "macos", "linux", "web"],
+                  "tags": ["secrets", "enterprise", "cloud-native", "api"],
+                  "difficulty": "expert"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

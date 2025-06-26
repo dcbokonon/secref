@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "section": "1.7",
+    "title": "Mobile Security Tools",
+    "description": "Tools for analyzing, testing, and securing mobile applications on Android and iOS platforms",
+    "lastUpdated": "2025-01-25",
+    "totalItems": 19
+  },
+  "categories": [
+    {
+      "id": "android-security",
+      "title": "Android Security",
+      "description": "Tools for Android application security analysis and testing",
+      "subcategories": [
+        {
+          "id": "static-analysis",
+          "title": "Static Analysis",
+          "description": "Tools for analyzing Android applications without execution",
+          "subcategories": [
+            {
+              "id": "apk-analysis",
+              "title": "APK Analysis",
+              "description": "Tools for decompiling and analyzing Android APK files",
+              "items": [
+                {
+                  "name": "JADX",
+                  "type": "free",
+                  "url": "https://github.com/skylot/jadx",
+                  "description": "Dex to Java decompiler with GUI",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["android", "decompiler", "static-analysis", "apk"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Apktool",
+                  "type": "free",
+                  "url": "https://ibotpeaches.github.io/Apktool/",
+                  "description": "Tool for reverse engineering Android APK files",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["android", "reverse-engineering", "apk", "smali"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "ByteCode Viewer",
+                  "type": "free",
+                  "url": "https://github.com/Konloch/bytecode-viewer",
+                  "description": "Java/Android bytecode viewer and decompiler",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["android", "java", "bytecode", "decompiler"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "MobSF",
+                  "type": "free",
+                  "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+                  "description": "Automated mobile security testing framework",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["android", "ios", "automated", "security-testing"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "AndroBugs",
+                  "type": "free",
+                  "url": "https://github.com/AndroBugs/AndroBugs_Framework",
+                  "description": "Android vulnerability scanner",
+                  "platforms": ["linux"],
+                  "tags": ["android", "vulnerability", "scanner", "static"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "QARK",
+                  "type": "free",
+                  "url": "https://github.com/linkedin/qark",
+                  "description": "Quick Android Review Kit",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["android", "security", "review", "static-analysis"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dynamic-analysis",
+          "title": "Dynamic Analysis",
+          "description": "Tools for runtime analysis of Android applications",
+          "subcategories": [
+            {
+              "id": "runtime-analysis",
+              "title": "Runtime Analysis",
+              "description": "Tools for analyzing Android apps during execution",
+              "items": [
+                {
+                  "name": "Frida",
+                  "type": "free",
+                  "url": "https://frida.re/",
+                  "description": "Dynamic instrumentation toolkit",
+                  "platforms": ["windows", "macos", "linux", "mobile"],
+                  "tags": ["dynamic", "instrumentation", "hooking", "runtime"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Xposed Framework",
+                  "type": "free",
+                  "url": "https://repo.xposed.info/",
+                  "description": "Framework for modifying Android system behavior",
+                  "platforms": ["mobile"],
+                  "tags": ["android", "framework", "modification", "root"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Objection",
+                  "type": "free",
+                  "url": "https://github.com/sensepost/objection",
+                  "description": "Runtime mobile exploration toolkit",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["mobile", "runtime", "exploration", "frida"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            },
+            {
+              "id": "network-analysis",
+              "title": "Network Analysis",
+              "description": "Tools for analyzing mobile app network traffic",
+              "items": [
+                {
+                  "name": "Burp Suite",
+                  "type": "freemium",
+                  "url": "https://portswigger.net/burp",
+                  "description": "Web proxy for mobile app traffic analysis",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["proxy", "web", "traffic", "analysis"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "OWASP ZAP",
+                  "type": "free",
+                  "url": "https://www.zaproxy.org/",
+                  "description": "Free web application security scanner",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["proxy", "scanner", "web", "free"],
+                  "difficulty": "beginner"
+                },
+                {
+                  "name": "mitmproxy",
+                  "type": "free",
+                  "url": "https://mitmproxy.org/",
+                  "description": "Interactive TLS-capable intercepting proxy",
+                  "platforms": ["windows", "macos", "linux"],
+                  "tags": ["proxy", "tls", "intercepting", "python"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ios-security",
+      "title": "iOS Security",
+      "description": "Tools for iOS application security analysis and testing",
+      "subcategories": [
+        {
+          "id": "jailbreaking-tools",
+          "title": "Jailbreaking Tools",
+          "description": "Tools for jailbreaking iOS devices to enable security testing",
+          "subcategories": [
+            {
+              "id": "current-jailbreaks",
+              "title": "Current Jailbreaks",
+              "description": "Modern jailbreaking solutions for iOS devices",
+              "items": [
+                {
+                  "name": "checkra1n",
+                  "type": "free",
+                  "url": "https://checkra.in/",
+                  "description": "Hardware-based jailbreak for A5-A11 devices",
+                  "platforms": ["macos", "linux"],
+                  "tags": ["ios", "jailbreak", "hardware", "bootrom"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "unc0ver",
+                  "type": "free",
+                  "url": "https://unc0ver.dev/",
+                  "description": "Semi-untethered jailbreak for iOS 11.0-14.8",
+                  "platforms": ["mobile"],
+                  "tags": ["ios", "jailbreak", "semi-untethered"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Taurine",
+                  "type": "free",
+                  "url": "https://taurine.app/",
+                  "description": "Semi-untethered jailbreak for iOS 14",
+                  "platforms": ["mobile"],
+                  "tags": ["ios", "jailbreak", "semi-untethered", "modern"],
+                  "difficulty": "intermediate"
+                },
+                {
+                  "name": "Odyssey",
+                  "type": "free",
+                  "url": "https://theodyssey.dev/",
+                  "description": "Semi-tethered jailbreak for iOS 13",
+                  "platforms": ["mobile"],
+                  "tags": ["ios", "jailbreak", "semi-tethered"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ios-analysis",
+          "title": "iOS Analysis",
+          "description": "Tools for analyzing iOS applications",
+          "subcategories": [
+            {
+              "id": "static-analysis",
+              "title": "Static Analysis",
+              "description": "Tools for static analysis of iOS applications",
+              "items": [
+                {
+                  "name": "class-dump",
+                  "type": "free",
+                  "url": "http://stevenygard.com/projects/class-dump/",
+                  "description": "Utility for examining Objective-C runtime information",
+                  "platforms": ["macos"],
+                  "tags": ["ios", "objective-c", "runtime", "static"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "otool",
+                  "type": "free",
+                  "description": "Object file displaying tool (part of Xcode)",
+                  "platforms": ["macos"],
+                  "tags": ["ios", "macos", "binary", "analysis"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Hopper Disassembler",
+                  "type": "paid",
+                  "url": "https://www.hopperapp.com/",
+                  "description": "Reverse engineering tool for macOS and iOS",
+                  "platforms": ["macos"],
+                  "tags": ["ios", "reverse-engineering", "disassembler"],
+                  "difficulty": "expert"
+                }
+              ]
+            },
+            {
+              "id": "dynamic-analysis",
+              "title": "Dynamic Analysis",
+              "description": "Tools for runtime analysis of iOS applications",
+              "items": [
+                {
+                  "name": "Frida",
+                  "type": "free",
+                  "url": "https://frida.re/",
+                  "description": "Dynamic instrumentation toolkit for iOS",
+                  "platforms": ["windows", "macos", "linux", "mobile"],
+                  "tags": ["dynamic", "instrumentation", "hooking", "runtime"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "Cycript",
+                  "type": "free",
+                  "url": "http://www.cycript.org/",
+                  "description": "JavaScript bridge for Objective-C runtime",
+                  "platforms": ["mobile"],
+                  "tags": ["ios", "javascript", "objective-c", "runtime"],
+                  "difficulty": "advanced"
+                },
+                {
+                  "name": "SSL Kill Switch",
+                  "type": "free",
+                  "url": "https://github.com/nabla-c0d3/ssl-kill-switch2",
+                  "description": "Tool to disable SSL certificate validation",
+                  "platforms": ["mobile"],
+                  "tags": ["ios", "ssl", "certificate", "bypass"],
+                  "difficulty": "intermediate"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

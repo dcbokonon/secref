@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "section": "7.3",
+    "title": "Research & Whitepapers",
+    "description": "Security research publications, vulnerability databases, and threat intelligence",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 25
+  },
+  "categories": [
+    {
+      "id": "security-research",
+      "title": "Security Research Publications",
+      "description": "Vulnerability research, academic papers, and security publications",
+      "subcategories": [
+        {
+          "id": "vulnerability-research",
+          "title": "Vulnerability Research & Disclosure",
+          "description": "Databases and sources for vulnerability information",
+          "items": [
+            {
+              "name": "CVE Database",
+              "type": "free",
+              "url": "https://cve.mitre.org/",
+              "description": "Common Vulnerabilities and Exposures database",
+              "platforms": ["web"],
+              "tags": ["cve", "vulnerabilities", "database", "mitre"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "NVD (National Vulnerability Database)",
+              "type": "free",
+              "url": "https://nvd.nist.gov/",
+              "description": "US government repository of vulnerability management data",
+              "platforms": ["web"],
+              "tags": ["nvd", "nist", "vulnerabilities", "government"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Exploit-DB",
+              "type": "free",
+              "url": "https://exploit-db.com/",
+              "description": "Archive of public exploits and vulnerability proofs-of-concept",
+              "platforms": ["web"],
+              "tags": ["exploits", "poc", "archive", "offensive-security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Full Disclosure Mailing List",
+              "type": "free",
+              "url": "https://seclists.org/fulldisclosure/",
+              "description": "Public vulnerability disclosure mailing list",
+              "platforms": ["web"],
+              "tags": ["disclosure", "mailing-list", "public", "vulnerabilities"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Packet Storm Security",
+              "type": "free",
+              "url": "https://packetstormsecurity.com/",
+              "description": "Security tools, exploits, and vulnerability information",
+              "platforms": ["web"],
+              "tags": ["security", "exploits", "tools", "information"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Microsoft Security Response Center",
+              "type": "free",
+              "url": "https://msrc.microsoft.com/",
+              "description": "Microsoft security advisories and updates",
+              "platforms": ["web"],
+              "tags": ["microsoft", "advisories", "updates", "msrc"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Oracle Critical Patch Updates",
+              "type": "free",
+              "url": "https://oracle.com/security-alerts/",
+              "description": "Oracle security patches and advisories",
+              "platforms": ["web"],
+              "tags": ["oracle", "patches", "advisories", "database"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Cisco Security Advisories",
+              "type": "free",
+              "url": "https://sec.cloudapps.cisco.com/security/center/publicationListing.x",
+              "description": "Cisco product security advisories",
+              "platforms": ["web"],
+              "tags": ["cisco", "advisories", "networking", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Red Hat Security Advisories",
+              "type": "free",
+              "url": "https://access.redhat.com/security/security-updates/",
+              "description": "Red Hat Enterprise Linux security updates",
+              "platforms": ["web"],
+              "tags": ["redhat", "linux", "security", "updates"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "academic-research",
+          "title": "Academic Security Research",
+          "description": "Academic conferences, journals, and research publications",
+          "items": [
+            {
+              "name": "IEEE Security & Privacy",
+              "type": "paid",
+              "url": "https://ieee-security.org/",
+              "description": "Premier academic security conference proceedings",
+              "platforms": ["web"],
+              "tags": ["ieee", "academic", "conference", "research"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "USENIX Security Symposium",
+              "type": "free",
+              "url": "https://usenix.org/conferences/byname/108",
+              "description": "USENIX Security conference papers and presentations",
+              "platforms": ["web"],
+              "tags": ["usenix", "security", "symposium", "research"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "ACM CCS",
+              "type": "paid",
+              "url": "https://sigsac.org/ccs.html",
+              "description": "ACM Conference on Computer and Communications Security",
+              "platforms": ["web"],
+              "tags": ["acm", "ccs", "computer-security", "communications"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "NDSS Symposium",
+              "type": "free",
+              "url": "https://ndss-symposium.org/",
+              "description": "Network and Distributed System Security Symposium",
+              "platforms": ["web"],
+              "tags": ["ndss", "network-security", "distributed", "systems"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Journal of Computer Security",
+              "type": "paid",
+              "url": "https://iospress.nl/journal/journal-of-computer-security/",
+              "description": "Academic journal on computer security research",
+              "platforms": ["web"],
+              "tags": ["journal", "computer-security", "academic", "research"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Computers & Security Journal",
+              "type": "paid",
+              "url": "https://elsevier.com/locate/cose",
+              "description": "International journal on information security",
+              "platforms": ["web"],
+              "tags": ["journal", "information-security", "international", "elsevier"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "International Journal of Information Security",
+              "type": "paid",
+              "url": "https://springer.com/journal/10207",
+              "description": "Springer journal on information security research",
+              "platforms": ["web"],
+              "tags": ["journal", "information-security", "springer", "research"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "threat-intelligence",
+      "title": "Threat Intelligence Sources",
+      "description": "Threat reports, intelligence feeds, and security research from industry",
+      "subcategories": [
+        {
+          "id": "threat-reports",
+          "title": "Industry Threat Reports",
+          "description": "Annual and periodic threat intelligence reports from security vendors",
+          "items": [
+            {
+              "name": "Mandiant/FireEye Threat Reports",
+              "type": "free",
+              "url": "https://mandiant.com/resources/insights",
+              "description": "Advanced persistent threat research and reports",
+              "platforms": ["web"],
+              "tags": ["mandiant", "fireeye", "apt", "threat-intel"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "CrowdStrike Intelligence",
+              "type": "freemium",
+              "url": "https://crowdstrike.com/resources/",
+              "description": "Adversary intelligence and threat research",
+              "platforms": ["web"],
+              "tags": ["crowdstrike", "adversary", "intelligence", "research"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Kaspersky Security Bulletin",
+              "type": "free",
+              "url": "https://securelist.com/",
+              "description": "Annual security reports and threat analysis",
+              "platforms": ["web"],
+              "tags": ["kaspersky", "securelist", "threats", "analysis"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Symantec Threat Reports",
+              "type": "free",
+              "url": "https://symantec.com/security-center/threat-report",
+              "description": "Internet Security Threat Reports (ISTR)",
+              "platforms": ["web"],
+              "tags": ["symantec", "istr", "internet-security", "threats"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Trend Micro Research",
+              "type": "free",
+              "url": "https://trendmicro.com/vinfo/us/security/research-and-analysis",
+              "description": "Security research and threat analysis",
+              "platforms": ["web"],
+              "tags": ["trend-micro", "research", "threat-analysis", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Verizon Data Breach Investigations Report",
+              "type": "free",
+              "url": "https://verizon.com/business/resources/reports/dbir/",
+              "description": "Annual data breach analysis and statistics",
+              "platforms": ["web"],
+              "tags": ["verizon", "dbir", "data-breach", "statistics"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "IBM X-Force Threat Intelligence",
+              "type": "free",
+              "url": "https://exchange.xforce.ibmcloud.com/",
+              "description": "IBM security threat intelligence platform",
+              "platforms": ["web"],
+              "tags": ["ibm", "x-force", "threat-intelligence", "platform"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Ponemon Cost of Data Breach",
+              "type": "free",
+              "url": "https://ibm.com/security/digital-assets/cost-data-breach-report/",
+              "description": "Annual study on data breach costs and impact",
+              "platforms": ["web"],
+              "tags": ["ponemon", "cost", "data-breach", "impact"],
+              "difficulty": "beginner"
+            }
+          ]
+        },
+        {
+          "id": "threat-feeds",
+          "title": "Threat Intelligence Feeds",
+          "description": "Real-time and periodic threat intelligence data feeds",
+          "items": [
+            {
+              "name": "AlienVault OTX",
+              "type": "free",
+              "url": "https://otx.alienvault.com/",
+              "description": "Open Threat Exchange community intelligence",
+              "platforms": ["web"],
+              "tags": ["alienvault", "otx", "community", "open"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Emerging Threats",
+              "type": "freemium",
+              "url": "https://emergingthreats.net/",
+              "description": "Real-time threat intelligence rules and feeds",
+              "platforms": ["web"],
+              "tags": ["emerging-threats", "rules", "feeds", "real-time"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "abuse.ch Threat Feeds",
+              "type": "free",
+              "url": "https://abuse.ch/",
+              "description": "Malware and botnet tracking feeds",
+              "platforms": ["web"],
+              "tags": ["abuse-ch", "malware", "botnet", "tracking"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "MalwareBazaar",
+              "type": "free",
+              "url": "https://bazaar.abuse.ch/",
+              "description": "Malware sample sharing platform",
+              "platforms": ["web"],
+              "tags": ["malware", "samples", "sharing", "abuse-ch"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Recorded Future",
+              "type": "paid",
+              "url": "https://recordedfuture.com/",
+              "description": "Real-time threat intelligence platform",
+              "platforms": ["web"],
+              "tags": ["recorded-future", "real-time", "intelligence", "commercial"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "ThreatConnect",
+              "type": "paid",
+              "url": "https://threatconnect.com/",
+              "description": "Threat intelligence aggregation platform",
+              "platforms": ["web"],
+              "tags": ["threatconnect", "aggregation", "platform", "commercial"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Anomali ThreatStream",
+              "type": "paid",
+              "url": "https://anomali.com/",
+              "description": "Threat intelligence management platform",
+              "platforms": ["web"],
+              "tags": ["anomali", "threatstream", "management", "commercial"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Digital Shadows SearchLight",
+              "type": "paid",
+              "url": "https://digitalshadows.com/",
+              "description": "Digital risk and threat intelligence platform",
+              "platforms": ["web"],
+              "tags": ["digital-shadows", "risk", "intelligence", "commercial"],
+              "difficulty": "advanced"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

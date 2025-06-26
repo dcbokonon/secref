@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "section": "7.2",
+    "title": "Tool Documentation",
+    "description": "Official documentation and community resources for cybersecurity tools",
+    "lastUpdated": "2025-06-25",
+    "totalItems": 20
+  },
+  "categories": [
+    {
+      "id": "official-documentation",
+      "title": "Official Tool Documentation",
+      "description": "Official documentation from tool vendors and maintainers",
+      "subcategories": [
+        {
+          "id": "major-tools",
+          "title": "Major Security Tools Documentation",
+          "description": "Documentation for widely-used security testing and analysis tools",
+          "items": [
+            {
+              "name": "Metasploit Documentation",
+              "type": "free",
+              "url": "https://docs.rapid7.com/metasploit/",
+              "description": "Official Metasploit Framework documentation",
+              "platforms": ["web"],
+              "tags": ["metasploit", "documentation", "exploitation", "official"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Rapid7 Community",
+              "type": "free",
+              "url": "https://community.rapid7.com/",
+              "description": "Community support and discussions for Rapid7 tools",
+              "platforms": ["web"],
+              "tags": ["rapid7", "community", "support", "discussions"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Metasploit Unleashed",
+              "type": "free",
+              "url": "https://metasploit.help.rapid7.com/docs/metasploit-unleashed",
+              "description": "Free ethical hacking course using Metasploit",
+              "platforms": ["web"],
+              "tags": ["metasploit", "course", "ethical-hacking", "training"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Nmap Reference Guide",
+              "type": "free",
+              "url": "https://nmap.org/book/",
+              "description": "Comprehensive Nmap usage guide and reference",
+              "platforms": ["web"],
+              "tags": ["nmap", "reference", "scanning", "networking"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Nmap NSE Documentation",
+              "type": "free",
+              "url": "https://nmap.org/nsedoc/",
+              "description": "Nmap Scripting Engine script reference",
+              "platforms": ["web"],
+              "tags": ["nmap", "nse", "scripting", "automation"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Nmap Network Scanning Book",
+              "type": "free",
+              "url": "https://nmap.org/book/",
+              "description": "Official Nmap book by Gordon Fyodor Lyon",
+              "platforms": ["web"],
+              "tags": ["nmap", "book", "comprehensive", "official"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Burp Suite Documentation",
+              "type": "free",
+              "url": "https://portswigger.net/burp/documentation",
+              "description": "PortSwigger's official Burp Suite documentation",
+              "platforms": ["web"],
+              "tags": ["burp", "web-security", "proxy", "testing"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Burp Extension Development",
+              "type": "free",
+              "url": "https://portswigger.net/burp/extender",
+              "description": "Guide for developing Burp Suite extensions",
+              "platforms": ["web"],
+              "tags": ["burp", "extensions", "development", "api"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Burp Collaborator Documentation",
+              "type": "free",
+              "url": "https://portswigger.net/burp/documentation/collaborator",
+              "description": "Documentation for Burp Collaborator service",
+              "platforms": ["web"],
+              "tags": ["burp", "collaborator", "oob", "testing"],
+              "difficulty": "advanced"
+            }
+          ]
+        },
+        {
+          "id": "community-docs",
+          "title": "Community Documentation",
+          "description": "Community-maintained documentation and resources",
+          "items": [
+            {
+              "name": "Tool-Specific Wikis",
+              "type": "free",
+              "description": "Community-maintained wikis for security tools",
+              "platforms": ["web"],
+              "tags": ["wiki", "community", "collaborative", "documentation"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "GitHub Documentation",
+              "type": "free",
+              "url": "https://github.com/",
+              "description": "Project documentation in GitHub repositories",
+              "platforms": ["web"],
+              "tags": ["github", "repositories", "readme", "documentation"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Community Forums",
+              "type": "free",
+              "description": "User forums and discussion boards for tools",
+              "platforms": ["web"],
+              "tags": ["forums", "community", "support", "discussions"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Official YouTube Channels",
+              "type": "free",
+              "description": "Official video documentation and tutorials",
+              "platforms": ["web"],
+              "tags": ["youtube", "videos", "tutorials", "official"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Conference Talks",
+              "type": "free",
+              "description": "Tool presentations at security conferences",
+              "platforms": ["web"],
+              "tags": ["conferences", "presentations", "talks", "demos"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Tutorial Series",
+              "type": "free",
+              "description": "Step-by-step tutorial series for tools",
+              "platforms": ["web"],
+              "tags": ["tutorials", "series", "step-by-step", "learning"],
+              "difficulty": "beginner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cheat-sheets",
+      "title": "Tool Cheat Sheets",
+      "description": "Quick reference guides and command references for security tools",
+      "subcategories": [
+        {
+          "id": "quick-references",
+          "title": "Command Line Quick References",
+          "description": "Cheat sheets for command-line tools and environments",
+          "items": [
+            {
+              "name": "Linux Commands Cheat Sheet",
+              "type": "free",
+              "description": "Essential Linux commands for security professionals",
+              "platforms": ["linux"],
+              "tags": ["linux", "commands", "cli", "reference"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Windows Commands Cheat Sheet",
+              "type": "free",
+              "description": "Windows command line reference for security",
+              "platforms": ["windows"],
+              "tags": ["windows", "cmd", "powershell", "reference"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "PowerShell Security Cheat Sheet",
+              "type": "free",
+              "description": "PowerShell commands for security tasks",
+              "platforms": ["windows"],
+              "tags": ["powershell", "security", "windows", "automation"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Bash Scripting Reference",
+              "type": "free",
+              "description": "Bash scripting guide for automation",
+              "platforms": ["linux", "macos"],
+              "tags": ["bash", "scripting", "automation", "reference"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "tool-specific",
+          "title": "Tool-Specific Cheat Sheets",
+          "description": "Quick reference guides for specific security tools",
+          "items": [
+            {
+              "name": "Nmap Cheat Sheet",
+              "type": "free",
+              "description": "Common Nmap commands and options",
+              "platforms": ["linux", "windows", "macos"],
+              "tags": ["nmap", "scanning", "networking", "reference"],
+              "difficulty": "beginner"
+            },
+            {
+              "name": "Metasploit Commands",
+              "type": "free",
+              "description": "Essential Metasploit framework commands",
+              "platforms": ["linux", "windows"],
+              "tags": ["metasploit", "exploitation", "commands", "reference"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "SQLMap Usage Guide",
+              "type": "free",
+              "description": "SQLMap command syntax and options",
+              "platforms": ["linux", "windows", "macos"],
+              "tags": ["sqlmap", "sql-injection", "database", "reference"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Hydra Syntax Reference",
+              "type": "free",
+              "description": "Hydra password cracking tool syntax",
+              "platforms": ["linux"],
+              "tags": ["hydra", "password", "brute-force", "reference"],
+              "difficulty": "intermediate"
+            }
+          ]
+        },
+        {
+          "id": "methodology-sheets",
+          "title": "Methodology Cheat Sheets",
+          "description": "Step-by-step methodology guides for security assessments",
+          "items": [
+            {
+              "name": "Web App Penetration Testing Checklist",
+              "type": "free",
+              "description": "Systematic approach to web application testing",
+              "platforms": ["web"],
+              "tags": ["web-app", "pentest", "checklist", "methodology"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Network Penetration Testing Guide",
+              "type": "free",
+              "description": "Network assessment methodology and checklist",
+              "platforms": ["network"],
+              "tags": ["network", "pentest", "methodology", "assessment"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Wireless Security Assessment",
+              "type": "free",
+              "description": "Wireless network security testing methodology",
+              "platforms": ["wireless"],
+              "tags": ["wireless", "wifi", "assessment", "security"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Incident Response Checklist",
+              "type": "free",
+              "description": "Step-by-step incident response procedures",
+              "platforms": ["procedures"],
+              "tags": ["incident-response", "checklist", "procedures", "ir"],
+              "difficulty": "intermediate"
+            },
+            {
+              "name": "Digital Evidence Collection Guide",
+              "type": "free",
+              "description": "Procedures for collecting digital evidence",
+              "platforms": ["procedures"],
+              "tags": ["evidence", "collection", "forensics", "procedures"],
+              "difficulty": "advanced"
+            },
+            {
+              "name": "Chain of Custody Procedures",
+              "type": "free",
+              "description": "Legal requirements for evidence handling",
+              "platforms": ["procedures"],
+              "tags": ["chain-of-custody", "legal", "evidence", "procedures"],
+              "difficulty": "intermediate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

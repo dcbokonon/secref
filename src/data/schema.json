@@ -1,0 +1,39 @@
+{
+  "description": "JSON Schema for cybersecurity resource data files",
+  "version": "1.0.0",
+  "standardSchema": {
+    "metadata": {
+      "section": "string - section identifier (e.g. '1.1', '2.3')",
+      "title": "string - human readable section title",
+      "description": "string - section description",
+      "lastUpdated": "string - ISO date (YYYY-MM-DD)",
+      "totalItems": "number - count of all items in this file"
+    },
+    "categories": [
+      {
+        "id": "string - unique category identifier",
+        "title": "string - category display name",
+        "description": "string - category description",
+        "subcategories": "array - nested subcategories (optional)",
+        "items": [
+          {
+            "name": "string - tool/resource name",
+            "type": "string - free|paid|freemium",
+            "url": "string - primary URL (optional)",
+            "description": "string - brief description",
+            "platforms": "array - [linux, windows, macos, web, mobile] (optional)",
+            "tags": "array - searchable keywords",
+            "difficulty": "string - beginner|intermediate|advanced|expert (optional)",
+            "alternatives": "array - related/alternative tools (optional)"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "All files should follow this consistent structure",
+    "Preserve hierarchical relationships from original markdown",
+    "Use consistent naming conventions",
+    "Include all relevant metadata for future enhancements"
+  ]
+}
