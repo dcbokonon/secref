@@ -13,18 +13,20 @@
       "description": "Foundational certifications for those starting their cybersecurity career",
       "subcategories": [
         {
-          "id": "comptia",
-          "title": "CompTIA",
-          "description": "Industry-standard entry-level certifications",
+          "id": "vendor-neutral",
+          "title": "Vendor Neutral",
+          "description": "Industry-standard vendor-neutral certifications",
           "items": [
             {
-              "name": "Security+",
+              "name": "CompTIA Security+",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.comptia.org/certifications/security",
               "description": "Foundational cybersecurity certification covering core security concepts",
               "platforms": ["all"],
               "tags": ["entry-level", "vendor-neutral", "foundational", "security-fundamentals"],
               "difficulty": "beginner",
+              "pricingNote": "Exam fee ~$392",
               "studyResources": [
                 {
                   "name": "Professor Messer",
@@ -56,56 +58,265 @@
               ]
             },
             {
-              "name": "Network+",
+              "name": "CompTIA Network+",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.comptia.org/certifications/network",
               "description": "Networking fundamentals essential for cybersecurity professionals",
               "platforms": ["all"],
               "tags": ["entry-level", "networking", "foundational"],
-              "difficulty": "beginner"
+              "difficulty": "beginner",
+              "pricingNote": "Exam fee ~$338"
             },
             {
-              "name": "CySA+",
+              "name": "CompTIA CySA+",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.comptia.org/certifications/cybersecurity-analyst",
               "description": "Cybersecurity analyst certification focusing on threat detection and analysis",
               "platforms": ["all"],
               "tags": ["intermediate", "threat-analysis", "soc-analyst"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee ~$392"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vendor-specific",
+      "title": "Vendor-Specific Certifications",
+      "description": "Certifications from specific security vendors and organizations",
+      "subcategories": [
+        {
+          "id": "isc2",
+          "title": "(ISC)² Certifications",
+          "description": "Certifications from the International Information System Security Certification Consortium",
+          "items": [
+            {
+              "name": "CC (Certified in Cybersecurity)",
+              "notation": "(F)†",
+              "type": "freemium",
+              "url": "https://www.isc2.org/certifications/cc",
+              "description": "Entry-level certification with free exam for qualifying candidates",
+              "platforms": ["all"],
+              "tags": ["entry-level", "free-exam-option"],
+              "difficulty": "beginner",
+              "pricingNote": "Free for qualifying candidates, otherwise $50 AMF"
+            },
+            {
+              "name": "SSCP (Systems Security Certified Practitioner)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isc2.org/certifications/sscp",
+              "description": "IT security certification for hands-on practitioners",
+              "platforms": ["all"],
+              "tags": ["intermediate", "hands-on", "practitioner"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee $249, $50 AMF"
+            },
+            {
+              "name": "CISSP (Certified Information Systems Security Professional)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isc2.org/certifications/cissp",
+              "description": "Premier cybersecurity management certification",
+              "platforms": ["all"],
+              "tags": ["management", "ciso", "leadership", "gold-standard"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $749, $125 AMF",
+              "domains": [
+                "Security and Risk Management",
+                "Asset Security",
+                "Security Architecture",
+                "Communications and Network Security",
+                "Identity and Access Management",
+                "Security Assessment and Testing",
+                "Security Operations",
+                "Software Development Security"
+              ]
+            },
+            {
+              "name": "CCSP (Cloud Security Professional)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isc2.org/certifications/ccsp",
+              "description": "Cloud security professional certification",
+              "platforms": ["cloud"],
+              "tags": ["cloud-security", "management", "architecture"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $599, $100 AMF"
             }
           ]
         },
         {
-          "id": "vendor-neutral-entry",
-          "title": "Vendor Neutral Entry",
-          "description": "Entry-level certifications from major cybersecurity organizations",
+          "id": "sans-giac",
+          "title": "SANS/GIAC Certifications",
+          "description": "GIAC certifications from SANS Institute",
           "items": [
             {
-              "name": "(ISC)² CC (Certified in Cybersecurity)",
-              "type": "paid",
-              "url": "https://www.isc2.org/certifications/cc",
-              "description": "Free entry-level certification from (ISC)²",
-              "platforms": ["all"],
-              "tags": ["entry-level", "vendor-neutral", "free-exam"],
-              "difficulty": "beginner"
-            },
-            {
               "name": "GIAC GSEC",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.giac.org/certifications/security-essentials-gsec/",
               "description": "SANS foundational security certification",
               "platforms": ["all"],
               "tags": ["foundational", "hands-on", "expensive"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "pricingNote": "Exam only ~$2,499, with training ~$8,500+"
             },
             {
-              "name": "EC-Council CND",
+              "name": "GIAC GCIH (Incident Handler)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.giac.org/certifications/certified-incident-handler-gcih/",
+              "description": "Incident handling and response certification",
+              "platforms": ["all"],
+              "tags": ["incident-response", "blue-team", "hands-on"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam only ~$2,499, with training ~$8,500+"
+            },
+            {
+              "name": "GIAC GPEN (Penetration Tester)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.giac.org/certifications/penetration-tester-gpen/",
+              "description": "SANS penetration testing certification",
+              "platforms": ["all"],
+              "tags": ["penetration-testing", "methodology", "expensive"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam only ~$2,499, with training ~$8,500+"
+            },
+            {
+              "name": "GIAC GWAPT (Web Application Penetration Tester)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.giac.org/certifications/web-application-penetration-tester-gwapt/",
+              "description": "SANS web application security certification",
+              "platforms": ["web"],
+              "tags": ["web-security", "application-security"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam only ~$2,499, with training ~$8,500+"
+            }
+          ]
+        },
+        {
+          "id": "ec-council",
+          "title": "EC-Council Certifications",
+          "description": "Certifications from EC-Council",
+          "items": [
+            {
+              "name": "CEH (Certified Ethical Hacker)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
+              "description": "Popular but theory-heavy ethical hacking certification",
+              "platforms": ["all"],
+              "tags": ["ethical-hacking", "theory", "multiple-choice"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee $1,199"
+            },
+            {
+              "name": "CND (Computer Network Defender)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.eccouncil.org/programs/computer-network-defense-cnd/",
               "description": "Computer Network Defense certification",
               "platforms": ["all"],
               "tags": ["defense", "network-security"],
-              "difficulty": "beginner"
+              "difficulty": "beginner",
+              "pricingNote": "Exam fee $550"
+            },
+            {
+              "name": "CPENT (Certified Penetration Tester)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.eccouncil.org/programs/certified-penetration-testing-professional-cpent/",
+              "description": "Advanced penetration testing certification",
+              "platforms": ["all"],
+              "tags": ["penetration-testing", "advanced"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $1,999"
+            }
+          ]
+        },
+        {
+          "id": "isaca",
+          "title": "ISACA Certifications",
+          "description": "Governance and management certifications from ISACA",
+          "items": [
+            {
+              "name": "CISA (Certified Information Systems Auditor)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isaca.org/credentialing/cisa",
+              "description": "Information systems auditing certification",
+              "platforms": ["all"],
+              "tags": ["audit", "governance", "compliance"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $760 members, $850 non-members"
+            },
+            {
+              "name": "CISM (Certified Information Security Manager)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isaca.org/credentialing/cism",
+              "description": "Information security management certification",
+              "platforms": ["all"],
+              "tags": ["management", "governance", "strategy"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $760 members, $850 non-members"
+            },
+            {
+              "name": "CRISC (Risk and Information Systems Control)",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://www.isaca.org/credentialing/crisc",
+              "description": "Risk management and information systems control",
+              "platforms": ["all"],
+              "tags": ["risk-management", "governance", "controls"],
+              "difficulty": "advanced",
+              "pricingNote": "Exam fee $760 members, $850 non-members"
+            }
+          ]
+        },
+        {
+          "id": "cloud-vendors",
+          "title": "Cloud Vendor Security Certifications",
+          "description": "Security certifications from major cloud providers",
+          "items": [
+            {
+              "name": "AWS Certified Security - Specialty",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://aws.amazon.com/certification/certified-security-specialty/",
+              "description": "AWS cloud security specialty certification",
+              "platforms": ["cloud"],
+              "tags": ["aws", "cloud-security", "specialty"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee $300"
+            },
+            {
+              "name": "Azure Security Engineer Associate",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://learn.microsoft.com/en-us/certifications/azure-security-engineer/",
+              "description": "Microsoft Azure security certification",
+              "platforms": ["cloud"],
+              "tags": ["azure", "cloud-security", "microsoft"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee $165"
+            },
+            {
+              "name": "Google Cloud Professional Cloud Security Engineer",
+              "notation": "($)",
+              "type": "paid",
+              "url": "https://cloud.google.com/certification/cloud-security-engineer",
+              "description": "Google Cloud security engineer certification",
+              "platforms": ["cloud"],
+              "tags": ["gcp", "cloud-security", "google"],
+              "difficulty": "intermediate",
+              "pricingNote": "Exam fee $200"
             }
           ]
         }
@@ -123,12 +334,14 @@
           "items": [
             {
               "name": "OSCP (Offensive Security Certified Professional)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.offensive-security.com/pwk-oscp/",
               "description": "Gold standard practical penetration testing certification",
               "platforms": ["linux", "windows"],
               "tags": ["penetration-testing", "practical", "hands-on", "gold-standard"],
               "difficulty": "advanced",
+              "pricingNote": "Starting at $1,499",
               "studyResources": [
                 {
                   "name": "PWK Course",
@@ -146,30 +359,36 @@
             },
             {
               "name": "OSEP (Experienced Penetration Tester)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.offensive-security.com/pen300-osep/",
               "description": "Advanced evasion techniques and advanced penetration testing",
               "platforms": ["linux", "windows"],
               "tags": ["advanced", "evasion", "practical"],
-              "difficulty": "expert"
+              "difficulty": "expert",
+              "pricingNote": "Starting at $1,649"
             },
             {
               "name": "OSWE (Web Expert)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.offensive-security.com/awae-oswe/",
               "description": "Web application security expert certification",
               "platforms": ["web"],
               "tags": ["web-security", "source-code-review", "practical"],
-              "difficulty": "expert"
+              "difficulty": "expert",
+              "pricingNote": "Starting at $1,649"
             },
             {
               "name": "OSWP (Wireless Professional)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://www.offensive-security.com/wifu-oswp/",
               "description": "Wireless security professional certification",
               "platforms": ["linux"],
               "tags": ["wireless", "wifi", "practical"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "pricingNote": "Starting at $799"
             }
           ]
         },
@@ -180,262 +399,25 @@
           "items": [
             {
               "name": "eJPT (Junior Penetration Tester)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://elearnsecurity.com/product/ejpt-certification/",
               "description": "Entry-level practical penetration testing certification",
               "platforms": ["linux", "windows"],
               "tags": ["entry-level", "practical", "penetration-testing"],
-              "difficulty": "beginner"
+              "difficulty": "beginner",
+              "pricingNote": "Starting at $200"
             },
             {
               "name": "eCPPT (Professional Penetration Tester)",
+              "notation": "($)",
               "type": "paid",
               "url": "https://elearnsecurity.com/product/ecpptv2-certification/",
               "description": "Professional-level penetration testing certification",
               "platforms": ["linux", "windows"],
               "tags": ["intermediate", "practical", "penetration-testing"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "eCPTX (Extreme Penetration Tester)",
-              "type": "paid",
-              "url": "https://elearnsecurity.com/product/ecptxv2-certification/",
-              "description": "Advanced penetration testing with complex scenarios",
-              "platforms": ["linux", "windows"],
-              "tags": ["advanced", "practical", "complex-scenarios"],
-              "difficulty": "expert"
-            }
-          ]
-        },
-        {
-          "id": "knowledge-based",
-          "title": "Knowledge-Based",
-          "description": "Theory and knowledge-based offensive security certifications",
-          "items": [
-            {
-              "name": "GPEN (Penetration Tester)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/penetration-tester-gpen/",
-              "description": "SANS penetration testing certification",
-              "platforms": ["all"],
-              "tags": ["penetration-testing", "methodology", "expensive"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GWAPT (Web Application Penetration Tester)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/web-application-penetration-tester-gwapt/",
-              "description": "SANS web application security certification",
-              "platforms": ["web"],
-              "tags": ["web-security", "application-security"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GMOB (Mobile Device Security Analyst)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/mobile-device-security-analyst-gmob/",
-              "description": "Mobile device security certification",
-              "platforms": ["mobile"],
-              "tags": ["mobile-security", "ios", "android"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GXPN (Exploit Researcher)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/exploit-researcher-advanced-penetration-tester-gxpn/",
-              "description": "Advanced exploit development and research",
-              "platforms": ["all"],
-              "tags": ["exploit-development", "advanced", "research"],
-              "difficulty": "expert"
-            },
-            {
-              "name": "CEH (Certified Ethical Hacker)",
-              "type": "paid",
-              "url": "https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/",
-              "description": "Popular but theory-heavy ethical hacking certification",
-              "platforms": ["all"],
-              "tags": ["ethical-hacking", "theory", "multiple-choice"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "CPENT (Certified Penetration Tester)",
-              "type": "paid",
-              "url": "https://www.eccouncil.org/programs/certified-penetration-testing-professional-cpent/",
-              "description": "Advanced penetration testing certification",
-              "platforms": ["all"],
-              "tags": ["penetration-testing", "advanced"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "LPT (Licensed Penetration Tester)",
-              "type": "paid",
-              "url": "https://www.eccouncil.org/programs/licensed-penetration-tester-lpt-master/",
-              "description": "Master-level penetration testing certification",
-              "platforms": ["all"],
-              "tags": ["penetration-testing", "master-level"],
-              "difficulty": "advanced"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "defensive-security",
-      "title": "Defensive Security Certifications",
-      "description": "Certifications focused on blue team activities, incident response, and defensive operations",
-      "subcategories": [
-        {
-          "id": "blue-team",
-          "title": "Blue Team Certifications",
-          "description": "Certifications for defensive security professionals",
-          "items": [
-            {
-              "name": "GCIH (Incident Handler)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/certified-incident-handler-gcih/",
-              "description": "SANS incident handling and response certification",
-              "platforms": ["all"],
-              "tags": ["incident-response", "blue-team", "hands-on"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GNFA (Network Forensic Analyst)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/network-forensic-analyst-gnfa/",
-              "description": "Network forensics and analysis certification",
-              "platforms": ["all"],
-              "tags": ["network-forensics", "analysis", "wireshark"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GCFA (Forensic Analyst)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/certified-forensic-analyst-gcfa/",
-              "description": "Digital forensics and incident response certification",
-              "platforms": ["all"],
-              "tags": ["digital-forensics", "incident-response", "analysis"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "GMON (Continuous Monitoring)",
-              "type": "paid",
-              "url": "https://www.giac.org/certifications/continuous-monitoring-gmon/",
-              "description": "Continuous security monitoring certification",
-              "platforms": ["all"],
-              "tags": ["monitoring", "siem", "continuous-monitoring"],
-              "difficulty": "intermediate"
-            }
-          ]
-        },
-        {
-          "id": "vendor-specific",
-          "title": "Vendor Specific",
-          "description": "Certifications from specific security vendors",
-          "items": [
-            {
-              "name": "Splunk Certifications",
-              "type": "paid",
-              "url": "https://www.splunk.com/en_us/training.html",
-              "description": "Various Splunk certifications for SIEM and log analysis",
-              "platforms": ["all"],
-              "tags": ["splunk", "siem", "log-analysis"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Elastic Certifications",
-              "type": "paid",
-              "url": "https://www.elastic.co/training/certification",
-              "description": "Elasticsearch and Elastic Stack certifications",
-              "platforms": ["all"],
-              "tags": ["elastic", "elasticsearch", "elk-stack"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "CrowdStrike Certifications",
-              "type": "paid",
-              "url": "https://www.crowdstrike.com/university/",
-              "description": "CrowdStrike Falcon platform certifications",
-              "platforms": ["all"],
-              "tags": ["crowdstrike", "edr", "endpoint-security"],
-              "difficulty": "intermediate"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "management-governance",
-      "title": "Management & Governance",
-      "description": "Leadership and governance certifications for cybersecurity management",
-      "subcategories": [
-        {
-          "id": "management-certifications",
-          "title": "Management Certifications",
-          "description": "Certifications for cybersecurity leaders and managers",
-          "items": [
-            {
-              "name": "CISSP (Certified Information Systems Security Professional)",
-              "type": "paid",
-              "url": "https://www.isc2.org/certifications/cissp",
-              "description": "Premier cybersecurity management certification",
-              "platforms": ["all"],
-              "tags": ["management", "ciso", "leadership", "gold-standard"],
-              "difficulty": "advanced",
-              "domains": [
-                "Security and Risk Management",
-                "Asset Security",
-                "Security Architecture",
-                "Communications and Network Security",
-                "Identity and Access Management",
-                "Security Assessment and Testing",
-                "Security Operations",
-                "Software Development Security"
-              ]
-            },
-            {
-              "name": "CCSP (Cloud Security Professional)",
-              "type": "paid",
-              "url": "https://www.isc2.org/certifications/ccsp",
-              "description": "Cloud security professional certification",
-              "platforms": ["cloud"],
-              "tags": ["cloud-security", "management", "architecture"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "CISM (Certified Information Security Manager)",
-              "type": "paid",
-              "url": "https://www.isaca.org/credentialing/cism",
-              "description": "Information security management certification",
-              "platforms": ["all"],
-              "tags": ["management", "governance", "strategy"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "CISA (Certified Information Systems Auditor)",
-              "type": "paid",
-              "url": "https://www.isaca.org/credentialing/cisa",
-              "description": "Information systems auditing certification",
-              "platforms": ["all"],
-              "tags": ["audit", "governance", "compliance"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "CRISC (Risk and Information Systems Control)",
-              "type": "paid",
-              "url": "https://www.isaca.org/credentialing/crisc",
-              "description": "Risk management and information systems control",
-              "platforms": ["all"],
-              "tags": ["risk-management", "governance", "controls"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "CGEIT (Governance of Enterprise IT)",
-              "type": "paid",
-              "url": "https://www.isaca.org/credentialing/cgeit",
-              "description": "IT governance certification for senior executives",
-              "platforms": ["all"],
-              "tags": ["governance", "executive", "it-management"],
-              "difficulty": "expert"
+              "difficulty": "intermediate",
+              "pricingNote": "Starting at $400"
             }
           ]
         }

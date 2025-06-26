@@ -8,6 +8,8 @@ interface TreeNode {
   items?: any[];
   file?: string;
   category?: string;
+  notation?: string;
+  pricingNote?: string;
 }
 
 interface TreeItemProps {
@@ -15,6 +17,29 @@ interface TreeItemProps {
   level: number;
   basePath: string;
 }
+
+// Helper function to get tooltip text for notations
+const getTooltipText = (notation: string): string => {
+  const tooltips: { [key: string]: string } = {
+    '(F)': 'Freemium - Basic features free, advanced features require payment',
+    '(F)†': 'Freemium with registration - Must create account for free tier',
+    '($)': 'Paid only - No free version available',
+    '(E)': 'Enterprise pricing - Contact sales for custom quote',
+    '†': 'Registration required',
+    '[BETA]': 'Beta version - May have bugs or incomplete features',
+    '[EOL]': 'End of Life - No longer maintained'
+  };
+  return tooltips[notation] || notation;
+};
+
+// Helper function to get notation class
+const getNotationClass = (notation: string): string => {
+  if (notation.includes('(F)')) return 'notation-free';
+  if (notation.includes('($)')) return 'notation-paid';
+  if (notation.includes('(E)')) return 'notation-enterprise';
+  if (notation === '†') return 'notation-registration';
+  return '';
+};
 
 const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -73,7 +98,9 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                       children: subsub.items?.map((item: any) => ({
                         name: item.name,
                         url: item.url || item.link,
-                        count: 0
+                        count: 0,
+                        notation: item.notation,
+                        pricingNote: item.pricingNote
                       })) || []
                     });
                   });
@@ -85,7 +112,9 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                     children: sub.items.map((item: any) => ({
                       name: item.name,
                       url: item.url || item.link,
-                      count: 0
+                      count: 0,
+                      notation: item.notation,
+                      pricingNote: item.pricingNote
                     }))
                   });
                 }
@@ -98,7 +127,9 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
                 children: category.items.map((item: any) => ({
                   name: item.name,
                   url: item.url || item.link,
-                  count: 0
+                  count: 0,
+                  notation: item.notation,
+                  pricingNote: item.pricingNote
                 }))
               });
             }
@@ -109,7 +140,9 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
             items.push({
               name: item.name,
               url: item.url || item.link,
-              count: 0
+              count: 0,
+              notation: item.notation,
+              pricingNote: item.pricingNote
             });
           });
         }
@@ -135,6 +168,15 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
           {hasChildren ? (isExpanded ? '▼' : '▶') : '→'}
         </span>
         <span className="tree-name">{node.name}</span>
+        {node.notation && (
+          <span 
+            className={`notation ${getNotationClass(node.notation)}`}
+            data-tooltip={`${getTooltipText(node.notation)}${node.pricingNote ? ` - ${node.pricingNote}` : ''}`}
+            aria-label={getTooltipText(node.notation)}
+          >
+            {node.notation}
+          </span>
+        )}
         {node.count !== undefined && node.count > 0 && (
           <span className="tree-count">({node.count} resources)</span>
         )}

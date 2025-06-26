@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { TreeNavigation } from '../components/TreeNavigation.tsx';
 import '../styles/tree-navigation.css';
+import '../styles/notation.css';
 
 // Import all our organized JSON data
 const toolsFiles = [
@@ -222,6 +223,26 @@ const allData = {
 </div>
 
 <TreeNavigation data={allData} client:load />
+
+<div class="notation-key">
+  <span class="notation-key-title">Resource Key:</span>
+  <span class="notation-key-item">
+    <span class="notation notation-free" data-tooltip="Freemium - Basic features free, advanced features require payment">(F)</span>
+    Freemium
+  </span>
+  <span class="notation-key-item">
+    <span class="notation notation-paid" data-tooltip="Paid only - No free version available">($)</span>
+    Paid
+  </span>
+  <span class="notation-key-item">
+    <span class="notation notation-enterprise" data-tooltip="Enterprise pricing - Contact sales for custom quote">(E)</span>
+    Enterprise
+  </span>
+  <span class="notation-key-item">
+    <span class="notation notation-registration" data-tooltip="Registration required">†</span>
+    Registration required
+  </span>
+</div>
 
 <div class="footer-stats">
   {totalTools + totalLearning + totalCommunity + totalCareer + totalPractice + totalSpecialized + totalReferences + totalNews + totalCompliance + totalVulnIntel + totalDistros} resources | Updated: {new Date().toLocaleDateString()}

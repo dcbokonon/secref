@@ -1,0 +1,127 @@
+/* Resource notation system styles */
+
+.notation {
+  position: relative;
+  cursor: help;
+  color: #888;
+  font-size: 0.9em;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+/* Tooltip styling */
+.notation[data-tooltip]:hover::after,
+.notation[data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: #1a1a1a;
+  color: #0f0;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  animation: tooltipFade 0.2s ease-in;
+}
+
+/* Tooltip arrow */
+.notation[data-tooltip]:hover::before,
+.notation[data-tooltip]:focus::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  border: 5px solid transparent;
+  border-top-color: #333;
+  z-index: 1001;
+  animation: tooltipFade 0.2s ease-in;
+}
+
+/* Fade in animation */
+@keyframes tooltipFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+/* Different notation colors */
+.notation-free {
+  color: #50fa7b; /* Green for freemium */
+}
+
+.notation-paid {
+  color: #ffb86c; /* Orange for paid */
+}
+
+.notation-enterprise {
+  color: #ff79c6; /* Pink for enterprise */
+}
+
+.notation-registration {
+  color: #f1fa8c; /* Yellow for registration marker */
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+/* Notation key in footer */
+.notation-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+}
+
+.notation-key-title {
+  color: #0f0;
+  font-weight: bold;
+}
+
+.notation-key-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.notation-key .notation {
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+/* Accessibility improvements */
+.notation:focus {
+  outline: 1px dotted #0f0;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .notation[data-tooltip]:hover::after,
+  .notation[data-tooltip]:focus::after {
+    font-size: 11px;
+    white-space: normal;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .notation-key {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+  }
+}

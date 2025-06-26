@@ -53,9 +53,9 @@
                   "name": "Prowler",
                   "type": "free",
                   "url": "https://github.com/prowler-cloud/prowler",
-                  "description": "AWS security best practices assessment tool",
+                  "description": "Multi-cloud security assessment tool supporting AWS, Azure, GCP, and Kubernetes",
                   "platforms": ["linux", "macos", "windows"],
-                  "tags": ["aws", "security", "assessment", "compliance"],
+                  "tags": ["multi-cloud", "aws", "azure", "gcp", "security", "assessment", "compliance"],
                   "difficulty": "intermediate"
                 }
               ]
