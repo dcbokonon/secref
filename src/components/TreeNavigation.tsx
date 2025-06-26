@@ -21,7 +21,8 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
   const [children, setChildren] = useState<TreeNode[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const hasChildren = node.children || node.file || (node.items && node.items.length > 0);
+  // Check if node has children or can load children
+  const hasChildren = !!(node.children?.length || node.file || node.items?.length);
   const indent = level * 20;
 
   const handleClick = async (e: React.MouseEvent) => {
@@ -42,11 +43,15 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
     }
 
     // Load children if needed
-    if (children.length === 0 && node.file) {
+    if (children.length === 0 && node.file && basePath) {
       setIsLoading(true);
       try {
-        const response = await fetch(`/data/${basePath}/${node.file}.json`);
-        console.log('Loading:', `/data/${basePath}/${node.file}.json`);
+        const url = `/data/${basePath}/${node.file}.json`;
+        console.log('Loading:', url);
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Failed to load ${url}: ${response.status}`);
+        }
         const data = await response.json();
         
         // Extract items from the JSON structure
@@ -130,8 +135,8 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
           {hasChildren ? (isExpanded ? '▼' : '▶') : '→'}
         </span>
         <span className="tree-name">{node.name}</span>
-        {node.count !== undefined && (
-          <span className="tree-count">({node.count})</span>
+        {node.count !== undefined && node.count > 0 && (
+          <span className="tree-count">({node.count} resources)</span>
         )}
         {isLoading && <span className="loading">...</span>}
       </div>
@@ -143,7 +148,7 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
               key={index} 
               node={child} 
               level={level + 1}
-              basePath={basePath}
+              basePath={child.category || basePath}
             />
           ))}
           {node.children?.map((child, index) => (
@@ -151,7 +156,7 @@ const TreeItem: React.FC<TreeItemProps> = ({ node, level, basePath }) => {
               key={index} 
               node={child} 
               level={level + 1}
-              basePath={basePath}
+              basePath={child.category || basePath}
             />
           ))}
         </div>
@@ -174,31 +179,31 @@ export const TreeNavigation: React.FC<TreeNavigationProps> = ({ data }) => {
         {
           name: 'Assessment & Testing',
           children: [
-            { name: 'Reconnaissance', file: 'reconnaissance', count: data.toolsByPhase.reconnaissance.totalItems },
-            { name: 'Vulnerability Scanners', file: 'vulnerability-assessment', count: data.toolsByPhase.vulnerability.totalItems },
-            { name: 'Web Application Testing', file: 'web-security', count: data.webSecurityData.totalItems },
-            { name: 'Network Testing', file: 'network-testing', count: data.networkTestingData.totalItems },
-            { name: 'Penetration Testing', file: 'exploitation', count: data.toolsByPhase.exploitation.totalItems },
-            { name: 'OSINT Tools', file: 'osint', count: data.osintData.totalItems },
-            { name: 'API Security Testing', file: 'api-security', count: 56 }
+            { name: 'Reconnaissance', file: 'reconnaissance', count: data.toolsByPhase.reconnaissance.totalItems, category: 'tools' },
+            { name: 'Vulnerability Scanners', file: 'vulnerability-assessment', count: data.toolsByPhase.vulnerability.totalItems, category: 'tools' },
+            { name: 'Web Application Testing', file: 'web-security', count: data.webSecurityData.totalItems, category: 'tools' },
+            { name: 'Network Testing', file: 'network-testing', count: data.networkTestingData.totalItems, category: 'tools' },
+            { name: 'Penetration Testing', file: 'exploitation', count: data.toolsByPhase.exploitation.totalItems, category: 'tools' },
+            { name: 'OSINT Tools', file: 'osint', count: data.osintData.totalItems, category: 'tools' },
+            { name: 'API Security Testing', file: 'api-security', count: 56, category: 'tools' }
           ]
         },
         {
           name: 'Monitoring & Detection',
           children: [
-            { name: 'SIEM Platforms', file: 'siem', count: data.siemData.totalItems },
-            { name: 'Network Monitoring', file: 'network-monitoring', count: data.networkMonitoringData.totalItems },
-            { name: 'Endpoint Detection', file: 'endpoint-detection', count: data.endpointData.totalItems },
-            { name: 'Threat Intelligence', file: 'threat-intelligence', count: data.threatIntelData.totalItems }
+            { name: 'SIEM Platforms', file: 'siem', count: data.siemData.totalItems, category: 'tools' },
+            { name: 'Network Monitoring', file: 'network-monitoring', count: data.networkMonitoringData.totalItems, category: 'tools' },
+            { name: 'Endpoint Detection', file: 'endpoint-detection', count: data.endpointData.totalItems, category: 'tools' },
+            { name: 'Threat Intelligence', file: 'threat-intelligence', count: data.threatIntelData.totalItems, category: 'tools' }
           ]
         },
         {
           name: 'Response & Analysis',
           children: [
-            { name: 'Incident Response', file: 'incident-response', count: data.incidentResponseData.totalItems },
-            { name: 'Digital Forensics', file: 'forensics-ir', count: data.toolsByPhase.forensics.totalItems },
-            { name: 'Malware Analysis', file: 'malware-analysis', count: data.malwareAnalysisData.totalItems },
-            { name: 'Log Analysis', file: 'log-analysis', count: data.logAnalysisData.totalItems }
+            { name: 'Incident Response', file: 'incident-response', count: data.incidentResponseData.totalItems, category: 'tools' },
+            { name: 'Digital Forensics', file: 'forensics-ir', count: data.toolsByPhase.forensics.totalItems, category: 'tools' },
+            { name: 'Malware Analysis', file: 'malware-analysis', count: data.malwareAnalysisData.totalItems, category: 'tools' },
+            { name: 'Log Analysis', file: 'log-analysis', count: data.logAnalysisData.totalItems, category: 'tools' }
           ]
         },
         {
@@ -206,7 +211,8 @@ export const TreeNavigation: React.FC<TreeNavigationProps> = ({ data }) => {
           children: data.specializedData.map((item: any) => ({
             name: item.title,
             file: item.file,
-            count: item.totalItems
+            count: item.totalItems,
+            category: 'specialized-domains'
           }))
         }
       ]
