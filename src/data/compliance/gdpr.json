@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "section": "9.3",
+    "title": "GDPR Compliance",
+    "description": "General Data Protection Regulation requirements and implementation resources",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 31
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "GDPR Requirements",
+      "description": "Core GDPR principles and requirements",
+      "items": [
+        {
+          "name": "Data Protection Principles",
+          "url": "https://gdpr.eu/data-protection-principles/",
+          "description": "Core GDPR data protection principles",
+          "type": "free",
+          "tags": ["privacy", "principles", "gdpr"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "DPIA Templates",
+          "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/data-protection-impact-assessments-dpias/",
+          "description": "Data Protection Impact Assessment templates",
+          "type": "free",
+          "tags": ["assessment", "privacy", "templates"],
+          "resourceType": "template"
+        },
+        {
+          "name": "Privacy Notices",
+          "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-to-be-informed/",
+          "description": "Privacy notice requirements and templates",
+          "type": "free",
+          "tags": ["privacy", "notices", "transparency"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Breach Response",
+          "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/personal-data-breaches/",
+          "description": "GDPR breach notification requirements",
+          "type": "free",
+          "tags": ["breach", "incident", "notification"],
+          "resourceType": "documentation"
+        }
+      ]
+    }
+  ]
+}

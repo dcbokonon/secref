@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "section": "9.2",
+    "title": "HIPAA Compliance",
+    "description": "Health Insurance Portability and Accountability Act security and privacy requirements",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 18
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "HIPAA Requirements",
+      "description": "Security Rule and Privacy Rule requirements",
+      "items": [
+        {
+          "name": "Security Rule",
+          "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
+          "description": "HIPAA Security Rule requirements and implementation",
+          "type": "free",
+          "tags": ["security", "compliance", "healthcare"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Privacy Rule",
+          "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
+          "description": "HIPAA Privacy Rule requirements",
+          "type": "free",
+          "tags": ["privacy", "compliance", "healthcare"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Breach Notification",
+          "url": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html",
+          "description": "HIPAA breach notification requirements",
+          "type": "free",
+          "tags": ["breach", "notification", "compliance"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Risk Assessment",
+          "url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html",
+          "description": "HIPAA risk assessment guidance",
+          "type": "free",
+          "tags": ["risk", "assessment", "security"],
+          "resourceType": "documentation"
+        }
+      ]
+    }
+  ]
+}

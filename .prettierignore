@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/
+
+# Build outputs
+dist/
+build/
+.astro/
+*.min.js
+*.min.css
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

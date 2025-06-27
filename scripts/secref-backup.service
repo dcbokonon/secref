@@ -1,0 +1,28 @@
+[Unit]
+Description=SecRef Database Backup
+After=network.target
+
+[Service]
+Type=oneshot
+User=secref
+Group=secref
+WorkingDirectory=/opt/secref
+ExecStart=/usr/bin/python3 /opt/secref/scripts/backup_database.py --backup-dir /var/backups/secref --keep 30
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/backups/secref /opt/secref/database
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictRealtime=true
+RestrictSUIDSGID=true

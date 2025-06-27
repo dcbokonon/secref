@@ -1,0 +1,26 @@
+# SecRef Robots File
+# https://www.robotstxt.org/
+
+# Allow all crawlers to index the main site
+User-agent: *
+Allow: /
+
+# Disallow admin area
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+
+# Disallow sensitive files
+User-agent: *
+Disallow: /*.json$
+Disallow: /*.db$
+Disallow: /.env
+Disallow: /database/
+Disallow: /scripts/
+Disallow: /logs/
+
+# Crawl delay to be respectful
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://secref.org/sitemap.xml

@@ -1,56 +1,118 @@
 {
   "metadata": {
-    "section": "4.1",
     "title": "Job Search",
     "description": "Comprehensive job search resources for cybersecurity professionals",
     "lastUpdated": "2025-06-25",
-    "totalItems": 13
+    "totalItems": 16
   },
   "categories": [
+    {
+      "id": "clearance-required",
+      "title": "Clearance Required Job Boards",
+      "description": "Job boards for positions requiring security clearances",
+      "items": [
+        {
+          "name": "ClearanceJobs",
+          "description": "Jobs requiring security clearances",
+          "url": "https://clearancejobs.com",
+          "type": "free",
+          "difficulty": "intermediate",
+          "tags": [
+            "clearance",
+            "defense",
+            "government",
+            "jobs"
+          ]
+        },
+        {
+          "name": "ClearedJobs.net",
+          "description": "Cleared professional job board",
+          "url": "https://clearedjobs.net",
+          "type": "free",
+          "difficulty": "intermediate",
+          "tags": [
+            "clearance",
+            "jobs",
+            "security"
+          ]
+        },
+        {
+          "name": "Intelligence Careers",
+          "description": "Intelligence community job board",
+          "type": "free",
+          "difficulty": "intermediate",
+          "tags": [
+            "government",
+            "intelligence",
+            "jobs"
+          ]
+        }
+      ]
+    },
     {
       "id": "general-tech-job-boards",
       "title": "General Tech Job Boards",
       "description": "Major platforms for technology and cybersecurity job searches",
       "items": [
         {
-          "name": "LinkedIn Jobs",
-          "type": "free",
-          "url": "https://www.linkedin.com/jobs/",
-          "description": "Professional networking platform with extensive job listings",
-          "tags": ["jobs", "networking", "professional"],
-          "difficulty": "beginner"
-        },
-        {
-          "name": "Indeed",
-          "type": "free",
-          "url": "https://indeed.com",
-          "description": "Large general job board with security positions",
-          "tags": ["jobs", "general", "popular"],
-          "difficulty": "beginner"
-        },
-        {
-          "name": "Glassdoor",
-          "type": "free",
-          "url": "https://www.glassdoor.com",
-          "description": "Job board with company reviews and salary information",
-          "tags": ["jobs", "reviews", "salary"],
-          "difficulty": "beginner"
-        },
-        {
           "name": "AngelList",
-          "type": "free",
-          "url": "https://angel.co/jobs",
           "description": "Startup-focused job platform",
-          "tags": ["jobs", "startups", "equity"],
-          "difficulty": "beginner"
+          "url": "https://angel.co/jobs",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "equity",
+            "jobs",
+            "startups"
+          ]
         },
         {
           "name": "Dice",
-          "type": "free",
-          "url": "https://dice.com",
           "description": "Technology-focused job board",
-          "tags": ["jobs", "technology", "tech"],
-          "difficulty": "beginner"
+          "url": "https://dice.com",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "jobs",
+            "tech",
+            "technology"
+          ]
+        },
+        {
+          "name": "Glassdoor",
+          "description": "Job board with company reviews and salary information",
+          "url": "https://www.glassdoor.com",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "jobs",
+            "reviews",
+            "salary"
+          ]
+        },
+        {
+          "name": "Indeed",
+          "description": "Large general job board with security positions",
+          "url": "https://indeed.com",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "general",
+            "jobs",
+            "popular"
+          ]
+        },
+        {
+          "name": "LinkedIn Jobs",
+          "description": "Professional networking platform with extensive job listings",
+          "url": "https://www.linkedin.com/jobs/",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "jobs",
+            "networking",
+            "professional"
+          ]
         }
       ]
     },
@@ -60,38 +122,55 @@
       "description": "Platforms focused on remote work opportunities",
       "items": [
         {
-          "name": "Remote.co",
-          "type": "free",
-          "url": "https://remote.co",
-          "description": "Remote job board with security positions",
-          "tags": ["jobs", "remote", "telecommute"],
-          "difficulty": "beginner"
+          "name": "FlexJobs",
+          "description": "Curated remote and flexible job listings",
+          "url": "https://www.flexjobs.com",
+          "type": "paid",
+          "difficulty": "beginner",
+          "notation": "($)",
+          "pricingNote": "Subscription from $14.95/month",
+          "tags": [
+            "curated",
+            "flexible",
+            "jobs",
+            "remote"
+          ]
         },
         {
-          "name": "We Work Remotely",
+          "name": "Remote.co",
+          "description": "Remote job board with security positions",
+          "url": "https://remote.co",
           "type": "free",
-          "url": "https://weworkremotely.com",
-          "description": "Large remote work job board",
-          "tags": ["jobs", "remote", "distributed"],
-          "difficulty": "beginner"
+          "difficulty": "beginner",
+          "tags": [
+            "jobs",
+            "remote",
+            "telecommute"
+          ]
         },
         {
           "name": "RemoteOK",
-          "type": "free",
-          "url": "https://remoteok.io",
           "description": "Global remote job board",
-          "tags": ["jobs", "remote", "global"],
-          "difficulty": "beginner"
+          "url": "https://remoteok.io",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "global",
+            "jobs",
+            "remote"
+          ]
         },
         {
-          "name": "FlexJobs",
-          "type": "paid",
-          "notation": "($)",
-          "pricingNote": "Subscription from $14.95/month",
-          "url": "https://www.flexjobs.com",
-          "description": "Curated remote and flexible job listings",
-          "tags": ["jobs", "remote", "flexible", "curated"],
-          "difficulty": "beginner"
+          "name": "We Work Remotely",
+          "description": "Large remote work job board",
+          "url": "https://weworkremotely.com",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "distributed",
+            "jobs",
+            "remote"
+          ]
         }
       ]
     },
@@ -101,65 +180,51 @@
       "description": "Job boards dedicated to cybersecurity positions",
       "items": [
         {
-          "name": "CyberSeek.org",
+          "name": "CyberJobCentral",
+          "description": "Cybersecurity-focused job aggregator",
           "type": "free",
-          "url": "https://cyberseek.org",
-          "description": "NICE-sponsored cybersecurity career resource",
-          "tags": ["jobs", "cybersecurity", "career-path"],
-          "difficulty": "beginner"
+          "difficulty": "beginner",
+          "tags": [
+            "aggregator",
+            "cybersecurity",
+            "jobs"
+          ]
         },
         {
           "name": "CyberSecJobs",
-          "type": "free",
-          "url": "https://cybersecjobs.com",
           "description": "Dedicated cybersecurity job board",
-          "tags": ["jobs", "cybersecurity", "specialized"],
-          "difficulty": "beginner"
+          "url": "https://cybersecjobs.com",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "cybersecurity",
+            "jobs",
+            "specialized"
+          ]
+        },
+        {
+          "name": "CyberSeek.org",
+          "description": "NICE-sponsored cybersecurity career resource",
+          "url": "https://cyberseek.org",
+          "type": "free",
+          "difficulty": "beginner",
+          "tags": [
+            "career-path",
+            "cybersecurity",
+            "jobs"
+          ]
         },
         {
           "name": "InfoSec-Jobs.com",
-          "type": "free",
-          "url": "https://infosec-jobs.com",
           "description": "Information security job listings",
-          "tags": ["jobs", "infosec", "security"],
-          "difficulty": "beginner"
-        },
-        {
-          "name": "CyberJobCentral",
+          "url": "https://infosec-jobs.com",
           "type": "free",
-          "description": "Cybersecurity-focused job aggregator",
-          "tags": ["jobs", "cybersecurity", "aggregator"],
-          "difficulty": "beginner"
-        }
-      ]
-    },
-    {
-      "id": "clearance-required",
-      "title": "Clearance Required Job Boards",
-      "description": "Job boards for positions requiring security clearances",
-      "items": [
-        {
-          "name": "ClearanceJobs",
-          "type": "free",
-          "url": "https://clearancejobs.com",
-          "description": "Jobs requiring security clearances",
-          "tags": ["jobs", "clearance", "government", "defense"],
-          "difficulty": "intermediate"
-        },
-        {
-          "name": "ClearedJobs.net",
-          "type": "free",
-          "url": "https://clearedjobs.net",
-          "description": "Cleared professional job board",
-          "tags": ["jobs", "clearance", "security"],
-          "difficulty": "intermediate"
-        },
-        {
-          "name": "Intelligence Careers",
-          "type": "free",
-          "description": "Intelligence community job board",
-          "tags": ["jobs", "intelligence", "government"],
-          "difficulty": "intermediate"
+          "difficulty": "beginner",
+          "tags": [
+            "infosec",
+            "jobs",
+            "security"
+          ]
         }
       ]
     }

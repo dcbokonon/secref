@@ -1,0 +1,122 @@
+# SecRef Caddy Configuration
+# Secure web server configuration with comprehensive security headers
+
+secref.org {
+    # Document root
+    root * /var/www/secref/public
+    
+    # File server
+    file_server
+    
+    # Enable compression
+    encode gzip
+    
+    # Security headers
+    header {
+        # Remove server identification
+        -Server
+        
+        # Security headers
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-downgrade"
+        
+        # Content Security Policy
+        Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+        
+        # Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        
+        # Permissions Policy
+        Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()"
+        
+        # Additional security headers
+        X-Permitted-Cross-Domain-Policies "none"
+        X-Download-Options "noopen"
+        X-DNS-Prefetch-Control "off"
+        
+        # CORS headers (adjust as needed)
+        Access-Control-Allow-Origin "https://secref.org"
+        Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+        Access-Control-Max-Age "86400"
+    }
+    
+    # Logging
+    log {
+        output file /var/log/caddy/secref.log {
+            roll_size 100mb
+            roll_keep 10
+            roll_keep_for 90d
+        }
+        format console
+        level INFO
+    }
+    
+    # Handle specific paths
+    handle /admin* {
+        # Admin panel reverse proxy
+        reverse_proxy localhost:5001 {
+            # Additional security for admin
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+            
+            # Health check
+            health_uri /api/health
+            health_interval 30s
+            health_timeout 5s
+        }
+    }
+    
+    # Serve static files
+    handle {
+        try_files {path} /index.html
+    }
+    
+    # Error pages
+    handle_errors {
+        @404 {
+            expression {http.error.status_code} == 404
+        }
+        rewrite @404 /404.html
+        file_server
+    }
+    
+    # Security: Block access to sensitive files
+    @blocked {
+        path *.json
+        path *.db
+        path *.sql
+        path *.log
+        path .env*
+        path .git*
+        path *.bak
+        path *.backup
+        path *.old
+        path *.orig
+        path *.swp
+        path *.swo
+        path *~
+    }
+    respond @blocked 403
+    
+    # Rate limiting (requires rate_limit plugin)
+    # rate_limit {
+    #     zone static {
+    #         key {remote_host}
+    #         events 100
+    #         window 1m
+    #     }
+    # }
+}
+
+# Redirect www to non-www
+www.secref.org {
+    redir https://secref.org{uri} permanent
+}
+
+# Redirect HTTP to HTTPS
+http://secref.org, http://www.secref.org {
+    redir https://secref.org{uri} permanent
+}

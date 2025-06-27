@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  secref:
+    build: .
+    container_name: secref
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Persist database
+      - ./database:/admin/database
+      # Persist logs
+      - ./logs:/admin/logs
+      - ./logs/caddy:/var/log/caddy
+      # Caddy data (certificates)
+      - caddy_data:/data
+      - caddy_config:/config
+      # For development: mount source
+      # - ./src:/var/www/secref
+      # - ./admin:/admin
+    environment:
+      - FLASK_ENV=production
+      - SECREF_DB_PATH=/admin/database/secref.db
+      - SECRET_KEY=${SECRET_KEY:-change-this-in-production}
+      - ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
+      - ADMIN_PASSWORD_HASH=${ADMIN_PASSWORD_HASH}
+    networks:
+      - secref-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Redis for rate limiting and caching
+  redis:
+    image: redis:7-alpine
+    container_name: secref-redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD:-change-this-password}
+    volumes:
+      - redis_data:/data
+    networks:
+      - secref-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Backup service
+  backup:
+    image: alpine:latest
+    container_name: secref-backup
+    volumes:
+      - ./database:/backup/database:ro
+      - ./backups:/backups
+    environment:
+      - BACKUP_SCHEDULE=${BACKUP_SCHEDULE:-0 3 * * *}  # 3 AM daily
+    command: >
+      sh -c "
+        apk add --no-cache sqlite
+        echo '${BACKUP_SCHEDULE} cd /backup && tar -czf /backups/secref-backup-\$$(date +\%Y\%m\%d-\%H\%M\%S).tar.gz database/' | crontab -
+        crond -f
+      "
+    networks:
+      - secref-network
+
+volumes:
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  secref-network:
+    driver: bridge
+
+# Development override example (docker-compose.override.yml):
+# version: '3.8'
+# services:
+#   secref:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.dev
+#     ports:
+#       - "3000:3000"  # Astro dev server
+#       - "5001:5001"  # Flask admin
+#     volumes:
+#       - ./src:/app/src
+#       - ./admin:/app/admin
+#     environment:
+#       - FLASK_ENV=development
+#       - FLASK_DEBUG=True

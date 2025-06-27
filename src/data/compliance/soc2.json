@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "section": "9.5",
+    "title": "SOC 2",
+    "description": "Service Organization Control 2 compliance resources",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 27
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "SOC 2 Requirements",
+      "description": "Trust Service Criteria and control requirements",
+      "items": [
+        {
+          "name": "Trust Service Criteria",
+          "url": "https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustservices",
+          "description": "AICPA Trust Service Criteria for SOC 2",
+          "type": "free",
+          "notation": "†",
+          "tags": ["criteria", "standards", "soc2"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Control Activities",
+          "url": "https://www.vanta.com/resources/soc-2-control-activities",
+          "description": "Common SOC 2 control activities",
+          "type": "free",
+          "tags": ["controls", "activities", "implementation"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Evidence Collection",
+          "url": "https://www.auditboard.com/blog/soc-2-evidence-collection/",
+          "description": "SOC 2 evidence collection guide",
+          "type": "free",
+          "tags": ["evidence", "audit", "collection"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Report Types",
+          "url": "https://www.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/soc2_report_types.pdf",
+          "description": "SOC 2 Type I vs Type II report differences",
+          "type": "free",
+          "tags": ["reports", "types", "audit"],
+          "resourceType": "documentation"
+        }
+      ]
+    }
+  ]
+}

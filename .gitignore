@@ -136,11 +136,24 @@ dist
 .pnp.*
 
 # Claude/AI related files
-CLAUDE.md
-claude.md
+# CLAUDE.md files are project documentation and should be tracked
 .claude/
 *.claude
 .cursorrules
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+*.pyo
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
 
 # IDE specific
 .vscode/

@@ -1,0 +1,33 @@
+{
+  "name": "SecRef - Cybersecurity Reference",
+  "short_name": "SecRef",
+  "description": "The ultimate cybersecurity resource hub - tools, guides, certifications, and community resources",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#282a36",
+  "theme_color": "#50fa7b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "reference", "security"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

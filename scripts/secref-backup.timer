@@ -1,0 +1,15 @@
+[Unit]
+Description=SecRef Database Backup Timer
+Requires=secref-backup.service
+
+[Timer]
+# Run daily at 3 AM
+OnCalendar=daily
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+
+# Randomize start time by up to 30 minutes
+RandomizedDelaySec=1800
+
+[Install]
+WantedBy=timers.target

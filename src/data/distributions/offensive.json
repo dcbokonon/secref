@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "section": "11.1",
+    "title": "Offensive Security Distributions",
+    "description": "Linux distributions designed for penetration testing and security assessments",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 8
+  },
+  "categories": [
+    {
+      "id": "distributions",
+      "title": "Offensive Distributions",
+      "description": "Penetration testing focused Linux distributions",
+      "items": [
+        {
+          "name": "Kali Linux",
+          "url": "https://www.kali.org/",
+          "description": "Debian-based penetration testing distribution",
+          "type": "free",
+          "tags": ["pentest", "debian", "offensive-security"],
+          "resourceType": "platform",
+          "isIndustryStandard": true,
+          "isCommunityFavorite": true,
+          "platforms": ["x86", "x64", "arm", "vm"]
+        },
+        {
+          "name": "Parrot Security",
+          "url": "https://www.parrotsec.org/",
+          "description": "Security-oriented distribution with privacy tools",
+          "type": "free",
+          "tags": ["pentest", "privacy", "debian"],
+          "resourceType": "platform",
+          "isCommunityFavorite": true,
+          "platforms": ["x86", "x64", "arm"]
+        },
+        {
+          "name": "BlackArch",
+          "url": "https://blackarch.org/",
+          "description": "Arch-based distribution with 2000+ tools",
+          "type": "free",
+          "tags": ["pentest", "arch", "tools"],
+          "resourceType": "platform",
+          "platforms": ["x64"]
+        },
+        {
+          "name": "Pentoo",
+          "url": "https://www.pentoo.ch/",
+          "description": "Gentoo-based security testing distribution",
+          "type": "free",
+          "tags": ["pentest", "gentoo", "security"],
+          "resourceType": "platform",
+          "platforms": ["x86", "x64"]
+        }
+      ]
+    }
+  ]
+}

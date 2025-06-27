@@ -24,7 +24,18 @@
             "platforms": "array - [linux, windows, macos, web, mobile] (optional)",
             "tags": "array - searchable keywords",
             "difficulty": "string - beginner|intermediate|advanced|expert (optional)",
-            "alternatives": "array - related/alternative tools (optional)"
+            "alternatives": "array - related/alternative tools (optional)",
+            "notation": "string - pricing notation (F), ($), (E), † (optional)",
+            "pricingNote": "string - additional pricing details (optional)",
+            "resourceType": "string - tool|technique|service|platform|documentation (optional)",
+            "isCommunityFavorite": "boolean - highly recommended by community (optional)",
+            "isIndustryStandard": "boolean - widely adopted industry standard (optional)",
+            "frameworks": {
+              "mitre_attack": "array - MITRE ATT&CK technique IDs (optional)",
+              "nist": "array - NIST framework references (optional)",
+              "owasp": "array - OWASP references (optional)",
+              "cis": "array - CIS control references (optional)"
+            }
           }
         ]
       }

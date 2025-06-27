@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "section": "11.3",
+    "title": "Privacy-Focused Distributions",
+    "description": "Operating systems designed for privacy and anonymity",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 6
+  },
+  "categories": [
+    {
+      "id": "distributions",
+      "title": "Privacy Distributions",
+      "description": "Privacy and anonymity focused operating systems",
+      "items": [
+        {
+          "name": "Tails",
+          "url": "https://tails.boum.org/",
+          "description": "The Amnesic Incognito Live System",
+          "type": "free",
+          "tags": ["privacy", "tor", "amnesia"],
+          "resourceType": "platform",
+          "isIndustryStandard": true,
+          "isCommunityFavorite": true,
+          "platforms": ["x64", "usb"]
+        },
+        {
+          "name": "Whonix",
+          "url": "https://www.whonix.org/",
+          "description": "Anonymous operating system using virtualization",
+          "type": "free",
+          "tags": ["privacy", "tor", "virtualization"],
+          "resourceType": "platform",
+          "isCommunityFavorite": true,
+          "platforms": ["vm"]
+        },
+        {
+          "name": "Qubes OS",
+          "url": "https://www.qubes-os.org/",
+          "description": "Security through isolation using Xen",
+          "type": "free",
+          "tags": ["security", "isolation", "xen"],
+          "resourceType": "platform",
+          "isIndustryStandard": true,
+          "platforms": ["x64"]
+        },
+        {
+          "name": "Kodachi",
+          "url": "https://www.digi77.com/linux-kodachi/",
+          "description": "Debian-based OS for anonymity",
+          "type": "free",
+          "tags": ["privacy", "tor", "vpn"],
+          "resourceType": "platform",
+          "platforms": ["x64", "usb"]
+        }
+      ]
+    }
+  ]
+}

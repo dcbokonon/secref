@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "section": "11.2",
+    "title": "Defensive Security Distributions",
+    "description": "Linux distributions for blue team, forensics, and incident response",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 7
+  },
+  "categories": [
+    {
+      "id": "distributions",
+      "title": "Defensive Distributions",
+      "description": "Blue team and forensics focused distributions",
+      "items": [
+        {
+          "name": "Security Onion",
+          "url": "https://securityonionsolutions.com/",
+          "description": "Network security monitoring and log management",
+          "type": "free",
+          "tags": ["nsm", "siem", "blue-team"],
+          "resourceType": "platform",
+          "isIndustryStandard": true,
+          "isCommunityFavorite": true,
+          "platforms": ["x64", "vm"]
+        },
+        {
+          "name": "SIFT Workstation",
+          "url": "https://www.sans.org/tools/sift-workstation/",
+          "description": "SANS forensic toolkit distribution",
+          "type": "free",
+          "tags": ["forensics", "sans", "incident-response"],
+          "resourceType": "platform",
+          "isIndustryStandard": true,
+          "platforms": ["x64", "vm"]
+        },
+        {
+          "name": "REMnux",
+          "url": "https://remnux.org/",
+          "description": "Linux toolkit for malware analysis",
+          "type": "free",
+          "tags": ["malware", "reverse-engineering", "analysis"],
+          "resourceType": "platform",
+          "isCommunityFavorite": true,
+          "platforms": ["x64", "vm"]
+        },
+        {
+          "name": "CAINE",
+          "url": "https://www.caine-live.net/",
+          "description": "Computer Aided INvestigative Environment",
+          "type": "free",
+          "tags": ["forensics", "investigation", "italian"],
+          "resourceType": "platform",
+          "platforms": ["x64"]
+        }
+      ]
+    }
+  ]
+}

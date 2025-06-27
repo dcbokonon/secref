@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "section": "9.4",
+    "title": "ISO 27001",
+    "description": "Information Security Management System (ISMS) standard resources",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 42
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "ISO 27001 Requirements",
+      "description": "ISMS requirements and control objectives",
+      "items": [
+        {
+          "name": "Control Objectives",
+          "url": "https://www.iso.org/standard/27001",
+          "description": "ISO 27001 control objectives and requirements",
+          "type": "paid",
+          "notation": "($)",
+          "tags": ["controls", "standards", "isms"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Risk Register",
+          "url": "https://advisera.com/27001academy/iso-27001-risk-register/",
+          "description": "ISO 27001 risk register templates",
+          "type": "freemium",
+          "notation": "(F)",
+          "tags": ["risk", "register", "templates"],
+          "resourceType": "template"
+        },
+        {
+          "name": "ISMS Documentation",
+          "url": "https://www.itgovernance.co.uk/iso27001",
+          "description": "ISMS documentation templates and guides",
+          "type": "paid",
+          "notation": "($)",
+          "tags": ["documentation", "isms", "templates"],
+          "resourceType": "template"
+        },
+        {
+          "name": "Audit Checklists",
+          "url": "https://www.iso27001security.com/html/toolkit.html",
+          "description": "ISO 27001 audit checklists and tools",
+          "type": "paid",
+          "notation": "($)",
+          "tags": ["audit", "checklist", "assessment"],
+          "resourceType": "tool"
+        }
+      ]
+    }
+  ]
+}

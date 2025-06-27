@@ -1,12 +1,166 @@
 {
   "metadata": {
-    "section": "4.2",
     "title": "Interview Preparation",
     "description": "Resources and guidance for cybersecurity job interviews",
     "lastUpdated": "2025-06-25",
-    "totalItems": 18
+    "totalItems": 19
   },
   "categories": [
+    {
+      "id": "interview-resources",
+      "title": "Interview Resources",
+      "description": "Study materials and practice resources for interview preparation",
+      "subcategories": [
+        {
+          "id": "mock-interviews",
+          "title": "Mock Interview Platforms",
+          "description": "Platforms and communities for practicing interviews",
+          "items": [
+            {
+              "name": "Discord Communities",
+              "description": "Security Discord servers with interview prep channels",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "community",
+                "discord",
+                "real-time"
+              ]
+            },
+            {
+              "name": "InterviewBit",
+              "description": "Technical interview preparation platform",
+              "url": "https://interviewbit.com",
+              "type": "freemium",
+              "difficulty": "intermediate",
+              "tags": [
+                "coding",
+                "preparation",
+                "technical"
+              ]
+            },
+            {
+              "name": "Local Meetups",
+              "description": "Local security meetups with interview practice",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "local",
+                "meetup",
+                "networking"
+              ]
+            },
+            {
+              "name": "Mock Interview Services",
+              "description": "Professional mock interview services",
+              "type": "paid",
+              "difficulty": "beginner",
+              "tags": [
+                "coaching",
+                "feedback",
+                "professional"
+              ]
+            },
+            {
+              "name": "Pramp",
+              "description": "Peer-to-peer mock interview platform",
+              "url": "https://pramp.com",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "mock-interview",
+                "peer",
+                "practice"
+              ]
+            },
+            {
+              "name": "Study Groups",
+              "description": "Peer study groups for interview preparation",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "collaboration",
+                "peer",
+                "study-group"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "question-banks",
+          "title": "Question Banks",
+          "description": "Collections of common security interview questions",
+          "items": [
+            {
+              "name": "Community-Shared Questions",
+              "description": "Questions shared by the security community",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "community",
+                "experience",
+                "shared"
+              ]
+            },
+            {
+              "name": "Cybersecurity Interview Questions Books",
+              "description": "Published collections of common security interview questions",
+              "type": "paid",
+              "difficulty": "beginner",
+              "tags": [
+                "books",
+                "questions",
+                "study-guide"
+              ]
+            },
+            {
+              "name": "Online Question Repositories",
+              "description": "Community-maintained interview question collections",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "community",
+                "online",
+                "repository"
+              ]
+            },
+            {
+              "name": "Penetration Tester Questions",
+              "description": "Questions focused on offensive security roles",
+              "type": "free",
+              "difficulty": "intermediate",
+              "tags": [
+                "offensive",
+                "pentest",
+                "red-team"
+              ]
+            },
+            {
+              "name": "SOC Analyst Questions",
+              "description": "Role-specific questions for SOC analyst positions",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "analyst",
+                "blue-team",
+                "soc"
+              ]
+            },
+            {
+              "name": "Security Architect Questions",
+              "description": "Architecture and design focused interview questions",
+              "type": "free",
+              "difficulty": "advanced",
+              "tags": [
+                "architecture",
+                "design",
+                "leadership"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "technical-preparation",
       "title": "Technical Preparation",
@@ -18,25 +172,37 @@
           "description": "Fundamental security concepts frequently tested in interviews",
           "items": [
             {
-              "name": "Network Security Fundamentals",
-              "type": "free",
-              "description": "OSI model, TCP/IP, common ports, network attacks",
-              "tags": ["networking", "fundamentals", "protocols"],
-              "difficulty": "beginner"
-            },
-            {
               "name": "Application Security",
-              "type": "free",
               "description": "OWASP Top 10, secure coding, authentication/authorization",
-              "tags": ["web-security", "owasp", "applications"],
-              "difficulty": "intermediate"
+              "type": "free",
+              "difficulty": "intermediate",
+              "tags": [
+                "applications",
+                "owasp",
+                "web-security"
+              ]
             },
             {
               "name": "Cryptography Concepts",
-              "type": "free",
               "description": "Encryption types, hashing, PKI, TLS/SSL",
-              "tags": ["cryptography", "encryption", "certificates"],
-              "difficulty": "intermediate"
+              "type": "free",
+              "difficulty": "intermediate",
+              "tags": [
+                "certificates",
+                "cryptography",
+                "encryption"
+              ]
+            },
+            {
+              "name": "Network Security Fundamentals",
+              "description": "OSI model, TCP/IP, common ports, network attacks",
+              "type": "free",
+              "difficulty": "beginner",
+              "tags": [
+                "fundamentals",
+                "networking",
+                "protocols"
+              ]
             }
           ]
         },
@@ -47,138 +213,47 @@
           "items": [
             {
               "name": "CTF-style Challenges",
-              "type": "free",
               "description": "Capture-the-flag style technical problems",
-              "tags": ["ctf", "practical", "hands-on"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Whiteboard Exercises",
               "type": "free",
-              "description": "Network diagrams, security architecture design",
-              "tags": ["architecture", "design", "whiteboard"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Take-home Projects",
-              "type": "free",
-              "description": "Security assessment or analysis projects",
-              "tags": ["project", "assessment", "analysis"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "tags": [
+                "ctf",
+                "hands-on",
+                "practical"
+              ]
             },
             {
               "name": "Scenario-Based Questions",
-              "type": "free",
               "description": "Incident response, risk assessment, security architecture scenarios",
-              "tags": ["scenarios", "incident-response", "risk"],
-              "difficulty": "intermediate"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "interview-resources",
-      "title": "Interview Resources",
-      "description": "Study materials and practice resources for interview preparation",
-      "subcategories": [
-        {
-          "id": "question-banks",
-          "title": "Question Banks",
-          "description": "Collections of common security interview questions",
-          "items": [
-            {
-              "name": "Cybersecurity Interview Questions Books",
-              "type": "paid",
-              "description": "Published collections of common security interview questions",
-              "tags": ["books", "questions", "study-guide"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "Online Question Repositories",
               "type": "free",
-              "description": "Community-maintained interview question collections",
-              "tags": ["online", "community", "repository"],
-              "difficulty": "beginner"
+              "difficulty": "intermediate",
+              "tags": [
+                "incident-response",
+                "risk",
+                "scenarios"
+              ]
             },
             {
-              "name": "Community-Shared Questions",
+              "name": "Take-home Projects",
+              "description": "Security assessment or analysis projects",
               "type": "free",
-              "description": "Questions shared by the security community",
-              "tags": ["community", "shared", "experience"],
-              "difficulty": "beginner"
+              "difficulty": "intermediate",
+              "tags": [
+                "analysis",
+                "assessment",
+                "project"
+              ]
             },
             {
-              "name": "SOC Analyst Questions",
+              "name": "Whiteboard Exercises",
+              "description": "Network diagrams, security architecture design",
               "type": "free",
-              "description": "Role-specific questions for SOC analyst positions",
-              "tags": ["soc", "analyst", "blue-team"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "Penetration Tester Questions",
-              "type": "free",
-              "description": "Questions focused on offensive security roles",
-              "tags": ["pentest", "red-team", "offensive"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Security Architect Questions",
-              "type": "free",
-              "description": "Architecture and design focused interview questions",
-              "tags": ["architecture", "design", "leadership"],
-              "difficulty": "advanced"
-            }
-          ]
-        },
-        {
-          "id": "mock-interviews",
-          "title": "Mock Interview Platforms",
-          "description": "Platforms and communities for practicing interviews",
-          "items": [
-            {
-              "name": "Pramp",
-              "type": "free",
-              "url": "https://pramp.com",
-              "description": "Peer-to-peer mock interview platform",
-              "tags": ["mock-interview", "peer", "practice"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "InterviewBit",
-              "type": "freemium",
-              "url": "https://interviewbit.com",
-              "description": "Technical interview preparation platform",
-              "tags": ["technical", "preparation", "coding"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Mock Interview Services",
-              "type": "paid",
-              "description": "Professional mock interview services",
-              "tags": ["professional", "coaching", "feedback"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "Study Groups",
-              "type": "free",
-              "description": "Peer study groups for interview preparation",
-              "tags": ["study-group", "peer", "collaboration"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "Discord Communities",
-              "type": "free",
-              "description": "Security Discord servers with interview prep channels",
-              "tags": ["discord", "community", "real-time"],
-              "difficulty": "beginner"
-            },
-            {
-              "name": "Local Meetups",
-              "type": "free",
-              "description": "Local security meetups with interview practice",
-              "tags": ["meetup", "local", "networking"],
-              "difficulty": "beginner"
+              "difficulty": "intermediate",
+              "tags": [
+                "architecture",
+                "design",
+                "whiteboard"
+              ]
             }
           ]
         }

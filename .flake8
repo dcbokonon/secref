@@ -1,0 +1,38 @@
+# SecRef Flake8 Configuration
+[flake8]
+# Black compatibility
+max-line-length = 88
+extend-ignore = E203, W503
+
+# Exclude paths
+exclude =
+    .git,
+    __pycache__,
+    .env,
+    .venv,
+    env,
+    venv,
+    .eggs,
+    *.egg,
+    build,
+    dist,
+    .pytest_cache,
+    .mypy_cache,
+    .tox,
+    migrations,
+    node_modules
+
+# Additional settings
+max-complexity = 10
+per-file-ignores =
+    # Ignore imports in __init__.py
+    __init__.py:F401,F403
+    # Ignore line length in tests
+    test_*.py:E501
+
+# Enable plugins
+enable-extensions = 
+    # Security checks
+    S
+    # Complexity checks
+    C901

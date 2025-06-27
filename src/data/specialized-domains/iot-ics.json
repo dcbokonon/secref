@@ -1,12 +1,242 @@
 {
   "metadata": {
-    "section": "5.2",
     "title": "IoT & ICS Security",
     "description": "Security tools and resources for Internet of Things and Industrial Control Systems",
     "lastUpdated": "2025-06-25",
-    "totalItems": 19
+    "totalItems": 24
   },
   "categories": [
+    {
+      "id": "industrial-control-systems",
+      "title": "Industrial Control Systems",
+      "description": "Security tools for SCADA, ICS, and industrial environments",
+      "subcategories": [
+        {
+          "id": "ics-security-tools",
+          "title": "ICS Security Tools",
+          "description": "Specialized tools for industrial control system security",
+          "items": [
+            {
+              "name": "Claroty Platform",
+              "description": "Industrial cybersecurity platform",
+              "url": "https://claroty.com/",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "ics",
+                "monitoring",
+                "platform"
+              ]
+            },
+            {
+              "name": "Conpot",
+              "description": "ICS/SCADA honeypot system",
+              "url": "https://github.com/mushorg/conpot",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "honeypot",
+                "ics",
+                "opensource",
+                "scada"
+              ]
+            },
+            {
+              "name": "Dragos Platform",
+              "description": "Industrial cybersecurity and threat detection",
+              "url": "https://dragos.com/",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "ics",
+                "platform",
+                "threat-detection"
+              ]
+            },
+            {
+              "name": "GasPot",
+              "description": "Gas tank monitoring honeypot",
+              "url": "https://github.com/sjhilt/GasPot",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "gas",
+                "honeypot",
+                "monitoring",
+                "opensource"
+              ]
+            },
+            {
+              "name": "GridPot",
+              "description": "Smart grid honeypot system",
+              "url": "https://github.com/sk4ld/gridpot",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "honeypot",
+                "opensource",
+                "power",
+                "smart-grid"
+              ]
+            },
+            {
+              "name": "SecurityMatters",
+              "description": "ICS security monitoring solution",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "ics",
+                "monitoring",
+                "security"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scada-security",
+          "title": "SCADA Security",
+          "description": "Assessment tools and protocols for SCADA systems",
+          "items": [
+            {
+              "name": "CyberX Platform",
+              "description": "IoT and ICS security platform (now Microsoft)",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "ics",
+                "iot",
+                "platform"
+              ]
+            },
+            {
+              "name": "DNP3 Protocol",
+              "description": "Distributed Network Protocol analysis",
+              "type": "free",
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "distributed",
+                "dnp3",
+                "network",
+                "protocol"
+              ]
+            },
+            {
+              "name": "IEC 61850",
+              "description": "Power utility communication standard",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "iec61850",
+                "power",
+                "standard",
+                "utility"
+              ]
+            },
+            {
+              "name": "Industrial Defender",
+              "description": "ICS/SCADA security monitoring platform",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "ics",
+                "monitoring",
+                "platform"
+              ]
+            },
+            {
+              "name": "Modbus Protocol",
+              "description": "Industrial communication protocol analysis",
+              "type": "free",
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "communication",
+                "industrial",
+                "modbus",
+                "protocol"
+              ]
+            },
+            {
+              "name": "Nessus SCADA Plugins",
+              "description": "Industrial control system vulnerability scanner",
+              "url": "https://www.tenable.com/plugins/nessus",
+              "type": "paid",
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "commercial",
+                "scada",
+                "scanner",
+                "vulnerability"
+              ]
+            },
+            {
+              "name": "OPC Protocol",
+              "description": "OLE for Process Control analysis",
+              "type": "free",
+              "difficulty": "intermediate",
+              "platforms": [
+                "windows"
+              ],
+              "tags": [
+                "opc",
+                "process-control",
+                "protocol",
+                "windows"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "iot-security",
       "title": "IoT Security",
@@ -19,70 +249,127 @@
           "items": [
             {
               "name": "Binwalk",
-              "type": "free",
-              "url": "https://github.com/ReFirmLabs/binwalk",
               "description": "Firmware analysis and extraction tool",
-              "platforms": ["linux", "macos"],
-              "tags": ["firmware", "analysis", "extraction", "opensource"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Firmware Analysis Toolkit",
+              "url": "https://github.com/ReFirmLabs/binwalk",
               "type": "free",
-              "url": "https://github.com/attify/firmware-analysis-toolkit",
-              "description": "Comprehensive firmware analysis framework",
-              "platforms": ["linux"],
-              "tags": ["firmware", "analysis", "framework", "opensource"],
-              "difficulty": "advanced"
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "macos"
+              ],
+              "tags": [
+                "analysis",
+                "extraction",
+                "firmware",
+                "opensource"
+              ]
             },
             {
               "name": "FACT",
-              "type": "free",
-              "url": "https://github.com/fkie-cad/FACT_core",
               "description": "Firmware Analysis and Comparison Tool",
-              "platforms": ["linux"],
-              "tags": ["firmware", "analysis", "comparison", "opensource"],
-              "difficulty": "advanced"
+              "url": "https://github.com/fkie-cad/FACT_core",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "analysis",
+                "comparison",
+                "firmware",
+                "opensource"
+              ]
+            },
+            {
+              "name": "Firmware Analysis Toolkit",
+              "description": "Comprehensive firmware analysis framework",
+              "url": "https://github.com/attify/firmware-analysis-toolkit",
+              "type": "free",
+              "difficulty": "advanced",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "analysis",
+                "firmware",
+                "framework",
+                "opensource"
+              ]
             },
             {
               "name": "IoT-specific Scanners",
-              "type": "free",
               "description": "Specialized network scanners for IoT devices",
-              "platforms": ["linux"],
-              "tags": ["iot", "scanning", "network", "specialized"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Protocol Analyzers",
               "type": "free",
-              "description": "Analysis tools for IoT communication protocols",
-              "platforms": ["linux", "windows"],
-              "tags": ["protocol", "analysis", "communication", "iot"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Logic Analyzers",
-              "type": "paid",
-              "description": "Hardware analysis tools for IoT devices",
-              "platforms": ["hardware"],
-              "tags": ["hardware", "analysis", "logic", "debugging"],
-              "difficulty": "advanced"
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux"
+              ],
+              "tags": [
+                "iot",
+                "network",
+                "scanning",
+                "specialized"
+              ]
             },
             {
               "name": "JTAG/SWD Tools",
-              "type": "paid",
               "description": "Hardware debugging interfaces for IoT devices",
-              "platforms": ["hardware"],
-              "tags": ["jtag", "swd", "debugging", "hardware"],
-              "difficulty": "advanced"
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "hardware"
+              ],
+              "tags": [
+                "debugging",
+                "hardware",
+                "jtag",
+                "swd"
+              ]
+            },
+            {
+              "name": "Logic Analyzers",
+              "description": "Hardware analysis tools for IoT devices",
+              "type": "paid",
+              "difficulty": "advanced",
+              "platforms": [
+                "hardware"
+              ],
+              "tags": [
+                "analysis",
+                "debugging",
+                "hardware",
+                "logic"
+              ]
+            },
+            {
+              "name": "Protocol Analyzers",
+              "description": "Analysis tools for IoT communication protocols",
+              "type": "free",
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "windows"
+              ],
+              "tags": [
+                "analysis",
+                "communication",
+                "iot",
+                "protocol"
+              ]
             },
             {
               "name": "Side-channel Analysis",
-              "type": "paid",
               "description": "Power and electromagnetic analysis tools",
-              "platforms": ["hardware"],
-              "tags": ["side-channel", "power-analysis", "hardware"],
-              "difficulty": "expert"
+              "type": "paid",
+              "difficulty": "expert",
+              "platforms": [
+                "hardware"
+              ],
+              "tags": [
+                "hardware",
+                "power-analysis",
+                "side-channel"
+              ]
             }
           ]
         },
@@ -92,161 +379,52 @@
           "description": "Security tools for consumer IoT and smart home devices",
           "items": [
             {
-              "name": "IoT Inspector",
+              "name": "Firmalyzer",
+              "description": "IoT firmware security analysis platform",
+              "url": "https://github.com/securifybv/firmalyzer",
               "type": "free",
-              "url": "https://github.com/alufers/iot-inspector",
-              "description": "Smart home device security scanner",
-              "platforms": ["linux", "macos"],
-              "tags": ["smart-home", "scanner", "inspector", "opensource"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "platforms": [
+                "web"
+              ],
+              "tags": [
+                "analysis",
+                "firmware",
+                "opensource",
+                "platform"
+              ]
             },
             {
-              "name": "Firmalyzer",
+              "name": "IoT Inspector",
+              "description": "Smart home device security scanner",
+              "url": "https://github.com/alufers/iot-inspector",
               "type": "free",
-              "url": "https://github.com/securifybv/firmalyzer",
-              "description": "IoT firmware security analysis platform",
-              "platforms": ["web"],
-              "tags": ["firmware", "analysis", "platform", "opensource"],
-              "difficulty": "intermediate"
+              "difficulty": "intermediate",
+              "platforms": [
+                "linux",
+                "macos"
+              ],
+              "tags": [
+                "inspector",
+                "opensource",
+                "scanner",
+                "smart-home"
+              ]
             },
             {
               "name": "IoTSF Tools",
-              "type": "free",
               "description": "IoT Security Foundation assessment tools",
-              "platforms": ["web"],
-              "tags": ["iotsf", "assessment", "foundation", "standards"],
-              "difficulty": "beginner"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "industrial-control-systems",
-      "title": "Industrial Control Systems",
-      "description": "Security tools for SCADA, ICS, and industrial environments",
-      "subcategories": [
-        {
-          "id": "scada-security",
-          "title": "SCADA Security",
-          "description": "Assessment tools and protocols for SCADA systems",
-          "items": [
-            {
-              "name": "Nessus SCADA Plugins",
-              "type": "paid",
-              "url": "https://www.tenable.com/plugins/nessus",
-              "description": "Industrial control system vulnerability scanner",
-              "platforms": ["linux", "windows"],
-              "tags": ["scada", "vulnerability", "scanner", "commercial"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "Industrial Defender",
-              "type": "paid",
-              "description": "ICS/SCADA security monitoring platform",
-              "platforms": ["linux", "windows"],
-              "tags": ["ics", "monitoring", "platform", "commercial"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "CyberX Platform",
-              "type": "paid",
-              "description": "IoT and ICS security platform (now Microsoft)",
-              "platforms": ["linux", "windows"],
-              "tags": ["ics", "iot", "platform", "commercial"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "Modbus Protocol",
               "type": "free",
-              "description": "Industrial communication protocol analysis",
-              "platforms": ["linux", "windows"],
-              "tags": ["modbus", "protocol", "industrial", "communication"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "DNP3 Protocol",
-              "type": "free",
-              "description": "Distributed Network Protocol analysis",
-              "platforms": ["linux", "windows"],
-              "tags": ["dnp3", "protocol", "distributed", "network"],
-              "difficulty": "intermediate"
-            },
-            {
-              "name": "IEC 61850",
-              "type": "free",
-              "description": "Power utility communication standard",
-              "platforms": ["linux", "windows"],
-              "tags": ["iec61850", "power", "utility", "standard"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "OPC Protocol",
-              "type": "free",
-              "description": "OLE for Process Control analysis",
-              "platforms": ["windows"],
-              "tags": ["opc", "process-control", "windows", "protocol"],
-              "difficulty": "intermediate"
-            }
-          ]
-        },
-        {
-          "id": "ics-security-tools",
-          "title": "ICS Security Tools",
-          "description": "Specialized tools for industrial control system security",
-          "items": [
-            {
-              "name": "Claroty Platform",
-              "type": "paid",
-              "url": "https://claroty.com/",
-              "description": "Industrial cybersecurity platform",
-              "platforms": ["linux", "windows"],
-              "tags": ["ics", "platform", "monitoring", "commercial"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "Dragos Platform",
-              "type": "paid",
-              "url": "https://dragos.com/",
-              "description": "Industrial cybersecurity and threat detection",
-              "platforms": ["linux", "windows"],
-              "tags": ["ics", "threat-detection", "platform", "commercial"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "SecurityMatters",
-              "type": "paid",
-              "description": "ICS security monitoring solution",
-              "platforms": ["linux", "windows"],
-              "tags": ["ics", "monitoring", "security", "commercial"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "Conpot",
-              "type": "free",
-              "url": "https://github.com/mushorg/conpot",
-              "description": "ICS/SCADA honeypot system",
-              "platforms": ["linux"],
-              "tags": ["honeypot", "ics", "scada", "opensource"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "GasPot",
-              "type": "free",
-              "url": "https://github.com/sjhilt/GasPot",
-              "description": "Gas tank monitoring honeypot",
-              "platforms": ["linux"],
-              "tags": ["honeypot", "gas", "monitoring", "opensource"],
-              "difficulty": "advanced"
-            },
-            {
-              "name": "GridPot",
-              "type": "free",
-              "url": "https://github.com/sk4ld/gridpot",
-              "description": "Smart grid honeypot system",
-              "platforms": ["linux"],
-              "tags": ["honeypot", "smart-grid", "power", "opensource"],
-              "difficulty": "advanced"
+              "difficulty": "beginner",
+              "platforms": [
+                "web"
+              ],
+              "tags": [
+                "assessment",
+                "foundation",
+                "iotsf",
+                "standards"
+              ]
             }
           ]
         }

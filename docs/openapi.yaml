@@ -1,0 +1,635 @@
+openapi: 3.0.3
+info:
+  title: SecRef Admin API
+  description: API for managing cybersecurity resources in SecRef
+  version: 1.0.0
+  contact:
+    email: api@secref.org
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: https://secref.org/admin/api
+    description: Production server
+  - url: http://localhost:5001/admin/api
+    description: Development server
+
+security:
+  - sessionAuth: []
+
+paths:
+  /resources:
+    get:
+      summary: List resources
+      description: Get paginated list of resources with optional filters
+      operationId: listResources
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+            minimum: 1
+        - name: per_page
+          in: query
+          schema:
+            type: integer
+            default: 50
+            minimum: 10
+            maximum: 100
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum: [free, freemium, paid, enterprise]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceList'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+    post:
+      summary: Create resource
+      description: Create a new resource
+      operationId: createResource
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceCreate'
+      responses:
+        '201':
+          description: Resource created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /resources/{id}:
+    get:
+      summary: Get resource
+      description: Get a single resource by ID
+      operationId: getResource
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    put:
+      summary: Update resource
+      description: Update an existing resource
+      operationId: updateResource
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceUpdate'
+      responses:
+        '200':
+          description: Resource updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+    delete:
+      summary: Delete resource
+      description: Delete a resource
+      operationId: deleteResource
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                csrf_token:
+                  type: string
+              required:
+                - csrf_token
+      responses:
+        '200':
+          description: Resource deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /resources/bulk-update:
+    post:
+      summary: Bulk update resources
+      description: Update multiple resources at once
+      operationId: bulkUpdateResources
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkUpdate'
+      responses:
+        '200':
+          description: Bulk update completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /resources/bulk-delete:
+    post:
+      summary: Bulk delete resources
+      description: Delete multiple resources at once
+      operationId: bulkDeleteResources
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkDelete'
+      responses:
+        '200':
+          description: Bulk delete completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BulkResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /export:
+    get:
+      summary: Export resources
+      description: Export resources in various formats
+      operationId: exportResources
+      parameters:
+        - name: format
+          in: query
+          required: true
+          schema:
+            type: string
+            enum: [json, csv]
+        - name: category
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Export successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Resource'
+            text/csv:
+              schema:
+                type: string
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /import:
+    post:
+      summary: Import resources
+      description: Import resources from file
+      operationId: importResources
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                csrf_token:
+                  type: string
+              required:
+                - file
+                - csrf_token
+      responses:
+        '200':
+          description: Import completed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportResponse'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+  /health:
+    get:
+      summary: Health check
+      description: Check API health status
+      operationId: healthCheck
+      security: []
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'
+
+  /stats:
+    get:
+      summary: Get statistics
+      description: Get resource statistics
+      operationId: getStatistics
+      responses:
+        '200':
+          description: Statistics retrieved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Statistics'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+
+components:
+  securitySchemes:
+    sessionAuth:
+      type: apiKey
+      in: cookie
+      name: session
+
+  schemas:
+    Resource:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        url:
+          type: string
+          format: uri
+        description:
+          type: string
+        category:
+          type: string
+        subcategory:
+          type: string
+        type:
+          type: string
+          enum: [free, freemium, paid, enterprise]
+        notation:
+          type: string
+        pricing_note:
+          type: string
+        is_community_favorite:
+          type: boolean
+        is_industry_standard:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+        platforms:
+          type: array
+          items:
+            type: string
+        extra_data:
+          type: object
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    ResourceCreate:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 3
+          maxLength: 100
+        url:
+          type: string
+          format: uri
+        description:
+          type: string
+          minLength: 10
+          maxLength: 500
+        category:
+          type: string
+        subcategory:
+          type: string
+        type:
+          type: string
+          enum: [free, freemium, paid, enterprise]
+        notation:
+          type: string
+        pricing_note:
+          type: string
+        is_community_favorite:
+          type: boolean
+        is_industry_standard:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+          maxItems: 10
+        platforms:
+          type: array
+          items:
+            type: string
+        csrf_token:
+          type: string
+      required:
+        - name
+        - url
+        - description
+        - category
+        - type
+        - csrf_token
+
+    ResourceUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 3
+          maxLength: 100
+        url:
+          type: string
+          format: uri
+        description:
+          type: string
+          minLength: 10
+          maxLength: 500
+        category:
+          type: string
+        subcategory:
+          type: string
+        type:
+          type: string
+          enum: [free, freemium, paid, enterprise]
+        notation:
+          type: string
+        pricing_note:
+          type: string
+        is_community_favorite:
+          type: boolean
+        is_industry_standard:
+          type: boolean
+        tags:
+          type: array
+          items:
+            type: string
+          maxItems: 10
+        platforms:
+          type: array
+          items:
+            type: string
+        csrf_token:
+          type: string
+      required:
+        - csrf_token
+
+    ResourceList:
+      type: object
+      properties:
+        resources:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+        pagination:
+          type: object
+          properties:
+            page:
+              type: integer
+            per_page:
+              type: integer
+            total:
+              type: integer
+            pages:
+              type: integer
+
+    ResourceResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        resource:
+          $ref: '#/components/schemas/Resource'
+
+    DeleteResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+
+    BulkUpdate:
+      type: object
+      properties:
+        resource_ids:
+          type: array
+          items:
+            type: string
+        updates:
+          type: object
+        csrf_token:
+          type: string
+      required:
+        - resource_ids
+        - updates
+        - csrf_token
+
+    BulkDelete:
+      type: object
+      properties:
+        resource_ids:
+          type: array
+          items:
+            type: string
+        csrf_token:
+          type: string
+      required:
+        - resource_ids
+        - csrf_token
+
+    BulkResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        updated:
+          type: integer
+        deleted:
+          type: integer
+        failed:
+          type: integer
+
+    ImportResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        imported:
+          type: integer
+        skipped:
+          type: integer
+        errors:
+          type: array
+          items:
+            type: string
+
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        database:
+          type: string
+        version:
+          type: string
+        uptime:
+          type: integer
+
+    Statistics:
+      type: object
+      properties:
+        total_resources:
+          type: integer
+        by_category:
+          type: object
+          additionalProperties:
+            type: integer
+        by_type:
+          type: object
+          additionalProperties:
+            type: integer
+        community_favorites:
+          type: integer
+        industry_standards:
+          type: integer
+        last_updated:
+          type: string
+          format: date-time
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: object
+
+  responses:
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    ValidationError:
+      description: Validation failed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    Conflict:
+      description: Resource already exists
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    RateLimited:
+      description: Rate limit exceeded
+      headers:
+        X-RateLimit-Limit:
+          schema:
+            type: integer
+        X-RateLimit-Remaining:
+          schema:
+            type: integer
+        X-RateLimit-Reset:
+          schema:
+            type: integer
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'

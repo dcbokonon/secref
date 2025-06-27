@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "section": "9.1",
+    "title": "PCI-DSS Compliance",
+    "description": "Payment Card Industry Data Security Standard resources, requirements, and implementation guides",
+    "lastUpdated": "2025-06-27",
+    "totalItems": 24
+  },
+  "categories": [
+    {
+      "id": "requirements",
+      "title": "PCI DSS Requirements",
+      "description": "Official requirements and standards documentation",
+      "items": [
+        {
+          "name": "PCI DSS v4.0 Requirements",
+          "url": "https://www.pcisecuritystandards.org/document_library/",
+          "description": "Official PCI DSS version 4.0 requirements document",
+          "type": "free",
+          "notation": "†",
+          "tags": ["compliance", "standards", "requirements"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "SAQ Templates",
+          "url": "https://www.pcisecuritystandards.org/document_library/",
+          "description": "Self-Assessment Questionnaire templates for different merchant levels",
+          "type": "free",
+          "notation": "†",
+          "tags": ["assessment", "templates"],
+          "resourceType": "template"
+        },
+        {
+          "name": "Scoping Guidance",
+          "url": "https://www.pcisecuritystandards.org/document_library/",
+          "description": "Official guidance on PCI DSS scope determination",
+          "type": "free",
+          "notation": "†",
+          "tags": ["scoping", "guidance"],
+          "resourceType": "documentation"
+        },
+        {
+          "name": "Compensating Controls",
+          "url": "https://www.pcisecuritystandards.org/document_library/",
+          "description": "Guidance on implementing compensating controls",
+          "type": "free",
+          "notation": "†",
+          "tags": ["controls", "guidance"],
+          "resourceType": "documentation"
+        }
+      ]
+    }
+  ]
+}
