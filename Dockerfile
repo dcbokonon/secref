@@ -2,7 +2,7 @@
 # Optimized for security and small image size
 
 # Stage 1: Build the Astro static site
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 
 # Install dependencies for building
 RUN apk add --no-cache python3 make g++
