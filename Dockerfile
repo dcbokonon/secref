@@ -23,7 +23,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Python admin panel
-FROM python:3.11-slim AS admin
+FROM python:3.13-slim AS admin
 
 # Security: Run as non-root user
 RUN useradd -m -u 1000 secref && \
