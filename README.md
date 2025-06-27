@@ -1,5 +1,16 @@
 # SecRef
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/dcbokonon/secref/releases)
+[![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org/)
+[![Python](https://img.shields.io/badge/python-%3E%3D3.9-blue.svg)](https://www.python.org/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fsecref.org)](https://secref.org)
+[![GitHub last commit](https://img.shields.io/github/last-commit/dcbokonon/secref)](https://github.com/dcbokonon/secref/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/dcbokonon/secref)](https://github.com/dcbokonon/secref/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/dcbokonon/secref)](https://github.com/dcbokonon/secref/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/dcbokonon/secref)](https://github.com/dcbokonon/secref/pulls)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/dcbokonon/secref/blob/main/CONTRIBUTING.md)
+
 A clean, no-BS directory of cybersecurity resources. 
 
 Visit: https://secref.org
