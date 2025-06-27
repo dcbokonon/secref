@@ -12,8 +12,14 @@ install: ## Install all dependencies
 	pip install -r requirements.txt
 	pip install -r admin/requirements.txt
 
-dev: ## Run development server
+dev: ## Run Astro development server only
 	npm run dev
+
+dev-all: ## Start both Astro site and admin panel
+	@./start.sh
+
+admin: ## Run admin panel only
+	cd admin && flask run
 
 build: ## Build for production
 	npm run build
