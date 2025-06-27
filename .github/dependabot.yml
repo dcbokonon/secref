@@ -8,7 +8,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     reviewers:
       - "dcbokonon"
     labels:
@@ -17,6 +17,15 @@ updates:
     commit-message:
       prefix: "npm"
       include: "scope"
+    # Group dependency updates to reduce PR noise
+    groups:
+      # Group all minor and patch updates together
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   # Enable version updates for pip
   - package-ecosystem: "pip"
@@ -25,7 +34,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     reviewers:
       - "dcbokonon"
     labels:
@@ -34,6 +43,13 @@ updates:
     commit-message:
       prefix: "pip"
       include: "scope"
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   # Enable version updates for pip in admin directory
   - package-ecosystem: "pip"
@@ -42,7 +58,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
     reviewers:
       - "dcbokonon"
     labels:
@@ -52,6 +68,13 @@ updates:
     commit-message:
       prefix: "pip"
       include: "scope"
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
@@ -60,7 +83,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 3
     reviewers:
       - "dcbokonon"
     labels:
@@ -77,7 +100,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "04:00"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 3
     reviewers:
       - "dcbokonon"
     labels:
