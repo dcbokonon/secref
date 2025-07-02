@@ -84,6 +84,6 @@ We gratefully acknowledge security researchers who have helped improve SecRef:
 
 - Security: security@secref.org
 - General: info@secref.org
-- GitHub: https://github.com/mikedilalo/secref
+- GitHub: https://github.com/dcbokonon/secref
 
 Thank you for helping keep SecRef secure!
